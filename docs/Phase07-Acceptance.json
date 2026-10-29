@@ -1,0 +1,19 @@
+{
+  "verifiedAt": "2026-10-29T15:05:11.6218336+08:00",
+  "frontendTests": 6,
+  "backendTests": {
+    "integration": 68,
+    "total": 221,
+    "scanner": 69,
+    "core": 84
+  },
+  "browser": {
+    "consoleWarnings": 0,
+    "routes": 6,
+    "replayFrames": 53,
+    "activeNavigationPerRoute": 1,
+    "consoleErrors": 0,
+    "replayObservations": 27307
+  },
+  "productionManualIdentityChanges": 0
+}

@@ -1,0 +1,4 @@
+<script setup lang="ts">
+import PageIntro from '../components/PageIntro.vue'
+const groups=[{title:'行情与信号',text:'用于解释异动，不是买卖指令。',items:[['/forward','连续前瞻观察与每日复盘'],['/strategy-replay','结构策略R1与离线回放'],['/template-library','历史行为样板库'],['/strategy-research','两套策略与历史案例'],['/market','全市场行情'],['/volatility','异动研究'],['/speculative','高异常标的研究'],['/derivatives','衍生品证据']]},{title:'链上与身份',text:'核对归属、覆盖和时间，再解释资金流。',items:[['/onchain','持币分布与标签'],['/flows','资金流与地址核验'],['/mappings','资产身份映射']]},{title:'验证与通知',text:'检查历史一致性、数据质量和通知记录。',items:[['/network','流量与连接'],['/evaluation','历史回放与评估'],['/alerts','通知中心']]}]
+</script><template><PageIntro eyebrow="RESEARCH TOOLS" title="需要解释时，再看细节。" description="这些工具集中收纳。每天优先看工作台、持仓风险和复盘。"/><div class="provider-grid"><section v-for="g in groups" :key="g.title" class="detail"><h2>{{g.title}}</h2><p>{{g.text}}</p><p v-for="i in g.items" :key="i[0]"><RouterLink :to="i[0]!">{{i[1]}} →</RouterLink></p></section></div></template>

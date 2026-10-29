@@ -1,0 +1,9 @@
+import type {Feature} from './types'
+export type AddressLabel={chain:string;address:string;type:number;verified:boolean;evidenceUrl:string;revision:number;updatedAt:string}
+export type ChainBinding={assetId:number;chain:string;contractAddress:string;coinGeckoId:string;enabled:boolean;verified:boolean;revision:number;updatedAt:string;verification:string;evidenceUrls:string[]}
+export type ChainFeatures={trustedIdentity:boolean;chain:string|null;contractAddress:string|null;provider:string|null;bindingRevision:number;returnedHolders:number;holderCount:Feature;holderChange24h:Feature;holderChange24hPercent:Feature;rawTopPercent:Record<string,Feature>;adjustedTop10Percent:Feature;observedExchangePercent:Feature;observedProjectPercent:Feature;classificationCoveragePercent:number;concentrationUsable:boolean;labels:AddressLabel[];caveats:string[]}
+export type ChainSample={id:string;chain:string;contractAddress:string;provider:string;sourceTime:string;receivedTime:string;timeBasis:string;holderCount:number|null;rawTotalSupply:string;decimals:number|null;holders:{address:string;rawBalance:string;percent:number;reportedTag:string}[];requestedCount:number;orderedTopHolders:boolean}
+export type ChainView={binding:ChainBinding;features:ChainFeatures;sample:ChainSample|null;attempt:{lastAttempt:string;nextAttempt:string;error:string|null}|null}
+export const labelNames=['Unknown','Project','Team','Investor','Treasury','Exchange','LP','Bridge','Burn','Whale','Contract']
+export const addressKey=(chain:string,address:string)=>`${chain}:${address.toLowerCase()}`
+export const percentage=(value:number)=>value>0&&value<.01?'<0.01%':`${value.toFixed(2)}%`

@@ -1,0 +1,111 @@
+@page "/"
+@rendermode InteractiveServer
+@implements IAsyncDisposable
+@inject MarketService MarketService
+
+<PageTitle>PulletCryptoRadar · 实时行情</PageTitle>
+<div class="shell">
+<Sidebar />
+<main>
+<header class="topbar"><span>工作台 <span class="slash">/</span> <b>全市场行情</b></span><div class="top-right"><span class="local-badge">LOCAL HOST</span><span>@DateTimeOffset.Now.ToString("yyyy.MM.dd")</span></div></header>
+<div class="content">
+    <div class="page-title"><div><div class="eyebrow">BINANCE · USDⓈ-M PERPETUAL</div><h1>市场，正在发生。</h1><p>实时追踪 USDT 永续合约，观察价格、成交量与历史异常。</p></div><span class="live-pill"><span class="status-dot"></span> @ConnectionLabel</span></div>
+    <div class="stats">
+        <div class="stat"><span>监控合约</span><strong>@_assets.Count<small> USDT 永续</small></strong><div class="stat-foot">仅展示 TRADING 合约</div></div>
+        <div class="stat"><span>价格可用</span><strong>@FreshCount<small> / @_assets.Count</small></strong><div class="stat-foot">源数据距今 ≤ 30 秒</div></div>
+        <div class="stat"><span>特征已就绪</span><strong>@ReadyCount<small> 个合约</small></strong><div class="stat-foot">5m 价格 RZ 与成交量 RZ 可用</div></div>
+        <div class="stat"><span>历史窗口</span><strong>48<small> 小时 / 1m</small></strong><div class="stat-foot">5m · 7 天　15m · 30 天</div></div>
+    </div>
+    <div class="section-heading"><h2>行情总览 <span>@_assets.Count</span></h2><div class="refresh-text">每 2 秒刷新 · @_lastRefresh.ToLocalTime().ToString("HH:mm:ss") <button class="text-button" @onclick="() => _redUp = !_redUp">@(_redUp ? "红涨绿跌" : "绿涨红跌")</button></div></div>
+    <div class="market-panel">
+        <div class="toolbar"><label class="search"><span>⌕</span><input placeholder="搜索合约，例如 BTC、ARIA" aria-label="搜索合约" @bind="_search" @bind:event="oninput" @bind:after="ResetPage" /></label><select aria-label="成交额筛选" @bind="_volumeFilter" @bind:after="ResetPage"><option value="0">全部成交额</option><option value="5000000">24h ≥ $5M</option><option value="50000000">24h ≥ $50M</option></select><label class="checkbox"><input type="checkbox" @bind="_readyOnly" @bind:after="ResetPage" /> 仅已就绪</label><span class="results">@Filtered.Count 个结果</span></div>
+        <div class="table-scroll"><table>
+            <thead><tr>@foreach (var (key, label) in Columns) { <th><button @onclick="() => Sort(key)">@label <span class="sort">@(_sort == key ? _descending ? "↓" : "↑" : "↕")</span></button></th> }<th>数据状态</th></tr></thead>
+            <tbody>
+            @if (_assets.Count == 0) { <tr><td colspan="12" class="empty"><strong>等待 Binance 市场数据</strong><p>首次启动会同步合约并回填历史。连接问题可在下方数据源状态中查看。</p></td></tr> }
+            else if (Filtered.Count == 0) { <tr><td colspan="12" class="empty">没有符合筛选条件的合约。</td></tr> }
+            @foreach (var m in Paged)
+            {
+                <tr class="@(_selected == m.Instrument.AssetId ? "selected" : "")" @key="m.Instrument.AssetId" @onclick="() => _selected = _selected == m.Instrument.AssetId ? null : m.Instrument.AssetId">
+                    <td><div class="symbol-cell"><span class="coin">@m.Instrument.BaseAsset[..Math.Min(2, m.Instrument.BaseAsset.Length)]</span><span><b>@m.Instrument.BaseAsset</b><small>@m.Instrument.Symbol</small></span>@if (m.Features.NewListing) { <span class="new-tag">NEW</span> }</div></td>
+                    <td class="price">@Price(m.Price)</td>
+                    @foreach (var h in new[] { 1, 5, 15, 60, 1440 }) { var f = Return(m, h); <td class="@Color(f)" title="@FeatureTitle(f)">@Percent(f)</td> }
+                    <td>@Money(m.Volume24h)</td><td class="@(m.Features.PriceRobustZ5m.Status == DataStatus.Valid ? "rz" : "muted")" title="@FeatureTitle(m.Features.PriceRobustZ5m)">@Number(m.Features.PriceRobustZ5m)</td><td class="@(m.Features.VolumeRobustZ.Status == DataStatus.Valid ? "rz" : "muted")" title="@FeatureTitle(m.Features.VolumeRobustZ)">@Number(m.Features.VolumeRobustZ)</td>
+                    <td title="价格历史百分位；新上市合约使用横截面 5m 涨跌幅百分位">@Number(m.Features.PricePercentile, true)</td>
+                    <td><span class="data-state @DataState(m).ToLowerInvariant()">@StateLabel(m)</span></td>
+                </tr>
+            }
+            </tbody>
+        </table></div>
+        <div class="table-footer"><span>Unknown：历史不足或统计量未定义；过期值以灰色显示。</span><div><button disabled="@(_page == 0)" @onclick="() => _page--">←</button><span>@(_page + 1) / @PageCount</span><button disabled="@(_page + 1 >= PageCount)" @onclick="() => _page++">→</button></div></div>
+    </div>
+    @if (Selected is { } selected)
+    {
+        <section class="detail"><div class="section-heading"><h2>@selected.Instrument.Symbol <span>数据详情</span></h2><button class="text-button" @onclick="() => _selected = null">收起 ×</button></div><div class="detail-grid">
+            <div><span>标记价格</span><strong>@Price(selected.MarkPrice)</strong></div><div><span>资金费率</span><strong>@(selected.FundingRate is { } rate ? (rate * 100).ToString("0.0000", CultureInfo.InvariantCulture) + "%" : "Unknown")</strong></div>
+            <div><span>历史样本 · 1m / 5m / 15m</span><strong>@selected.MinuteSamples / @selected.FiveMinuteSamples / @selected.FifteenMinuteSamples</strong></div><div><span>价格百分位依据</span><strong>@selected.Features.PercentileBasis</strong></div>
+            <div><span>价格 SourceTime · UTC</span><strong>@Utc(selected.PriceSourceTime)</strong></div><div><span>价格 ReceivedTime · UTC</span><strong>@Utc(selected.PriceReceivedTime)</strong></div><div><span>Funding SourceTime · UTC</span><strong>@Utc(selected.FundingSourceTime)</strong></div><div><span>资产 ID / 映射</span><strong>@selected.Instrument.AssetId · Unknown</strong></div>
+        </div></section>
+    }
+    <section class="providers"><div class="section-heading"><h2>数据源状态</h2><span class="refresh-text">独立健康检查 · UTC</span></div><div class="provider-grid">
+        @if (_health.Count == 0) { <div class="provider"><b>初始化中</b><span>等待后台服务启动</span></div> }
+        @foreach (var h in _health) { <div class="provider"><div><b>@h.Name</b><span class="health @h.Status(DateTimeOffset.UtcNow).ToLowerInvariant()">@h.Status(DateTimeOffset.UtcNow)</span></div><span>最近成功 @Utc(h.LastSuccess) UTC</span><span>错误 @h.ErrorCount · 延迟 @(h.LatencyMs?.ToString("0") ?? "—") ms</span>@if (h.Error is not null) { <p class="provider-error">@h.Error</p> }</div> }
+    </div></section>
+    <footer>PulletCryptoRadar <span>v1.0 · Phase 0–4</span><span>行情与统计特征仅供研究观察</span></footer>
+</div>
+</main>
+</div>
+
+@code {
+    private IReadOnlyList<MarketView> _assets = [];
+    private IReadOnlyList<ProviderHealth> _health = [];
+    private string _search = "", _sort = "volume";
+    private decimal _volumeFilter;
+    private bool _descending = true, _readyOnly, _redUp;
+    private int _page;
+    private int? _selected;
+    private DateTimeOffset _lastRefresh;
+    private readonly CancellationTokenSource _cts = new();
+    private Task? _refreshTask;
+    private static readonly (string, string)[] Columns = [("symbol", "合约"), ("price", "价格 / USDT"), ("1", "1m"), ("5", "5m"), ("15", "15m"), ("60", "1h"), ("1440", "24h"), ("volume", "24h 成交额"), ("priceZ", "价格 RZ · 5m"), ("volumeZ", "成交量 RZ · 5m"), ("percentile", "价格分位")];
+    private int FreshCount => _assets.Count(m => m.Price is not null && DateTimeOffset.UtcNow - m.PriceSourceTime <= TimeSpan.FromSeconds(30));
+    private int ReadyCount => _assets.Count(IsReady);
+    private string ConnectionLabel => _health.FirstOrDefault(x => x.Name == "Binance WebSocket")?.Status(DateTimeOffset.UtcNow) == "Healthy" ? "实时连接" : "连接检查中";
+    private static bool IsReady(MarketView m) => m.Features.PriceRobustZ5m.Status == DataStatus.Valid && m.Features.VolumeRobustZ.Status == DataStatus.Valid;
+    private MarketView? Selected => _assets.FirstOrDefault(x => x.Instrument.AssetId == _selected);
+    private List<MarketView> Filtered
+    {
+        get
+        {
+            var query = _assets.Where(m => m.Instrument.Symbol.Contains(_search.Trim(), StringComparison.OrdinalIgnoreCase) && (_volumeFilter == 0 || m.Volume24h >= _volumeFilter) && (!_readyOnly || IsReady(m)));
+            if (_sort == "symbol") return (_descending ? query.OrderByDescending(m => m.Instrument.Symbol) : query.OrderBy(m => m.Instrument.Symbol)).ToList();
+            return (_descending ? query.OrderBy(m => SortValue(m) is null).ThenByDescending(SortValue) : query.OrderBy(m => SortValue(m) is null).ThenBy(SortValue)).ToList();
+        }
+    }
+    private decimal? SortValue(MarketView m) => _sort switch { "price" => m.Price, "volume" => m.Volume24h,
+        "priceZ" => (decimal?)m.Features.PriceRobustZ5m.Value, "volumeZ" => (decimal?)m.Features.VolumeRobustZ.Value,
+        "percentile" => (decimal?)m.Features.PricePercentile.Value, _ => Return(m, int.Parse(_sort)).Value };
+    private int PageCount => Math.Max(1, (Filtered.Count + 49) / 50);
+    private IEnumerable<MarketView> Paged => Filtered.Skip(Math.Min(_page, PageCount - 1) * 50).Take(50);
+    private void Sort(string key) { if (_sort == key) _descending = !_descending; else { _sort = key; _descending = key != "symbol"; } ResetPage(); }
+    private void ResetPage() => _page = 0;
+    protected override void OnInitialized() { Refresh(); _refreshTask = RefreshLoop(); }
+    private void Refresh() { _assets = MarketService.GetAssets(); _health = MarketService.GetHealth(); _lastRefresh = DateTimeOffset.UtcNow; }
+    private async Task RefreshLoop()
+    {
+        using var timer = new PeriodicTimer(TimeSpan.FromSeconds(2));
+        try { while (await timer.WaitForNextTickAsync(_cts.Token)) await InvokeAsync(() => { Refresh(); StateHasChanged(); }); }
+        catch (OperationCanceledException) { }
+    }
+    private static FeatureValue<decimal> Return(MarketView m, int h) => m.Features.Returns.GetValueOrDefault(h) ?? FeatureValue<decimal>.Missing();
+    private string Color(FeatureValue<decimal> f) => f.Status != DataStatus.Valid ? "muted" : f.Value > 0 ? _redUp ? "negative" : "positive" : f.Value < 0 ? _redUp ? "positive" : "negative" : "muted";
+    private static string Percent(FeatureValue<decimal> f) => f.Value is null ? "Unknown" : f.Value.Value.ToString("+0.00;-0.00;0.00", CultureInfo.InvariantCulture) + "%";
+    private static string Number(FeatureValue<double> f, bool percent = false) => f.Value is null ? "Unknown" : f.Value.Value.ToString("0.00", CultureInfo.InvariantCulture) + (percent ? "%" : "");
+    private static string Price(decimal? p) => p?.ToString("0.########", CultureInfo.InvariantCulture) ?? "Unknown";
+    private static string Money(decimal? v) => v is null ? "Unknown" : v >= 1000000000 ? "$" + (v.Value / 1000000000).ToString("0.00") + "B" : v >= 1000000 ? "$" + (v.Value / 1000000).ToString("0.00") + "M" : "$" + v.Value.ToString("N0");
+    private static string Utc(DateTimeOffset? t) => t?.UtcDateTime.ToString("MM-dd HH:mm:ss") ?? "Unknown";
+    private static string FeatureTitle<T>(FeatureValue<T> f) where T : struct => $"{f.Status} · {f.Source} · UTC {Utc(f.SourceTime)}";
+    private static string DataState(MarketView m) => m.PriceSourceTime is null ? "Missing" : DateTimeOffset.UtcNow - m.PriceSourceTime > TimeSpan.FromSeconds(30) ? "Stale" : IsReady(m) ? "Valid" : "Warming";
+    private static string StateLabel(MarketView m) => DataState(m) switch { "Missing" => "等待数据", "Stale" => "已过期", "Valid" => "已就绪", _ => "预热中" };
+    public async ValueTask DisposeAsync() { await _cts.CancelAsync(); if (_refreshTask is not null) await _refreshTask; _cts.Dispose(); }
+}

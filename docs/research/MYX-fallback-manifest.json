@@ -1,0 +1,8 @@
+{
+  "symbol": "MYXUSDT",
+  "note": "Gate MYX_USDT failed; venue kept separate",
+  "rawFile": "MYXUSDT-Binance-1d-raw.json",
+  "rows": 499,
+  "source": "Binance futures 1d",
+  "retrieved": "2026-10-29T18:08:33+08:00"
+}

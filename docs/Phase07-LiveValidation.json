@@ -1,0 +1,83 @@
+{
+  "time": "2026-10-29T15:02:48.5158370+08:00",
+  "health": {
+    "application": "PulletCryptoRadar",
+    "status": "Ready",
+    "version": "1.0",
+    "phase": "0-7",
+    "frontend": "Vue 3"
+  },
+  "catalog": {
+    "catalogReceivedTime": "2026-10-29T14:59:50.5695479+08:00",
+    "catalogCount": 22565,
+    "apiKeyConfigured": false
+  },
+  "assets": 522,
+  "states": [
+    {
+      "Name": "0",
+      "Count": 13
+    },
+    {
+      "Name": "1",
+      "Count": 275
+    },
+    {
+      "Name": "2",
+      "Count": 234
+    }
+  ],
+  "validCapital": 272,
+  "trusted": 0,
+  "btcCandidates": 13,
+  "unconfirmedPutStatus": 400,
+  "unknownApiStatus": 404,
+  "audit": [
+    {
+      "Name": "Match",
+      "Count": 97
+    },
+    {
+      "Name": "MissingInput",
+      "Count": 3
+    }
+  ],
+  "routes": [
+    {
+      "blazor": false,
+      "vue": true,
+      "status": 200,
+      "route": "/"
+    },
+    {
+      "blazor": false,
+      "vue": true,
+      "status": 200,
+      "route": "/volatility"
+    },
+    {
+      "blazor": false,
+      "vue": true,
+      "status": 200,
+      "route": "/alerts"
+    },
+    {
+      "blazor": false,
+      "vue": true,
+      "status": 200,
+      "route": "/derivatives"
+    },
+    {
+      "blazor": false,
+      "vue": true,
+      "status": 200,
+      "route": "/evaluation"
+    },
+    {
+      "blazor": false,
+      "vue": true,
+      "status": 200,
+      "route": "/mappings"
+    }
+  ]
+}

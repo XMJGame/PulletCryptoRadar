@@ -1,0 +1,29 @@
+{
+  "cases": 20,
+  "trb": "TRBUSDT",
+  "priceRows": 145,
+  "oiRows": 33596.0,
+  "fundingRows": 37,
+  "markRows": 145,
+  "unknownStatus": 404,
+  "invalidKey": 404,
+  "paperCash": 1000,
+  "paperEnabled": false,
+  "trades": 0,
+  "researchTests": 11,
+  "backendTests": 318,
+  "frontendTests": 21,
+  "controlFilterRows": 8,
+  "ui": {
+    "navItems": 4,
+    "consoleErrors": 0,
+    "horizontalOverflow": false,
+    "caseSwitch": "TRB/YFI"
+  },
+  "verifiedFiles": 300,
+  "missingFiles": 4,
+  "hourlyRows": 56703.0,
+  "actualFundingRows": 12526.0,
+  "crashChartVerified": "ACT peak 2025-03-25T18:00:00Z and crash 2025-04-01T10:00:00Z both covered",
+  "validatedAt": "2026-10-29T18:48:10.8172461+08:00"
+}

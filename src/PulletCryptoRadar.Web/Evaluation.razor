@@ -1,0 +1,78 @@
+@page "/evaluation"
+@rendermode InteractiveServer
+@inject EvaluationService Service
+
+<PageTitle>PulletCryptoRadar · 回放与评估</PageTitle>
+<div class="shell"><Sidebar /><main><header class="topbar"><span>工作台 <span class="slash">/</span><b>回放与评估</b></span><a href="/volatility">查看异动雷达 →</a></header><div class="content">
+    <div class="page-title"><div><div class="eyebrow">MEASURE THE SIGNAL</div><h1>发现之后，市场怎样走？</h1><p>保存当时的判断，等待完整的结果；把证据与未知都留下。</p></div><button class="replay-action" disabled="@_busy" @onclick="Refresh">@(_busy ? "处理中…" : "更新评估")</button></div>
+    @if (_error is not null) { <p class="radar-notice" role="alert">@_error</p> }
+    <p class="radar-notice">窗口为信号后首个 5m 开盘至随后 24h。未到期、入口缺失和中途缺口不会算作失败。这里衡量研究信号，不代表可成交收益或交易胜率。系统每小时更新，也可手动刷新。</p>
+    <div class="stats"><div class="stat"><span>Episode 首次信号</span><strong>@(_report?.Signals.Count(s => !s.Signal.IsNotification) ?? 0)</strong><div class="stat-foot">按 Episode 去重 · 不按每次涨分重复计数</div></div><div class="stat"><span>完整 24h 样本</span><strong>@Complete.Length</strong><div class="stat-foot">288 根连续闭合 5m K 线</div></div><div class="stat"><span>待完成 / 缺失</span><strong>@(_report?.Signals.Count(s => s.Status != EvaluationStatus.Complete) ?? 0)</strong><div class="stat-foot">保留 Unknown，继续等待历史</div></div><div class="stat"><span>完整样本平均 MFE / MAE</span><strong class="regime">@Average(true) / @Average(false)</strong><div class="stat-foot">方向性百分数 · 均为非负幅度</div></div></div>
+    <div class="section-heading"><h2>24h 信号追踪</h2><span class="refresh-text">@(_report is null ? "等待首次评估" : $"更新 {_report.AsOf.ToLocalTime():MM-dd HH:mm:ss} · {_report.Version}")</span></div>
+    @if (_report?.SignalsTruncated == true) { <p class="radar-notice">记录达到本轮上限，Precision 与 Recall 暂不计算。请缩短 Evaluation.LookbackDays 或调整上限后重新评估。</p> }
+    <div class="market-panel"><div class="toolbar"><label class="search"><input aria-label="搜索评估合约" placeholder="搜索合约" @bind="_search" @bind:event="oninput" @bind:after="ResetPage" /></label><label class="checkbox"><input type="checkbox" @bind="_notificationsOnly" @bind:after="ResetPage" /> 仅通知预留记录</label><span class="results">@Filtered.Count 个结果 · 每页 20 条</span></div><div class="table-scroll"><table><thead><tr><th>合约 / 来源</th><th>信号时间 · 本地</th><th>方向</th><th>状态 / 覆盖</th><th>MFE</th><th>MAE</th><th>Hit20 / 50</th><th>Drop20 / 30</th><th>Lead · pp</th></tr></thead><tbody>
+        @foreach (var e in Filtered.Skip(Math.Min(_page, Pages - 1) * 20).Take(20))
+        {
+            <tr title="@e.Reason" @onclick="() => _selected = e"><td>@e.Signal.Symbol <small>@(e.Signal.IsNotification ? "通知预留" : "首次信号")</small></td><td>@e.Signal.Time.ToLocalTime().ToString("MM-dd HH:mm:ss")</td><td>@(e.Signal.Direction == MoveDirection.Up ? "上涨" : "下跌")</td><td>@Status(e.Status) · @e.ObservedBars/@e.ExpectedBars</td><td>@Pct(e.Mfe)@(e.Status == EvaluationStatus.Complete ? "" : "*")</td><td>@Pct(e.Mae)@(e.Status == EvaluationStatus.Complete ? "" : "*")</td><td>@Flag(e.Hit20) / @Flag(e.Hit50)</td><td>@Flag(e.Drop20) / @Flag(e.Drop30)</td><td>@Number(e.Signal.Direction == MoveDirection.Up ? e.CaptureLead : e.CrashLead)</td></tr>
+        }
+        @if (Filtered.Count == 0) { <tr><td colspan="9" class="empty">还没有符合条件的首次信号。不会注入模拟事件或用空样本报告 0% 准确率。</td></tr> }
+    </tbody></table></div><div class="table-footer"><span>* 仅已观测区间的临时极值，不能与完整 24h 样本直接比较。点击查看入口及版本。</span><div><button disabled="@(_page == 0)" @onclick="() => _page--">←</button><span>@(Math.Min(_page + 1, Pages)) / @Pages</span><button disabled="@(_page + 1 >= Pages)" @onclick="() => _page++">→</button></div></div></div>
+    @if (_selected is { } selected)
+    {
+        <section class="detail"><div class="section-heading"><h2>@selected.Signal.Symbol · 评估详情</h2><button class="text-button" @onclick="() => _selected = null">收起 ×</button></div><div class="detail-grid"><div><span>信号时刻价格</span><strong>@Price(selected.Signal.Price)</strong></div><div><span>评估入口 · 下一 5m Open</span><strong>@Price(selected.EntryPrice)</strong><small>UTC @selected.EntryTime?.ToUniversalTime().ToString("O")</small></div><div><span>窗口结束</span><strong>@selected.WindowEnd?.ToLocalTime().ToString("MM-dd HH:mm:ss")</strong></div><div><span>策略版本</span><strong>@selected.Signal.StrategyVersion</strong></div><div><span>冻结的 Lead 参考价</span><strong>@Price(selected.Signal.ReferencePrice)</strong></div><div><span>CaptureLead / CrashLead · pp</span><strong>@Number(selected.CaptureLead) / @Number(selected.CrashLead)</strong></div></div><p>@selected.Reason</p><p>@selected.Signal.Key</p></section>
+    }
+    <div class="section-heading radar-heading"><h2>Precision@K 与极端行情召回</h2><span class="refresh-text">上海日期 · 上下行分别统计</span></div>
+    <div class="market-panel"><div class="table-scroll"><table><thead><tr><th>日期</th><th>方向</th><th>指标</th><th>分子 / 分母</th><th>结果</th><th>覆盖</th></tr></thead><tbody>
+        @foreach (var p in _report?.Precision ?? []) { <tr><td>@p.Date</td><td>@p.Direction</td><td>Precision@@@p.K</td><td>@p.Hits / @p.Selected</td><td>@Pct(p.Percent)</td><td>成熟 @p.Completed/@p.Selected</td></tr> }
+        @foreach (var r in _report?.Recall ?? []) { <tr><td>@r.Date</td><td>@r.Direction</td><td>ExtremeMoveRecall</td><td>@r.CapturedAssets / @r.ExtremeAssets</td><td>@Pct(r.Percent)</td><td>价格 @r.CoveredAssets/@r.ExpectedAssets · 扫描@(r.ScanCoverageComplete ? "整日连续" : "不足整日")</td></tr> }
+        @if ((_report?.Precision.Count ?? 0) + (_report?.Recall.Count ?? 0) == 0) { <tr><td colspan="6" class="empty">尚无完整统计日期或通知样本。Unknown 不代表 0%。</td></tr> }
+    </tbody></table></div></div>
+    <div class="section-heading radar-heading"><h2>按历史顺序回放</h2><span class="refresh-text">快照 @_availability?.Frames 个 · 事件输入 @_availability?.EventInputs 个</span></div>
+    <p class="radar-notice">完整快照从 Phase 6 开始保存，默认保留 7 天。回放复用生产检测器、Episode 与通知策略，预算从空状态开始；历史特征不会用现在的行情重算。此操作不会发送 Windows 通知。</p>
+    <div class="market-panel"><div class="toolbar replay-controls"><label>开始 · 本地<input type="datetime-local" aria-label="回放开始时间" @bind="_from" /></label><label>结束 · 本地<input type="datetime-local" aria-label="回放结束时间" @bind="_to" /></label><label>跟踪合约<input aria-label="回放跟踪合约" @bind="_symbol" /></label><button class="replay-action" disabled="@_busy" @onclick="Replay">运行回放</button><button class="replay-action" disabled="@_busy" @onclick="Audit">复核历史事件</button></div><div class="table-footer"><span>UTC 可用范围：@_availability?.First?.ToUniversalTime().ToString("MM-dd HH:mm:ss") → @_availability?.Last?.ToUniversalTime().ToString("MM-dd HH:mm:ss")。每次最多 6 小时 / 360 个快照；全市场参与评分，仅表格跟踪指定合约。</span></div></div>
+    @if (_replay is { } replay)
+    {
+        <section class="detail"><h2>回放完成 · @replay.Frames 个快照 / @replay.Observations 个合约观测</h2><p>缺口 @replay.GapCount · 新建 Episode @replay.Signals.Count(s => !s.IsNotification) · 模拟通知 @replay.SimulatedNotifications.Count</p><p>@replay.Note</p></section>
+        @if (replay.Coverage.Count > 0) { <p class="radar-notice">每帧合约数 @replay.Coverage.Min(c => c.Assets)～@replay.Coverage.Max(c => c.Assets)；新鲜价格数 @replay.Coverage.Min(c => c.FreshPrices)～@replay.Coverage.Max(c => c.FreshPrices)。预热或覆盖不完整的帧按原记录保留，不用后来的数据补齐。</p> }
+        <div class="market-panel"><div class="table-scroll"><table><thead><tr><th>时间 · 本地</th><th>合约</th><th>价格</th><th>上涨评分 / 阶段</th><th>下跌评分 / 阶段</th><th>置信度 Up / Down</th><th>策略</th></tr></thead><tbody>
+            @foreach (var p in replay.Trace.TakeLast(100)) { <tr><td>@p.Time.ToLocalTime().ToString("MM-dd HH:mm:ss")</td><td>@p.Symbol</td><td>@Price(p.Price)</td><td>@(p.Up.Score?.ToString("0.0") ?? "Unknown") · @p.Up.Stage</td><td>@(p.Down.Score?.ToString("0.0") ?? "Unknown") · @p.Down.Stage</td><td>@p.Up.DataConfidence / @p.Down.DataConfidence</td><td>@p.Up.StrategyVersion</td></tr> }
+            @if (replay.Trace.Count == 0) { <tr><td colspan="7" class="empty">此区间暂无所选合约的扫描快照。请使用可用范围重新选择。</td></tr> }
+        </tbody></table></div></div>
+    }
+    @if (_audit is { } audit)
+    {
+        <section class="detail"><h2>事件复核 · @audit.Count 条</h2><p>一致 @audit.Count(a => a.Status == "Match") · 差异 @audit.Count(a => a.Status == "Mismatch") · 无法复核 @audit.Count(a => a.Status is not ("Match" or "Mismatch"))。事件复核不是连续行情回测。</p></section>
+        <div class="market-panel"><div class="table-scroll"><table><thead><tr><th>时间 · 本地</th><th>合约</th><th>原评分</th><th>复算评分</th><th>结果</th><th>说明 · 最近 20 条</th></tr></thead><tbody>@foreach (var a in audit.Take(20)) { <tr><td>@a.Time.ToLocalTime().ToString("MM-dd HH:mm:ss")</td><td>@a.Symbol</td><td>@a.SavedScore?.ToString("0.0")</td><td>@a.ReplayedScore?.ToString("0.0")</td><td>@a.Status</td><td class="decision-reason">@a.Reason · @a.StrategyVersion</td></tr> }</tbody></table></div></div>
+    }
+    <details class="detail"><summary>指标口径与限制</summary><p>@(_report?.Methodology ?? SignalEvaluationEngine.Methodology)</p><p>Hit20/50 是从研究入口的最大上涨 ≥20%/50%；Drop20/30 是最大下跌 ≥20%/30%。Recall 上涨极端阈值为 +50%、下跌为 -30%；信号须早于首次越线 K 线的开始，且发现时涨跌尚未达到 ±20%。价格历史不足的合约单列覆盖，不能把局部集合的召回率声称为全市场召回率。</p><p>按时间分开训练、验证和测试；当前没有自动调参，也没有机器学习。回放起点之前的 Episode 和预算不会推测恢复。</p></details>
+    <footer>PulletCryptoRadar <span>v1.0 · Phase 6</span><span>只读市场研究 · 结果需要完整样本</span></footer>
+</div></main></div>
+
+@code {
+    private EvaluationReport? _report;
+    private ReplayAvailability? _availability;
+    private ReplayResult? _replay;
+    private IReadOnlyList<ReplayAuditResult>? _audit;
+    private SignalEvaluation? _selected;
+    private bool _busy, _notificationsOnly;
+    private int _page;
+    private int Pages => Math.Max(1, (Filtered.Count + 19) / 20);
+    private void ResetPage() => _page = 0;
+    private string? _error;
+    private string _search = "", _symbol = "ARIAUSDT";
+    private DateTime _from = DateTime.Now.AddHours(-1), _to = DateTime.Now;
+    private SignalEvaluation[] Complete => (_report?.Signals ?? []).Where(s => !s.Signal.IsNotification && s.Status == EvaluationStatus.Complete).ToArray();
+    private List<SignalEvaluation> Filtered => (_report?.Signals ?? []).Where(e => e.Signal.Symbol.Contains(_search.Trim(), StringComparison.OrdinalIgnoreCase)
+        && (!_notificationsOnly || e.Signal.IsNotification)).OrderByDescending(e => e.Signal.Time).ToList();
+    protected override void OnInitialized() { _report = Service.GetLatest(); _availability = Service.GetAvailability(); }
+    private static string Status(EvaluationStatus s) => s switch { EvaluationStatus.Complete => "完整", EvaluationStatus.Pending => "观察中", EvaluationStatus.Incomplete => "有缺口", _ => "入口缺失" };
+    private static string Number(decimal? n) => n?.ToString("0.00", CultureInfo.InvariantCulture) ?? "Unknown";
+    private static string Price(decimal? n) => n?.ToString("G12", CultureInfo.InvariantCulture) ?? "Unknown";
+    private static string Pct(decimal? n) => n is null ? "Unknown" : Number(n) + "%";
+    private static string Flag(bool? b) => b is null ? "?" : b.Value ? "是" : "否";
+    private string Average(bool favorable) => Complete.Length == 0 ? "Unknown" : Pct(Complete.Average(e => favorable ? e.Mfe : e.Mae));
+    private async Task Run(Func<Task> work) { _busy = true; _error = null; try { await work(); _availability = Service.GetAvailability(); } catch (Exception ex) { _error = ex.Message; } finally { _busy = false; } }
+    private Task Refresh() => Run(async () => { _report = await Service.RefreshAsync(CancellationToken.None); });
+    private Task Audit() => Run(async () => { _audit = await Task.Run(() => Service.Audit(100)); });
+    private Task Replay() => Run(async () => { _replay = await Service.ReplayAsync(new(new DateTimeOffset(_from), new DateTimeOffset(_to), _symbol.Trim().ToUpperInvariant()), CancellationToken.None); });
+}

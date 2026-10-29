@@ -1,0 +1,66 @@
+@page "/alerts"
+@rendermode InteractiveServer
+@implements IAsyncDisposable
+@inject AlertService Service
+
+<PageTitle>PulletCryptoRadar · 通知中心</PageTitle>
+<div class="shell"><Sidebar /><main><header class="topbar"><span>工作台 <span class="slash">/</span><b>通知中心</b></span><a href="/volatility">查看异动雷达 →</a></header>
+<div class="content">
+    <div class="page-title"><div><div class="eyebrow">SIGNAL ≠ NOTIFICATION</div><h1>少一点打扰，多一点依据。</h1><p>每条提醒经过数据门槛、风险过滤、竞争排名和持久化去重。</p></div><span class="live-pill">@(_policy is null ? "等待首轮策略评估" : $"策略更新 {_policy.AsOf.ToLocalTime():HH:mm:ss}")</span></div>
+    <p class="radar-notice">普通 A 级通知仍要求至少 70 的置信度。V2 按实际可用的 OI、Taker 等证据计算完整度；基础模型上限仍为 60，不降低门槛制造通知。Submitted 表示 Windows 已接收，不表示用户已经看见。</p>
+    @if (_policy is { } p)
+    {
+        <div class="stats"><div class="stat"><span>普通通知 · 今日已预留</span><strong>@p.DailyUsed<small> / @p.DailyLimit</small></strong><div class="stat-foot">@p.BudgetDate · 上海时间每日重置</div></div>
+            <div class="stat"><span>窗口内新标的</span><strong>@p.WindowAssetsUsed<small> / @p.WindowAssetLimit</small></strong><div class="stat-foot">默认滚动 30 分钟，保留竞争名额</div></div>
+            <div class="stat"><span>Windows Toast</span><strong class="regime">@(p.ToastEnabled ? "已启用" : "已关闭")</strong><div class="stat-foot">应用配置 · 实际提交状态见记录</div></div>
+            <div class="stat"><span>本轮 A/S 级信号</span><strong>@p.Decisions.Count(d => d.Grade is SignalGrade.A or SignalGrade.S)</strong><div class="stat-foot">按证据等级分类，高分不等于通知</div></div></div>
+        <div class="section-heading"><h2>策略评估</h2><span class="refresh-text">@p.PolicyVersion · @(_policy is not null && DateTimeOffset.UtcNow - p.AsOf > TimeSpan.FromMinutes(3) ? "快照已过期" : "读取最新已保存策略")</span></div>
+        <div class="market-panel"><div class="toolbar"><label class="search"><input aria-label="搜索通知评估合约" placeholder="搜索合约或拦截原因" @bind="_search" @bind:event="oninput" @bind:after="ResetPage" /></label>
+            <select aria-label="信号等级筛选" @bind="_grade" @bind:after="ResetPage"><option value="all">全部等级</option><option value="S">S</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="Unknown">Unknown</option></select><span class="results">@Decisions.Count 条</span></div>
+            <div class="table-scroll"><table><thead><tr><th>合约</th><th>方向</th><th>等级</th><th>分数</th><th>置信度</th><th>阶段</th><th>通知策略结果</th></tr></thead><tbody>
+                @foreach (var d in PageDecisions) { <tr><td>@d.Symbol</td><td>@d.Direction</td><td><span class="grade grade-@d.Grade.ToString().ToLowerInvariant()">@d.Grade</span></td><td>@(d.Score?.ToString("0.0") ?? "Unknown")</td><td>@d.Confidence</td><td>@d.Stage</td><td class="decision-reason">@d.Reason</td></tr> }
+                @if (Decisions.Count == 0) { <tr><td colspan="7" class="empty">暂无符合条件的评估。</td></tr> }
+            </tbody></table></div><div class="table-footer"><span>等级同时检查分数、置信度与独立特征家族。</span><div><button disabled="@(_page == 0)" @onclick="() => _page--">←</button><span>@(Math.Min(_page + 1, PageCount)) / @PageCount</span><button disabled="@(_page + 1 >= PageCount)" @onclick="() => _page++">→</button></div></div>
+        </div>
+    }
+    else { <div class="detail empty">等待雷达完成第一次有效扫描，然后评估通知条件。</div> }
+    <div class="section-heading radar-heading"><h2>通知记录</h2><button class="text-button" @onclick="Refresh">刷新记录</button></div>
+    @if (_error is not null) { <p class="provider-error">@_error</p> }
+    <div class="market-panel table-scroll"><table><thead><tr><th>创建时间 · 本地</th><th>类型</th><th>标题</th><th>状态</th><th>说明</th></tr></thead><tbody>
+        @foreach (var n in _notifications) { <tr><td>@n.CreatedAt.ToLocalTime().ToString("MM-dd HH:mm:ss")</td><td>@n.Kind</td><td class="decision-reason">@n.Title</td><td>@n.Status</td><td class="decision-reason">@(n.Error ?? (n.Status == NotificationStatus.Submitted ? "Windows 已接收；专注模式或系统设置可能影响显示" : n.Body))</td></tr> }
+        @if (_notifications.Count == 0) { <tr><td colspan="5" class="empty">尚无通知记录。没有符合条件的信号时保持安静。</td></tr> }
+    </tbody></table></div>
+    <details class="detail"><summary>等级和通知规则</summary><p>S：分数 ≥92、置信度 ≥80、至少 4 个独立家族且风险低；A：上涨 ≥82 / 下跌 ≥75、置信度 ≥70、至少 3 个家族。高分但证据不足降至 B，70 分以下为 C，数据无效为 Unknown。</p><p>普通通知每日最多 5 条；滚动 30 分钟最多 2 个新标的。默认先等待 60 秒参与竞争，同 Episode 最多 2 次，第二次需明显升级。过热上涨不会被当作新机会提醒。</p><p>系统性行情按同一市场事件合并，不占普通预算。通知提交失败、关闭、过期或结果未知仍保留已预留额度和去重记录，防止重试刷屏。配置位于 appsettings.json 的 Alert 节，修改后重启生效。</p></details>
+    <footer>PulletCryptoRadar <span>v1.0 · Phase 4</span><span>研究预警 · 本地 Windows 通知</span></footer>
+</div></main></div>
+
+@code {
+    private AlertPolicySnapshot? _policy;
+    private IReadOnlyList<NotificationRecord> _notifications = [];
+    private readonly CancellationTokenSource _cts = new();
+    private Task? _loop;
+    private string _search = "", _grade = "all";
+    private string? _error;
+    private int _page;
+    private List<AlertDecision> Decisions => (_policy?.Decisions ?? [])
+        .Where(d => (_grade == "all" || d.Grade.ToString() == _grade) && (d.Symbol.Contains(_search.Trim(), StringComparison.OrdinalIgnoreCase) || d.Reason.Contains(_search.Trim(), StringComparison.OrdinalIgnoreCase)))
+        .OrderByDescending(d => d.Grade).ThenByDescending(d => d.Score).ToList();
+    private int PageCount => Math.Max(1, (Decisions.Count + 29) / 30);
+    private IEnumerable<AlertDecision> PageDecisions => Decisions.Skip(Math.Min(_page, PageCount - 1) * 30).Take(30);
+    private void ResetPage() => _page = 0;
+    protected override async Task OnInitializedAsync() { await Refresh(); _loop = RefreshLoop(); }
+    private async Task Refresh()
+    {
+        _policy = Service.GetSnapshot();
+        try { _notifications = await Service.GetNotificationsAsync(50, _cts.Token); _error = null; }
+        catch (OperationCanceledException) when (_cts.IsCancellationRequested) { }
+        catch (Exception) { _error = "通知记录暂时不可用，请稍后刷新。"; }
+    }
+    private async Task RefreshLoop()
+    {
+        using var timer = new PeriodicTimer(TimeSpan.FromSeconds(5));
+        try { while (await timer.WaitForNextTickAsync(_cts.Token)) await InvokeAsync(async () => { await Refresh(); StateHasChanged(); }); }
+        catch (OperationCanceledException) { }
+    }
+    public async ValueTask DisposeAsync() { await _cts.CancelAsync(); if (_loop is not null) await _loop; _cts.Dispose(); }
+}

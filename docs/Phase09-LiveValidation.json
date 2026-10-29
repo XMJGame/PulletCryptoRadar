@@ -1,0 +1,121 @@
+{
+  "Time": "2026-10-29T16:05:23.2341359+08:00",
+  "Health": {
+    "application": "PulletCryptoRadar",
+    "status": "Ready",
+    "version": "1.0",
+    "phase": "0-9",
+    "frontend": "Vue 3"
+  },
+  "Watch": [
+    {
+      "config": {
+        "assetId": 392,
+        "enabled": true,
+        "costPrice": 0.4,
+        "targetPrice": null,
+        "attentionPrice": null,
+        "supportPrice": null,
+        "resistancePrice": null,
+        "enableAlerts": false,
+        "wallets": [],
+        "revision": 1,
+        "createdAt": "2026-10-29T16:01:19.8745817+08:00",
+        "updatedAt": "2026-10-29T16:01:19.8745817+08:00",
+        "isSpecificationExample": true
+      },
+      "result": {
+        "version": "WatchTower-1.0",
+        "asOf": "2026-10-29T16:05:08.553821+08:00",
+        "assetId": 392,
+        "symbol": "ARIAUSDT",
+        "exchange": "Binance",
+        "nativeSymbol": "ARIAUSDT",
+        "status": 0,
+        "price": {
+          "value": 0.08703,
+          "status": 0,
+          "sourceTime": "2026-10-29T16:05:08.199+08:00",
+          "source": "Binance USDT perpetual (USD proxy)"
+        },
+        "costReturnPercent": -78.2425,
+        "toCostPercent": 359.6116281741928,
+        "trend": "Unknown",
+        "currentStage": "Observing",
+        "state": 0,
+        "risk": 0,
+        "confidence": 30,
+        "trendScore": null,
+        "derivativeScore": null,
+        "onChainScore": null,
+        "walletRiskScore": null,
+        "crowdingRisk": null,
+        "positiveReasons": [],
+        "riskReasons": [
+          "尚不能给出整体低风险结论：链上与钱包风险未知"
+        ],
+        "missingEvidence": [
+          "OnChainScore / Holder / 筹码集中度尚未采集",
+          "WalletRiskScore / 项目钱包 / 交易所流入尚未采集",
+          "本交易所 1h 收益缺失或过期，趋势保持 Unknown",
+          "本交易所 15m OI 变化未知",
+          "标准化 Funding 与多头拥挤数据未知"
+        ],
+        "nextTriggers": [
+          "可配置关注价、目标价、支撑或压力；目前继续等待同交易所趋势与 OI 确认",
+          "补齐资产身份、链上与钱包证据；状态仅用于研究观察，不执行交易"
+        ]
+      }
+    }
+  ],
+  "HistoryAudit": [
+    {
+      "asOf": "2026-10-29T16:05:08.553821+08:00",
+      "assetId": 392,
+      "status": "Match",
+      "reason": "使用冻结输入与参数；不读取现在的行情"
+    },
+    {
+      "asOf": "2026-10-29T16:04:53.5415479+08:00",
+      "assetId": 392,
+      "status": "Match",
+      "reason": "使用冻结输入与参数；不读取现在的行情"
+    },
+    {
+      "asOf": "2026-10-29T16:04:38.4677947+08:00",
+      "assetId": 392,
+      "status": "Match",
+      "reason": "使用冻结输入与参数；不读取现在的行情"
+    },
+    {
+      "asOf": "2026-10-29T16:03:05.265211+08:00",
+      "assetId": 392,
+      "status": "Match",
+      "reason": "使用冻结输入与参数；不读取现在的行情"
+    },
+    {
+      "asOf": "2026-10-29T16:02:05.2192738+08:00",
+      "assetId": 392,
+      "status": "Match",
+      "reason": "使用冻结输入与参数；不读取现在的行情"
+    },
+    {
+      "asOf": "2026-10-29T16:01:19.8745817+08:00",
+      "assetId": 392,
+      "status": "Match",
+      "reason": "使用冻结输入与参数；不读取现在的行情"
+    }
+  ],
+  "PersonalNotices": 0,
+  "LegacyAudit": [
+    {
+      "Name": "Match",
+      "Count": 100
+    }
+  ],
+  "InvalidSupportPutStatus": 400,
+  "InvalidSupportPutBody": "支撑价必须低于压力价",
+  "FrontendInvalidCost": "价格须为大于 0 的十进制数，未配置请留空",
+  "BackendTests": 258,
+  "FrontendTests": 11
+}

@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\PulletCryptoRadar.Infrastructure\PulletCryptoRadar.Infrastructure.csproj" />
+    <ProjectReference Include="..\PulletCryptoRadar.Providers.Binance\PulletCryptoRadar.Providers.Binance.csproj" />
+    <ProjectReference Include="..\PulletCryptoRadar.Providers.Market\PulletCryptoRadar.Providers.Market.csproj" />
+    <ProjectReference Include="..\PulletCryptoRadar.Providers.OnChain\PulletCryptoRadar.Providers.OnChain.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup><AssemblyName>PulletCryptoRadar</AssemblyName></PropertyGroup>
+  <ItemGroup>
+    <Content Remove="Components\**\*.razor" />
+    <RazorComponent Remove="Components\**\*.razor" />
+  </ItemGroup>
+  <ItemGroup><Content Include="Notifications\Show-Toast.ps1" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" /></ItemGroup>
+  <ItemGroup><Content Include="..\..\docs\research\CaseInventory.json" Link="Research\CaseInventory.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" /></ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\docs\research\templates\Summary.json" Link="Research\Templates\Summary.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="..\..\docs\research\templates\cases\*.json" Link="Research\Templates\Cases\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Serilog.AspNetCore" Version="10.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\docs\research\backtest\Summary.json" Link="Research\Backtest\Summary.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="..\..\docs\research\backtest\*-cost*.json" Link="Research\Backtest\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

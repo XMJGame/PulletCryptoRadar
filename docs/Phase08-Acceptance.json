@@ -1,0 +1,49 @@
+{
+  "Routes": [
+    {
+      "Vue": true,
+      "Route": "/",
+      "Status": 200
+    },
+    {
+      "Vue": true,
+      "Route": "/volatility",
+      "Status": 200
+    },
+    {
+      "Vue": true,
+      "Route": "/alerts",
+      "Status": 200
+    },
+    {
+      "Vue": true,
+      "Route": "/derivatives",
+      "Status": 200
+    },
+    {
+      "Vue": true,
+      "Route": "/evaluation",
+      "Status": 200
+    },
+    {
+      "Vue": true,
+      "Route": "/mappings",
+      "Status": 200
+    },
+    {
+      "Vue": true,
+      "Route": "/speculative",
+      "Status": 200
+    }
+  ],
+  "UnknownApiStatus": 404,
+  "BackendTests": 242,
+  "FrontendTests": 8,
+  "Health": {
+    "application": "PulletCryptoRadar",
+    "status": "Ready",
+    "version": "1.0",
+    "phase": "0-8",
+    "frontend": "Vue 3"
+  }
+}

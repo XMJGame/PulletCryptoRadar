@@ -1,0 +1,227 @@
+[
+  {
+    "page": "/",
+    "links": [
+      {
+        "active": true,
+        "dot": "visible",
+        "height": 49,
+        "href": "/",
+        "label": "▦\n全市场行情",
+        "top": 170
+      },
+      {
+        "active": false,
+        "dot": "hidden",
+        "height": 48,
+        "href": "/volatility",
+        "label": "◎\n异动雷达",
+        "top": 229
+      },
+      {
+        "active": false,
+        "dot": "hidden",
+        "height": 48,
+        "href": "/alerts",
+        "label": "◇\n通知中心",
+        "top": 287
+      },
+      {
+        "active": false,
+        "dot": "hidden",
+        "height": 48,
+        "href": "/derivatives",
+        "label": "↗\n衍生品数据",
+        "top": 345
+      },
+      {
+        "active": false,
+        "dot": "hidden",
+        "height": 48,
+        "href": "/evaluation",
+        "label": "◷\n回放与评估",
+        "top": 403
+      }
+    ]
+  },
+  {
+    "page": "http://localhost:5218/volatility",
+    "links": [
+      {
+        "active": false,
+        "dot": "hidden",
+        "height": 49,
+        "href": "/",
+        "label": "▦\n全市场行情",
+        "top": 170
+      },
+      {
+        "active": true,
+        "dot": "visible",
+        "height": 48,
+        "href": "/volatility",
+        "label": "◎\n异动雷达",
+        "top": 229
+      },
+      {
+        "active": false,
+        "dot": "hidden",
+        "height": 48,
+        "href": "/alerts",
+        "label": "◇\n通知中心",
+        "top": 287
+      },
+      {
+        "active": false,
+        "dot": "hidden",
+        "height": 48,
+        "href": "/derivatives",
+        "label": "↗\n衍生品数据",
+        "top": 345
+      },
+      {
+        "active": false,
+        "dot": "hidden",
+        "height": 48,
+        "href": "/evaluation",
+        "label": "◷\n回放与评估",
+        "top": 403
+      }
+    ]
+  },
+  {
+    "page": "http://localhost:5218/alerts",
+    "links": [
+      {
+        "active": false,
+        "dot": "hidden",
+        "height": 49,
+        "href": "/",
+        "label": "▦\n全市场行情",
+        "top": 170
+      },
+      {
+        "active": false,
+        "dot": "hidden",
+        "height": 48,
+        "href": "/volatility",
+        "label": "◎\n异动雷达",
+        "top": 229
+      },
+      {
+        "active": true,
+        "dot": "visible",
+        "height": 48,
+        "href": "/alerts",
+        "label": "◇\n通知中心",
+        "top": 287
+      },
+      {
+        "active": false,
+        "dot": "hidden",
+        "height": 48,
+        "href": "/derivatives",
+        "label": "↗\n衍生品数据",
+        "top": 345
+      },
+      {
+        "active": false,
+        "dot": "hidden",
+        "height": 48,
+        "href": "/evaluation",
+        "label": "◷\n回放与评估",
+        "top": 403
+      }
+    ]
+  },
+  {
+    "page": "http://localhost:5218/evaluation",
+    "links": [
+      {
+        "active": false,
+        "dot": "hidden",
+        "height": 49,
+        "href": "/",
+        "label": "▦\n全市场行情",
+        "top": 170
+      },
+      {
+        "active": false,
+        "dot": "hidden",
+        "height": 48,
+        "href": "/volatility",
+        "label": "◎\n异动雷达",
+        "top": 229
+      },
+      {
+        "active": false,
+        "dot": "hidden",
+        "height": 48,
+        "href": "/alerts",
+        "label": "◇\n通知中心",
+        "top": 287
+      },
+      {
+        "active": false,
+        "dot": "hidden",
+        "height": 48,
+        "href": "/derivatives",
+        "label": "↗\n衍生品数据",
+        "top": 345
+      },
+      {
+        "active": true,
+        "dot": "visible",
+        "height": 48,
+        "href": "/evaluation",
+        "label": "◷\n回放与评估",
+        "top": 403
+      }
+    ]
+  },
+  {
+    "page": "http://localhost:5218/derivatives",
+    "links": [
+      {
+        "active": false,
+        "dot": "hidden",
+        "height": 49,
+        "href": "/",
+        "label": "▦\n全市场行情",
+        "top": 170
+      },
+      {
+        "active": false,
+        "dot": "hidden",
+        "height": 48,
+        "href": "/volatility",
+        "label": "◎\n异动雷达",
+        "top": 229
+      },
+      {
+        "active": false,
+        "dot": "hidden",
+        "height": 48,
+        "href": "/alerts",
+        "label": "◇\n通知中心",
+        "top": 287
+      },
+      {
+        "active": true,
+        "dot": "visible",
+        "height": 48,
+        "href": "/derivatives",
+        "label": "↗\n衍生品数据",
+        "top": 345
+      },
+      {
+        "active": false,
+        "dot": "hidden",
+        "height": 48,
+        "href": "/evaluation",
+        "label": "◷\n回放与评估",
+        "top": 403
+      }
+    ]
+  }
+]

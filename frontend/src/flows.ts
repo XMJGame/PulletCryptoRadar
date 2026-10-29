@@ -1,0 +1,10 @@
+export type Transfer={chain:string;contractAddress:string;blockNumber:number;blockHash:string;transactionHash:string;logIndex:number;blockTime:string;from:string;to:string;rawAmount:string;provider:string;receivedTime:string}
+export type TransferEvidence={transfer:Transfer;fromType:number;toType:number;fromLabelRevision:number;toLabelRevision:number;fromEvidence:string;toEvidence:string;supplyPercent:number|null;kind:string}
+export type FlowSummary={trustedIdentity:boolean;fresh:boolean;windowComplete:boolean;throughTime:string|null;observedTransfers:number;projectOutflows:number;exchangeInflows:number;exchangeOutflows:number;projectOutflowSupplyPercent:number|null;projectToExchangeSupplyPercent:number|null;evidence:TransferEvidence[];caveat:string}
+export type Inspection={chain:string;address:string;blockNumber:number;blockHash:string;hasCode:boolean;codeSha256:string;checkedAt:string;source:string;conclusion:string}
+export type FlowView={assetId:number;symbol:string;cursor:{startBlock:number;nextBlock:number;observedHead:number;confirmationDepth:number;lastBlockTime:string;updatedAt:string;startTime:string|null}|null;attempt:{nextAttempt:string;error:string|null;halted:boolean}|null;summary:FlowSummary;transfers:TransferEvidence[];inspections:Inspection[]}
+export const flowKind:Record<string,string>={Transfer:'归属待核对',SelfTransfer:'同地址转账',Mint:'铸造事件',Burn:'转向销毁地址',ProjectToExchange:'项目类 → 交易所',ProjectOutflow:'项目类流出',ExchangeInflow:'交易所转入',ExchangeOutflow:'交易所转出'}
+export const txLink=(hash:string)=>/^0x[0-9a-fA-F]{64}$/.test(hash)?`https://bscscan.com/tx/${hash}`:null
+export const addressLink=(address:string)=>/^0x[0-9a-fA-F]{40}$/.test(address)?`https://bscscan.com/address/${address}`:null
+// Exact string formatting; uint256 must never pass through Number.
+export function tokenAmount(raw:string,decimals:number|null|undefined):string{if(!/^\d+$/.test(raw))return 'Unknown';if(decimals==null||decimals<0||decimals>255)return `${raw} 最小单位`;const s=raw.padStart(decimals+1,'0');return decimals===0?s:`${s.slice(0,-decimals)}.${s.slice(-decimals).replace(/0+$/,'')||'0'}`}

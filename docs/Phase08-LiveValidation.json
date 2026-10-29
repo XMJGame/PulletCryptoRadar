@@ -1,0 +1,161 @@
+{
+  "Time": "2026-10-29T15:25:44.3794467+08:00",
+  "Health": {
+    "application": "PulletCryptoRadar",
+    "status": "Ready",
+    "version": "1.0",
+    "phase": "0-8",
+    "frontend": "Vue 3"
+  },
+  "VenueCounts": [
+    {
+      "Name": "Coinbase",
+      "Count": 5
+    },
+    {
+      "Name": "Gate",
+      "Count": 1065
+    }
+  ],
+  "GateOiSamples": 12,
+  "QuoteSamples": [
+    {
+      "exchange": "Gate",
+      "symbol": "ARIA_USDT",
+      "kind": "Perpetual",
+      "price": 0.08697,
+      "volume24hQuote": 556933,
+      "sourceTime": "2026-10-29T15:24:24+08:00",
+      "openInterestUsd": {
+        "value": 433415.2108,
+        "status": 0,
+        "sourceTime": "2026-10-29T15:20:00+08:00",
+        "source": "Gate contract_stats; same venue"
+      }
+    },
+    {
+      "exchange": "Gate",
+      "symbol": "BTC_USDT",
+      "kind": "Perpetual",
+      "price": 79872.9,
+      "volume24hQuote": 5189308956,
+      "sourceTime": "2026-10-29T15:24:24+08:00",
+      "openInterestUsd": {
+        "value": 4450348839.78576,
+        "status": 0,
+        "sourceTime": "2026-10-29T15:20:00+08:00",
+        "source": "Gate contract_stats; same venue"
+      }
+    },
+    {
+      "exchange": "Coinbase",
+      "symbol": "BTC-USD",
+      "kind": "Spot",
+      "price": 79783.22,
+      "volume24hQuote": null,
+      "sourceTime": "2026-10-29T15:24:37.5107231+08:00",
+      "openInterestUsd": {
+        "value": null,
+        "status": 2,
+        "sourceTime": null,
+        "source": "Spot has no perpetual OI"
+      }
+    }
+  ],
+  "Rows": 1015,
+  "SelectedSources": [
+    {
+      "Name": "Binance",
+      "Count": 34
+    },
+    {
+      "Name": "Gate",
+      "Count": 488
+    }
+  ],
+  "CompleteScores": 0,
+  "VenueBindings": 0,
+  "UnconfirmedPutStatus": 400,
+  "Providers": [
+    {
+      "health": {
+        "name": "Binance Cooldown",
+        "lastSuccess": null,
+        "lastFailure": "2026-10-29T15:24:21.380471+08:00",
+        "latencyMs": null,
+        "errorCount": 1,
+        "error": "REST 冷却至 UTC 2026-10-29T08:35:00.7787691+00:00；等待交易所恢复。实时流独立运行。",
+        "freshnessSeconds": 60
+      },
+      "status": "Unavailable"
+    },
+    {
+      "health": {
+        "name": "Coinbase Spot Reference",
+        "lastSuccess": "2026-10-29T15:24:42.7927029+08:00",
+        "lastFailure": null,
+        "latencyMs": 0,
+        "errorCount": 0,
+        "error": null,
+        "freshnessSeconds": 240
+      },
+      "status": "Healthy"
+    },
+    {
+      "health": {
+        "name": "Gate Perpetual",
+        "lastSuccess": "2026-10-29T15:24:36.5685433+08:00",
+        "lastFailure": null,
+        "latencyMs": 0,
+        "errorCount": 0,
+        "error": null,
+        "freshnessSeconds": 240
+      },
+      "status": "Healthy"
+    },
+    {
+      "health": {
+        "name": "Speculative Radar",
+        "lastSuccess": "2026-10-29T15:24:23.4726943+08:00",
+        "lastFailure": null,
+        "latencyMs": 0,
+        "errorCount": 0,
+        "error": null,
+        "freshnessSeconds": 360
+      },
+      "status": "Healthy"
+    }
+  ],
+  "Audit": [
+    {
+      "id": "1f335812-c1ac-4a4a-babc-f7115c79079d",
+      "asOf": "2026-10-29T15:24:52.2972212+08:00",
+      "status": "Match",
+      "rows": 1015,
+      "mismatches": 0,
+      "reason": "使用保存的独立交易所输入、映射状态、时间和参数复算；不读取当前行情"
+    },
+    {
+      "id": "0a5824c1-4d18-480d-8d9f-89304af9b3b5",
+      "asOf": "2026-10-29T15:24:23.402221+08:00",
+      "status": "Match",
+      "rows": 522,
+      "mismatches": 0,
+      "reason": "使用保存的独立交易所输入、映射状态、时间和参数复算；不读取当前行情"
+    },
+    {
+      "id": "a9220ea8-62a8-4725-85ff-699ce8d5310c",
+      "asOf": "2026-10-29T15:21:49.6085723+08:00",
+      "status": "Match",
+      "rows": 522,
+      "mismatches": 0,
+      "reason": "使用保存的独立交易所输入、映射状态、时间和参数复算；不读取当前行情"
+    }
+  ],
+  "LegacyAudit": [
+    {
+      "Name": "Match",
+      "Count": 100
+    }
+  ]
+}

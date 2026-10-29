@@ -1,0 +1,43 @@
+{
+  "time": "2026-10-29T05:55:07.9191115Z",
+  "health": {
+    "application": "PulletCryptoRadar",
+    "status": "Ready",
+    "version": "1.0",
+    "phase": "0-5"
+  },
+  "assets": 522,
+  "oiReady": 3,
+  "takerReady": 0,
+  "ariaPriceTime": "2026-10-29T13:55:05.697+08:00",
+  "ariaOiSourceTime": "2026-10-29T13:52:16.113+08:00",
+  "ariaOiBaselineSamples": 98,
+  "rawSeriesCounts": [
+    {
+      "count": 2,
+      "kind": "OpenInterest5m"
+    },
+    {
+      "count": 2,
+      "kind": "CurrentOpenInterest"
+    }
+  ],
+  "cooldown": {
+    "health": {
+      "name": "Binance Cooldown",
+      "lastSuccess": null,
+      "lastFailure": "2026-10-29T13:52:24.7194208+08:00",
+      "latencyMs": null,
+      "errorCount": 3,
+      "error": "REST 冷却至 UTC 2026-10-29T06:41:59.6102121+00:00；等待交易所恢复。实时流独立运行。",
+      "freshnessSeconds": 60
+    },
+    "status": "Unavailable"
+  },
+  "tests": {
+    "integration": 41,
+    "core": 39,
+    "total": 149,
+    "scanner": 69
+  }
+}

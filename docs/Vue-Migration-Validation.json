@@ -1,0 +1,58 @@
+[
+  {
+    "page": "http://localhost:5218/volatility",
+    "heading": "发现变化，追踪过程。",
+    "active": [
+      "◎异动雷达"
+    ],
+    "positions": [
+      170,
+      229,
+      287,
+      345,
+      403
+    ]
+  },
+  {
+    "page": "http://localhost:5218/alerts",
+    "heading": "少一点打扰，多一点依据。",
+    "active": [
+      "◇通知中心"
+    ],
+    "positions": [
+      170,
+      229,
+      287,
+      345,
+      403
+    ]
+  },
+  {
+    "page": "http://localhost:5218/derivatives",
+    "heading": "价格背后，仓位正在变化。",
+    "active": [
+      "↗衍生品数据"
+    ],
+    "positions": [
+      170,
+      229,
+      287,
+      345,
+      403
+    ]
+  },
+  {
+    "page": "http://localhost:5218/evaluation",
+    "heading": "发现之后，市场怎样走？",
+    "active": [
+      "◷回放与评估"
+    ],
+    "positions": [
+      170,
+      229,
+      287,
+      345,
+      403
+    ]
+  }
+]

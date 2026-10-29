@@ -1,0 +1,1358 @@
+{
+  "version": "Structure-R1",
+  "generatedAt": "2026-10-29T11:17:02+00:00",
+  "networkRequests": 0,
+  "rulesSha256": "f1c29b6c8527f425c75c5bac57c1f65d35b84d502babb641597067862b3dac1d",
+  "archiveManifestSha256": "f5050ac7d6a7c836f3fa8776e247c57c3422d2db9c5809fb64d1e3078c63a2ab",
+  "engineSha256": "343ec55917b415c804b3d9e1af4284e55834ba33ce592a7ee0c49c107b79a0b4",
+  "dailyRiskTimeZone": "Asia/Shanghai",
+  "windowBoundaryTimeZone": "UTC",
+  "symbols": 17,
+  "hours": 56703,
+  "rules": {
+    "version": "Structure-R1",
+    "initialCash": 1000,
+    "leverage": 10,
+    "marginCap": 100,
+    "maxPositions": 2,
+    "riskFraction": 0.01,
+    "riskCap": 10,
+    "dailyLossCap": 30,
+    "drawdownEntryPause": 0.15,
+    "feePerSide": 0.0005,
+    "slippagePerSide": 0.0005,
+    "maintenanceRate": 0.005,
+    "fundingRiskBuffer": 0.001,
+    "atrBars": 14,
+    "stopAtrBuffer": 0.5,
+    "liquidationSafetyAtr": 0.5,
+    "trailAtr": 3,
+    "maximumHours": 168,
+    "pivotRightBars": 2,
+    "compressionHours": 72,
+    "compressionRangeMax": 0.12,
+    "positionInRangeMin": 0.7,
+    "accumulationVolumeRatio": 1.2,
+    "breakoutBuffer": 0.002,
+    "breakoutVolumeRatio": 1.5,
+    "gainer24hMin": 0.08,
+    "gainer24hMax": 0.4,
+    "oi24hMin": 0,
+    "oi24hMax": 0.3,
+    "oiPublicationLagSeconds": 300,
+    "oiMaximumAgeSeconds": 900,
+    "cooldownHours": 24,
+    "firstFraction": 0.3,
+    "secondFraction": 0.3,
+    "targetRiskFallback": [
+      2,
+      4
+    ],
+    "windows": [
+      {
+        "name": "早期诊断",
+        "start": "2022-01-01",
+        "end": "2024-07-01"
+      },
+      {
+        "name": "中段诊断",
+        "start": "2024-07-01",
+        "end": "2026-01-01"
+      },
+      {
+        "name": "后段诊断（已看过）",
+        "start": "2026-01-01",
+        "end": "2027-01-01"
+      }
+    ],
+    "limitations": [
+      "所有样本事先已看过，没有真正独立留出；按日期分段仅诊断。",
+      "手选17合约，不含当时全市场可交易全集；B仅涨幅候选代理，不是涨幅榜回测。",
+      "历史OI只在事后选定事件附近采集，覆盖偏差本身与结果有关；不能据此认定多维策略有效。",
+      "尚无历史地址、已核对钱包、消息因果、精确合约步长、订单簿与真实分层维持保证金。",
+      "小时内先后未知时，先估算强平，再止损，再分批止盈；保守压力情景不代表真实成交路径。",
+      "有历史标记价时用标记价极值做清算压力检查；缺失时用成交价代理，单独计数。",
+      "费用/滑点/维持保证金是假设；资金费采用实际结算率乘当小时标记开盘价或成交开盘代理。",
+      "期末平仓与缺口后首个开盘强制退出单独标记；缺口内价格与强平路径未知。"
+    ]
+  },
+  "results": [
+    {
+      "strategy": "a",
+      "oiRequired": false,
+      "costMultiplier": 1,
+      "initialCash": 1000,
+      "finalCash": 978.7389,
+      "net": -21.2611,
+      "returnPercent": -2.126,
+      "closedHourMaxDrawdownPercent": 12.623,
+      "trades": 111,
+      "wins": 48,
+      "profitFactor": 0.962,
+      "fees": 45.684,
+      "fundingPaidSigned": 14.6864,
+      "settlementAdjustment": -0.6381,
+      "incompletePathTrades": 0,
+      "markProxyTrades": 101,
+      "windowEndTrades": 3,
+      "liquidationStressTrades": 1,
+      "maximumMarginInUse": 175.447,
+      "entryCircuitPaused": false,
+      "checks": {
+        "rawCandidates": 1186,
+        "oiMissing": 1179
+      },
+      "skipped": {
+        "held_or_cooldown": 868,
+        "stop_liquidation_conflict": 10,
+        "two_position_limit": 197
+      },
+      "bySymbol": [
+        {
+          "symbol": "BLZUSDT",
+          "trades": 10,
+          "net": -9.0311
+        },
+        {
+          "symbol": "BNTUSDT",
+          "trades": 9,
+          "net": -0.0982
+        },
+        {
+          "symbol": "BTCUSDT",
+          "trades": 29,
+          "net": 19.2813
+        },
+        {
+          "symbol": "ETHUSDT",
+          "trades": 27,
+          "net": -17.7853
+        },
+        {
+          "symbol": "GASUSDT",
+          "trades": 2,
+          "net": -17.1755
+        },
+        {
+          "symbol": "LINAUSDT",
+          "trades": 8,
+          "net": 9.7742
+        },
+        {
+          "symbol": "LUNAUSDT",
+          "trades": 6,
+          "net": -17.638
+        },
+        {
+          "symbol": "TRBUSDT",
+          "trades": 8,
+          "net": 60.9135
+        },
+        {
+          "symbol": "YFIUSDT",
+          "trades": 12,
+          "net": -49.502
+        }
+      ],
+      "window": "早期诊断",
+      "period": [
+        "2022-01-01",
+        "2024-07-01"
+      ]
+    },
+    {
+      "strategy": "a",
+      "oiRequired": false,
+      "costMultiplier": 2,
+      "initialCash": 1000,
+      "finalCash": 912.7335,
+      "net": -87.2665,
+      "returnPercent": -8.727,
+      "closedHourMaxDrawdownPercent": 12.923,
+      "trades": 108,
+      "wins": 45,
+      "profitFactor": 0.841,
+      "fees": 77.9216,
+      "fundingPaidSigned": 13.5243,
+      "settlementAdjustment": -0.4565,
+      "incompletePathTrades": 0,
+      "markProxyTrades": 98,
+      "windowEndTrades": 3,
+      "liquidationStressTrades": 1,
+      "maximumMarginInUse": 164.5983,
+      "entryCircuitPaused": false,
+      "checks": {
+        "rawCandidates": 1186,
+        "oiMissing": 1179
+      },
+      "skipped": {
+        "held_or_cooldown": 860,
+        "stop_liquidation_conflict": 10,
+        "two_position_limit": 208
+      },
+      "bySymbol": [
+        {
+          "symbol": "BLZUSDT",
+          "trades": 10,
+          "net": -16.8501
+        },
+        {
+          "symbol": "BNTUSDT",
+          "trades": 8,
+          "net": -12.6415
+        },
+        {
+          "symbol": "BTCUSDT",
+          "trades": 28,
+          "net": -12.0029
+        },
+        {
+          "symbol": "ETHUSDT",
+          "trades": 27,
+          "net": -22.8364
+        },
+        {
+          "symbol": "GASUSDT",
+          "trades": 2,
+          "net": -16.6057
+        },
+        {
+          "symbol": "LINAUSDT",
+          "trades": 8,
+          "net": 6.6608
+        },
+        {
+          "symbol": "LUNAUSDT",
+          "trades": 6,
+          "net": -18.7302
+        },
+        {
+          "symbol": "TRBUSDT",
+          "trades": 8,
+          "net": 52.7634
+        },
+        {
+          "symbol": "YFIUSDT",
+          "trades": 11,
+          "net": -47.0239
+        }
+      ],
+      "window": "早期诊断",
+      "period": [
+        "2022-01-01",
+        "2024-07-01"
+      ]
+    },
+    {
+      "strategy": "a",
+      "oiRequired": true,
+      "costMultiplier": 1,
+      "initialCash": 1000,
+      "finalCash": 1000.0,
+      "net": 0.0,
+      "returnPercent": 0.0,
+      "closedHourMaxDrawdownPercent": 0,
+      "trades": 0,
+      "wins": 0,
+      "profitFactor": null,
+      "fees": 0,
+      "fundingPaidSigned": 0,
+      "settlementAdjustment": 0,
+      "incompletePathTrades": 0,
+      "markProxyTrades": 0,
+      "windowEndTrades": 0,
+      "liquidationStressTrades": 0,
+      "maximumMarginInUse": 0,
+      "entryCircuitPaused": false,
+      "checks": {
+        "rawCandidates": 1186,
+        "oiMissing": 1179
+      },
+      "skipped": {
+        "oi_missing_or_outside_range": 1186
+      },
+      "bySymbol": [],
+      "window": "早期诊断",
+      "period": [
+        "2022-01-01",
+        "2024-07-01"
+      ]
+    },
+    {
+      "strategy": "a",
+      "oiRequired": true,
+      "costMultiplier": 2,
+      "initialCash": 1000,
+      "finalCash": 1000.0,
+      "net": 0.0,
+      "returnPercent": 0.0,
+      "closedHourMaxDrawdownPercent": 0,
+      "trades": 0,
+      "wins": 0,
+      "profitFactor": null,
+      "fees": 0,
+      "fundingPaidSigned": 0,
+      "settlementAdjustment": 0,
+      "incompletePathTrades": 0,
+      "markProxyTrades": 0,
+      "windowEndTrades": 0,
+      "liquidationStressTrades": 0,
+      "maximumMarginInUse": 0,
+      "entryCircuitPaused": false,
+      "checks": {
+        "rawCandidates": 1186,
+        "oiMissing": 1179
+      },
+      "skipped": {
+        "oi_missing_or_outside_range": 1186
+      },
+      "bySymbol": [],
+      "window": "早期诊断",
+      "period": [
+        "2022-01-01",
+        "2024-07-01"
+      ]
+    },
+    {
+      "strategy": "b",
+      "oiRequired": false,
+      "costMultiplier": 1,
+      "initialCash": 1000,
+      "finalCash": 1086.6494,
+      "net": 86.6494,
+      "returnPercent": 8.665,
+      "closedHourMaxDrawdownPercent": 3.543,
+      "trades": 19,
+      "wins": 9,
+      "profitFactor": 1.854,
+      "fees": 2.8111,
+      "fundingPaidSigned": -15.3951,
+      "settlementAdjustment": -1.3589,
+      "incompletePathTrades": 0,
+      "markProxyTrades": 15,
+      "windowEndTrades": 0,
+      "liquidationStressTrades": 3,
+      "maximumMarginInUse": 31.9655,
+      "entryCircuitPaused": false,
+      "checks": {
+        "rawCandidates": 153,
+        "oiMissing": 137
+      },
+      "skipped": {
+        "held_or_cooldown": 24,
+        "stop_liquidation_conflict": 110
+      },
+      "bySymbol": [
+        {
+          "symbol": "BLZUSDT",
+          "trades": 3,
+          "net": 38.8121
+        },
+        {
+          "symbol": "BTCUSDT",
+          "trades": 1,
+          "net": -9.8872
+        },
+        {
+          "symbol": "ETHUSDT",
+          "trades": 2,
+          "net": 3.0409
+        },
+        {
+          "symbol": "LINAUSDT",
+          "trades": 3,
+          "net": -7.6316
+        },
+        {
+          "symbol": "LUNAUSDT",
+          "trades": 3,
+          "net": 19.5427
+        },
+        {
+          "symbol": "TRBUSDT",
+          "trades": 4,
+          "net": 39.6332
+        },
+        {
+          "symbol": "UNFIUSDT",
+          "trades": 1,
+          "net": -9.8978
+        },
+        {
+          "symbol": "YFIUSDT",
+          "trades": 2,
+          "net": 13.0372
+        }
+      ],
+      "window": "早期诊断",
+      "period": [
+        "2022-01-01",
+        "2024-07-01"
+      ]
+    },
+    {
+      "strategy": "b",
+      "oiRequired": false,
+      "costMultiplier": 2,
+      "initialCash": 1000,
+      "finalCash": 1071.4764,
+      "net": 71.4764,
+      "returnPercent": 7.148,
+      "closedHourMaxDrawdownPercent": 3.892,
+      "trades": 19,
+      "wins": 9,
+      "profitFactor": 1.708,
+      "fees": 5.4495,
+      "fundingPaidSigned": -14.7481,
+      "settlementAdjustment": -0.9948,
+      "incompletePathTrades": 0,
+      "markProxyTrades": 15,
+      "windowEndTrades": 0,
+      "liquidationStressTrades": 3,
+      "maximumMarginInUse": 30.9815,
+      "entryCircuitPaused": false,
+      "checks": {
+        "rawCandidates": 153,
+        "oiMissing": 137
+      },
+      "skipped": {
+        "held_or_cooldown": 24,
+        "stop_liquidation_conflict": 110
+      },
+      "bySymbol": [
+        {
+          "symbol": "BLZUSDT",
+          "trades": 3,
+          "net": 35.698
+        },
+        {
+          "symbol": "BTCUSDT",
+          "trades": 1,
+          "net": -9.8807
+        },
+        {
+          "symbol": "ETHUSDT",
+          "trades": 2,
+          "net": -4.9506
+        },
+        {
+          "symbol": "LINAUSDT",
+          "trades": 3,
+          "net": -7.9771
+        },
+        {
+          "symbol": "LUNAUSDT",
+          "trades": 3,
+          "net": 18.0789
+        },
+        {
+          "symbol": "TRBUSDT",
+          "trades": 4,
+          "net": 38.1614
+        },
+        {
+          "symbol": "UNFIUSDT",
+          "trades": 1,
+          "net": -9.8906
+        },
+        {
+          "symbol": "YFIUSDT",
+          "trades": 2,
+          "net": 12.237
+        }
+      ],
+      "window": "早期诊断",
+      "period": [
+        "2022-01-01",
+        "2024-07-01"
+      ]
+    },
+    {
+      "strategy": "b",
+      "oiRequired": true,
+      "costMultiplier": 1,
+      "initialCash": 1000,
+      "finalCash": 997.2521,
+      "net": -2.7479,
+      "returnPercent": -0.275,
+      "closedHourMaxDrawdownPercent": 2.519,
+      "trades": 3,
+      "wins": 1,
+      "profitFactor": 0.861,
+      "fees": 0.4871,
+      "fundingPaidSigned": 0.1796,
+      "settlementAdjustment": 0.0,
+      "incompletePathTrades": 0,
+      "markProxyTrades": 2,
+      "windowEndTrades": 0,
+      "liquidationStressTrades": 0,
+      "maximumMarginInUse": 34.327,
+      "entryCircuitPaused": false,
+      "checks": {
+        "rawCandidates": 153,
+        "oiMissing": 137
+      },
+      "skipped": {
+        "oi_missing_or_outside_range": 143,
+        "stop_liquidation_conflict": 5,
+        "held_or_cooldown": 2
+      },
+      "bySymbol": [
+        {
+          "symbol": "BTCUSDT",
+          "trades": 1,
+          "net": -9.8872
+        },
+        {
+          "symbol": "ETHUSDT",
+          "trades": 1,
+          "net": -9.8693
+        },
+        {
+          "symbol": "YFIUSDT",
+          "trades": 1,
+          "net": 17.0086
+        }
+      ],
+      "window": "早期诊断",
+      "period": [
+        "2022-01-01",
+        "2024-07-01"
+      ]
+    },
+    {
+      "strategy": "b",
+      "oiRequired": true,
+      "costMultiplier": 2,
+      "initialCash": 1000,
+      "finalCash": 996.5487,
+      "net": -3.4513,
+      "returnPercent": -0.345,
+      "closedHourMaxDrawdownPercent": 2.514,
+      "trades": 3,
+      "wins": 1,
+      "profitFactor": 0.825,
+      "fees": 0.943,
+      "fundingPaidSigned": 0.1738,
+      "settlementAdjustment": 0.0,
+      "incompletePathTrades": 0,
+      "markProxyTrades": 2,
+      "windowEndTrades": 0,
+      "liquidationStressTrades": 0,
+      "maximumMarginInUse": 33.1767,
+      "entryCircuitPaused": false,
+      "checks": {
+        "rawCandidates": 153,
+        "oiMissing": 137
+      },
+      "skipped": {
+        "oi_missing_or_outside_range": 143,
+        "stop_liquidation_conflict": 5,
+        "held_or_cooldown": 2
+      },
+      "bySymbol": [
+        {
+          "symbol": "BTCUSDT",
+          "trades": 1,
+          "net": -9.8807
+        },
+        {
+          "symbol": "ETHUSDT",
+          "trades": 1,
+          "net": -9.8647
+        },
+        {
+          "symbol": "YFIUSDT",
+          "trades": 1,
+          "net": 16.294
+        }
+      ],
+      "window": "早期诊断",
+      "period": [
+        "2022-01-01",
+        "2024-07-01"
+      ]
+    },
+    {
+      "strategy": "a",
+      "oiRequired": false,
+      "costMultiplier": 1,
+      "initialCash": 1000,
+      "finalCash": 1092.9339,
+      "net": 92.9339,
+      "returnPercent": 9.293,
+      "closedHourMaxDrawdownPercent": 7.081,
+      "trades": 67,
+      "wins": 33,
+      "profitFactor": 1.292,
+      "fees": 25.9609,
+      "fundingPaidSigned": 0.2361,
+      "settlementAdjustment": -1.0449,
+      "incompletePathTrades": 0,
+      "markProxyTrades": 57,
+      "windowEndTrades": 0,
+      "liquidationStressTrades": 2,
+      "maximumMarginInUse": 166.8741,
+      "entryCircuitPaused": false,
+      "checks": {
+        "rawCandidates": 543,
+        "oiMissing": 510
+      },
+      "skipped": {
+        "held_or_cooldown": 443,
+        "stop_liquidation_conflict": 2,
+        "two_position_limit": 31
+      },
+      "bySymbol": [
+        {
+          "symbol": "ACTUSDT",
+          "trades": 10,
+          "net": 14.6379
+        },
+        {
+          "symbol": "AUCTIONUSDT",
+          "trades": 6,
+          "net": 10.8207
+        },
+        {
+          "symbol": "BTCUSDT",
+          "trades": 17,
+          "net": 36.6667
+        },
+        {
+          "symbol": "ETHUSDT",
+          "trades": 15,
+          "net": -38.4467
+        },
+        {
+          "symbol": "MYXUSDT",
+          "trades": 1,
+          "net": 19.5935
+        },
+        {
+          "symbol": "OMUSDT",
+          "trades": 7,
+          "net": 5.9774
+        },
+        {
+          "symbol": "UNFIUSDT",
+          "trades": 11,
+          "net": 43.6844
+        }
+      ],
+      "window": "中段诊断",
+      "period": [
+        "2024-07-01",
+        "2026-01-01"
+      ]
+    },
+    {
+      "strategy": "a",
+      "oiRequired": false,
+      "costMultiplier": 2,
+      "initialCash": 1000,
+      "finalCash": 1044.5006,
+      "net": 44.5006,
+      "returnPercent": 4.45,
+      "closedHourMaxDrawdownPercent": 7.867,
+      "trades": 64,
+      "wins": 31,
+      "profitFactor": 1.14,
+      "fees": 44.3694,
+      "fundingPaidSigned": 0.3343,
+      "settlementAdjustment": -0.7623,
+      "incompletePathTrades": 0,
+      "markProxyTrades": 56,
+      "windowEndTrades": 0,
+      "liquidationStressTrades": 2,
+      "maximumMarginInUse": 142.8378,
+      "entryCircuitPaused": false,
+      "checks": {
+        "rawCandidates": 543,
+        "oiMissing": 510
+      },
+      "skipped": {
+        "held_or_cooldown": 427,
+        "stop_liquidation_conflict": 2,
+        "two_position_limit": 50
+      },
+      "bySymbol": [
+        {
+          "symbol": "ACTUSDT",
+          "trades": 9,
+          "net": 4.0207
+        },
+        {
+          "symbol": "AUCTIONUSDT",
+          "trades": 6,
+          "net": 8.3765
+        },
+        {
+          "symbol": "BTCUSDT",
+          "trades": 15,
+          "net": 21.7872
+        },
+        {
+          "symbol": "ETHUSDT",
+          "trades": 16,
+          "net": -54.1507
+        },
+        {
+          "symbol": "MYXUSDT",
+          "trades": 1,
+          "net": 18.4795
+        },
+        {
+          "symbol": "OMUSDT",
+          "trades": 6,
+          "net": 10.0115
+        },
+        {
+          "symbol": "UNFIUSDT",
+          "trades": 11,
+          "net": 35.976
+        }
+      ],
+      "window": "中段诊断",
+      "period": [
+        "2024-07-01",
+        "2026-01-01"
+      ]
+    },
+    {
+      "strategy": "a",
+      "oiRequired": true,
+      "costMultiplier": 1,
+      "initialCash": 1000,
+      "finalCash": 1010.6305,
+      "net": 10.6305,
+      "returnPercent": 1.063,
+      "closedHourMaxDrawdownPercent": 1.867,
+      "trades": 3,
+      "wins": 2,
+      "profitFactor": 2.168,
+      "fees": 1.7387,
+      "fundingPaidSigned": 0.3934,
+      "settlementAdjustment": 0.0,
+      "incompletePathTrades": 0,
+      "markProxyTrades": 3,
+      "windowEndTrades": 0,
+      "liquidationStressTrades": 0,
+      "maximumMarginInUse": 99.0268,
+      "entryCircuitPaused": false,
+      "checks": {
+        "rawCandidates": 543,
+        "oiMissing": 510
+      },
+      "skipped": {
+        "oi_missing_or_outside_range": 518,
+        "held_or_cooldown": 22
+      },
+      "bySymbol": [
+        {
+          "symbol": "BTCUSDT",
+          "trades": 1,
+          "net": 10.9881
+        },
+        {
+          "symbol": "ETHUSDT",
+          "trades": 1,
+          "net": -9.1009
+        },
+        {
+          "symbol": "UNFIUSDT",
+          "trades": 1,
+          "net": 8.7432
+        }
+      ],
+      "window": "中段诊断",
+      "period": [
+        "2024-07-01",
+        "2026-01-01"
+      ]
+    },
+    {
+      "strategy": "a",
+      "oiRequired": true,
+      "costMultiplier": 2,
+      "initialCash": 1000,
+      "finalCash": 1007.9274,
+      "net": 7.9274,
+      "returnPercent": 0.793,
+      "closedHourMaxDrawdownPercent": 1.821,
+      "trades": 3,
+      "wins": 2,
+      "profitFactor": 1.858,
+      "fees": 3.0219,
+      "fundingPaidSigned": 0.3492,
+      "settlementAdjustment": 0.0,
+      "incompletePathTrades": 0,
+      "markProxyTrades": 3,
+      "windowEndTrades": 0,
+      "liquidationStressTrades": 0,
+      "maximumMarginInUse": 82.6858,
+      "entryCircuitPaused": false,
+      "checks": {
+        "rawCandidates": 543,
+        "oiMissing": 510
+      },
+      "skipped": {
+        "oi_missing_or_outside_range": 518,
+        "held_or_cooldown": 22
+      },
+      "bySymbol": [
+        {
+          "symbol": "BTCUSDT",
+          "trades": 1,
+          "net": 9.0616
+        },
+        {
+          "symbol": "ETHUSDT",
+          "trades": 1,
+          "net": -9.2415
+        },
+        {
+          "symbol": "UNFIUSDT",
+          "trades": 1,
+          "net": 8.1072
+        }
+      ],
+      "window": "中段诊断",
+      "period": [
+        "2024-07-01",
+        "2026-01-01"
+      ]
+    },
+    {
+      "strategy": "b",
+      "oiRequired": false,
+      "costMultiplier": 1,
+      "initialCash": 1000,
+      "finalCash": 1057.5314,
+      "net": 57.5314,
+      "returnPercent": 5.753,
+      "closedHourMaxDrawdownPercent": 2.332,
+      "trades": 8,
+      "wins": 4,
+      "profitFactor": 2.802,
+      "fees": 1.116,
+      "fundingPaidSigned": -7.6213,
+      "settlementAdjustment": 0.0,
+      "incompletePathTrades": 0,
+      "markProxyTrades": 8,
+      "windowEndTrades": 0,
+      "liquidationStressTrades": 0,
+      "maximumMarginInUse": 27.4602,
+      "entryCircuitPaused": false,
+      "checks": {
+        "rawCandidates": 63,
+        "oiMissing": 56
+      },
+      "skipped": {
+        "stop_liquidation_conflict": 48,
+        "held_or_cooldown": 7
+      },
+      "bySymbol": [
+        {
+          "symbol": "AUCTIONUSDT",
+          "trades": 4,
+          "net": 89.453
+        },
+        {
+          "symbol": "ETHUSDT",
+          "trades": 1,
+          "net": -3.0886
+        },
+        {
+          "symbol": "MYXUSDT",
+          "trades": 1,
+          "net": -9.849
+        },
+        {
+          "symbol": "OMUSDT",
+          "trades": 1,
+          "net": -9.126
+        },
+        {
+          "symbol": "UNFIUSDT",
+          "trades": 1,
+          "net": -9.858
+        }
+      ],
+      "window": "中段诊断",
+      "period": [
+        "2024-07-01",
+        "2026-01-01"
+      ]
+    },
+    {
+      "strategy": "b",
+      "oiRequired": false,
+      "costMultiplier": 2,
+      "initialCash": 1000,
+      "finalCash": 1054.0392,
+      "net": 54.0392,
+      "returnPercent": 5.404,
+      "closedHourMaxDrawdownPercent": 2.336,
+      "trades": 8,
+      "wins": 4,
+      "profitFactor": 2.682,
+      "fees": 2.172,
+      "fundingPaidSigned": -7.4383,
+      "settlementAdjustment": 0.0,
+      "incompletePathTrades": 0,
+      "markProxyTrades": 8,
+      "windowEndTrades": 0,
+      "liquidationStressTrades": 0,
+      "maximumMarginInUse": 26.7309,
+      "entryCircuitPaused": false,
+      "checks": {
+        "rawCandidates": 63,
+        "oiMissing": 56
+      },
+      "skipped": {
+        "stop_liquidation_conflict": 48,
+        "held_or_cooldown": 7
+      },
+      "bySymbol": [
+        {
+          "symbol": "AUCTIONUSDT",
+          "trades": 4,
+          "net": 86.1607
+        },
+        {
+          "symbol": "ETHUSDT",
+          "trades": 1,
+          "net": -3.2899
+        },
+        {
+          "symbol": "MYXUSDT",
+          "trades": 1,
+          "net": -9.8435
+        },
+        {
+          "symbol": "OMUSDT",
+          "trades": 1,
+          "net": -9.1361
+        },
+        {
+          "symbol": "UNFIUSDT",
+          "trades": 1,
+          "net": -9.8521
+        }
+      ],
+      "window": "中段诊断",
+      "period": [
+        "2024-07-01",
+        "2026-01-01"
+      ]
+    },
+    {
+      "strategy": "b",
+      "oiRequired": true,
+      "costMultiplier": 1,
+      "initialCash": 1000,
+      "finalCash": 1046.6967,
+      "net": 46.6967,
+      "returnPercent": 4.67,
+      "closedHourMaxDrawdownPercent": 0.818,
+      "trades": 1,
+      "wins": 1,
+      "profitFactor": null,
+      "fees": 0.1431,
+      "fundingPaidSigned": -5.5491,
+      "settlementAdjustment": 0.0,
+      "incompletePathTrades": 0,
+      "markProxyTrades": 1,
+      "windowEndTrades": 0,
+      "liquidationStressTrades": 0,
+      "maximumMarginInUse": 12.2449,
+      "entryCircuitPaused": false,
+      "checks": {
+        "rawCandidates": 63,
+        "oiMissing": 56
+      },
+      "skipped": {
+        "oi_missing_or_outside_range": 56,
+        "stop_liquidation_conflict": 1,
+        "held_or_cooldown": 5
+      },
+      "bySymbol": [
+        {
+          "symbol": "AUCTIONUSDT",
+          "trades": 1,
+          "net": 46.6967
+        }
+      ],
+      "window": "中段诊断",
+      "period": [
+        "2024-07-01",
+        "2026-01-01"
+      ]
+    },
+    {
+      "strategy": "b",
+      "oiRequired": true,
+      "costMultiplier": 2,
+      "initialCash": 1000,
+      "finalCash": 1045.4432,
+      "net": 45.4432,
+      "returnPercent": 4.544,
+      "closedHourMaxDrawdownPercent": 0.798,
+      "trades": 1,
+      "wins": 1,
+      "profitFactor": null,
+      "fees": 0.2795,
+      "fundingPaidSigned": -5.4164,
+      "settlementAdjustment": 0.0,
+      "incompletePathTrades": 0,
+      "markProxyTrades": 1,
+      "windowEndTrades": 0,
+      "liquidationStressTrades": 0,
+      "maximumMarginInUse": 11.9579,
+      "entryCircuitPaused": false,
+      "checks": {
+        "rawCandidates": 63,
+        "oiMissing": 56
+      },
+      "skipped": {
+        "oi_missing_or_outside_range": 56,
+        "stop_liquidation_conflict": 1,
+        "held_or_cooldown": 5
+      },
+      "bySymbol": [
+        {
+          "symbol": "AUCTIONUSDT",
+          "trades": 1,
+          "net": 45.4432
+        }
+      ],
+      "window": "中段诊断",
+      "period": [
+        "2024-07-01",
+        "2026-01-01"
+      ]
+    },
+    {
+      "strategy": "a",
+      "oiRequired": false,
+      "costMultiplier": 1,
+      "initialCash": 1000,
+      "finalCash": 981.4945,
+      "net": -18.5055,
+      "returnPercent": -1.851,
+      "closedHourMaxDrawdownPercent": 2.924,
+      "trades": 7,
+      "wins": 3,
+      "profitFactor": 0.527,
+      "fees": 1.9012,
+      "fundingPaidSigned": 0.8359,
+      "settlementAdjustment": 0.0,
+      "incompletePathTrades": 0,
+      "markProxyTrades": 7,
+      "windowEndTrades": 0,
+      "liquidationStressTrades": 0,
+      "maximumMarginInUse": 44.548,
+      "entryCircuitPaused": false,
+      "checks": {
+        "rawCandidates": 22,
+        "oiMissing": 22
+      },
+      "skipped": {
+        "held_or_cooldown": 15
+      },
+      "bySymbol": [
+        {
+          "symbol": "APRUSDT",
+          "trades": 7,
+          "net": -18.5055
+        }
+      ],
+      "window": "后段诊断（已看过）",
+      "period": [
+        "2026-01-01",
+        "2027-01-01"
+      ]
+    },
+    {
+      "strategy": "a",
+      "oiRequired": false,
+      "costMultiplier": 2,
+      "initialCash": 1000,
+      "finalCash": 978.8847,
+      "net": -21.1153,
+      "returnPercent": -2.112,
+      "closedHourMaxDrawdownPercent": 2.923,
+      "trades": 7,
+      "wins": 3,
+      "profitFactor": 0.46,
+      "fees": 3.5847,
+      "fundingPaidSigned": 0.7829,
+      "settlementAdjustment": 0.0,
+      "incompletePathTrades": 0,
+      "markProxyTrades": 7,
+      "windowEndTrades": 0,
+      "liquidationStressTrades": 0,
+      "maximumMarginInUse": 40.8881,
+      "entryCircuitPaused": false,
+      "checks": {
+        "rawCandidates": 22,
+        "oiMissing": 22
+      },
+      "skipped": {
+        "held_or_cooldown": 15
+      },
+      "bySymbol": [
+        {
+          "symbol": "APRUSDT",
+          "trades": 7,
+          "net": -21.1153
+        }
+      ],
+      "window": "后段诊断（已看过）",
+      "period": [
+        "2026-01-01",
+        "2027-01-01"
+      ]
+    },
+    {
+      "strategy": "a",
+      "oiRequired": true,
+      "costMultiplier": 1,
+      "initialCash": 1000,
+      "finalCash": 1000.0,
+      "net": 0.0,
+      "returnPercent": 0.0,
+      "closedHourMaxDrawdownPercent": 0,
+      "trades": 0,
+      "wins": 0,
+      "profitFactor": null,
+      "fees": 0,
+      "fundingPaidSigned": 0,
+      "settlementAdjustment": 0,
+      "incompletePathTrades": 0,
+      "markProxyTrades": 0,
+      "windowEndTrades": 0,
+      "liquidationStressTrades": 0,
+      "maximumMarginInUse": 0,
+      "entryCircuitPaused": false,
+      "checks": {
+        "rawCandidates": 22,
+        "oiMissing": 22
+      },
+      "skipped": {
+        "oi_missing_or_outside_range": 22
+      },
+      "bySymbol": [],
+      "window": "后段诊断（已看过）",
+      "period": [
+        "2026-01-01",
+        "2027-01-01"
+      ]
+    },
+    {
+      "strategy": "a",
+      "oiRequired": true,
+      "costMultiplier": 2,
+      "initialCash": 1000,
+      "finalCash": 1000.0,
+      "net": 0.0,
+      "returnPercent": 0.0,
+      "closedHourMaxDrawdownPercent": 0,
+      "trades": 0,
+      "wins": 0,
+      "profitFactor": null,
+      "fees": 0,
+      "fundingPaidSigned": 0,
+      "settlementAdjustment": 0,
+      "incompletePathTrades": 0,
+      "markProxyTrades": 0,
+      "windowEndTrades": 0,
+      "liquidationStressTrades": 0,
+      "maximumMarginInUse": 0,
+      "entryCircuitPaused": false,
+      "checks": {
+        "rawCandidates": 22,
+        "oiMissing": 22
+      },
+      "skipped": {
+        "oi_missing_or_outside_range": 22
+      },
+      "bySymbol": [],
+      "window": "后段诊断（已看过）",
+      "period": [
+        "2026-01-01",
+        "2027-01-01"
+      ]
+    },
+    {
+      "strategy": "b",
+      "oiRequired": false,
+      "costMultiplier": 1,
+      "initialCash": 1000,
+      "finalCash": 1024.0618,
+      "net": 24.0618,
+      "returnPercent": 2.406,
+      "closedHourMaxDrawdownPercent": 0.938,
+      "trades": 2,
+      "wins": 2,
+      "profitFactor": null,
+      "fees": 0.2501,
+      "fundingPaidSigned": 0.5391,
+      "settlementAdjustment": 0.0,
+      "incompletePathTrades": 0,
+      "markProxyTrades": 2,
+      "windowEndTrades": 0,
+      "liquidationStressTrades": 0,
+      "maximumMarginInUse": 12.0095,
+      "entryCircuitPaused": false,
+      "checks": {
+        "rawCandidates": 67,
+        "oiMissing": 63
+      },
+      "skipped": {
+        "stop_liquidation_conflict": 54,
+        "held_or_cooldown": 11
+      },
+      "bySymbol": [
+        {
+          "symbol": "APRUSDT",
+          "trades": 1,
+          "net": 5.8216
+        },
+        {
+          "symbol": "LABUSDT",
+          "trades": 1,
+          "net": 18.2402
+        }
+      ],
+      "window": "后段诊断（已看过）",
+      "period": [
+        "2026-01-01",
+        "2027-01-01"
+      ]
+    },
+    {
+      "strategy": "b",
+      "oiRequired": false,
+      "costMultiplier": 2,
+      "initialCash": 1000,
+      "finalCash": 1023.347,
+      "net": 23.347,
+      "returnPercent": 2.335,
+      "closedHourMaxDrawdownPercent": 0.937,
+      "trades": 2,
+      "wins": 2,
+      "profitFactor": null,
+      "fees": 0.4888,
+      "fundingPaidSigned": 0.5265,
+      "settlementAdjustment": 0.0,
+      "incompletePathTrades": 0,
+      "markProxyTrades": 2,
+      "windowEndTrades": 0,
+      "liquidationStressTrades": 0,
+      "maximumMarginInUse": 11.7334,
+      "entryCircuitPaused": false,
+      "checks": {
+        "rawCandidates": 67,
+        "oiMissing": 63
+      },
+      "skipped": {
+        "stop_liquidation_conflict": 54,
+        "held_or_cooldown": 11
+      },
+      "bySymbol": [
+        {
+          "symbol": "APRUSDT",
+          "trades": 1,
+          "net": 5.7352
+        },
+        {
+          "symbol": "LABUSDT",
+          "trades": 1,
+          "net": 17.6118
+        }
+      ],
+      "window": "后段诊断（已看过）",
+      "period": [
+        "2026-01-01",
+        "2027-01-01"
+      ]
+    },
+    {
+      "strategy": "b",
+      "oiRequired": true,
+      "costMultiplier": 1,
+      "initialCash": 1000,
+      "finalCash": 1000.0,
+      "net": 0.0,
+      "returnPercent": 0.0,
+      "closedHourMaxDrawdownPercent": 0,
+      "trades": 0,
+      "wins": 0,
+      "profitFactor": null,
+      "fees": 0,
+      "fundingPaidSigned": 0,
+      "settlementAdjustment": 0,
+      "incompletePathTrades": 0,
+      "markProxyTrades": 0,
+      "windowEndTrades": 0,
+      "liquidationStressTrades": 0,
+      "maximumMarginInUse": 0,
+      "entryCircuitPaused": false,
+      "checks": {
+        "rawCandidates": 67,
+        "oiMissing": 63
+      },
+      "skipped": {
+        "oi_missing_or_outside_range": 64,
+        "stop_liquidation_conflict": 3
+      },
+      "bySymbol": [],
+      "window": "后段诊断（已看过）",
+      "period": [
+        "2026-01-01",
+        "2027-01-01"
+      ]
+    },
+    {
+      "strategy": "b",
+      "oiRequired": true,
+      "costMultiplier": 2,
+      "initialCash": 1000,
+      "finalCash": 1000.0,
+      "net": 0.0,
+      "returnPercent": 0.0,
+      "closedHourMaxDrawdownPercent": 0,
+      "trades": 0,
+      "wins": 0,
+      "profitFactor": null,
+      "fees": 0,
+      "fundingPaidSigned": 0,
+      "settlementAdjustment": 0,
+      "incompletePathTrades": 0,
+      "markProxyTrades": 0,
+      "windowEndTrades": 0,
+      "liquidationStressTrades": 0,
+      "maximumMarginInUse": 0,
+      "entryCircuitPaused": false,
+      "checks": {
+        "rawCandidates": 67,
+        "oiMissing": 63
+      },
+      "skipped": {
+        "oi_missing_or_outside_range": 64,
+        "stop_liquidation_conflict": 3
+      },
+      "bySymbol": [],
+      "window": "后段诊断（已看过）",
+      "period": [
+        "2026-01-01",
+        "2027-01-01"
+      ]
+    }
+  ],
+  "validated": false,
+  "paperEnabled": false,
+  "verdict": "研究诊断完成，不具备开启自动模拟的验证资格；未使用真实留出与完整排行榜，OI覆盖存在事件选择偏差。"
+}

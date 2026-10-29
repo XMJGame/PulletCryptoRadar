@@ -1,0 +1,154 @@
+{
+  "GeneratedAt": "2026-10-29T10:09:35.7496825+00:00",
+  "Warning": "Winners selected retrospectively; separate venues; daily bars cannot establish intraday fills, historic OI or wallet causation. Failed control cohort and walk-forward tests remain required.",
+  "Datasets": [
+    {
+      "Symbol": "LAB_USDT",
+      "Venue": "Gate perpetual",
+      "ClosedDailyRows": 380,
+      "First": "2025-10-14T00:00:00.0000000+00:00",
+      "LastClose": "2026-10-29T00:00:00.0000000+00:00",
+      "RetrospectiveCases": [
+        {
+          "AtClose": "2026-04-30T00:00:00.0000000+00:00",
+          "Close": 0.66753,
+          "Past20DayRangePercent": 179.942,
+          "KnownVolumeRatio": 0.428,
+          "Forward7DayMaxHighPercent": 611.511,
+          "Forward7DayMinLowPercent": -1.465,
+          "LabelOnly": "Forward fields are future labels, not executable returns or entry features"
+        },
+        {
+          "AtClose": "2026-05-29T00:00:00.0000000+00:00",
+          "Close": 4.38578,
+          "Past20DayRangePercent": 180.891,
+          "KnownVolumeRatio": 0.439,
+          "Forward7DayMaxHighPercent": 465.225,
+          "Forward7DayMinLowPercent": -6.693,
+          "LabelOnly": "Forward fields are future labels, not executable returns or entry features"
+        },
+        {
+          "AtClose": "2026-07-04T00:00:00.0000000+00:00",
+          "Close": 5.96551,
+          "Past20DayRangePercent": 145.845,
+          "KnownVolumeRatio": 3.594,
+          "Forward7DayMaxHighPercent": 202.843,
+          "Forward7DayMinLowPercent": -86.464,
+          "LabelOnly": "Forward fields are future labels, not executable returns or entry features"
+        }
+      ],
+      "Status": "Descriptive case selection only; no strategy validated"
+    },
+    {
+      "Symbol": "MYXUSDT",
+      "Venue": "Binance perpetual",
+      "ClosedDailyRows": 498,
+      "First": "2025-06-18T00:00:00.0000000+00:00",
+      "LastClose": "2026-10-29T00:00:00.0000000+00:00",
+      "RetrospectiveCases": [
+        {
+          "AtClose": "2025-08-02T00:00:00.0000000+00:00",
+          "Close": 0.10578,
+          "Past20DayRangePercent": 116.055,
+          "KnownVolumeRatio": 0.329,
+          "Forward7DayMaxHighPercent": 2126.839,
+          "Forward7DayMinLowPercent": -1.437,
+          "LabelOnly": "Forward fields are future labels, not executable returns or entry features"
+        },
+        {
+          "AtClose": "2025-09-04T00:00:00.0000000+00:00",
+          "Close": 1.1336,
+          "Past20DayRangePercent": 157.865,
+          "KnownVolumeRatio": 0.576,
+          "Forward7DayMaxHighPercent": 1539.026,
+          "Forward7DayMinLowPercent": -3.987,
+          "LabelOnly": "Forward fields are future labels, not executable returns or entry features"
+        },
+        {
+          "AtClose": "2026-04-13T00:00:00.0000000+00:00",
+          "Close": 0.2125,
+          "Past20DayRangePercent": 80.137,
+          "KnownVolumeRatio": 0.833,
+          "Forward7DayMaxHighPercent": 195.906,
+          "Forward7DayMinLowPercent": -2.729,
+          "LabelOnly": "Forward fields are future labels, not executable returns or entry features"
+        }
+      ],
+      "Status": "Descriptive case selection only; no strategy validated"
+    },
+    {
+      "Symbol": "BTW_USDT",
+      "Venue": "Gate perpetual",
+      "ClosedDailyRows": 147,
+      "First": "2026-06-04T00:00:00.0000000+00:00",
+      "LastClose": "2026-10-29T00:00:00.0000000+00:00",
+      "RetrospectiveCases": [
+        {
+          "AtClose": "2026-08-03T00:00:00.0000000+00:00",
+          "Close": 0.08035,
+          "Past20DayRangePercent": 138.043,
+          "KnownVolumeRatio": 6.904,
+          "Forward7DayMaxHighPercent": 200.177,
+          "Forward7DayMinLowPercent": -2.334,
+          "LabelOnly": "Forward fields are future labels, not executable returns or entry features"
+        },
+        {
+          "AtClose": "2026-09-20T00:00:00.0000000+00:00",
+          "Close": 0.590215,
+          "Past20DayRangePercent": 115.399,
+          "KnownVolumeRatio": 1.148,
+          "Forward7DayMaxHighPercent": 137.038,
+          "Forward7DayMinLowPercent": -0.580,
+          "LabelOnly": "Forward fields are future labels, not executable returns or entry features"
+        },
+        {
+          "AtClose": "2026-08-18T00:00:00.0000000+00:00",
+          "Close": 0.358,
+          "Past20DayRangePercent": 571.775,
+          "KnownVolumeRatio": 1.243,
+          "Forward7DayMaxHighPercent": 117.142,
+          "Forward7DayMinLowPercent": -27.374,
+          "LabelOnly": "Forward fields are future labels, not executable returns or entry features"
+        }
+      ],
+      "Status": "Descriptive case selection only; no strategy validated"
+    },
+    {
+      "Symbol": "APR_USDT",
+      "Venue": "Gate perpetual",
+      "ClosedDailyRows": 371,
+      "First": "2025-10-23T00:00:00.0000000+00:00",
+      "LastClose": "2026-10-29T00:00:00.0000000+00:00",
+      "RetrospectiveCases": [
+        {
+          "AtClose": "2026-08-06T00:00:00.0000000+00:00",
+          "Close": 0.19464,
+          "Past20DayRangePercent": 60.819,
+          "KnownVolumeRatio": 0.507,
+          "Forward7DayMaxHighPercent": 224.188,
+          "Forward7DayMinLowPercent": -4.013,
+          "LabelOnly": "Forward fields are future labels, not executable returns or entry features"
+        },
+        {
+          "AtClose": "2026-10-22T00:00:00.0000000+00:00",
+          "Close": 0.02735,
+          "Past20DayRangePercent": 529.693,
+          "KnownVolumeRatio": 3.925,
+          "Forward7DayMaxHighPercent": 122.486,
+          "Forward7DayMinLowPercent": -17.660,
+          "LabelOnly": "Forward fields are future labels, not executable returns or entry features"
+        },
+        {
+          "AtClose": "2026-04-12T00:00:00.0000000+00:00",
+          "Close": 0.1689,
+          "Past20DayRangePercent": 114.762,
+          "KnownVolumeRatio": 0.387,
+          "Forward7DayMaxHighPercent": 112.954,
+          "Forward7DayMinLowPercent": -13.706,
+          "LabelOnly": "Forward fields are future labels, not executable returns or entry features"
+        }
+      ],
+      "Status": "Descriptive case selection only; no strategy validated"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "time": "2026-10-29T06:24:48.5350558Z",
+  "health": {
+    "application": "PulletCryptoRadar",
+    "status": "Ready",
+    "version": "1.0",
+    "phase": "0-6"
+  },
+  "availability": {
+    "first": "2026-10-29T14:10:50.2977248+08:00",
+    "last": "2026-10-29T14:24:05.5499163+08:00",
+    "frames": 16,
+    "eventInputs": 125
+  },
+  "tests": {
+    "total": 185,
+    "scanner": 69,
+    "core": 65,
+    "integration": 51
+  },
+  "signals": 125,
+  "complete": 0,
+  "pending": 119,
+  "awaitingEntry": 6,
+  "notes": "Recorded feature snapshots; cold start; historical partial-universe frames preserved; current registration is atomic."
+}

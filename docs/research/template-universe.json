@@ -1,0 +1,26 @@
+{
+  "version": "Templates-1.0",
+  "selection": "Purposeful historical case library, not a representative sample or validated trading universe. Periods selected before fetching this run; exact venue and contract retained. Case labels do not identify manipulation or owners.",
+  "cases": [
+    {"symbol":"LABUSDT","from":"2026-03","to":"2026-07","role":"seed"},
+    {"symbol":"MYXUSDT","from":"2025-07","to":"2025-10","role":"seed"},
+    {"symbol":"BTWUSDT","from":"2026-06","to":"2026-09","role":"seed"},
+    {"symbol":"APRUSDT","from":"2026-07","to":"2026-09","role":"seed-contrast"},
+    {"symbol":"TRBUSDT","from":"2023-08","to":"2024-01","role":"historical","mark":true},
+    {"symbol":"YFIUSDT","from":"2023-09","to":"2023-12","role":"historical","mark":true},
+    {"symbol":"GASUSDT","from":"2023-09","to":"2023-12","role":"historical"},
+    {"symbol":"BLZUSDT","from":"2023-07","to":"2023-11","role":"historical"},
+    {"symbol":"UNFIUSDT","from":"2022-05","to":"2022-08","role":"historical"},
+    {"symbol":"UNFIUSDT","from":"2024-08","to":"2024-10","role":"delisting-context"},
+    {"symbol":"LINAUSDT","from":"2023-04","to":"2023-07","role":"historical"},
+    {"symbol":"AUCTIONUSDT","from":"2025-01","to":"2025-04","role":"historical"},
+    {"symbol":"ACTUSDT","from":"2025-02","to":"2025-05","role":"crash-context","mark":true},
+    {"symbol":"OMUSDT","from":"2025-02","to":"2025-05","role":"crash-context","mark":true},
+    {"symbol":"LUNAUSDT","from":"2022-03","to":"2022-05","role":"delisting-context","mark":true},
+    {"symbol":"BNTUSDT","from":"2023-09","to":"2023-11","role":"historical"},
+    {"symbol":"BTCUSDT","from":"2023-09","to":"2024-01","role":"market-control"},
+    {"symbol":"ETHUSDT","from":"2023-09","to":"2024-01","role":"market-control"},
+    {"symbol":"BTCUSDT","from":"2025-03","to":"2025-05","role":"market-control"},
+    {"symbol":"ETHUSDT","from":"2025-03","to":"2025-05","role":"market-control"}
+  ]
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "symbol": "LAB_USDT",
+    "rows": 381,
+    "source": "Gate futures 1d",
+    "retrieved": "2026-10-29T18:08:06.6991342+08:00",
+    "httpDate": [
+      "Thu, 29 Oct 2026 10:08:05 GMT"
+    ]
+  },
+  {
+    "symbol": "MYX_USDT",
+    "status": "Unavailable",
+    "type": "HttpRequestException"
+  },
+  {
+    "symbol": "BTW_USDT",
+    "rows": 148,
+    "source": "Gate futures 1d",
+    "retrieved": "2026-10-29T18:08:10.3561867+08:00",
+    "httpDate": [
+      "Thu, 29 Oct 2026 10:08:10 GMT"
+    ]
+  },
+  {
+    "symbol": "APR_USDT",
+    "rows": 372,
+    "source": "Gate futures 1d",
+    "retrieved": "2026-10-29T18:08:10.7946012+08:00",
+    "httpDate": [
+      "Thu, 29 Oct 2026 10:08:10 GMT"
+    ]
+  }
+]

@@ -1,0 +1,65 @@
+@page "/derivatives"
+@rendermode InteractiveServer
+@implements IAsyncDisposable
+@inject DerivativeService Service
+
+<PageTitle>PulletCryptoRadar · 衍生品数据</PageTitle>
+<div class="shell"><Sidebar /><main><header class="topbar"><span>工作台 <span class="slash">/</span><b>衍生品数据</b></span><a href="/volatility">查看异动雷达 →</a></header><div class="content">
+    <div class="page-title"><div><div class="eyebrow">BINANCE FUTURES · DERIVATIVES</div><h1>价格背后，仓位正在变化。</h1><p>全市场 OI 轮询，候选池按需加载持仓比与主动买卖数据。</p></div><span class="live-pill">@_refreshed.ToLocalTime().ToString("HH:mm:ss")</span></div>
+    <p class="radar-notice">OI 变化按持仓数量计算。Taker 为买卖成交量，Top Account 与 Top Position 分别表示账户和持仓结构，不能混用。强平数据是交易所抽样快照；断线和预热时显示 Unknown。</p>
+    @if (Service.GetCooldown() is { } cooldown) { <p class="radar-notice">@cooldown</p> }
+    <div class="stats"><div class="stat"><span>监控合约</span><strong>@_assets.Count</strong><div class="stat-foot">USDT 永续 · 活跃合约</div></div><div class="stat"><span>有效 OI</span><strong>@_assets.Count(m => m.Features.Derivatives.OpenInterestQuantity.Status == DataStatus.Valid)</strong><div class="stat-foot">源时间在有效窗口内</div></div><div class="stat"><span>有效 Taker</span><strong>@_assets.Count(m => m.Features.Derivatives.TakerBuyShare.Status == DataStatus.Valid)</strong><div class="stat-foot">候选分层采集 · 5m 已完成周期</div></div><div class="stat"><span>OI 历史统计就绪</span><strong>@_assets.Count(m => m.Features.Derivatives.OiRobustZ.Status == DataStatus.Valid)</strong><div class="stat-foot">至少 30 个基线样本 · MAD 非零</div></div></div>
+    <div class="section-heading"><h2>资金结构总览</h2><span class="refresh-text">默认 5 分钟采集 · 页面每 5 秒读取缓存</span></div>
+    <div class="market-panel"><div class="toolbar"><label class="search"><input aria-label="搜索衍生品合约" placeholder="搜索 ARIA、BTC 等合约" @bind="_search" @bind:event="oninput" @bind:after="ResetPage" /></label><label class="checkbox"><input type="checkbox" @bind="_deepOnly" @bind:after="ResetPage" /> 仅深度数据可用</label><span class="results">@Filtered.Count 个结果</span></div>
+        <div class="table-scroll"><table><thead><tr><th>合约</th><th>OI 数量</th><th>OI 美元值</th><th>OI 15m</th><th>OI RZ</th><th>Taker 买量占比</th><th>Global 多头占比</th><th>Top Position 多头</th><th>Price / OI</th></tr></thead><tbody>
+            @foreach (var m in Paged)
+            {
+                var d = m.Features.Derivatives;
+                <tr @onclick="() => Select(m)"><td>@m.Instrument.Symbol</td><td title="@Title(d.OpenInterestQuantity)">@Number(d.OpenInterestQuantity)</td><td title="@Title(d.OpenInterestUsd)">@Number(d.OpenInterestUsd)</td><td title="@Title(Oi(d))">@Number(Oi(d), suffix: "%")</td><td title="@Title(d.OiRobustZ)">@(d.OiRobustZ.Value?.ToString("0.00") ?? "Unknown")</td><td title="@Title(d.TakerBuyShare)">@Number(d.TakerBuyShare, 100, "%")</td><td>@Number(d.GlobalLongShare, 100, "%")</td><td>@Number(d.TopPositionLongShare, 100, "%")</td><td>@d.PriceOiStructure</td></tr>
+            }
+            @if (Filtered.Count == 0) { <tr><td colspan="9" class="empty">等待采集或没有符合条件的合约。缺失数据不会使用 0 填充。</td></tr> }
+        </tbody></table></div><div class="table-footer"><span>点击合约查看源时间、Top Account 与强平观测。</span><div><button disabled="@(_page == 0)" @onclick="() => _page--">←</button><span>@(Math.Min(_page + 1, PageCount)) / @PageCount</span><button disabled="@(_page + 1 >= PageCount)" @onclick="() => _page++">→</button></div></div>
+    </div>
+    @if (Selected is { } selected)
+    {
+        var d = selected.Features.Derivatives;
+        <section class="detail"><div class="section-heading"><h2>@selected.Instrument.Symbol <span>衍生品详情</span></h2><button class="text-button" @onclick="() => _selectedId = null">收起 ×</button></div>
+            <div class="detail-grid"><div><span>Top Account 多头占比</span><strong>@Number(d.TopAccountLongShare, 100, "%")</strong><small>@Title(d.TopAccountLongShare)</small></div><div><span>Top Position 15m 变化</span><strong>@Number(d.TopPositionChange15m, suffix: " pp")</strong></div><div><span>Taker 买卖比</span><strong>@Number(d.TakerBuySellRatio)</strong></div><div><span>OI 历史基线样本</span><strong>@d.OiBaselineSamples</strong></div>
+                <div><span>观测多头强平 · 15m</span><strong>$@Number(d.ObservedLongLiquidation15mUsd)</strong></div><div><span>观测空头强平 · 15m</span><strong>$@Number(d.ObservedShortLiquidation15mUsd)</strong></div><div><span>强平流连续覆盖 15m</span><strong>@(d.LiquidationCoverageComplete ? "已覆盖" : "预热中 / 连接中断")</strong></div><div><span>Funding</span><strong>@(selected.FundingRate?.ToString("0.000000") ?? "Unknown")</strong></div>
+            </div><p>@d.LiquidationCaveat</p><p>OI：@Title(d.OpenInterestQuantity)；Taker：@Title(d.TakerBuyShare)</p>
+            @if (_raw is { } raw) { <p>流开始覆盖：@raw.CoverageStart?.ToUniversalTime().ToString("O") · 最近活动：@raw.LastStreamActivity?.ToUniversalTime().ToString("O")</p> }
+        </section>
+    }
+    <footer>PulletCryptoRadar <span>v1.0 · Phase 5</span><span>只读市场研究 · 公共数据来源</span></footer>
+</div></main></div>
+
+@code {
+    private IReadOnlyList<MarketView> _assets = [];
+    private string _search = "";
+    private bool _deepOnly;
+    private int _page;
+    private int? _selectedId;
+    private DerivativeRuntimeSnapshot? _raw;
+    private DateTimeOffset _refreshed;
+    private readonly CancellationTokenSource _cts = new();
+    private Task? _loop;
+    private List<MarketView> Filtered => _assets.Where(m => m.Instrument.Symbol.Contains(_search.Trim(), StringComparison.OrdinalIgnoreCase)
+        && (!_deepOnly || m.Features.Derivatives.TakerBuyShare.Status == DataStatus.Valid)).OrderByDescending(m => m.Features.Derivatives.OpenInterestUsd.Value).ToList();
+    private int PageCount => Math.Max(1, (Filtered.Count + 29) / 30);
+    private IEnumerable<MarketView> Paged => Filtered.Skip(Math.Min(_page, PageCount - 1) * 30).Take(30);
+    private MarketView? Selected => _assets.FirstOrDefault(m => m.Instrument.AssetId == _selectedId);
+    private static FeatureValue<decimal> Oi(DerivativeFeatures d) => d.OiChanges.GetValueOrDefault(15) ?? FeatureValue<decimal>.Missing();
+    private static string Number(FeatureValue<decimal> f, decimal multiplier = 1, string suffix = "") => f.Value is null ? "Unknown" : (f.Value * multiplier)?.ToString("0.00", CultureInfo.InvariantCulture) + suffix + (f.Status == DataStatus.Valid ? "" : $" · {f.Status}");
+    private static string Title<T>(FeatureValue<T> f) where T : struct => $"{f.Status} · {f.Source} · UTC {f.SourceTime?.ToUniversalTime():MM-dd HH:mm:ss}";
+    private void ResetPage() => _page = 0;
+    private void Select(MarketView market) { _selectedId = market.Instrument.AssetId; _raw = Service.GetRaw(market.Instrument.AssetId); }
+    protected override void OnInitialized() { Refresh(); _loop = RefreshLoop(); }
+    private void Refresh() { _assets = Service.GetAssets(); _refreshed = DateTimeOffset.UtcNow; if (_selectedId is { } id) _raw = Service.GetRaw(id); }
+    private async Task RefreshLoop()
+    {
+        using var timer = new PeriodicTimer(TimeSpan.FromSeconds(5));
+        try { while (await timer.WaitForNextTickAsync(_cts.Token)) await InvokeAsync(() => { Refresh(); StateHasChanged(); }); }
+        catch (OperationCanceledException) { }
+    }
+    public async ValueTask DisposeAsync() { await _cts.CancelAsync(); if (_loop is not null) await _loop; _cts.Dispose(); }
+}

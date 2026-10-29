@@ -1,0 +1,2122 @@
+{
+  "monthly/klines/LABUSDT/1h/LABUSDT-1h-2026-03.zip": {
+    "status": "verified",
+    "sha256": "9f16b014aa4b731fe99ae4b1f32bd300e4f5dd3c10ae01969d5622c17bba5113",
+    "bytes": 33273,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/LABUSDT/1h/LABUSDT-1h-2026-03.zip",
+    "retrievedAt": "2026-10-29T10:23:26.818159+00:00"
+  },
+  "monthly/fundingRate/LABUSDT/LABUSDT-fundingRate-2026-03.zip": {
+    "status": "verified",
+    "sha256": "88e860f47e1b325225e8c73413b3a435a2c7277664c3532b85eb7118874d9471",
+    "bytes": 1151,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/LABUSDT/LABUSDT-fundingRate-2026-03.zip",
+    "retrievedAt": "2026-10-29T10:23:27.857423+00:00"
+  },
+  "monthly/klines/LABUSDT/1h/LABUSDT-1h-2026-04.zip": {
+    "status": "verified",
+    "sha256": "52bfef64e04487981e34a06cb17b65d6eb439b616d88e03028ec03de6996aa05",
+    "bytes": 34357,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/LABUSDT/1h/LABUSDT-1h-2026-04.zip",
+    "retrievedAt": "2026-10-29T10:23:28.994134+00:00"
+  },
+  "monthly/fundingRate/LABUSDT/LABUSDT-fundingRate-2026-04.zip": {
+    "status": "verified",
+    "sha256": "8f248f1b0d3df30c6a6463ce183e28331c945a1a0d629a12992d1d7520295cef",
+    "bytes": 1464,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/LABUSDT/LABUSDT-fundingRate-2026-04.zip",
+    "retrievedAt": "2026-10-29T10:23:30.092391+00:00"
+  },
+  "monthly/klines/LABUSDT/1h/LABUSDT-1h-2026-05.zip": {
+    "status": "verified",
+    "sha256": "7ccc52ecb3bb41849da9df9f6b01ed934c3b2c1c68974e9ade4473468d7637a0",
+    "bytes": 37180,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/LABUSDT/1h/LABUSDT-1h-2026-05.zip",
+    "retrievedAt": "2026-10-29T10:23:31.235483+00:00"
+  },
+  "monthly/fundingRate/LABUSDT/LABUSDT-fundingRate-2026-05.zip": {
+    "status": "verified",
+    "sha256": "0198656f094203d024d8aadfac702fe3cbb26ddc5e7bdb62492931327a1e580f",
+    "bytes": 1477,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/LABUSDT/LABUSDT-fundingRate-2026-05.zip",
+    "retrievedAt": "2026-10-29T10:23:32.293023+00:00"
+  },
+  "monthly/klines/LABUSDT/1h/LABUSDT-1h-2026-06.zip": {
+    "status": "verified",
+    "sha256": "fea9dc6d43a812a6886d6f6efb7c8e4404cc8a1f3f021a04da060e3d43a04369",
+    "bytes": 35144,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/LABUSDT/1h/LABUSDT-1h-2026-06.zip",
+    "retrievedAt": "2026-10-29T10:23:33.452068+00:00"
+  },
+  "monthly/fundingRate/LABUSDT/LABUSDT-fundingRate-2026-06.zip": {
+    "status": "verified",
+    "sha256": "450cccf3889c375e8cbe12d69e2d6174ed998ef2c73ec4222f735aacf8a80c02",
+    "bytes": 3423,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/LABUSDT/LABUSDT-fundingRate-2026-06.zip",
+    "retrievedAt": "2026-10-29T10:23:34.532425+00:00"
+  },
+  "monthly/klines/LABUSDT/1h/LABUSDT-1h-2026-07.zip": {
+    "status": "verified",
+    "sha256": "1c422c6e303ace36545bd2657c891e71795b8650d278af2b7854236eab439bdb",
+    "bytes": 35302,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/LABUSDT/1h/LABUSDT-1h-2026-07.zip",
+    "retrievedAt": "2026-10-29T10:23:35.664417+00:00"
+  },
+  "monthly/fundingRate/LABUSDT/LABUSDT-fundingRate-2026-07.zip": {
+    "status": "verified",
+    "sha256": "5d91e5204a467cefcb6ece47c07ae7f0398e7e3367405863b6e9046f2b833f62",
+    "bytes": 2794,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/LABUSDT/LABUSDT-fundingRate-2026-07.zip",
+    "retrievedAt": "2026-10-29T10:23:36.743742+00:00"
+  },
+  "daily/metrics/LABUSDT/LABUSDT-metrics-2026-05-31.zip": {
+    "status": "verified",
+    "sha256": "c89061d23f875f9b68d3c72a5807556c14784420bd6fa70f0542d99607c7d647",
+    "bytes": 11222,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/LABUSDT/LABUSDT-metrics-2026-05-31.zip",
+    "retrievedAt": "2026-10-29T10:23:37.801590+00:00"
+  },
+  "daily/metrics/LABUSDT/LABUSDT-metrics-2026-06-01.zip": {
+    "status": "verified",
+    "sha256": "9e37468ab82dbc88966de2e4cd2f9ca1041766d5084442e554943a9ec52ee525",
+    "bytes": 11456,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/LABUSDT/LABUSDT-metrics-2026-06-01.zip",
+    "retrievedAt": "2026-10-29T10:23:38.869548+00:00"
+  },
+  "daily/metrics/LABUSDT/LABUSDT-metrics-2026-06-02.zip": {
+    "status": "verified",
+    "sha256": "9d495d63b14685eb0387a534e34069c46acaac2e2615ff5d0a183db57d11c09d",
+    "bytes": 11258,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/LABUSDT/LABUSDT-metrics-2026-06-02.zip",
+    "retrievedAt": "2026-10-29T10:23:39.976339+00:00"
+  },
+  "daily/metrics/LABUSDT/LABUSDT-metrics-2026-06-03.zip": {
+    "status": "verified",
+    "sha256": "4921377ad40d1c5f169d1199e9092696a1773fbff11d1f43e44c8dea2d6cd586",
+    "bytes": 11301,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/LABUSDT/LABUSDT-metrics-2026-06-03.zip",
+    "retrievedAt": "2026-10-29T10:23:41.041000+00:00"
+  },
+  "daily/metrics/LABUSDT/LABUSDT-metrics-2026-06-04.zip": {
+    "status": "verified",
+    "sha256": "5a0b91e183e6fa2958e3591419826e224e38fb7c1a15a69daab6012b6f27ad4b",
+    "bytes": 11343,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/LABUSDT/LABUSDT-metrics-2026-06-04.zip",
+    "retrievedAt": "2026-10-29T10:23:42.225067+00:00"
+  },
+  "monthly/klines/MYXUSDT/1h/MYXUSDT-1h-2025-07.zip": {
+    "status": "verified",
+    "sha256": "9698194713746842ca87ce4f83a48e682985973570679ed7c79eb42ab0d363f4",
+    "bytes": 36255,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/MYXUSDT/1h/MYXUSDT-1h-2025-07.zip",
+    "retrievedAt": "2026-10-29T10:23:43.595166+00:00"
+  },
+  "monthly/fundingRate/MYXUSDT/MYXUSDT-fundingRate-2025-07.zip": {
+    "status": "verified",
+    "sha256": "9c42d0bf79a5646de582867f5264de7ebfe783f9e8e9e52056fea6fe8d73b60e",
+    "bytes": 4011,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/MYXUSDT/MYXUSDT-fundingRate-2025-07.zip",
+    "retrievedAt": "2026-10-29T10:23:44.633910+00:00"
+  },
+  "monthly/klines/MYXUSDT/1h/MYXUSDT-1h-2025-08.zip": {
+    "status": "verified",
+    "sha256": "5ed6779764e2af75415712298775988f20f63021f8e63d8d3fc98744a68c95c6",
+    "bytes": 36985,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/MYXUSDT/1h/MYXUSDT-1h-2025-08.zip",
+    "retrievedAt": "2026-10-29T10:23:45.805705+00:00"
+  },
+  "monthly/fundingRate/MYXUSDT/MYXUSDT-fundingRate-2025-08.zip": {
+    "status": "verified",
+    "sha256": "ef7221b785024a2b1fba531d7a960b1267fcb5c9d69083652d30b02b3e04d9b2",
+    "bytes": 4650,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/MYXUSDT/MYXUSDT-fundingRate-2025-08.zip",
+    "retrievedAt": "2026-10-29T10:23:46.885492+00:00"
+  },
+  "monthly/klines/MYXUSDT/1h/MYXUSDT-1h-2025-09.zip": {
+    "status": "verified",
+    "sha256": "7dfcc12cabc82310cd41c53e3f8b5ee544ef3d91fe3c44eccc6e859581d8245c",
+    "bytes": 34775,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/MYXUSDT/1h/MYXUSDT-1h-2025-09.zip",
+    "retrievedAt": "2026-10-29T10:23:48.014647+00:00"
+  },
+  "monthly/fundingRate/MYXUSDT/MYXUSDT-fundingRate-2025-09.zip": {
+    "status": "verified",
+    "sha256": "36f0dbe5314e0e9f2f884c2777f9674366053893301e0f077191d150a1cd3f88",
+    "bytes": 3734,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/MYXUSDT/MYXUSDT-fundingRate-2025-09.zip",
+    "retrievedAt": "2026-10-29T10:23:49.110318+00:00"
+  },
+  "monthly/klines/MYXUSDT/1h/MYXUSDT-1h-2025-10.zip": {
+    "status": "verified",
+    "sha256": "35d41253cd692ccec7885cf3d3b1bfdde8934c81307230b99346020fe3df8da6",
+    "bytes": 32612,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/MYXUSDT/1h/MYXUSDT-1h-2025-10.zip",
+    "retrievedAt": "2026-10-29T10:23:50.219085+00:00"
+  },
+  "monthly/fundingRate/MYXUSDT/MYXUSDT-fundingRate-2025-10.zip": {
+    "status": "verified",
+    "sha256": "51e0e7c012984238caf8f7c7ce231a496993de5597644b6bb213040e073c3248",
+    "bytes": 2441,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/MYXUSDT/MYXUSDT-fundingRate-2025-10.zip",
+    "retrievedAt": "2026-10-29T10:23:51.263682+00:00"
+  },
+  "daily/metrics/MYXUSDT/MYXUSDT-metrics-2025-09-09.zip": {
+    "status": "verified",
+    "sha256": "9e35dac1e668e413252b92e14a27e26bfb0603013bdbea56d1d72f739bd03643",
+    "bytes": 11379,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/MYXUSDT/MYXUSDT-metrics-2025-09-09.zip",
+    "retrievedAt": "2026-10-29T10:23:52.316274+00:00"
+  },
+  "daily/metrics/MYXUSDT/MYXUSDT-metrics-2025-09-10.zip": {
+    "status": "verified",
+    "sha256": "c2d583684acdd2c2d3a4b63ddd3a4234946612d35bdde59453f8c0a6008e6154",
+    "bytes": 11213,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/MYXUSDT/MYXUSDT-metrics-2025-09-10.zip",
+    "retrievedAt": "2026-10-29T10:23:53.383828+00:00"
+  },
+  "daily/metrics/MYXUSDT/MYXUSDT-metrics-2025-09-11.zip": {
+    "status": "verified",
+    "sha256": "78c555338d229aebb39d0bc55278ebb516748461712d3e0418da9a0e9b8e621e",
+    "bytes": 11239,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/MYXUSDT/MYXUSDT-metrics-2025-09-11.zip",
+    "retrievedAt": "2026-10-29T10:23:54.453646+00:00"
+  },
+  "daily/metrics/MYXUSDT/MYXUSDT-metrics-2025-09-12.zip": {
+    "status": "verified",
+    "sha256": "41fe45682d8d4ab5f1843daaab0ae9f27c3b19a9169363e52db62cb72c83761c",
+    "bytes": 11343,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/MYXUSDT/MYXUSDT-metrics-2025-09-12.zip",
+    "retrievedAt": "2026-10-29T10:23:55.544192+00:00"
+  },
+  "daily/metrics/MYXUSDT/MYXUSDT-metrics-2025-09-13.zip": {
+    "status": "verified",
+    "sha256": "8e52ee32e5e3045dcdcdf1a0c11dc22925d1dfed4f3da270d3015cc597329f42",
+    "bytes": 11173,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/MYXUSDT/MYXUSDT-metrics-2025-09-13.zip",
+    "retrievedAt": "2026-10-29T10:23:56.617914+00:00"
+  },
+  "monthly/klines/BTWUSDT/1h/BTWUSDT-1h-2026-06.zip": {
+    "status": "verified",
+    "sha256": "d71618aaac39923adc71c561a8a192843aadc18417096326697ad355acf8cab5",
+    "bytes": 32359,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTWUSDT/1h/BTWUSDT-1h-2026-06.zip",
+    "retrievedAt": "2026-10-29T10:23:57.786467+00:00"
+  },
+  "monthly/fundingRate/BTWUSDT/BTWUSDT-fundingRate-2026-06.zip": {
+    "status": "verified",
+    "sha256": "4b1f33daf0858b6873c9f89596ddfe049afde6b74dc65dac7f4bf9398c80fb5c",
+    "bytes": 1399,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTWUSDT/BTWUSDT-fundingRate-2026-06.zip",
+    "retrievedAt": "2026-10-29T10:23:58.804911+00:00"
+  },
+  "monthly/klines/BTWUSDT/1h/BTWUSDT-1h-2026-07.zip": {
+    "status": "verified",
+    "sha256": "65135f584146beb6aa412a085b75dd713622844153867240813bc725da42cf22",
+    "bytes": 34445,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTWUSDT/1h/BTWUSDT-1h-2026-07.zip",
+    "retrievedAt": "2026-10-29T10:23:59.889576+00:00"
+  },
+  "monthly/fundingRate/BTWUSDT/BTWUSDT-fundingRate-2026-07.zip": {
+    "status": "verified",
+    "sha256": "f28b8af84793032af77935a7ae3d6f27c9f8b20b504e4adce74eedcdcd82b946",
+    "bytes": 1632,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTWUSDT/BTWUSDT-fundingRate-2026-07.zip",
+    "retrievedAt": "2026-10-29T10:24:00.902355+00:00"
+  },
+  "monthly/klines/BTWUSDT/1h/BTWUSDT-1h-2026-08.zip": {
+    "status": "verified",
+    "sha256": "f1d76397b1bb2c4fb3c5c1b493daba4e353f0719ff815dbad0751a7f9b605df1",
+    "bytes": 36866,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTWUSDT/1h/BTWUSDT-1h-2026-08.zip",
+    "retrievedAt": "2026-10-29T10:24:02.009620+00:00"
+  },
+  "monthly/fundingRate/BTWUSDT/BTWUSDT-fundingRate-2026-08.zip": {
+    "status": "verified",
+    "sha256": "2786cf54b9933a6363b4bf85b577bcfb96ba8ba770a71781f93bca6e91202d6e",
+    "bytes": 1686,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTWUSDT/BTWUSDT-fundingRate-2026-08.zip",
+    "retrievedAt": "2026-10-29T10:24:03.081716+00:00"
+  },
+  "monthly/klines/BTWUSDT/1h/BTWUSDT-1h-2026-09.zip": {
+    "status": "verified",
+    "sha256": "e0705edb271ec44081fa55785885a0bb77b7a14813c0a6eeeecc13eb2d751a93",
+    "bytes": 34812,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTWUSDT/1h/BTWUSDT-1h-2026-09.zip",
+    "retrievedAt": "2026-10-29T10:24:04.201380+00:00"
+  },
+  "monthly/fundingRate/BTWUSDT/BTWUSDT-fundingRate-2026-09.zip": {
+    "status": "verified",
+    "sha256": "b49b444d7c79e7720cda01788cec710147aa9886253ceec053a20a0888865a15",
+    "bytes": 1633,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTWUSDT/BTWUSDT-fundingRate-2026-09.zip",
+    "retrievedAt": "2026-10-29T10:24:05.253372+00:00"
+  },
+  "daily/metrics/BTWUSDT/BTWUSDT-metrics-2026-09-26.zip": {
+    "status": "verified",
+    "sha256": "308dfe62e5aaac498c95f67ca38e37b3714c3c734873590447255889e2a79f68",
+    "bytes": 11529,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/BTWUSDT/BTWUSDT-metrics-2026-09-26.zip",
+    "retrievedAt": "2026-10-29T10:24:06.308388+00:00"
+  },
+  "daily/metrics/BTWUSDT/BTWUSDT-metrics-2026-09-27.zip": {
+    "status": "verified",
+    "sha256": "d9a418a723bc327039b4149f9690cfdd0e72eabadd16be5a8bbb0257cc6f1241",
+    "bytes": 11291,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/BTWUSDT/BTWUSDT-metrics-2026-09-27.zip",
+    "retrievedAt": "2026-10-29T10:24:07.428419+00:00"
+  },
+  "daily/metrics/BTWUSDT/BTWUSDT-metrics-2026-09-28.zip": {
+    "status": "verified",
+    "sha256": "958f66c17a6f1fb62be38b4ed82ccc152a2e2769db6afe5f17cd74c47101782d",
+    "bytes": 11698,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/BTWUSDT/BTWUSDT-metrics-2026-09-28.zip",
+    "retrievedAt": "2026-10-29T10:24:08.531075+00:00"
+  },
+  "daily/metrics/BTWUSDT/BTWUSDT-metrics-2026-09-29.zip": {
+    "status": "verified",
+    "sha256": "441690ca17f5fe3114c6009d0556e3a7d304d9afe84059d922a4fd532bd2c11f",
+    "bytes": 11465,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/BTWUSDT/BTWUSDT-metrics-2026-09-29.zip",
+    "retrievedAt": "2026-10-29T10:24:09.569802+00:00"
+  },
+  "daily/metrics/BTWUSDT/BTWUSDT-metrics-2026-09-30.zip": {
+    "status": "verified",
+    "sha256": "76c7e0f19316fb1a044675f923aa1ca647fcb8bc06b26cd057f961e784108518",
+    "bytes": 11748,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/BTWUSDT/BTWUSDT-metrics-2026-09-30.zip",
+    "retrievedAt": "2026-10-29T10:24:10.631725+00:00"
+  },
+  "monthly/klines/APRUSDT/1h/APRUSDT-1h-2026-07.zip": {
+    "status": "verified",
+    "sha256": "4a80c6329348b36e29a3d9984cb51dabc7df41d15794101a81c67cce6dd889a5",
+    "bytes": 30413,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/APRUSDT/1h/APRUSDT-1h-2026-07.zip",
+    "retrievedAt": "2026-10-29T10:24:11.782062+00:00"
+  },
+  "monthly/fundingRate/APRUSDT/APRUSDT-fundingRate-2026-07.zip": {
+    "status": "verified",
+    "sha256": "fedc1f8bdab9d101d6f2e3705fa1bd4bb7b4e1462cc8e5362e92bcf07199e529",
+    "bytes": 1367,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/APRUSDT/APRUSDT-fundingRate-2026-07.zip",
+    "retrievedAt": "2026-10-29T10:24:12.858760+00:00"
+  },
+  "monthly/klines/APRUSDT/1h/APRUSDT-1h-2026-08.zip": {
+    "status": "verified",
+    "sha256": "02e0e74985d6b897418f885b11bd8fe736d445a8944fb9570d823441c1e99af5",
+    "bytes": 32417,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/APRUSDT/1h/APRUSDT-1h-2026-08.zip",
+    "retrievedAt": "2026-10-29T10:24:13.956467+00:00"
+  },
+  "monthly/fundingRate/APRUSDT/APRUSDT-fundingRate-2026-08.zip": {
+    "status": "verified",
+    "sha256": "9ec7b7c194565c92692e3b7fca095bbf51fdcb80df9fb14637dc8ba30a09b173",
+    "bytes": 1346,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/APRUSDT/APRUSDT-fundingRate-2026-08.zip",
+    "retrievedAt": "2026-10-29T10:24:14.991417+00:00"
+  },
+  "monthly/klines/APRUSDT/1h/APRUSDT-1h-2026-09.zip": {
+    "status": "verified",
+    "sha256": "fdfe0b3caaf6348fe6003471a390fad84374fc64b88abf9e6a0514981760b945",
+    "bytes": 30310,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/APRUSDT/1h/APRUSDT-1h-2026-09.zip",
+    "retrievedAt": "2026-10-29T10:24:16.075521+00:00"
+  },
+  "monthly/fundingRate/APRUSDT/APRUSDT-fundingRate-2026-09.zip": {
+    "status": "verified",
+    "sha256": "b71782667fd9d39c585849d8a1a0ae156cda3d88c2dbb07460ecd154e0a1129d",
+    "bytes": 1297,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/APRUSDT/APRUSDT-fundingRate-2026-09.zip",
+    "retrievedAt": "2026-10-29T10:24:17.127440+00:00"
+  },
+  "daily/metrics/APRUSDT/APRUSDT-metrics-2026-08-10.zip": {
+    "status": "verified",
+    "sha256": "7e141922904f1180a88437e12a87cf211942a9d535124aa3cbfe643cdfc392d8",
+    "bytes": 10268,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/APRUSDT/APRUSDT-metrics-2026-08-10.zip",
+    "retrievedAt": "2026-10-29T10:24:18.250843+00:00"
+  },
+  "daily/metrics/APRUSDT/APRUSDT-metrics-2026-08-11.zip": {
+    "status": "verified",
+    "sha256": "3eff62bb9cc822cbc2aeb61205bb02a51e8fbdcaf7223d4d3ff131116be54c53",
+    "bytes": 10688,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/APRUSDT/APRUSDT-metrics-2026-08-11.zip",
+    "retrievedAt": "2026-10-29T10:24:19.298395+00:00"
+  },
+  "daily/metrics/APRUSDT/APRUSDT-metrics-2026-08-12.zip": {
+    "status": "verified",
+    "sha256": "e6ff2e4037f6b315da3ae6acd829bd7db289c6fe65d676c6a7a563ce06cefd98",
+    "bytes": 11703,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/APRUSDT/APRUSDT-metrics-2026-08-12.zip",
+    "retrievedAt": "2026-10-29T10:24:20.388015+00:00"
+  },
+  "daily/metrics/APRUSDT/APRUSDT-metrics-2026-08-13.zip": {
+    "status": "verified",
+    "sha256": "bdab56d480f61b681cc3a9e7ba204e138251c5e36880cda509f4ddf4ed99c81d",
+    "bytes": 11164,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/APRUSDT/APRUSDT-metrics-2026-08-13.zip",
+    "retrievedAt": "2026-10-29T10:24:21.442775+00:00"
+  },
+  "daily/metrics/APRUSDT/APRUSDT-metrics-2026-08-14.zip": {
+    "status": "verified",
+    "sha256": "232794e93cfcf9ec85eb29bd85799a9bbf24ef2d13775b4eec3c54e4e373c08a",
+    "bytes": 11152,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/APRUSDT/APRUSDT-metrics-2026-08-14.zip",
+    "retrievedAt": "2026-10-29T10:24:22.517030+00:00"
+  },
+  "monthly/klines/TRBUSDT/1h/TRBUSDT-1h-2023-08.zip": {
+    "status": "verified",
+    "sha256": "e5371082df0098eadb866f0ab6719b210ea5da1c3f747de4cb13bc3bdf7682fe",
+    "bytes": 29454,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/TRBUSDT/1h/TRBUSDT-1h-2023-08.zip",
+    "retrievedAt": "2026-10-29T10:24:23.624721+00:00"
+  },
+  "monthly/fundingRate/TRBUSDT/TRBUSDT-fundingRate-2023-08.zip": {
+    "status": "verified",
+    "sha256": "3c0b80d39937083762e7432865ea1bcadc04a268fad8fa5412a08c18f9d9d5ba",
+    "bytes": 769,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/TRBUSDT/TRBUSDT-fundingRate-2023-08.zip",
+    "retrievedAt": "2026-10-29T10:24:24.656073+00:00"
+  },
+  "monthly/klines/TRBUSDT/1h/TRBUSDT-1h-2023-09.zip": {
+    "status": "verified",
+    "sha256": "f370cc16b5567a7c3db7756830a19cf0c81f90e33951c05906d7cf6c9375ddba",
+    "bytes": 34314,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/TRBUSDT/1h/TRBUSDT-1h-2023-09.zip",
+    "retrievedAt": "2026-10-29T10:24:25.746037+00:00"
+  },
+  "monthly/fundingRate/TRBUSDT/TRBUSDT-fundingRate-2023-09.zip": {
+    "status": "verified",
+    "sha256": "c1928085a05a7bba48531a97f2f5e5dc566f8f3cae40a27260f9b9cd87579d6e",
+    "bytes": 975,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/TRBUSDT/TRBUSDT-fundingRate-2023-09.zip",
+    "retrievedAt": "2026-10-29T10:24:26.760655+00:00"
+  },
+  "monthly/klines/TRBUSDT/1h/TRBUSDT-1h-2023-10.zip": {
+    "status": "verified",
+    "sha256": "f13962f71595707c9faa428b6fab062b5914b02f30c7770f525ceba79c9b01bb",
+    "bytes": 35190,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/TRBUSDT/1h/TRBUSDT-1h-2023-10.zip",
+    "retrievedAt": "2026-10-29T10:24:27.862215+00:00"
+  },
+  "monthly/fundingRate/TRBUSDT/TRBUSDT-fundingRate-2023-10.zip": {
+    "status": "verified",
+    "sha256": "7945cbf64c647a3994a5f135d75b6eea23881fee4dd4beacc77d5eb275871aaa",
+    "bytes": 1317,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/TRBUSDT/TRBUSDT-fundingRate-2023-10.zip",
+    "retrievedAt": "2026-10-29T10:24:28.899105+00:00"
+  },
+  "monthly/klines/TRBUSDT/1h/TRBUSDT-1h-2023-11.zip": {
+    "status": "verified",
+    "sha256": "21123fe4bc16445edaa767734c5d1c973628ded6c4124d6e9c05195d748838da",
+    "bytes": 33509,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/TRBUSDT/1h/TRBUSDT-1h-2023-11.zip",
+    "retrievedAt": "2026-10-29T10:24:30.045007+00:00"
+  },
+  "monthly/fundingRate/TRBUSDT/TRBUSDT-fundingRate-2023-11.zip": {
+    "status": "verified",
+    "sha256": "4c86842a62ce0a3a68b92b9a6d14aca867b8bfffeef86ad28d5ecab832aeac15",
+    "bytes": 1417,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/TRBUSDT/TRBUSDT-fundingRate-2023-11.zip",
+    "retrievedAt": "2026-10-29T10:24:31.184407+00:00"
+  },
+  "monthly/klines/TRBUSDT/1h/TRBUSDT-1h-2023-12.zip": {
+    "status": "verified",
+    "sha256": "3810acac1d92d01a948edfd6c22af11267c3d2db137008bac0ffc934be493f21",
+    "bytes": 35168,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/TRBUSDT/1h/TRBUSDT-1h-2023-12.zip",
+    "retrievedAt": "2026-10-29T10:24:32.312140+00:00"
+  },
+  "monthly/fundingRate/TRBUSDT/TRBUSDT-fundingRate-2023-12.zip": {
+    "status": "verified",
+    "sha256": "5d7d0e39e60fba624f9a5a01bbafae0c56bc90a81085cf93a54917737f46ec2f",
+    "bytes": 1584,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/TRBUSDT/TRBUSDT-fundingRate-2023-12.zip",
+    "retrievedAt": "2026-10-29T10:24:33.356329+00:00"
+  },
+  "monthly/klines/TRBUSDT/1h/TRBUSDT-1h-2024-01.zip": {
+    "status": "verified",
+    "sha256": "a87facd94bd9462340b65d5c7cb9ef45297ec9ec98ccd27ab1bdfcc1ad08b45f",
+    "bytes": 35418,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/TRBUSDT/1h/TRBUSDT-1h-2024-01.zip",
+    "retrievedAt": "2026-10-29T10:24:34.464739+00:00"
+  },
+  "monthly/fundingRate/TRBUSDT/TRBUSDT-fundingRate-2024-01.zip": {
+    "status": "verified",
+    "sha256": "0689b68144da40a77b88e168dee633983fd68e9396dfdff6c107ffa584687c3a",
+    "bytes": 1140,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/TRBUSDT/TRBUSDT-fundingRate-2024-01.zip",
+    "retrievedAt": "2026-10-29T10:24:35.512378+00:00"
+  },
+  "daily/metrics/TRBUSDT/TRBUSDT-metrics-2023-12-29.zip": {
+    "status": "verified",
+    "sha256": "a2173a8ed356d27a43d5033a0ca8446d08f6183977db50a3fbe2913d7a71eda2",
+    "bytes": 11229,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/TRBUSDT/TRBUSDT-metrics-2023-12-29.zip",
+    "retrievedAt": "2026-10-29T10:24:36.590779+00:00"
+  },
+  "daily/metrics/TRBUSDT/TRBUSDT-metrics-2023-12-30.zip": {
+    "status": "verified",
+    "sha256": "fcce653e498b615e37f7585094801aee043b8d3200a3b45a5fe870bce8b702d2",
+    "bytes": 11261,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/TRBUSDT/TRBUSDT-metrics-2023-12-30.zip",
+    "retrievedAt": "2026-10-29T10:24:37.624561+00:00"
+  },
+  "daily/metrics/TRBUSDT/TRBUSDT-metrics-2023-12-31.zip": {
+    "status": "verified",
+    "sha256": "e765fe49c3a192763a41097d8c567fafed011d7a6b0bd8334c48754b0809ec8d",
+    "bytes": 11543,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/TRBUSDT/TRBUSDT-metrics-2023-12-31.zip",
+    "retrievedAt": "2026-10-29T10:24:38.684165+00:00"
+  },
+  "daily/metrics/TRBUSDT/TRBUSDT-metrics-2024-01-01.zip": {
+    "status": "verified",
+    "sha256": "7bb7c410045808ed5db5ebfd231e02a49c73f49bdc7c0034a6a35d369d2a43a8",
+    "bytes": 11627,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/TRBUSDT/TRBUSDT-metrics-2024-01-01.zip",
+    "retrievedAt": "2026-10-29T10:24:39.753567+00:00"
+  },
+  "daily/metrics/TRBUSDT/TRBUSDT-metrics-2024-01-02.zip": {
+    "status": "verified",
+    "sha256": "df005b33bbd857b837a6a75556e0179f90c86698e2883b5a579d0d1330feecf3",
+    "bytes": 11375,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/TRBUSDT/TRBUSDT-metrics-2024-01-02.zip",
+    "retrievedAt": "2026-10-29T10:24:40.791804+00:00"
+  },
+  "monthly/markPriceKlines/TRBUSDT/1h/TRBUSDT-1h-2023-12.zip": {
+    "status": "verified",
+    "sha256": "d584cdf1a5aaddb0a03df5c1f9d91cecb141ea158b23b4ddb3acf9b838a17fae",
+    "bytes": 20713,
+    "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/TRBUSDT/1h/TRBUSDT-1h-2023-12.zip",
+    "retrievedAt": "2026-10-29T10:24:41.902194+00:00"
+  },
+  "monthly/markPriceKlines/TRBUSDT/1h/TRBUSDT-1h-2024-01.zip": {
+    "status": "verified",
+    "sha256": "b764f9bc034ede0737c6e9320b147efab76f56398f6af056db11e6d53e1f403e",
+    "bytes": 21519,
+    "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/TRBUSDT/1h/TRBUSDT-1h-2024-01.zip",
+    "retrievedAt": "2026-10-29T10:24:43.020760+00:00"
+  },
+  "monthly/klines/YFIUSDT/1h/YFIUSDT-1h-2023-09.zip": {
+    "status": "verified",
+    "sha256": "73a9bef40fb2009ded3d0e0dd871086a233e6af41900a408a2db664c5bb1d8b5",
+    "bytes": 27536,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/YFIUSDT/1h/YFIUSDT-1h-2023-09.zip",
+    "retrievedAt": "2026-10-29T10:24:44.174120+00:00"
+  },
+  "monthly/fundingRate/YFIUSDT/YFIUSDT-fundingRate-2023-09.zip": {
+    "status": "verified",
+    "sha256": "c9357fe60c91398e4e0cbbf52c3983f489986cc3a5e1c954a991244bef054d64",
+    "bytes": 833,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/YFIUSDT/YFIUSDT-fundingRate-2023-09.zip",
+    "retrievedAt": "2026-10-29T10:24:45.220318+00:00"
+  },
+  "monthly/klines/YFIUSDT/1h/YFIUSDT-1h-2023-10.zip": {
+    "status": "verified",
+    "sha256": "e32aab44216954d40266beb37ff0e924b8ce81bc15e501ff93d2cf55e0902465",
+    "bytes": 28328,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/YFIUSDT/1h/YFIUSDT-1h-2023-10.zip",
+    "retrievedAt": "2026-10-29T10:24:46.311300+00:00"
+  },
+  "monthly/fundingRate/YFIUSDT/YFIUSDT-fundingRate-2023-10.zip": {
+    "status": "verified",
+    "sha256": "b810a69901aa97717dc701cfee427b209289cc26719dd2ab0e1a41388be536b4",
+    "bytes": 710,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/YFIUSDT/YFIUSDT-fundingRate-2023-10.zip",
+    "retrievedAt": "2026-10-29T10:24:47.331382+00:00"
+  },
+  "monthly/klines/YFIUSDT/1h/YFIUSDT-1h-2023-11.zip": {
+    "status": "verified",
+    "sha256": "9955d2be60a7810125ea97183568377ff2d040f79471d06d1b0b34bf137533cd",
+    "bytes": 29978,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/YFIUSDT/1h/YFIUSDT-1h-2023-11.zip",
+    "retrievedAt": "2026-10-29T10:24:48.442823+00:00"
+  },
+  "monthly/fundingRate/YFIUSDT/YFIUSDT-fundingRate-2023-11.zip": {
+    "status": "verified",
+    "sha256": "47a659869c1dfdc2be0cb4cbfbf7e7e1783d4e1f2838d0c27af5f0e8c8fbc4d6",
+    "bytes": 773,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/YFIUSDT/YFIUSDT-fundingRate-2023-11.zip",
+    "retrievedAt": "2026-10-29T10:24:49.487489+00:00"
+  },
+  "monthly/klines/YFIUSDT/1h/YFIUSDT-1h-2023-12.zip": {
+    "status": "verified",
+    "sha256": "c744343fd0936cbe790567cb62d5f7cdb8a63cdebc2414c559352b2c0f07be35",
+    "bytes": 29935,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/YFIUSDT/1h/YFIUSDT-1h-2023-12.zip",
+    "retrievedAt": "2026-10-29T10:24:50.584540+00:00"
+  },
+  "monthly/fundingRate/YFIUSDT/YFIUSDT-fundingRate-2023-12.zip": {
+    "status": "verified",
+    "sha256": "12990b3ec621ee1aedb679bb98e0d12edd79a2a580a181e8d8ef205d6f2d4765",
+    "bytes": 871,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/YFIUSDT/YFIUSDT-fundingRate-2023-12.zip",
+    "retrievedAt": "2026-10-29T10:24:51.633893+00:00"
+  },
+  "daily/metrics/YFIUSDT/YFIUSDT-metrics-2023-11-15.zip": {
+    "status": "verified",
+    "sha256": "cfd1d29e4a54e2cbfae2e1ef66c0ec023279c1ae9b3a2fbc1ef9db7e8b6c3761",
+    "bytes": 11137,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/YFIUSDT/YFIUSDT-metrics-2023-11-15.zip",
+    "retrievedAt": "2026-10-29T10:24:52.672497+00:00"
+  },
+  "daily/metrics/YFIUSDT/YFIUSDT-metrics-2023-11-16.zip": {
+    "status": "verified",
+    "sha256": "8438ce08415e95b0ed30e4bd12ecbc607df488fe7e90e8755678f1204d14f8e9",
+    "bytes": 11300,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/YFIUSDT/YFIUSDT-metrics-2023-11-16.zip",
+    "retrievedAt": "2026-10-29T10:24:53.743299+00:00"
+  },
+  "daily/metrics/YFIUSDT/YFIUSDT-metrics-2023-11-17.zip": {
+    "status": "verified",
+    "sha256": "6e7e06cf1656b396565900e7a66e499e3d4d009d3fcfeccf735ca65836b05ccf",
+    "bytes": 11358,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/YFIUSDT/YFIUSDT-metrics-2023-11-17.zip",
+    "retrievedAt": "2026-10-29T10:24:54.842049+00:00"
+  },
+  "daily/metrics/YFIUSDT/YFIUSDT-metrics-2023-11-18.zip": {
+    "status": "verified",
+    "sha256": "450e100542395466b416c991a41a55825433b77e45487febccd22818527cce9c",
+    "bytes": 11396,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/YFIUSDT/YFIUSDT-metrics-2023-11-18.zip",
+    "retrievedAt": "2026-10-29T10:24:55.871975+00:00"
+  },
+  "daily/metrics/YFIUSDT/YFIUSDT-metrics-2023-11-19.zip": {
+    "status": "verified",
+    "sha256": "b1c9cf7662042465efd66ef1f6502910581f009f7c0deedef4ad0054f3465fac",
+    "bytes": 11353,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/YFIUSDT/YFIUSDT-metrics-2023-11-19.zip",
+    "retrievedAt": "2026-10-29T10:24:56.931035+00:00"
+  },
+  "monthly/markPriceKlines/YFIUSDT/1h/YFIUSDT-1h-2023-11.zip": {
+    "status": "verified",
+    "sha256": "fa74f4af4cb6477a069496d8e74db1091e77ab61df31087540cd3f758e657e2c",
+    "bytes": 20373,
+    "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/YFIUSDT/1h/YFIUSDT-1h-2023-11.zip",
+    "retrievedAt": "2026-10-29T10:24:58.003711+00:00"
+  },
+  "monthly/klines/GASUSDT/1h/GASUSDT-1h-2023-09.zip": {
+    "status": "missing",
+    "http": 404,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/1h/GASUSDT-1h-2023-09.zip"
+  },
+  "monthly/fundingRate/GASUSDT/GASUSDT-fundingRate-2023-09.zip": {
+    "status": "missing",
+    "http": 404,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/GASUSDT/GASUSDT-fundingRate-2023-09.zip"
+  },
+  "monthly/klines/GASUSDT/1h/GASUSDT-1h-2023-10.zip": {
+    "status": "verified",
+    "sha256": "b9fa9a1f9993c0314e999855b61043e79bf327f69225396708df3a91aed3a889",
+    "bytes": 8214,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/1h/GASUSDT-1h-2023-10.zip",
+    "retrievedAt": "2026-10-29T10:25:00.147876+00:00"
+  },
+  "monthly/fundingRate/GASUSDT/GASUSDT-fundingRate-2023-10.zip": {
+    "status": "verified",
+    "sha256": "b0d539f1ade0bd768d3af8637f349e6c612efbcae4407b6476291d8cbc649d24",
+    "bytes": 551,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/GASUSDT/GASUSDT-fundingRate-2023-10.zip",
+    "retrievedAt": "2026-10-29T10:25:01.234216+00:00"
+  },
+  "monthly/klines/GASUSDT/1h/GASUSDT-1h-2023-11.zip": {
+    "status": "verified",
+    "sha256": "fe6900efe756275d4b84083456e32e62b7bf57d437ed33a448e091777cbc71d5",
+    "bytes": 34871,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/1h/GASUSDT-1h-2023-11.zip",
+    "retrievedAt": "2026-10-29T10:25:02.346702+00:00"
+  },
+  "monthly/fundingRate/GASUSDT/GASUSDT-fundingRate-2023-11.zip": {
+    "status": "verified",
+    "sha256": "54106a52958f6e6c29a864eb13157c36ef47862b04d5ee8fa7b42cbbf44389f5",
+    "bytes": 1456,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/GASUSDT/GASUSDT-fundingRate-2023-11.zip",
+    "retrievedAt": "2026-10-29T10:25:03.381990+00:00"
+  },
+  "monthly/klines/GASUSDT/1h/GASUSDT-1h-2023-12.zip": {
+    "status": "verified",
+    "sha256": "02323171cd120cea82a02fd479c6cc646535f44f430c98e18ad211f0e04a6170",
+    "bytes": 33286,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/1h/GASUSDT-1h-2023-12.zip",
+    "retrievedAt": "2026-10-29T10:25:04.450110+00:00"
+  },
+  "monthly/fundingRate/GASUSDT/GASUSDT-fundingRate-2023-12.zip": {
+    "status": "verified",
+    "sha256": "049e72f183e5fcc108bd2a0f80c545b0ae0a422ba051cba7dc221d0105529e9c",
+    "bytes": 1532,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/GASUSDT/GASUSDT-fundingRate-2023-12.zip",
+    "retrievedAt": "2026-10-29T10:25:05.467055+00:00"
+  },
+  "daily/metrics/GASUSDT/GASUSDT-metrics-2023-11-08.zip": {
+    "status": "verified",
+    "sha256": "5af32a04762663c73ac081ab99e835193bac0b691bcb124bacf4c88c19395648",
+    "bytes": 11475,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/GASUSDT/GASUSDT-metrics-2023-11-08.zip",
+    "retrievedAt": "2026-10-29T10:25:06.542794+00:00"
+  },
+  "daily/metrics/GASUSDT/GASUSDT-metrics-2023-11-09.zip": {
+    "status": "verified",
+    "sha256": "da62244dd581b156200ff24d0a42aa6bdb5709d72a31e2fd4df8ccb5a62792bf",
+    "bytes": 11488,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/GASUSDT/GASUSDT-metrics-2023-11-09.zip",
+    "retrievedAt": "2026-10-29T10:25:07.639724+00:00"
+  },
+  "daily/metrics/GASUSDT/GASUSDT-metrics-2023-11-10.zip": {
+    "status": "verified",
+    "sha256": "5351c27e8b4a2e8846efcfb35f6f7adbf8e13caee32f516261f242c7a6178ed7",
+    "bytes": 11577,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/GASUSDT/GASUSDT-metrics-2023-11-10.zip",
+    "retrievedAt": "2026-10-29T10:25:08.718881+00:00"
+  },
+  "daily/metrics/GASUSDT/GASUSDT-metrics-2023-11-11.zip": {
+    "status": "verified",
+    "sha256": "a61dc0958d574589ec02da5060f270c389275ae9755cc2ce5cb42d56c7da07ca",
+    "bytes": 11724,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/GASUSDT/GASUSDT-metrics-2023-11-11.zip",
+    "retrievedAt": "2026-10-29T10:25:09.795289+00:00"
+  },
+  "daily/metrics/GASUSDT/GASUSDT-metrics-2023-11-12.zip": {
+    "status": "verified",
+    "sha256": "e3ba57af16d9ce4b49b1d2dea63cafeb3fa0711d5ab49362eefe5106f991d56d",
+    "bytes": 11690,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/GASUSDT/GASUSDT-metrics-2023-11-12.zip",
+    "retrievedAt": "2026-10-29T10:25:10.863959+00:00"
+  },
+  "monthly/klines/BLZUSDT/1h/BLZUSDT-1h-2023-07.zip": {
+    "status": "verified",
+    "sha256": "ed39e9f104192e080855b472a1bc2943533cd5306f94a64939b45a80c50c12ce",
+    "bytes": 31662,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/BLZUSDT/1h/BLZUSDT-1h-2023-07.zip",
+    "retrievedAt": "2026-10-29T10:25:11.998083+00:00"
+  },
+  "monthly/fundingRate/BLZUSDT/BLZUSDT-fundingRate-2023-07.zip": {
+    "status": "verified",
+    "sha256": "1f25f0b81e22799b6d2f4a2c285bf8a8733689d073f471a91c1e7ca98a7aa0af",
+    "bytes": 732,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BLZUSDT/BLZUSDT-fundingRate-2023-07.zip",
+    "retrievedAt": "2026-10-29T10:25:13.088232+00:00"
+  },
+  "monthly/klines/BLZUSDT/1h/BLZUSDT-1h-2023-08.zip": {
+    "status": "verified",
+    "sha256": "487207f9e8d47aef1596ae04a1bac42a587e7673997a6297981d160f1416966c",
+    "bytes": 34703,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/BLZUSDT/1h/BLZUSDT-1h-2023-08.zip",
+    "retrievedAt": "2026-10-29T10:25:14.202209+00:00"
+  },
+  "monthly/fundingRate/BLZUSDT/BLZUSDT-fundingRate-2023-08.zip": {
+    "status": "verified",
+    "sha256": "ac6a5871dc1a468e36a6207f667ee6f25152de2c7a5f6857364bf5b88a4236b2",
+    "bytes": 1329,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BLZUSDT/BLZUSDT-fundingRate-2023-08.zip",
+    "retrievedAt": "2026-10-29T10:25:15.280304+00:00"
+  },
+  "monthly/klines/BLZUSDT/1h/BLZUSDT-1h-2023-09.zip": {
+    "status": "verified",
+    "sha256": "3e7b25d6e3ffa66b0cee7b2a7cad7619063a249e4f5272117c794a975d186461",
+    "bytes": 34499,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/BLZUSDT/1h/BLZUSDT-1h-2023-09.zip",
+    "retrievedAt": "2026-10-29T10:25:16.417038+00:00"
+  },
+  "monthly/fundingRate/BLZUSDT/BLZUSDT-fundingRate-2023-09.zip": {
+    "status": "verified",
+    "sha256": "745616c60dbfd8c0bdd5b154020eca378d66676a1cbfdd3761d4f7dd63b4eafd",
+    "bytes": 1175,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BLZUSDT/BLZUSDT-fundingRate-2023-09.zip",
+    "retrievedAt": "2026-10-29T10:25:17.497758+00:00"
+  },
+  "monthly/klines/BLZUSDT/1h/BLZUSDT-1h-2023-10.zip": {
+    "status": "verified",
+    "sha256": "d9aae921ad76fafdb8e296d6040807a6dc577d9fe015ff1042bc1e219abc51de",
+    "bytes": 35032,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/BLZUSDT/1h/BLZUSDT-1h-2023-10.zip",
+    "retrievedAt": "2026-10-29T10:25:18.596363+00:00"
+  },
+  "monthly/fundingRate/BLZUSDT/BLZUSDT-fundingRate-2023-10.zip": {
+    "status": "verified",
+    "sha256": "e07f79f056794975638a65771adbbd7d31d971a05476c812999b8b600796b852",
+    "bytes": 1071,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BLZUSDT/BLZUSDT-fundingRate-2023-10.zip",
+    "retrievedAt": "2026-10-29T10:25:19.627856+00:00"
+  },
+  "monthly/klines/BLZUSDT/1h/BLZUSDT-1h-2023-11.zip": {
+    "status": "verified",
+    "sha256": "816aae5e181bd86d5e6129e891cadda7189771d0dae074ab913719647d9f3268",
+    "bytes": 33160,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/BLZUSDT/1h/BLZUSDT-1h-2023-11.zip",
+    "retrievedAt": "2026-10-29T10:25:20.731903+00:00"
+  },
+  "monthly/fundingRate/BLZUSDT/BLZUSDT-fundingRate-2023-11.zip": {
+    "status": "verified",
+    "sha256": "af52980e8e2c1d5492013a5352b40086eaad5beb5a6c3a10ff475715ba359fef",
+    "bytes": 1190,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BLZUSDT/BLZUSDT-fundingRate-2023-11.zip",
+    "retrievedAt": "2026-10-29T10:25:21.788702+00:00"
+  },
+  "daily/metrics/BLZUSDT/BLZUSDT-metrics-2023-10-29.zip": {
+    "status": "verified",
+    "sha256": "6878b3aa47c8f17e59ea13ecebc2e1256d90bc00b2820f3c8bffdd9faf4b7d4d",
+    "bytes": 11411,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/BLZUSDT/BLZUSDT-metrics-2023-10-29.zip",
+    "retrievedAt": "2026-10-29T10:25:22.812936+00:00"
+  },
+  "daily/metrics/BLZUSDT/BLZUSDT-metrics-2023-10-30.zip": {
+    "status": "verified",
+    "sha256": "f794d365b0fc8e88e2e0517910d05731b853a698ac3bf970d64187663a8e0bf8",
+    "bytes": 11406,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/BLZUSDT/BLZUSDT-metrics-2023-10-30.zip",
+    "retrievedAt": "2026-10-29T10:25:23.854732+00:00"
+  },
+  "daily/metrics/BLZUSDT/BLZUSDT-metrics-2023-10-31.zip": {
+    "status": "verified",
+    "sha256": "1decbcb36bf8750778063e28b221a142ffca1874ff0218eab09793e5fdd621b0",
+    "bytes": 11543,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/BLZUSDT/BLZUSDT-metrics-2023-10-31.zip",
+    "retrievedAt": "2026-10-29T10:25:24.974079+00:00"
+  },
+  "daily/metrics/BLZUSDT/BLZUSDT-metrics-2023-11-01.zip": {
+    "status": "verified",
+    "sha256": "3772b935f348d5fafb7e52f1984ff7c217b6fe6b3e2b8e891f10e6fa256da74c",
+    "bytes": 11270,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/BLZUSDT/BLZUSDT-metrics-2023-11-01.zip",
+    "retrievedAt": "2026-10-29T10:25:26.088146+00:00"
+  },
+  "daily/metrics/BLZUSDT/BLZUSDT-metrics-2023-11-02.zip": {
+    "status": "verified",
+    "sha256": "49dc3f5efd153f3167d7a008d92c08d2f785204ef164b1b05f4e0672ad212691",
+    "bytes": 11118,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/BLZUSDT/BLZUSDT-metrics-2023-11-02.zip",
+    "retrievedAt": "2026-10-29T10:25:27.151926+00:00"
+  },
+  "monthly/klines/UNFIUSDT/1h/UNFIUSDT-1h-2022-05.zip": {
+    "status": "verified",
+    "sha256": "cdf337e24e53e7cd8026b2a296104b4ca0f324240c0073dc12e308b39f8c6bda",
+    "bytes": 31922,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/UNFIUSDT/1h/UNFIUSDT-1h-2022-05.zip",
+    "retrievedAt": "2026-10-29T10:25:28.370743+00:00"
+  },
+  "monthly/fundingRate/UNFIUSDT/UNFIUSDT-fundingRate-2022-05.zip": {
+    "status": "verified",
+    "sha256": "0a4305cce0fb964f7bb6b3c831e87d681564e4f32553af5414d33be292b93aa0",
+    "bytes": 943,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/UNFIUSDT/UNFIUSDT-fundingRate-2022-05.zip",
+    "retrievedAt": "2026-10-29T10:25:29.425051+00:00"
+  },
+  "monthly/klines/UNFIUSDT/1h/UNFIUSDT-1h-2022-06.zip": {
+    "status": "verified",
+    "sha256": "b575ae08ac4f15ed1098ef2c0fb2c8dea44f74bcd819a8f439f67177bad240ac",
+    "bytes": 32769,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/UNFIUSDT/1h/UNFIUSDT-1h-2022-06.zip",
+    "retrievedAt": "2026-10-29T10:25:30.511780+00:00"
+  },
+  "monthly/fundingRate/UNFIUSDT/UNFIUSDT-fundingRate-2022-06.zip": {
+    "status": "verified",
+    "sha256": "fcb99382706ba64fd489def44ed38ebe86d85fcec7ef29de6eab91681edd38ca",
+    "bytes": 973,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/UNFIUSDT/UNFIUSDT-fundingRate-2022-06.zip",
+    "retrievedAt": "2026-10-29T10:25:31.605193+00:00"
+  },
+  "monthly/klines/UNFIUSDT/1h/UNFIUSDT-1h-2022-07.zip": {
+    "status": "verified",
+    "sha256": "199fdf5cf4d158d20d4184b8596a1c84b8678bcbc4319536f669959acbc64a65",
+    "bytes": 33715,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/UNFIUSDT/1h/UNFIUSDT-1h-2022-07.zip",
+    "retrievedAt": "2026-10-29T10:25:32.738587+00:00"
+  },
+  "monthly/fundingRate/UNFIUSDT/UNFIUSDT-fundingRate-2022-07.zip": {
+    "status": "verified",
+    "sha256": "15c203a22ec6915425b0ea282a624adda5f98955dbf220cf6fa23e236a8d4bcf",
+    "bytes": 833,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/UNFIUSDT/UNFIUSDT-fundingRate-2022-07.zip",
+    "retrievedAt": "2026-10-29T10:25:33.767090+00:00"
+  },
+  "monthly/klines/UNFIUSDT/1h/UNFIUSDT-1h-2022-08.zip": {
+    "status": "verified",
+    "sha256": "a6c1d642d80882015a156845e29f0c4114c4a4eb1930c400bd891b222db1c681",
+    "bytes": 33791,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/UNFIUSDT/1h/UNFIUSDT-1h-2022-08.zip",
+    "retrievedAt": "2026-10-29T10:25:34.852824+00:00"
+  },
+  "monthly/fundingRate/UNFIUSDT/UNFIUSDT-fundingRate-2022-08.zip": {
+    "status": "verified",
+    "sha256": "f1267ff9fddc3d9f3af11bd508990f6f6df28e09be6d75c3e6c7f2f310e57667",
+    "bytes": 844,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/UNFIUSDT/UNFIUSDT-fundingRate-2022-08.zip",
+    "retrievedAt": "2026-10-29T10:25:35.887766+00:00"
+  },
+  "daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2022-06-05.zip": {
+    "status": "verified",
+    "sha256": "6c77ef675216f20366d4283450d517b6c7e68e0751db8f77df67a8735c5c52eb",
+    "bytes": 14074,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2022-06-05.zip",
+    "retrievedAt": "2026-10-29T10:25:36.973426+00:00"
+  },
+  "daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2022-06-06.zip": {
+    "status": "verified",
+    "sha256": "ee5b54a44a2d782ae2e2c4fe787e2640e54a6999e71bf130d57ab95c979fb5ed",
+    "bytes": 14570,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2022-06-06.zip",
+    "retrievedAt": "2026-10-29T10:25:38.041611+00:00"
+  },
+  "daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2022-06-07.zip": {
+    "status": "verified",
+    "sha256": "52b4e8310278760ecaeee08acd373468d259305b7b4f82baea312650a5f48c1e",
+    "bytes": 14741,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2022-06-07.zip",
+    "retrievedAt": "2026-10-29T10:25:39.111797+00:00"
+  },
+  "daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2022-06-08.zip": {
+    "status": "verified",
+    "sha256": "b5902e8672e1c13c652413eccfffa5dee3d0e7e9e955b557e01b6d65a9d89ba2",
+    "bytes": 14658,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2022-06-08.zip",
+    "retrievedAt": "2026-10-29T10:25:40.187478+00:00"
+  },
+  "daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2022-06-09.zip": {
+    "status": "verified",
+    "sha256": "127fa8328855458af06520fc1ad9ce7f246bff44d360f57a93cd2f29b5c87e11",
+    "bytes": 14500,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2022-06-09.zip",
+    "retrievedAt": "2026-10-29T10:25:41.586848+00:00"
+  },
+  "monthly/klines/UNFIUSDT/1h/UNFIUSDT-1h-2024-08.zip": {
+    "status": "verified",
+    "sha256": "8188dca3e4d2c1a4f432980f4e2bc910c935e091bd9f2cef0de0d3ee001f05ea",
+    "bytes": 30763,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/UNFIUSDT/1h/UNFIUSDT-1h-2024-08.zip",
+    "retrievedAt": "2026-10-29T10:25:42.766563+00:00"
+  },
+  "monthly/fundingRate/UNFIUSDT/UNFIUSDT-fundingRate-2024-08.zip": {
+    "status": "verified",
+    "sha256": "bd794160f3942379f70eccff914a15d5adc65f15385b7d60581eced7be36197c",
+    "bytes": 1135,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/UNFIUSDT/UNFIUSDT-fundingRate-2024-08.zip",
+    "retrievedAt": "2026-10-29T10:25:43.789403+00:00"
+  },
+  "monthly/klines/UNFIUSDT/1h/UNFIUSDT-1h-2024-09.zip": {
+    "status": "verified",
+    "sha256": "af6c005b564d1c796d7accddbe5ff54f0a4c2d1d2d67f9187c06c01233c51434",
+    "bytes": 29072,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/UNFIUSDT/1h/UNFIUSDT-1h-2024-09.zip",
+    "retrievedAt": "2026-10-29T10:25:45.111475+00:00"
+  },
+  "monthly/fundingRate/UNFIUSDT/UNFIUSDT-fundingRate-2024-09.zip": {
+    "status": "verified",
+    "sha256": "c996abaed91ac9ad2396b597a050a8d82a7805ebec498ae25da6f1e8b33ad804",
+    "bytes": 1049,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/UNFIUSDT/UNFIUSDT-fundingRate-2024-09.zip",
+    "retrievedAt": "2026-10-29T10:25:46.161934+00:00"
+  },
+  "monthly/klines/UNFIUSDT/1h/UNFIUSDT-1h-2024-10.zip": {
+    "status": "verified",
+    "sha256": "70bee850e4162c317b865a3d3dc1a9e23885d25e854fd9e4256175162d02fb65",
+    "bytes": 30186,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/UNFIUSDT/1h/UNFIUSDT-1h-2024-10.zip",
+    "retrievedAt": "2026-10-29T10:25:47.245836+00:00"
+  },
+  "monthly/fundingRate/UNFIUSDT/UNFIUSDT-fundingRate-2024-10.zip": {
+    "status": "verified",
+    "sha256": "256ad761ba31158c5fde7b889c2a061587a28dd571ab60320baf6b69e396ea63",
+    "bytes": 1106,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/UNFIUSDT/UNFIUSDT-fundingRate-2024-10.zip",
+    "retrievedAt": "2026-10-29T10:25:48.328621+00:00"
+  },
+  "daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2024-10-21.zip": {
+    "status": "verified",
+    "sha256": "f83eb26d2cd504f0288c250be312333de769a159757058db1fb13f508a20f951",
+    "bytes": 11075,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2024-10-21.zip",
+    "retrievedAt": "2026-10-29T10:25:49.438943+00:00"
+  },
+  "daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2024-10-22.zip": {
+    "status": "verified",
+    "sha256": "33bf03e952ca322aa988596b9cbe7e287496947b8fad2677ed50f33e14411e70",
+    "bytes": 10746,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2024-10-22.zip",
+    "retrievedAt": "2026-10-29T10:25:50.492374+00:00"
+  },
+  "daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2024-10-23.zip": {
+    "status": "verified",
+    "sha256": "ebb141d5e070b247f7ac6ba832b549861b114417e8cd3ae9db57c2355bace7ed",
+    "bytes": 11538,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2024-10-23.zip",
+    "retrievedAt": "2026-10-29T10:25:51.532792+00:00"
+  },
+  "daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2024-10-24.zip": {
+    "status": "verified",
+    "sha256": "54e21bc59e8027ace5054512dfd411bf188701859fa3618774d14b38cced05db",
+    "bytes": 11511,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2024-10-24.zip",
+    "retrievedAt": "2026-10-29T10:25:52.601425+00:00"
+  },
+  "daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2024-10-25.zip": {
+    "status": "verified",
+    "sha256": "5a99e360261c7dbb3ae06d4d41548243bb03d1cdbb3774451a592eccf0a26339",
+    "bytes": 11329,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2024-10-25.zip",
+    "retrievedAt": "2026-10-29T10:25:53.726879+00:00"
+  },
+  "monthly/klines/LINAUSDT/1h/LINAUSDT-1h-2023-04.zip": {
+    "status": "verified",
+    "sha256": "0d622428b176b22f2884b631ab3eb7e0fb14110f9513af1baede1543e196ee6a",
+    "bytes": 33119,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/LINAUSDT/1h/LINAUSDT-1h-2023-04.zip",
+    "retrievedAt": "2026-10-29T10:25:54.904667+00:00"
+  },
+  "monthly/fundingRate/LINAUSDT/LINAUSDT-fundingRate-2023-04.zip": {
+    "status": "verified",
+    "sha256": "6474da1f0f7f1544a08bcf92aedc87512605ebe6b485fe3f5512e8542b1232a7",
+    "bytes": 799,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/LINAUSDT/LINAUSDT-fundingRate-2023-04.zip",
+    "retrievedAt": "2026-10-29T10:25:56.015135+00:00"
+  },
+  "monthly/klines/LINAUSDT/1h/LINAUSDT-1h-2023-05.zip": {
+    "status": "verified",
+    "sha256": "94fb9101ebe55e46b7bf481f8287a0942c2cc4ac20cdcd31be0d23608c9746d2",
+    "bytes": 34294,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/LINAUSDT/1h/LINAUSDT-1h-2023-05.zip",
+    "retrievedAt": "2026-10-29T10:25:57.109784+00:00"
+  },
+  "monthly/fundingRate/LINAUSDT/LINAUSDT-fundingRate-2023-05.zip": {
+    "status": "verified",
+    "sha256": "bde8457fb487ad0f69c484c0aaf1e2539f37d25b5907b9fbed0be8052b21cc3a",
+    "bytes": 879,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/LINAUSDT/LINAUSDT-fundingRate-2023-05.zip",
+    "retrievedAt": "2026-10-29T10:25:58.145866+00:00"
+  },
+  "monthly/klines/LINAUSDT/1h/LINAUSDT-1h-2023-06.zip": {
+    "status": "verified",
+    "sha256": "f256b4f2245d22ccb53339e06ee8bf2b7e4847f6015e4673ce62c48ca2f3d4ac",
+    "bytes": 34320,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/LINAUSDT/1h/LINAUSDT-1h-2023-06.zip",
+    "retrievedAt": "2026-10-29T10:25:59.271200+00:00"
+  },
+  "monthly/fundingRate/LINAUSDT/LINAUSDT-fundingRate-2023-06.zip": {
+    "status": "verified",
+    "sha256": "36f2ea7c2b2f571a2615e2774669bcf04e2d77f5d8ad00cfb7db13bf3c588ba8",
+    "bytes": 927,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/LINAUSDT/LINAUSDT-fundingRate-2023-06.zip",
+    "retrievedAt": "2026-10-29T10:26:00.274294+00:00"
+  },
+  "monthly/klines/LINAUSDT/1h/LINAUSDT-1h-2023-07.zip": {
+    "status": "verified",
+    "sha256": "138f15a7ef4835252bb2ab177a5075f336f4a3c2b5034a875c49f93d602f0472",
+    "bytes": 32975,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/LINAUSDT/1h/LINAUSDT-1h-2023-07.zip",
+    "retrievedAt": "2026-10-29T10:26:01.364817+00:00"
+  },
+  "monthly/fundingRate/LINAUSDT/LINAUSDT-fundingRate-2023-07.zip": {
+    "status": "verified",
+    "sha256": "526b25abbdc8d9f696da002e3c4b9606a1d96b6456d4d504d5eb3be868ef16cc",
+    "bytes": 702,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/LINAUSDT/LINAUSDT-fundingRate-2023-07.zip",
+    "retrievedAt": "2026-10-29T10:26:02.403653+00:00"
+  },
+  "daily/metrics/LINAUSDT/LINAUSDT-metrics-2023-05-31.zip": {
+    "status": "verified",
+    "sha256": "2059ac6d2cd76201aa076d115eb4f7827090cbbb3a77261d231f5674f584555c",
+    "bytes": 14940,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/LINAUSDT/LINAUSDT-metrics-2023-05-31.zip",
+    "retrievedAt": "2026-10-29T10:26:03.467427+00:00"
+  },
+  "daily/metrics/LINAUSDT/LINAUSDT-metrics-2023-06-01.zip": {
+    "status": "verified",
+    "sha256": "928796600fdbdbc3a5dd757ce6b8ef2010496750d050efe0f2554ae2f4053dd7",
+    "bytes": 14906,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/LINAUSDT/LINAUSDT-metrics-2023-06-01.zip",
+    "retrievedAt": "2026-10-29T10:26:04.578650+00:00"
+  },
+  "daily/metrics/LINAUSDT/LINAUSDT-metrics-2023-06-02.zip": {
+    "status": "verified",
+    "sha256": "2197c9c8162250a0f988b83db3333db7c115183a68fbb9b54c39181c3d099097",
+    "bytes": 15047,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/LINAUSDT/LINAUSDT-metrics-2023-06-02.zip",
+    "retrievedAt": "2026-10-29T10:26:05.695960+00:00"
+  },
+  "daily/metrics/LINAUSDT/LINAUSDT-metrics-2023-06-03.zip": {
+    "status": "verified",
+    "sha256": "8a8160d5cd07b3bd339cda158f2939a90d2625379bd9e76b2c49a2e712093473",
+    "bytes": 14820,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/LINAUSDT/LINAUSDT-metrics-2023-06-03.zip",
+    "retrievedAt": "2026-10-29T10:26:06.782783+00:00"
+  },
+  "daily/metrics/LINAUSDT/LINAUSDT-metrics-2023-06-04.zip": {
+    "status": "verified",
+    "sha256": "d6bd156f4a1bece1ada16b1101d78920a99f72e88d0e8b39852d431774fdaa7c",
+    "bytes": 14829,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/LINAUSDT/LINAUSDT-metrics-2023-06-04.zip",
+    "retrievedAt": "2026-10-29T10:26:07.863380+00:00"
+  },
+  "monthly/klines/AUCTIONUSDT/1h/AUCTIONUSDT-1h-2025-01.zip": {
+    "status": "verified",
+    "sha256": "6de4e966c020d08aaead612d6a8e5b9be7c3df711b4f0a07fc774be9d3aa3d7f",
+    "bytes": 34566,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/AUCTIONUSDT/1h/AUCTIONUSDT-1h-2025-01.zip",
+    "retrievedAt": "2026-10-29T10:26:09.048715+00:00"
+  },
+  "monthly/fundingRate/AUCTIONUSDT/AUCTIONUSDT-fundingRate-2025-01.zip": {
+    "status": "verified",
+    "sha256": "f551a77123c99d8f1f1df3b0265839711b8be111eaebc2be0e10d99d9210ca55",
+    "bytes": 978,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/AUCTIONUSDT/AUCTIONUSDT-fundingRate-2025-01.zip",
+    "retrievedAt": "2026-10-29T10:26:10.079028+00:00"
+  },
+  "monthly/klines/AUCTIONUSDT/1h/AUCTIONUSDT-1h-2025-02.zip": {
+    "status": "verified",
+    "sha256": "4083d0a473241325918d8018b387346beec4d213072c2edf03053cf374036a63",
+    "bytes": 32080,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/AUCTIONUSDT/1h/AUCTIONUSDT-1h-2025-02.zip",
+    "retrievedAt": "2026-10-29T10:26:11.220758+00:00"
+  },
+  "monthly/fundingRate/AUCTIONUSDT/AUCTIONUSDT-fundingRate-2025-02.zip": {
+    "status": "verified",
+    "sha256": "bc2028f8862613f4174a0ab3b364dc215a163fea86fe52d6ef60510cf3231da2",
+    "bytes": 1223,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/AUCTIONUSDT/AUCTIONUSDT-fundingRate-2025-02.zip",
+    "retrievedAt": "2026-10-29T10:26:12.294177+00:00"
+  },
+  "monthly/klines/AUCTIONUSDT/1h/AUCTIONUSDT-1h-2025-03.zip": {
+    "status": "verified",
+    "sha256": "d7bfa3ddf2cb5cf71428e4c2eb9dca3b49b6bf0d4324568cfeae61bee0e59807",
+    "bytes": 37948,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/AUCTIONUSDT/1h/AUCTIONUSDT-1h-2025-03.zip",
+    "retrievedAt": "2026-10-29T10:26:13.437866+00:00"
+  },
+  "monthly/fundingRate/AUCTIONUSDT/AUCTIONUSDT-fundingRate-2025-03.zip": {
+    "status": "verified",
+    "sha256": "de57f9f2e284b9e3c067728456ea132219977e8c5016dda4aeafbca167da82c0",
+    "bytes": 1573,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/AUCTIONUSDT/AUCTIONUSDT-fundingRate-2025-03.zip",
+    "retrievedAt": "2026-10-29T10:26:14.511878+00:00"
+  },
+  "monthly/klines/AUCTIONUSDT/1h/AUCTIONUSDT-1h-2025-04.zip": {
+    "status": "verified",
+    "sha256": "0f0af061273face6734b17e8179f0c9e31eb14892a58b260898c7241d7d9e42c",
+    "bytes": 34483,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/AUCTIONUSDT/1h/AUCTIONUSDT-1h-2025-04.zip",
+    "retrievedAt": "2026-10-29T10:26:15.636706+00:00"
+  },
+  "monthly/fundingRate/AUCTIONUSDT/AUCTIONUSDT-fundingRate-2025-04.zip": {
+    "status": "verified",
+    "sha256": "9622a92970546ab73eabb34fef371b492f29e98669be3e7020b539434edcf3e2",
+    "bytes": 1442,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/AUCTIONUSDT/AUCTIONUSDT-fundingRate-2025-04.zip",
+    "retrievedAt": "2026-10-29T10:26:16.726244+00:00"
+  },
+  "daily/metrics/AUCTIONUSDT/AUCTIONUSDT-metrics-2025-03-19.zip": {
+    "status": "verified",
+    "sha256": "8e6b8c0a36c0880e04fc1597779981a53604407298147c7927311bb3c7b890fe",
+    "bytes": 11366,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/AUCTIONUSDT/AUCTIONUSDT-metrics-2025-03-19.zip",
+    "retrievedAt": "2026-10-29T10:26:17.927139+00:00"
+  },
+  "daily/metrics/AUCTIONUSDT/AUCTIONUSDT-metrics-2025-03-20.zip": {
+    "status": "verified",
+    "sha256": "daaf789722905d95e6d2bee02a897ff66d417d1bdcdd690a7ac0315ddb3c91d9",
+    "bytes": 11407,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/AUCTIONUSDT/AUCTIONUSDT-metrics-2025-03-20.zip",
+    "retrievedAt": "2026-10-29T10:26:19.017692+00:00"
+  },
+  "daily/metrics/AUCTIONUSDT/AUCTIONUSDT-metrics-2025-03-21.zip": {
+    "status": "verified",
+    "sha256": "a37709cd81b41b02a6561e72f1774eb4ec71cb3b8d20d3d7c53d11e0022ea518",
+    "bytes": 11329,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/AUCTIONUSDT/AUCTIONUSDT-metrics-2025-03-21.zip",
+    "retrievedAt": "2026-10-29T10:26:20.057163+00:00"
+  },
+  "daily/metrics/AUCTIONUSDT/AUCTIONUSDT-metrics-2025-03-22.zip": {
+    "status": "verified",
+    "sha256": "f82e3b2a368f114efd71eb79536286b59dd065f9ead8fb5caefad18bba8ffa8c",
+    "bytes": 11613,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/AUCTIONUSDT/AUCTIONUSDT-metrics-2025-03-22.zip",
+    "retrievedAt": "2026-10-29T10:26:21.095928+00:00"
+  },
+  "daily/metrics/AUCTIONUSDT/AUCTIONUSDT-metrics-2025-03-23.zip": {
+    "status": "verified",
+    "sha256": "d01eab1ad79969616a91bbf15c193ca23041fcd7a75fc5938acd803b201252e1",
+    "bytes": 11733,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/AUCTIONUSDT/AUCTIONUSDT-metrics-2025-03-23.zip",
+    "retrievedAt": "2026-10-29T10:26:22.144142+00:00"
+  },
+  "monthly/klines/ACTUSDT/1h/ACTUSDT-1h-2025-02.zip": {
+    "status": "verified",
+    "sha256": "f0d5c0dd2862f5c2d90ba12bd17b6cb093283702bbf632ce5a178b50b9b543cf",
+    "bytes": 32898,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACTUSDT/1h/ACTUSDT-1h-2025-02.zip",
+    "retrievedAt": "2026-10-29T10:26:23.314438+00:00"
+  },
+  "monthly/fundingRate/ACTUSDT/ACTUSDT-fundingRate-2025-02.zip": {
+    "status": "verified",
+    "sha256": "2f663a5f0f731c1b44600d58dcec4a65f40e184c65c9a0258d542d7d1f3c613a",
+    "bytes": 919,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ACTUSDT/ACTUSDT-fundingRate-2025-02.zip",
+    "retrievedAt": "2026-10-29T10:26:24.417862+00:00"
+  },
+  "monthly/klines/ACTUSDT/1h/ACTUSDT-1h-2025-03.zip": {
+    "status": "verified",
+    "sha256": "75fa7c072e2fdeb375e112771c338f8dc4c3105e30b7dd562d352de9e095f3d7",
+    "bytes": 34472,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACTUSDT/1h/ACTUSDT-1h-2025-03.zip",
+    "retrievedAt": "2026-10-29T10:26:25.607512+00:00"
+  },
+  "monthly/fundingRate/ACTUSDT/ACTUSDT-fundingRate-2025-03.zip": {
+    "status": "verified",
+    "sha256": "1453edd5503158709ae18ce0e7aeff214469facc4c36f7da724c9bc7ff0d081f",
+    "bytes": 1085,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ACTUSDT/ACTUSDT-fundingRate-2025-03.zip",
+    "retrievedAt": "2026-10-29T10:26:26.631869+00:00"
+  },
+  "monthly/klines/ACTUSDT/1h/ACTUSDT-1h-2025-04.zip": {
+    "status": "verified",
+    "sha256": "f52c6280e7544f02370fbd9cbd886f7b0b9ce442ff2dfbac4ddbda5016270d21",
+    "bytes": 34154,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACTUSDT/1h/ACTUSDT-1h-2025-04.zip",
+    "retrievedAt": "2026-10-29T10:26:27.748118+00:00"
+  },
+  "monthly/fundingRate/ACTUSDT/ACTUSDT-fundingRate-2025-04.zip": {
+    "status": "verified",
+    "sha256": "e7ffc97c688e7dd4fc7fdd76284633872f67fe3125e971573fde83e93fee8e6d",
+    "bytes": 1098,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ACTUSDT/ACTUSDT-fundingRate-2025-04.zip",
+    "retrievedAt": "2026-10-29T10:26:28.813088+00:00"
+  },
+  "monthly/klines/ACTUSDT/1h/ACTUSDT-1h-2025-05.zip": {
+    "status": "verified",
+    "sha256": "8eb59003aab3d28d1c79da60eb1f96b610c48c9c879c60ce14c85c91088aa3ab",
+    "bytes": 34950,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACTUSDT/1h/ACTUSDT-1h-2025-05.zip",
+    "retrievedAt": "2026-10-29T10:26:29.875155+00:00"
+  },
+  "monthly/fundingRate/ACTUSDT/ACTUSDT-fundingRate-2025-05.zip": {
+    "status": "verified",
+    "sha256": "d3ac36445691e005968af47283f10d85b8ced5362c4af9b439122146ce44001e",
+    "bytes": 1239,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ACTUSDT/ACTUSDT-fundingRate-2025-05.zip",
+    "retrievedAt": "2026-10-29T10:26:30.914943+00:00"
+  },
+  "daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-02-03.zip": {
+    "status": "verified",
+    "sha256": "c9af65efe05f73386ef906a5e648e533770ce4eced655ac602db7cda4a3ba61b",
+    "bytes": 11738,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-02-03.zip",
+    "retrievedAt": "2026-10-29T10:26:31.983734+00:00"
+  },
+  "daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-02-04.zip": {
+    "status": "verified",
+    "sha256": "2ee3d4e5573f6cbbdcbe281dc221bdbdac1388d90817808146d4fa1fc00a7058",
+    "bytes": 11433,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-02-04.zip",
+    "retrievedAt": "2026-10-29T10:26:33.071814+00:00"
+  },
+  "daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-02-05.zip": {
+    "status": "verified",
+    "sha256": "f6ef856ea66ff53a250442bd84509c44325924fb2f3ae92cead3f265df71b042",
+    "bytes": 11606,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-02-05.zip",
+    "retrievedAt": "2026-10-29T10:26:34.114222+00:00"
+  },
+  "daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-02-06.zip": {
+    "status": "verified",
+    "sha256": "b339c5081cca79cfee08145f1bca7c59183fcd1829365c9e1bd0976a262b9982",
+    "bytes": 11475,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-02-06.zip",
+    "retrievedAt": "2026-10-29T10:26:35.202803+00:00"
+  },
+  "daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-02-07.zip": {
+    "status": "verified",
+    "sha256": "b68fd33f13aac498e7e719dc2f93c31ae3c62723d64170f8d91fa72ad8192025",
+    "bytes": 11535,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-02-07.zip",
+    "retrievedAt": "2026-10-29T10:26:36.308099+00:00"
+  },
+  "monthly/markPriceKlines/ACTUSDT/1h/ACTUSDT-1h-2025-02.zip": {
+    "status": "verified",
+    "sha256": "7256cb158f08324bcb89b778acbf59548bda36eec285e81288362cfc626c4b19",
+    "bytes": 15685,
+    "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ACTUSDT/1h/ACTUSDT-1h-2025-02.zip",
+    "retrievedAt": "2026-10-29T10:26:37.375968+00:00"
+  },
+  "monthly/klines/OMUSDT/1h/OMUSDT-1h-2025-02.zip": {
+    "status": "verified",
+    "sha256": "b1df7811d3afbe3038f5bc859c4e58cf4b6254be3e050cf54f43cc04a1d9986f",
+    "bytes": 35488,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/OMUSDT/1h/OMUSDT-1h-2025-02.zip",
+    "retrievedAt": "2026-10-29T10:26:38.570934+00:00"
+  },
+  "monthly/fundingRate/OMUSDT/OMUSDT-fundingRate-2025-02.zip": {
+    "status": "verified",
+    "sha256": "e09792d67a6eb07de257f0a56699cd81831c532822da563621c3fbae9c9fee07",
+    "bytes": 1214,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/OMUSDT/OMUSDT-fundingRate-2025-02.zip",
+    "retrievedAt": "2026-10-29T10:26:39.622047+00:00"
+  },
+  "monthly/klines/OMUSDT/1h/OMUSDT-1h-2025-03.zip": {
+    "status": "verified",
+    "sha256": "9ca4c8b4dd535cc44226735d76f88a280491d42ba0f6b15a9ef0c1dddba2681a",
+    "bytes": 38140,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/OMUSDT/1h/OMUSDT-1h-2025-03.zip",
+    "retrievedAt": "2026-10-29T10:26:40.752991+00:00"
+  },
+  "monthly/fundingRate/OMUSDT/OMUSDT-fundingRate-2025-03.zip": {
+    "status": "verified",
+    "sha256": "eae28771c374535ace8580ccf91ab7e998798f5f0b7e07257028289b56a04a30",
+    "bytes": 1524,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/OMUSDT/OMUSDT-fundingRate-2025-03.zip",
+    "retrievedAt": "2026-10-29T10:26:41.825773+00:00"
+  },
+  "monthly/klines/OMUSDT/1h/OMUSDT-1h-2025-04.zip": {
+    "status": "verified",
+    "sha256": "878f767281c44a1b7ac922f3320bb1cee1c95b870448e8363eaf14e694531455",
+    "bytes": 37723,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/OMUSDT/1h/OMUSDT-1h-2025-04.zip",
+    "retrievedAt": "2026-10-29T10:26:42.948617+00:00"
+  },
+  "monthly/fundingRate/OMUSDT/OMUSDT-fundingRate-2025-04.zip": {
+    "status": "verified",
+    "sha256": "4630e0f25a191d556e807791fe2678c948f6499f28ac4cf203af72f15510cb8e",
+    "bytes": 1374,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/OMUSDT/OMUSDT-fundingRate-2025-04.zip",
+    "retrievedAt": "2026-10-29T10:26:43.989192+00:00"
+  },
+  "monthly/klines/OMUSDT/1h/OMUSDT-1h-2025-05.zip": {
+    "status": "verified",
+    "sha256": "6f38540b608daea3384d40279d7aee3f436af2e2493e19b488fccdf547cf52b6",
+    "bytes": 38551,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/OMUSDT/1h/OMUSDT-1h-2025-05.zip",
+    "retrievedAt": "2026-10-29T10:26:45.143810+00:00"
+  },
+  "monthly/fundingRate/OMUSDT/OMUSDT-fundingRate-2025-05.zip": {
+    "status": "verified",
+    "sha256": "6a5135aedf17e49d59a1bbcc2e7ea3b926fe62d5fc6d679344d2d4e863160737",
+    "bytes": 1298,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/OMUSDT/OMUSDT-fundingRate-2025-05.zip",
+    "retrievedAt": "2026-10-29T10:26:46.167591+00:00"
+  },
+  "daily/metrics/OMUSDT/OMUSDT-metrics-2025-02-21.zip": {
+    "status": "verified",
+    "sha256": "4990c9e7f6fe11ad2ed193c186e6a5dbe0b583f86a595e16db3c27a7a56f6203",
+    "bytes": 11260,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/OMUSDT/OMUSDT-metrics-2025-02-21.zip",
+    "retrievedAt": "2026-10-29T10:26:47.544019+00:00"
+  },
+  "daily/metrics/OMUSDT/OMUSDT-metrics-2025-02-22.zip": {
+    "status": "verified",
+    "sha256": "d9c5682de9fc3e700fd119cc6d7c7d0c65e6cda13f99b1a0bbbe3c72a1385a41",
+    "bytes": 11281,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/OMUSDT/OMUSDT-metrics-2025-02-22.zip",
+    "retrievedAt": "2026-10-29T10:26:48.649835+00:00"
+  },
+  "daily/metrics/OMUSDT/OMUSDT-metrics-2025-02-23.zip": {
+    "status": "verified",
+    "sha256": "647df494c96d3c28cbea2ee679b79cb433bc877bbf1b10c82860347b10a0d156",
+    "bytes": 11258,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/OMUSDT/OMUSDT-metrics-2025-02-23.zip",
+    "retrievedAt": "2026-10-29T10:26:49.712899+00:00"
+  },
+  "daily/metrics/OMUSDT/OMUSDT-metrics-2025-02-24.zip": {
+    "status": "verified",
+    "sha256": "1bd118d262e142607ab61c455ffd108a2d0eec0b50d78f49262b3c07e1ddb960",
+    "bytes": 11190,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/OMUSDT/OMUSDT-metrics-2025-02-24.zip",
+    "retrievedAt": "2026-10-29T10:26:50.780134+00:00"
+  },
+  "daily/metrics/OMUSDT/OMUSDT-metrics-2025-02-25.zip": {
+    "status": "verified",
+    "sha256": "f950bd65b98e5956bd21a14b7da28a4f9e195aea73ebf572c39cd8083f311acd",
+    "bytes": 11115,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/OMUSDT/OMUSDT-metrics-2025-02-25.zip",
+    "retrievedAt": "2026-10-29T10:26:51.824386+00:00"
+  },
+  "monthly/markPriceKlines/OMUSDT/1h/OMUSDT-1h-2025-02.zip": {
+    "status": "verified",
+    "sha256": "ccf2d1768c6458f492f30b8813d842e648f03f59ef5fb402a29e87a9322fa956",
+    "bytes": 17413,
+    "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/OMUSDT/1h/OMUSDT-1h-2025-02.zip",
+    "retrievedAt": "2026-10-29T10:26:52.882596+00:00"
+  },
+  "monthly/klines/LUNAUSDT/1h/LUNAUSDT-1h-2022-03.zip": {
+    "status": "verified",
+    "sha256": "543bbd8d49f33600990b1b48ec5a1cf6ad909cfaa6932c6cc73546829b207b7b",
+    "bytes": 34295,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/LUNAUSDT/1h/LUNAUSDT-1h-2022-03.zip",
+    "retrievedAt": "2026-10-29T10:26:54.071274+00:00"
+  },
+  "monthly/fundingRate/LUNAUSDT/LUNAUSDT-fundingRate-2022-03.zip": {
+    "status": "verified",
+    "sha256": "3b9dce72279407e0bea18e6d1d598dfc11dd51099e932fecaf6fa94b92e23cf0",
+    "bytes": 1028,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/LUNAUSDT/LUNAUSDT-fundingRate-2022-03.zip",
+    "retrievedAt": "2026-10-29T10:26:55.108223+00:00"
+  },
+  "monthly/klines/LUNAUSDT/1h/LUNAUSDT-1h-2022-04.zip": {
+    "status": "verified",
+    "sha256": "2308b231a069afcbcbe77dac5f66826421ee9792ba470aceb1308c9ddce8582b",
+    "bytes": 30939,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/LUNAUSDT/1h/LUNAUSDT-1h-2022-04.zip",
+    "retrievedAt": "2026-10-29T10:26:56.180923+00:00"
+  },
+  "monthly/fundingRate/LUNAUSDT/LUNAUSDT-fundingRate-2022-04.zip": {
+    "status": "verified",
+    "sha256": "c6268aa48cd4954d42b6a592126e588e2b00f02dc3b6453a325c8b3e031b58f9",
+    "bytes": 998,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/LUNAUSDT/LUNAUSDT-fundingRate-2022-04.zip",
+    "retrievedAt": "2026-10-29T10:26:57.215721+00:00"
+  },
+  "monthly/klines/LUNAUSDT/1h/LUNAUSDT-1h-2022-05.zip": {
+    "status": "verified",
+    "sha256": "96769b5a4d984f7b4689a8d2ac8c18d08724fc861b5c1330aa9b85fcea063ecf",
+    "bytes": 13878,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/LUNAUSDT/1h/LUNAUSDT-1h-2022-05.zip",
+    "retrievedAt": "2026-10-29T10:26:58.267622+00:00"
+  },
+  "monthly/fundingRate/LUNAUSDT/LUNAUSDT-fundingRate-2022-05.zip": {
+    "status": "verified",
+    "sha256": "33261d70ca4bd17d1cde22ab16e71b04609be94833aab00cb4b601096965277f",
+    "bytes": 598,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/LUNAUSDT/LUNAUSDT-fundingRate-2022-05.zip",
+    "retrievedAt": "2026-10-29T10:26:59.287675+00:00"
+  },
+  "daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-04-03.zip": {
+    "status": "verified",
+    "sha256": "55326f23c7978ea936aed8cab3bf41ef574827f14cf4614999e57155260ad0c1",
+    "bytes": 7918,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-04-03.zip",
+    "retrievedAt": "2026-10-29T10:27:00.366261+00:00"
+  },
+  "daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-04-04.zip": {
+    "status": "verified",
+    "sha256": "feed672d593591155599e7d8e27eeb269103925f9e51f0dba70fd6b05c515652",
+    "bytes": 7873,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-04-04.zip",
+    "retrievedAt": "2026-10-29T10:27:01.431670+00:00"
+  },
+  "daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-04-05.zip": {
+    "status": "verified",
+    "sha256": "585c2f157e7ac474e1a44f9b5e71b4e83e9cd6a2f310304473363b11468042fb",
+    "bytes": 7908,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-04-05.zip",
+    "retrievedAt": "2026-10-29T10:27:02.505988+00:00"
+  },
+  "daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-04-06.zip": {
+    "status": "verified",
+    "sha256": "cc35f82c1aa7ed8bc0c61ad9c1a621e90fdc8c5cb17ee026e81d89074149b307",
+    "bytes": 7974,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-04-06.zip",
+    "retrievedAt": "2026-10-29T10:27:03.601182+00:00"
+  },
+  "daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-04-07.zip": {
+    "status": "verified",
+    "sha256": "132b6a5cb0c7151ff0736e1d75bae906e50054aaa343d6e668fcf885345c46d7",
+    "bytes": 7994,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-04-07.zip",
+    "retrievedAt": "2026-10-29T10:27:04.662702+00:00"
+  },
+  "monthly/markPriceKlines/LUNAUSDT/1h/LUNAUSDT-1h-2022-04.zip": {
+    "status": "verified",
+    "sha256": "d0bd49e016ba926cc8585efc38725c83b7b857a1d0492506fa352c2a563d6b8f",
+    "bytes": 19500,
+    "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/LUNAUSDT/1h/LUNAUSDT-1h-2022-04.zip",
+    "retrievedAt": "2026-10-29T10:27:05.755855+00:00"
+  },
+  "monthly/klines/BNTUSDT/1h/BNTUSDT-1h-2023-09.zip": {
+    "status": "verified",
+    "sha256": "85c99c76115c5e4b4bc66b1f1264a1d20a0b54122fa824527b824b0020862ade",
+    "bytes": 29343,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/BNTUSDT/1h/BNTUSDT-1h-2023-09.zip",
+    "retrievedAt": "2026-10-29T10:27:06.973013+00:00"
+  },
+  "monthly/fundingRate/BNTUSDT/BNTUSDT-fundingRate-2023-09.zip": {
+    "status": "verified",
+    "sha256": "a0590a613b896730ab8bcc28604aa6044f0fba196ab1c3faf457dd6bb6a93624",
+    "bytes": 751,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BNTUSDT/BNTUSDT-fundingRate-2023-09.zip",
+    "retrievedAt": "2026-10-29T10:27:08.055199+00:00"
+  },
+  "monthly/klines/BNTUSDT/1h/BNTUSDT-1h-2023-10.zip": {
+    "status": "verified",
+    "sha256": "7aa2ea9d4a5bc39ee1627bb20af53e5ed073ccf24e40530fbe495069a769d026",
+    "bytes": 32894,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/BNTUSDT/1h/BNTUSDT-1h-2023-10.zip",
+    "retrievedAt": "2026-10-29T10:27:10.244380+00:00"
+  },
+  "monthly/fundingRate/BNTUSDT/BNTUSDT-fundingRate-2023-10.zip": {
+    "status": "verified",
+    "sha256": "5d218f2239c125b2a7ddab20e72865a40461609d1ee79e93e669c2f161244459",
+    "bytes": 795,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BNTUSDT/BNTUSDT-fundingRate-2023-10.zip",
+    "retrievedAt": "2026-10-29T10:27:11.288492+00:00"
+  },
+  "monthly/klines/BNTUSDT/1h/BNTUSDT-1h-2023-11.zip": {
+    "status": "verified",
+    "sha256": "232b70875d88a1a23446af6063c9f08032136fef6f4d95b89cf1de23efff2a9e",
+    "bytes": 32089,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/BNTUSDT/1h/BNTUSDT-1h-2023-11.zip",
+    "retrievedAt": "2026-10-29T10:27:12.459338+00:00"
+  },
+  "monthly/fundingRate/BNTUSDT/BNTUSDT-fundingRate-2023-11.zip": {
+    "status": "verified",
+    "sha256": "8197cfcef2fb6716e884ca4415a044d3227ec274416fd9a83d78f5936c7e5a23",
+    "bytes": 742,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BNTUSDT/BNTUSDT-fundingRate-2023-11.zip",
+    "retrievedAt": "2026-10-29T10:27:13.549082+00:00"
+  },
+  "daily/metrics/BNTUSDT/BNTUSDT-metrics-2023-11-11.zip": {
+    "status": "verified",
+    "sha256": "84c9b5778e0e5fad104d0ab9e0ccb90aff7e4a54ef5ea46b81930a042c863eaf",
+    "bytes": 11251,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/BNTUSDT/BNTUSDT-metrics-2023-11-11.zip",
+    "retrievedAt": "2026-10-29T10:27:14.615154+00:00"
+  },
+  "daily/metrics/BNTUSDT/BNTUSDT-metrics-2023-11-12.zip": {
+    "status": "verified",
+    "sha256": "9b736f2b8c7e4e70601781558b0fc0d7b474f28e124f53ef3c4f9118151cb005",
+    "bytes": 11409,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/BNTUSDT/BNTUSDT-metrics-2023-11-12.zip",
+    "retrievedAt": "2026-10-29T10:27:15.734415+00:00"
+  },
+  "daily/metrics/BNTUSDT/BNTUSDT-metrics-2023-11-13.zip": {
+    "status": "verified",
+    "sha256": "2bb85c5205b132a5b507cad1fdc861812c6df31be1fd7e8672e724dfdca3ef6a",
+    "bytes": 11579,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/BNTUSDT/BNTUSDT-metrics-2023-11-13.zip",
+    "retrievedAt": "2026-10-29T10:27:16.833537+00:00"
+  },
+  "daily/metrics/BNTUSDT/BNTUSDT-metrics-2023-11-14.zip": {
+    "status": "verified",
+    "sha256": "ef128040b10c81005ec5b4fb617fff78eab634592abf8a4d647c445d012a8500",
+    "bytes": 11345,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/BNTUSDT/BNTUSDT-metrics-2023-11-14.zip",
+    "retrievedAt": "2026-10-29T10:27:17.854653+00:00"
+  },
+  "daily/metrics/BNTUSDT/BNTUSDT-metrics-2023-11-15.zip": {
+    "status": "verified",
+    "sha256": "6102eebd598a45c44d406351747b395c5f43ce4b493553abde740a6bfc480e1e",
+    "bytes": 11166,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/BNTUSDT/BNTUSDT-metrics-2023-11-15.zip",
+    "retrievedAt": "2026-10-29T10:27:18.937145+00:00"
+  },
+  "monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2023-09.zip": {
+    "status": "verified",
+    "sha256": "7849f82af86aabcb9a79f64d0527480f22117656a68f98280fe8b840a6ee1339",
+    "bytes": 35974,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2023-09.zip",
+    "retrievedAt": "2026-10-29T10:27:20.175193+00:00"
+  },
+  "monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2023-09.zip": {
+    "status": "verified",
+    "sha256": "3fd9df6fd1eef33cf5fe625c27012359bc6d64a68c109305d7b44a0354f533c2",
+    "bytes": 914,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2023-09.zip",
+    "retrievedAt": "2026-10-29T10:27:21.258109+00:00"
+  },
+  "monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2023-10.zip": {
+    "status": "verified",
+    "sha256": "bbf0ef273c80f696ed9eb129a257812162487486692f124b9631ec38a924f6ae",
+    "bytes": 37679,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2023-10.zip",
+    "retrievedAt": "2026-10-29T10:27:22.347284+00:00"
+  },
+  "monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2023-10.zip": {
+    "status": "verified",
+    "sha256": "03105cc140150bffca834bcccbddc6cfee245e079d2df1759653243bd6e92448",
+    "bytes": 865,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2023-10.zip",
+    "retrievedAt": "2026-10-29T10:27:27.741494+00:00"
+  },
+  "monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2023-11.zip": {
+    "status": "verified",
+    "sha256": "26f1a2870f57925303edcf75581f0a33ff5e145c2126e15afc5fc1b400522428",
+    "bytes": 36685,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2023-11.zip",
+    "retrievedAt": "2026-10-29T10:27:28.945769+00:00"
+  },
+  "monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2023-11.zip": {
+    "status": "verified",
+    "sha256": "8015d2997f8d5e757ff3707ee87800ca30a74da0129daa747b64117f07bcc186",
+    "bytes": 696,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2023-11.zip",
+    "retrievedAt": "2026-10-29T10:27:29.990250+00:00"
+  },
+  "monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2023-12.zip": {
+    "status": "verified",
+    "sha256": "5377bec9e6dc04027717836cc1c2a3789da4e4122d57e8395265a0414b766b7c",
+    "bytes": 38475,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2023-12.zip",
+    "retrievedAt": "2026-10-29T10:27:31.136841+00:00"
+  },
+  "monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2023-12.zip": {
+    "status": "verified",
+    "sha256": "8f02fdd2a2da261bbf13ab301c74bdb57fae005f19d5088e9ece5f8824c1a2a7",
+    "bytes": 810,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2023-12.zip",
+    "retrievedAt": "2026-10-29T10:27:32.182065+00:00"
+  },
+  "monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2024-01.zip": {
+    "status": "verified",
+    "sha256": "bf673f3d10804a951e8bac56dd2473486f113025971d43ebe5258ec40f9bfeb3",
+    "bytes": 38890,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2024-01.zip",
+    "retrievedAt": "2026-10-29T10:27:33.337815+00:00"
+  },
+  "monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2024-01.zip": {
+    "status": "verified",
+    "sha256": "3e0d30870672aa8f0f937881056e3cfd55913ae5c780cd50b33f2763aa0ba58e",
+    "bytes": 696,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2024-01.zip",
+    "retrievedAt": "2026-10-29T10:27:34.360395+00:00"
+  },
+  "daily/metrics/BTCUSDT/BTCUSDT-metrics-2024-01-09.zip": {
+    "status": "verified",
+    "sha256": "ec835dc941764f3421f7208c1dcc1df158a3ef30a0f358c0dbb02e4f450c448a",
+    "bytes": 11619,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/BTCUSDT/BTCUSDT-metrics-2024-01-09.zip",
+    "retrievedAt": "2026-10-29T10:27:35.436856+00:00"
+  },
+  "daily/metrics/BTCUSDT/BTCUSDT-metrics-2024-01-10.zip": {
+    "status": "verified",
+    "sha256": "d9673598cf495035f807fb43f2010f4bf974527d02a48d65bde24fe258980991",
+    "bytes": 11654,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/BTCUSDT/BTCUSDT-metrics-2024-01-10.zip",
+    "retrievedAt": "2026-10-29T10:27:36.519567+00:00"
+  },
+  "daily/metrics/BTCUSDT/BTCUSDT-metrics-2024-01-11.zip": {
+    "status": "verified",
+    "sha256": "f95540e1d3fe42a994a08cb07ce9b2b941c5707cc86d9e1299bb3973cbb50ba6",
+    "bytes": 11770,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/BTCUSDT/BTCUSDT-metrics-2024-01-11.zip",
+    "retrievedAt": "2026-10-29T10:27:37.600542+00:00"
+  },
+  "daily/metrics/BTCUSDT/BTCUSDT-metrics-2024-01-12.zip": {
+    "status": "verified",
+    "sha256": "334506c68393f386d5b89c4f990c6a378c275da11d981f43dee42656cd693161",
+    "bytes": 11803,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/BTCUSDT/BTCUSDT-metrics-2024-01-12.zip",
+    "retrievedAt": "2026-10-29T10:27:38.690354+00:00"
+  },
+  "daily/metrics/BTCUSDT/BTCUSDT-metrics-2024-01-13.zip": {
+    "status": "verified",
+    "sha256": "7b26a9d69ac1db5d674e84a63570474f14abdfa56ae2ecd1c5033ba8d73880d0",
+    "bytes": 11691,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/BTCUSDT/BTCUSDT-metrics-2024-01-13.zip",
+    "retrievedAt": "2026-10-29T10:27:39.769249+00:00"
+  },
+  "monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2023-09.zip": {
+    "status": "verified",
+    "sha256": "38883595a881aadfbfd8c256e5170c8b016e9927119250f5128abfba96aba9c5",
+    "bytes": 36218,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2023-09.zip",
+    "retrievedAt": "2026-10-29T10:27:41.072016+00:00"
+  },
+  "monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2023-09.zip": {
+    "status": "verified",
+    "sha256": "41ac7eb67a46d14d97daec4c37e8229df5ac6b165639ad4b2c54bc7374930341",
+    "bytes": 902,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2023-09.zip",
+    "retrievedAt": "2026-10-29T10:27:42.191757+00:00"
+  },
+  "monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2023-10.zip": {
+    "status": "verified",
+    "sha256": "61d6692284b406c9f9f655aef68e151a1eeb90509ddcd7f4a97233b1a002ef9e",
+    "bytes": 38084,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2023-10.zip",
+    "retrievedAt": "2026-10-29T10:27:43.394275+00:00"
+  },
+  "monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2023-10.zip": {
+    "status": "verified",
+    "sha256": "ccaf4474f0dc94adedd4330c14995f338186caa2cc9fd0d2e2c55f74cf263a5c",
+    "bytes": 849,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2023-10.zip",
+    "retrievedAt": "2026-10-29T10:27:44.489981+00:00"
+  },
+  "monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2023-11.zip": {
+    "status": "verified",
+    "sha256": "d57c333ac46e779b2399c498cc8fedfbc8804deb688873585ded09aceec1fa16",
+    "bytes": 37387,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2023-11.zip",
+    "retrievedAt": "2026-10-29T10:27:45.616290+00:00"
+  },
+  "monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2023-11.zip": {
+    "status": "verified",
+    "sha256": "153ec1450eb5d999ce253e2c7ca2e81b79a523ff52dd18b14faefab8212b999b",
+    "bytes": 699,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2023-11.zip",
+    "retrievedAt": "2026-10-29T10:27:46.698452+00:00"
+  },
+  "monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2023-12.zip": {
+    "status": "verified",
+    "sha256": "8f581fcee21156d501435fc88db1d99515e6d7432fa7ae2993de3b5f95bb0069",
+    "bytes": 38764,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2023-12.zip",
+    "retrievedAt": "2026-10-29T10:27:47.867626+00:00"
+  },
+  "monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2023-12.zip": {
+    "status": "verified",
+    "sha256": "91bdf41566cebb86c6f0e3646b0037de9c22e14ee2f592c5722c7e4a19c91119",
+    "bytes": 801,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2023-12.zip",
+    "retrievedAt": "2026-10-29T10:27:48.988895+00:00"
+  },
+  "monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2024-01.zip": {
+    "status": "verified",
+    "sha256": "2f3d1a6d9292f13b1d6cf86716cbda5b3f6119a310daed1dde5ee3d0d71e2fab",
+    "bytes": 38917,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2024-01.zip",
+    "retrievedAt": "2026-10-29T10:27:50.143640+00:00"
+  },
+  "monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2024-01.zip": {
+    "status": "verified",
+    "sha256": "5a71469b0b363886df904e784dddefc484dd943334b1fb7454713ce4ed715a4b",
+    "bytes": 685,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2024-01.zip",
+    "retrievedAt": "2026-10-29T10:27:51.198346+00:00"
+  },
+  "daily/metrics/ETHUSDT/ETHUSDT-metrics-2024-01-10.zip": {
+    "status": "verified",
+    "sha256": "b3ce2e7ed8f9baf38f5511400997f68256d7198b38868ca568b2023c3b527b78",
+    "bytes": 12101,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2024-01-10.zip",
+    "retrievedAt": "2026-10-29T10:27:52.306902+00:00"
+  },
+  "daily/metrics/ETHUSDT/ETHUSDT-metrics-2024-01-11.zip": {
+    "status": "verified",
+    "sha256": "6c532de093ab63d6937864321082942bc63bb3c767ffc349610034d09301dd1c",
+    "bytes": 12010,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2024-01-11.zip",
+    "retrievedAt": "2026-10-29T10:27:53.404211+00:00"
+  },
+  "daily/metrics/ETHUSDT/ETHUSDT-metrics-2024-01-12.zip": {
+    "status": "verified",
+    "sha256": "9cbafa8762ed7ba381a1d54559ac1c3dbb733133466d2f9b68d7c7516eb6f1c4",
+    "bytes": 11999,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2024-01-12.zip",
+    "retrievedAt": "2026-10-29T10:27:54.477709+00:00"
+  },
+  "daily/metrics/ETHUSDT/ETHUSDT-metrics-2024-01-13.zip": {
+    "status": "verified",
+    "sha256": "8b99e6de93fc5d91b59e5f72b917e6d10e82271dba9e83d2ef13798206904ee5",
+    "bytes": 11811,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2024-01-13.zip",
+    "retrievedAt": "2026-10-29T10:27:55.550394+00:00"
+  },
+  "daily/metrics/ETHUSDT/ETHUSDT-metrics-2024-01-14.zip": {
+    "status": "verified",
+    "sha256": "1cefcd9ab7c86e5a4597e7d25ffac99466f683629a36a3a88f8d00deb055a7cd",
+    "bytes": 11769,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2024-01-14.zip",
+    "retrievedAt": "2026-10-29T10:27:56.660641+00:00"
+  },
+  "monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2025-03.zip": {
+    "status": "verified",
+    "sha256": "08043384c3336b0fa3eeee06e113a6f1eceb6d3fbe7b2971e9b9fa83625fdfb9",
+    "bytes": 38723,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2025-03.zip",
+    "retrievedAt": "2026-10-29T10:27:57.993087+00:00"
+  },
+  "monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2025-03.zip": {
+    "status": "verified",
+    "sha256": "a3b95cfb315641fbfddc61eb32adf2a2588afb7a3973a61f464aca007ad43e3f",
+    "bytes": 938,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2025-03.zip",
+    "retrievedAt": "2026-10-29T10:27:59.071783+00:00"
+  },
+  "monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2025-04.zip": {
+    "status": "verified",
+    "sha256": "2adf7c1be412e43b04a128e997f4cb1e5e7f895f55b6e1bf66621807f221f274",
+    "bytes": 37389,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2025-04.zip",
+    "retrievedAt": "2026-10-29T10:28:00.203457+00:00"
+  },
+  "monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2025-04.zip": {
+    "status": "verified",
+    "sha256": "01dbb7bd0135f98bd63bdde6b943cde1accc1770cabf92f68a1ec0653ced3888",
+    "bytes": 929,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2025-04.zip",
+    "retrievedAt": "2026-10-29T10:28:01.245733+00:00"
+  },
+  "monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2025-05.zip": {
+    "status": "verified",
+    "sha256": "2e736b9e792d5ae9d4607d7426e4530020762cb898d580b18d3fb0faf9d2ba8e",
+    "bytes": 38805,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1h/BTCUSDT-1h-2025-05.zip",
+    "retrievedAt": "2026-10-29T10:28:02.383975+00:00"
+  },
+  "monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2025-05.zip": {
+    "status": "verified",
+    "sha256": "e7355e2775b88009c984db1783bb8ed6b5f24ede2b52bb764151b5722d6a5e42",
+    "bytes": 943,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2025-05.zip",
+    "retrievedAt": "2026-10-29T10:28:03.487690+00:00"
+  },
+  "daily/metrics/BTCUSDT/BTCUSDT-metrics-2025-05-20.zip": {
+    "status": "verified",
+    "sha256": "cfe7d95a5e63f942dd04379ade92fddbd4aff2e90ffd8665943ef4930cfa56d8",
+    "bytes": 11255,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/BTCUSDT/BTCUSDT-metrics-2025-05-20.zip",
+    "retrievedAt": "2026-10-29T10:28:04.610432+00:00"
+  },
+  "daily/metrics/BTCUSDT/BTCUSDT-metrics-2025-05-21.zip": {
+    "status": "verified",
+    "sha256": "1a8008a6a768d989f77bddbe43d1bafb79af43eb3552cd39520d6790c429b0d1",
+    "bytes": 11263,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/BTCUSDT/BTCUSDT-metrics-2025-05-21.zip",
+    "retrievedAt": "2026-10-29T10:28:05.719087+00:00"
+  },
+  "daily/metrics/BTCUSDT/BTCUSDT-metrics-2025-05-22.zip": {
+    "status": "verified",
+    "sha256": "4792ee5c293176801a347b9db0f1698e8e6e0ce42dbf8a60a60731b8110a6811",
+    "bytes": 11256,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/BTCUSDT/BTCUSDT-metrics-2025-05-22.zip",
+    "retrievedAt": "2026-10-29T10:28:06.764618+00:00"
+  },
+  "daily/metrics/BTCUSDT/BTCUSDT-metrics-2025-05-23.zip": {
+    "status": "verified",
+    "sha256": "033b86df878fdbe3169f91f3ff75004e9090bebc97bd984a1be08eadf72b8446",
+    "bytes": 11228,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/BTCUSDT/BTCUSDT-metrics-2025-05-23.zip",
+    "retrievedAt": "2026-10-29T10:28:07.853604+00:00"
+  },
+  "daily/metrics/BTCUSDT/BTCUSDT-metrics-2025-05-24.zip": {
+    "status": "verified",
+    "sha256": "13d5463ba7b861deca7e61c9130e2e157c8d35d0a464c8cdbc6561b22d2728d7",
+    "bytes": 11090,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/BTCUSDT/BTCUSDT-metrics-2025-05-24.zip",
+    "retrievedAt": "2026-10-29T10:28:09.953925+00:00"
+  },
+  "monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2025-03.zip": {
+    "status": "verified",
+    "sha256": "9dbad1e542ff8344fe8610450cf71d5cb98e1af2e8f2d7a31dbe8679ef263535",
+    "bytes": 39488,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2025-03.zip",
+    "retrievedAt": "2026-10-29T10:28:11.303180+00:00"
+  },
+  "monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2025-03.zip": {
+    "status": "verified",
+    "sha256": "62464a8bfb7ba515628acb76d3e2172d33b88805faa2e701a22537c51a17d139",
+    "bytes": 934,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2025-03.zip",
+    "retrievedAt": "2026-10-29T10:28:12.395904+00:00"
+  },
+  "monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2025-04.zip": {
+    "status": "verified",
+    "sha256": "238c691129962d9fe08aaca46ea367f911e62c58a820a8e5ded371bff7f4eec4",
+    "bytes": 38095,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2025-04.zip",
+    "retrievedAt": "2026-10-29T10:28:13.554270+00:00"
+  },
+  "monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2025-04.zip": {
+    "status": "verified",
+    "sha256": "7db62cb5e9f32397dacabb3d571b96397024bda3810bde0799c90f61cb773679",
+    "bytes": 940,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2025-04.zip",
+    "retrievedAt": "2026-10-29T10:28:14.662268+00:00"
+  },
+  "monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2025-05.zip": {
+    "status": "verified",
+    "sha256": "201829c864a26677ad0b53df5b0491e9eab00e6f48e1a8bf5204dc7d794dd7ea",
+    "bytes": 39704,
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1h/ETHUSDT-1h-2025-05.zip",
+    "retrievedAt": "2026-10-29T10:28:15.838256+00:00"
+  },
+  "monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2025-05.zip": {
+    "status": "verified",
+    "sha256": "996aff38f046b50510301532ac5cbdca115afca971c49cb548f50e5d70e18d99",
+    "bytes": 919,
+    "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2025-05.zip",
+    "retrievedAt": "2026-10-29T10:28:16.902697+00:00"
+  },
+  "daily/metrics/ETHUSDT/ETHUSDT-metrics-2025-05-27.zip": {
+    "status": "verified",
+    "sha256": "cbb1855992e5bed0b148ba4e31086dd0293bbd6e3c1330c22d325273c7997aa6",
+    "bytes": 11899,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2025-05-27.zip",
+    "retrievedAt": "2026-10-29T10:28:17.985096+00:00"
+  },
+  "daily/metrics/ETHUSDT/ETHUSDT-metrics-2025-05-28.zip": {
+    "status": "verified",
+    "sha256": "36fa11f966de5c17adf2a7e73b04669aeeebb2e4efe89ffe02eeed50e1be877b",
+    "bytes": 11628,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2025-05-28.zip",
+    "retrievedAt": "2026-10-29T10:28:19.093090+00:00"
+  },
+  "daily/metrics/ETHUSDT/ETHUSDT-metrics-2025-05-29.zip": {
+    "status": "verified",
+    "sha256": "1dc0e4263187a34e9f56b9530d7541ed42298f880d9df2d64e7b2120eb05f389",
+    "bytes": 11877,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2025-05-29.zip",
+    "retrievedAt": "2026-10-29T10:28:20.147951+00:00"
+  },
+  "daily/metrics/ETHUSDT/ETHUSDT-metrics-2025-05-30.zip": {
+    "status": "verified",
+    "sha256": "015c20c3be958c8f28b6fd4dae9cfe278f78164215e7ce91c4608e4ea3cbf58f",
+    "bytes": 11785,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2025-05-30.zip",
+    "retrievedAt": "2026-10-29T10:28:21.237690+00:00"
+  },
+  "daily/metrics/ETHUSDT/ETHUSDT-metrics-2025-05-31.zip": {
+    "status": "verified",
+    "sha256": "f0f59b90d7777e6c7e59a1206846c942e663e51c812a71525d48e2ad22177212",
+    "bytes": 11587,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2025-05-31.zip",
+    "retrievedAt": "2026-10-29T10:28:22.300424+00:00"
+  },
+  "daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2024-10-15.zip": {
+    "status": "verified",
+    "sha256": "39b5e4409e217d98dcf2edf0ac192ddb2dd9f5beb1e2b97821dd324f4a962cd2",
+    "bytes": 10953,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2024-10-15.zip",
+    "retrievedAt": "2026-10-29T10:29:51.003526+00:00"
+  },
+  "daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2024-10-16.zip": {
+    "status": "verified",
+    "sha256": "062456e1dc65d510f1d8ea1020bc4c93873b2f86936b22240969bb5ea1d0d26e",
+    "bytes": 10797,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2024-10-16.zip",
+    "retrievedAt": "2026-10-29T10:29:52.109239+00:00"
+  },
+  "daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2024-10-17.zip": {
+    "status": "verified",
+    "sha256": "c933d2cef5d306030b3a967de51d746d53b59bb7651494fe4ab2e712d53543c4",
+    "bytes": 11459,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2024-10-17.zip",
+    "retrievedAt": "2026-10-29T10:29:53.183578+00:00"
+  },
+  "daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2024-10-18.zip": {
+    "status": "verified",
+    "sha256": "0537c9bef38bae50f2d756438d6d77fca5cd216c3d734184b878c994bc6f8893",
+    "bytes": 11071,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2024-10-18.zip",
+    "retrievedAt": "2026-10-29T10:29:54.236334+00:00"
+  },
+  "daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2024-10-19.zip": {
+    "status": "verified",
+    "sha256": "7c3dbd0f41c1f4d0e9684acfd9209fc799b2b8ba4258465840a7d70a54093408",
+    "bytes": 10926,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/UNFIUSDT/UNFIUSDT-metrics-2024-10-19.zip",
+    "retrievedAt": "2026-10-29T10:29:55.354851+00:00"
+  },
+  "daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-03-23.zip": {
+    "status": "verified",
+    "sha256": "1e577a16a4b57cc8424b4b6f8ed79d5813c3d36b151f9d1ccc0192325da74b15",
+    "bytes": 11291,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-03-23.zip",
+    "retrievedAt": "2026-10-29T10:29:56.853086+00:00"
+  },
+  "daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-03-24.zip": {
+    "status": "verified",
+    "sha256": "64c6aa99eb41768c0304a0a833368fb7a4906048a2c805344b42bd6b03ac230b",
+    "bytes": 11265,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-03-24.zip",
+    "retrievedAt": "2026-10-29T10:29:57.963047+00:00"
+  },
+  "daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-03-25.zip": {
+    "status": "verified",
+    "sha256": "5b60b512ac54cb730cd04bc0f7f128d03e1ef041391dbad39250cba08da1df79",
+    "bytes": 11283,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-03-25.zip",
+    "retrievedAt": "2026-10-29T10:29:58.994639+00:00"
+  },
+  "daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-03-26.zip": {
+    "status": "verified",
+    "sha256": "480fc5728d6cc45dd2d4e534b1436255751f757fd368838d3c78031c2d84d900",
+    "bytes": 11248,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-03-26.zip",
+    "retrievedAt": "2026-10-29T10:30:00.118053+00:00"
+  },
+  "daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-03-27.zip": {
+    "status": "verified",
+    "sha256": "e7239c845b4384cbae69aac2f41d6e282a7bc191c3cdf74b8692c16f270d5509",
+    "bytes": 11138,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-03-27.zip",
+    "retrievedAt": "2026-10-29T10:30:01.284131+00:00"
+  },
+  "monthly/markPriceKlines/ACTUSDT/1h/ACTUSDT-1h-2025-03.zip": {
+    "status": "verified",
+    "sha256": "b7a51ce8b1830eb7026a66e8cfe920f4a0d98510b85e96c2f25959c90b8bfcc1",
+    "bytes": 15978,
+    "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ACTUSDT/1h/ACTUSDT-1h-2025-03.zip",
+    "retrievedAt": "2026-10-29T10:30:02.377277+00:00"
+  },
+  "daily/metrics/OMUSDT/OMUSDT-metrics-2025-04-07.zip": {
+    "status": "verified",
+    "sha256": "dfad87403dddadaf3407f063f032783ebf05539179013e9cae14497d2006cdc1",
+    "bytes": 11113,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/OMUSDT/OMUSDT-metrics-2025-04-07.zip",
+    "retrievedAt": "2026-10-29T10:30:03.581608+00:00"
+  },
+  "daily/metrics/OMUSDT/OMUSDT-metrics-2025-04-08.zip": {
+    "status": "verified",
+    "sha256": "1924bc4ec868a027d74f93d0856c6b341e2f5fd0a47854e6b704e154870883b0",
+    "bytes": 10989,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/OMUSDT/OMUSDT-metrics-2025-04-08.zip",
+    "retrievedAt": "2026-10-29T10:30:04.706364+00:00"
+  },
+  "daily/metrics/OMUSDT/OMUSDT-metrics-2025-04-09.zip": {
+    "status": "verified",
+    "sha256": "02bce956edb471cc367051f494e06c0c7f17442bfbf3fa7bb97db8774d053093",
+    "bytes": 11019,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/OMUSDT/OMUSDT-metrics-2025-04-09.zip",
+    "retrievedAt": "2026-10-29T10:30:05.768253+00:00"
+  },
+  "daily/metrics/OMUSDT/OMUSDT-metrics-2025-04-10.zip": {
+    "status": "verified",
+    "sha256": "efb1aeb88a4f545f0222fc8082446daf21b282b2555d760a28c21cfd051a0132",
+    "bytes": 11013,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/OMUSDT/OMUSDT-metrics-2025-04-10.zip",
+    "retrievedAt": "2026-10-29T10:30:06.852607+00:00"
+  },
+  "daily/metrics/OMUSDT/OMUSDT-metrics-2025-04-11.zip": {
+    "status": "verified",
+    "sha256": "caff4d93a94391d7fa7bd1df4e2f11b5eaef10f470bad57fcd9ae238c5d449e8",
+    "bytes": 10712,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/OMUSDT/OMUSDT-metrics-2025-04-11.zip",
+    "retrievedAt": "2026-10-29T10:30:07.934355+00:00"
+  },
+  "monthly/markPriceKlines/OMUSDT/1h/OMUSDT-1h-2025-04.zip": {
+    "status": "verified",
+    "sha256": "074583ee42170b2a72c6727e29302fa8979b7d96308e27bf457623a0dc75b0f0",
+    "bytes": 17708,
+    "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/OMUSDT/1h/OMUSDT-1h-2025-04.zip",
+    "retrievedAt": "2026-10-29T10:30:09.060473+00:00"
+  },
+  "daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-05-03.zip": {
+    "status": "verified",
+    "sha256": "b81054fbbfd170576e5d893f22fd0300a088d4022ce693ce057019152dfce4c4",
+    "bytes": 7833,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-05-03.zip",
+    "retrievedAt": "2026-10-29T10:30:10.215352+00:00"
+  },
+  "daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-05-04.zip": {
+    "status": "verified",
+    "sha256": "3e0d5726ce294757ebc9ba13737f9809800224897c8fa774b77096c193f0ecb6",
+    "bytes": 7932,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-05-04.zip",
+    "retrievedAt": "2026-10-29T10:30:11.274121+00:00"
+  },
+  "daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-05-05.zip": {
+    "status": "verified",
+    "sha256": "d2806d96f6170187d6c3de2f07cabc55939909ad774c4feb486803bcee1ea95e",
+    "bytes": 7904,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-05-05.zip",
+    "retrievedAt": "2026-10-29T10:30:12.357136+00:00"
+  },
+  "daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-05-06.zip": {
+    "status": "verified",
+    "sha256": "136167b81742d047a353e41b1637132ecef2955a8416b19bb2a10bf615d827a6",
+    "bytes": 7993,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-05-06.zip",
+    "retrievedAt": "2026-10-29T10:30:13.417724+00:00"
+  },
+  "daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-05-07.zip": {
+    "status": "verified",
+    "sha256": "8c9146ae672054025ba5808385c451fd38a4f2522655b10fc5877fa3ab58c286",
+    "bytes": 8077,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-05-07.zip",
+    "retrievedAt": "2026-10-29T10:30:14.543441+00:00"
+  },
+  "monthly/markPriceKlines/LUNAUSDT/1h/LUNAUSDT-1h-2022-05.zip": {
+    "status": "verified",
+    "sha256": "6de06c6ff9557cf1e5f5f49195ff74c1390eb21bcbe168c022b53e905b6eee14",
+    "bytes": 11436,
+    "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/LUNAUSDT/1h/LUNAUSDT-1h-2022-05.zip",
+    "retrievedAt": "2026-10-29T10:30:15.644604+00:00"
+  },
+  "daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-03-30.zip": {
+    "status": "verified",
+    "sha256": "54dd1b3cccb16d57ce8fdb16c7c336fe10c8315a7e7ae41a435685a775065001",
+    "bytes": 11059,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-03-30.zip",
+    "retrievedAt": "2026-10-29T10:43:03.390031+00:00"
+  },
+  "daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-03-31.zip": {
+    "status": "verified",
+    "sha256": "366fb60232fe3056184aaa1da5dca76e684a93d0a6b0305512768c43a2e023cd",
+    "bytes": 11153,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-03-31.zip",
+    "retrievedAt": "2026-10-29T10:43:04.526931+00:00"
+  },
+  "daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-04-01.zip": {
+    "status": "verified",
+    "sha256": "6f98824875168f99ca7f4901e0172304bee31429bd34ba0299887e6539a74aa1",
+    "bytes": 11503,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-04-01.zip",
+    "retrievedAt": "2026-10-29T10:43:05.655170+00:00"
+  },
+  "daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-04-02.zip": {
+    "status": "verified",
+    "sha256": "bb584ef8eed8e1008ebd1846bd46c0bfc6b3facce6d344f76a0ead1587bb7337",
+    "bytes": 11664,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-04-02.zip",
+    "retrievedAt": "2026-10-29T10:43:06.730514+00:00"
+  },
+  "daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-04-03.zip": {
+    "status": "verified",
+    "sha256": "e004b28fae2b80b24f6ac8e366892c5f547b8867e736ef1cff7422765de322a5",
+    "bytes": 11505,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/ACTUSDT/ACTUSDT-metrics-2025-04-03.zip",
+    "retrievedAt": "2026-10-29T10:43:07.835673+00:00"
+  },
+  "monthly/markPriceKlines/ACTUSDT/1h/ACTUSDT-1h-2025-04.zip": {
+    "status": "verified",
+    "sha256": "277e77066c18baa074fdfb98901c21dd7cad213762f0d83bdc539c9eade95ebe",
+    "bytes": 16273,
+    "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ACTUSDT/1h/ACTUSDT-1h-2025-04.zip",
+    "retrievedAt": "2026-10-29T10:43:08.955019+00:00"
+  },
+  "daily/metrics/OMUSDT/OMUSDT-metrics-2025-04-12.zip": {
+    "status": "verified",
+    "sha256": "1a951ec4496f569db4508dd1c0bcbef5d17723db068396dabb4dd8813b018f63",
+    "bytes": 10828,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/OMUSDT/OMUSDT-metrics-2025-04-12.zip",
+    "retrievedAt": "2026-10-29T10:43:10.154588+00:00"
+  },
+  "daily/metrics/OMUSDT/OMUSDT-metrics-2025-04-13.zip": {
+    "status": "verified",
+    "sha256": "363b4dce235fa4265912c1e973da4f7ddb947c46f42f08ae8287fbd14585a9d5",
+    "bytes": 11200,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/OMUSDT/OMUSDT-metrics-2025-04-13.zip",
+    "retrievedAt": "2026-10-29T10:43:11.233834+00:00"
+  },
+  "daily/metrics/OMUSDT/OMUSDT-metrics-2025-04-14.zip": {
+    "status": "verified",
+    "sha256": "eccbe1006b75bb124b0095200f1a9211f6f00b2bde54771b31b05562e9ee00ba",
+    "bytes": 11758,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/OMUSDT/OMUSDT-metrics-2025-04-14.zip",
+    "retrievedAt": "2026-10-29T10:43:12.251450+00:00"
+  },
+  "daily/metrics/OMUSDT/OMUSDT-metrics-2025-04-15.zip": {
+    "status": "verified",
+    "sha256": "90eed9343b6b93386d4862fc3a9fe3e9d1a4a239cf580977b649d89f40dff1a9",
+    "bytes": 11565,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/OMUSDT/OMUSDT-metrics-2025-04-15.zip",
+    "retrievedAt": "2026-10-29T10:43:13.354454+00:00"
+  },
+  "daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-05-10.zip": {
+    "status": "verified",
+    "sha256": "2cff8e758d3a351c7a02ed29a2d31cc52ca258fd53bd1896cee9543573f8a4e7",
+    "bytes": 9514,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-05-10.zip",
+    "retrievedAt": "2026-10-29T10:43:15.577533+00:00"
+  },
+  "daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-05-11.zip": {
+    "status": "verified",
+    "sha256": "3516f56d85ce7adccf2e509d01b603afecfdf4a19f58cc054d46118ab83ed4f6",
+    "bytes": 10129,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-05-11.zip",
+    "retrievedAt": "2026-10-29T10:43:16.681374+00:00"
+  },
+  "daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-05-12.zip": {
+    "status": "verified",
+    "sha256": "cbd28a30ff7f5a0a5eb9f714773821f01ba2bb2c5b010669631f735a4eca5198",
+    "bytes": 7158,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-05-12.zip",
+    "retrievedAt": "2026-10-29T10:43:17.726407+00:00"
+  },
+  "daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-05-13.zip": {
+    "status": "missing",
+    "http": 404,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-05-13.zip"
+  },
+  "daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-05-14.zip": {
+    "status": "missing",
+    "http": 404,
+    "url": "https://data.binance.vision/data/futures/um/daily/metrics/LUNAUSDT/LUNAUSDT-metrics-2022-05-14.zip"
+  }
+}

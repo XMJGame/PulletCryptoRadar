@@ -1,0 +1,14 @@
+# Clash/Mihomo rules fragment, NOT a complete config. Not applied automatically.
+# First verify each data source with the VPN disconnected. Merge only working domains.
+# Put verified rules before the catch-all MATCH rule. TUN may still capture traffic before rules.
+rules:
+  - DOMAIN,localhost,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR6,::1/128,DIRECT,no-resolve
+  # Uncomment only after a genuine VPN-off test succeeds for the exact source:
+  # - DOMAIN,fapi.binance.com,DIRECT
+  # - DOMAIN,data.binance.vision,DIRECT
+  # - DOMAIN,api.gateio.ws,DIRECT
+  # - DOMAIN,api.exchange.coinbase.com,DIRECT
+  # - DOMAIN,api.coingecko.com,DIRECT
+  # - DOMAIN,bsc-rpc.publicnode.com,DIRECT

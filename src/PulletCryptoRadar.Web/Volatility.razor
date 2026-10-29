@@ -1,0 +1,111 @@
+@page "/volatility"
+@rendermode InteractiveServer
+@implements IAsyncDisposable
+@inject VolatilityRadarService Radar
+@inject PulletCryptoRadar.Scanner.VolatilityOptions Options
+
+<PageTitle>PulletCryptoRadar · 异动雷达</PageTitle>
+<div class="shell">
+<Sidebar />
+<main>
+<header class="topbar"><span>工作台 <span class="slash">/</span><b>异动雷达</b></span><a href="/">返回行情总览 →</a></header>
+<div class="content">
+    <div class="page-title"><div><div class="eyebrow">VOLATILITY RADAR · PHASE 3</div><h1>发现变化，追踪过程。</h1><p>上涨与下跌分别检测，同一行情按 Episode 持续追踪。</p></div><span class="live-pill">@ScanStatus</span></div>
+    <p class="radar-notice">深度数据可用时采用 V2 检测，加入 OI 数量、Taker 和持仓比；缺少衍生品证据时保留置信度最高 60 的基础模型。市值与链上风险仍未知，强平为交易所抽样观测。</p>
+    @if (_snapshot is { } s)
+    {
+        <div class="stats">
+            <div class="stat"><span>市场状态 · 1h</span><strong class="regime">@(s.Market.Regime?.ToString() ?? "Unknown")</strong><div class="stat-foot">有效覆盖 @s.Market.ValidAssets / @s.Market.TotalAssets · @s.Market.CoveragePercent%</div></div>
+            <div class="stat"><span>市场中位收益 · 1h</span><strong>@Percent(s.Market.MedianReturn1h)</strong><div class="stat-foot">上涨 @s.Market.Advancing　下跌 @s.Market.Declining</div></div>
+            <div class="stat"><span>上涨候选 / 下跌候选</span><strong>@s.Observations.Count(x => x.Up.IsCandidate)<small> / </small>@s.Observations.Count(x => x.Down.IsCandidate)</strong><div class="stat-foot">基础模型 · 独立方向确认</div></div>
+            <div class="stat"><span>活跃 Episode</span><strong>@s.ActiveEpisodes.Count</strong><div class="stat-foot">最近扫描 @s.AsOf.ToLocalTime().ToString("HH:mm:ss")</div></div>
+        </div>
+        <details class="detail"><summary>市场广度与分类依据</summary><p>@s.Market.Reason</p><p>1h &gt; +5%：@s.Market.Above5　&lt; -5%：@s.Market.BelowMinus5　&gt; +10%：@s.Market.Above10　&lt; -10%：@s.Market.BelowMinus10</p><p>BTC @Percent(s.Market.BtcReturn1h) · ETH @Percent(s.Market.EthReturn1h)</p></details>
+        <div class="section-heading radar-heading"><h2>异动观察台</h2><span class="refresh-text">列表每 3 秒读取快照 · 检测默认每 60 秒运行</span></div>
+        <div class="market-panel">
+            <div class="toolbar"><label class="search"><input aria-label="搜索雷达合约" placeholder="搜索合约，例如 ARIA" @bind="_search" @bind:event="oninput" @bind:after="ResetPage" /></label>
+                <select aria-label="雷达方向" @bind="_direction" @bind:after="ResetPage"><option value="all">全部方向</option><option value="up">上涨</option><option value="down">下跌</option></select>
+                <label class="checkbox"><input type="checkbox" @bind="_candidatesOnly" @bind:after="ResetPage" /> 仅候选</label>
+                <span class="results">@Rows.Count 个结果</span></div>
+            <div class="table-scroll"><table><thead><tr><th>合约</th><th>方向</th><th>基础分数 ↓</th><th>置信度</th><th>阶段</th><th>确认家族</th><th>数据</th><th>Episode</th><th>详情</th></tr></thead><tbody>
+                @foreach (var (observation, assessment) in PagedRows)
+                {
+                    <tr @key="(observation.Input.Instrument.AssetId, assessment.Direction)"><td>@observation.Input.Instrument.Symbol</td><td class="@(assessment.Direction == MoveDirection.Up ? "positive" : "negative")">@(assessment.Direction == MoveDirection.Up ? "上涨" : "下跌")</td><td>@Score(assessment.Score)</td><td>@assessment.DataConfidence / 100</td><td>@assessment.Stage</td><td>@string.Join(" · ", assessment.ConfirmedFamilies)</td><td>@assessment.Status</td><td>@(observation.EpisodeId?.ToString() ?? "—")</td><td><button class="text-button" @onclick="() => Select(observation, assessment)">依据 →</button></td></tr>
+                }
+                @if (Rows.Count == 0) { <tr><td colspan="9" class="empty">当前没有符合条件的异动候选。可以关闭“仅候选”查看全部计算结果。</td></tr> }
+            </tbody></table></div>
+            <div class="table-footer"><span>基础分数与后续完整策略评分不直接等价。</span><div><button disabled="@(_page == 0)" @onclick="() => _page--">←</button><span>@(Math.Min(_page + 1, PageCount)) / @PageCount</span><button disabled="@(_page + 1 >= PageCount)" @onclick="() => _page++">→</button></div></div>
+        </div>
+        @if (_selected is { } selection)
+        {
+            <section class="detail"><div class="section-heading"><h2>@selection.Symbol <span>@selection.Assessment.Direction · @selection.Assessment.Stage</span></h2><button class="text-button" @onclick="() => _selected = null">收起 ×</button></div>
+                <p>版本 @selection.Assessment.StrategyVersion · 选中快照 @selection.AsOf.ToLocalTime().ToString("HH:mm:ss")</p>
+                @foreach (var reason in selection.Assessment.Reasons) { <p>@reason</p> }
+                <p>缺失证据：@string.Join(" · ", selection.Assessment.MissingFamilies)</p>
+                <div class="detail-grid">@foreach (var component in selection.Assessment.Components) { <div><span>@component.Family · 权重 @component.Weight / @selection.Assessment.Components.Sum(c => c.Weight)</span><strong>强度 @(component.Strength?.ToString("0.00") ?? "Unknown") · @(component.Confirmed ? "已确认" : "待确认")</strong><small>UTC @component.SourceTime?.ToString("MM-dd HH:mm:ss")</small></div> }</div>
+            </section>
+        }
+        <div class="section-heading radar-heading"><h2>活跃行情 Episode</h2></div>
+        <div class="market-panel table-scroll"><table><thead><tr><th>合约 / 方向</th><th>阶段</th><th>状态</th><th>开始 / 最近观察 · UTC</th><th>起始价 → 当前价</th><th>最高 / 最低</th><th>当前 / 最高分</th><th>数据</th></tr></thead><tbody>
+            @foreach (var e in s.ActiveEpisodes.OrderByDescending(x => x.CurrentScore)) { <tr><td title="@e.Id">@e.Symbol · @e.Direction</td><td>@e.Stage</td><td>@e.State</td><td>@e.StartTime.ToString("MM-dd HH:mm") / @e.LastObservedTime.ToString("HH:mm")</td><td>@e.StartPrice.ToString("0.########") → @e.CurrentPrice.ToString("0.########")</td><td>@e.PeakPrice.ToString("0.########") / @e.LowestPrice.ToString("0.########")</td><td>@Score(e.CurrentScore) / @Score(e.MaxScore)</td><td>@e.DataStatus</td></tr> }
+            @if (s.ActiveEpisodes.Count == 0) { <tr><td colspan="8" class="empty">暂无活跃 Episode，等待符合确认条件的异动。</td></tr> }
+        </tbody></table></div>
+    }
+    else { <div class="detail empty">雷达正在初始化并恢复已保存的 Episode。</div> }
+    <div class="section-heading radar-heading"><h2>已保存事件</h2><button class="text-button" @onclick="LoadHistory">刷新记录</button></div>
+    @if (_historyError is not null) { <p class="provider-error">@_historyError</p> }
+    <div class="market-panel table-scroll"><table><thead><tr><th>时间 · UTC</th><th>合约</th><th>方向 / 事件</th><th>阶段</th><th>分数</th><th>版本</th><th>依据</th></tr></thead><tbody>
+        @foreach (var e in _events) { <tr><td>@e.Time.ToString("MM-dd HH:mm:ss")</td><td>@e.Symbol</td><td>@e.Direction · @e.Kind</td><td>@e.Episode.Stage @e.Episode.EndReason</td><td>@Score(e.Assessment?.Score)</td><td>@e.StrategyVersion</td><td>@if (e.Assessment is { } a) { <button class="text-button" @onclick="() => _selected = new(e.Symbol, a, e.Time)">查看</button> }</td></tr> }
+        @if (_events.Count == 0) { <tr><td colspan="7" class="empty">暂无保存事件。首次预热期间不会使用缺失数据生成事件。</td></tr> }
+    </tbody></table></div>
+    <footer>PulletCryptoRadar <span>v1.0 · Phase 3</span><span>行情研究与观察</span></footer>
+</div></main></div>
+
+@code {
+    private RadarSnapshot? _snapshot;
+    private IReadOnlyList<RadarEvent> _events = [];
+    private string _search = "", _direction = "all";
+    private bool _candidatesOnly = true;
+    private int _page;
+    private string? _historyError;
+    private Selection? _selected;
+    private readonly CancellationTokenSource _cts = new();
+    private Task? _loop;
+    private sealed record Selection(string Symbol, MoveAssessment Assessment, DateTimeOffset AsOf);
+    private string ScanStatus => _snapshot is null ? "等待扫描" : _snapshot.ScanId == Guid.Empty ? "等待行情预热"
+        : DateTimeOffset.UtcNow - _snapshot.AsOf > TimeSpan.FromSeconds(Options.IntervalSeconds * 2 + 15) ? "扫描已过期" : "后台检测运行中";
+    private List<(RadarObservation Observation, MoveAssessment Assessment)> Rows => (_snapshot?.Observations ?? [])
+        .SelectMany(o => new[] { (Observation: o, Assessment: o.Up), (Observation: o, Assessment: o.Down) })
+        .Where(x => x.Observation.Input.Instrument.Symbol.Contains(_search.Trim(), StringComparison.OrdinalIgnoreCase)
+            && (_direction == "all" || _direction == "up" && x.Assessment.Direction == MoveDirection.Up || _direction == "down" && x.Assessment.Direction == MoveDirection.Down)
+            && (!_candidatesOnly || x.Assessment.IsCandidate))
+        .OrderBy(x => x.Assessment.Score is null).ThenByDescending(x => x.Assessment.Score).ToList();
+    private int PageCount => Math.Max(1, (Rows.Count + 29) / 30);
+    private IEnumerable<(RadarObservation Observation, MoveAssessment Assessment)> PagedRows => Rows.Skip(Math.Min(_page, PageCount - 1) * 30).Take(30);
+    private void ResetPage() => _page = 0;
+    private void Select(RadarObservation o, MoveAssessment a) => _selected = new(o.Input.Instrument.Symbol, a, _snapshot!.AsOf);
+    private static string Score(double? score) => score?.ToString("0.0", CultureInfo.InvariantCulture) ?? "Unknown";
+    private static string Percent(decimal? value) => value?.ToString("+0.00;-0.00;0.00", CultureInfo.InvariantCulture) + (value is null ? "Unknown" : "%");
+    protected override async Task OnInitializedAsync() { _snapshot = Radar.GetSnapshot(); await LoadHistory(); _loop = RefreshLoop(); }
+    private async Task LoadHistory()
+    {
+        try { _events = await Radar.GetEventsAsync(null, 30, _cts.Token); _historyError = null; }
+        catch (OperationCanceledException) when (_cts.IsCancellationRequested) { }
+        catch (Exception) { _historyError = "事件记录暂时不可用，请稍后刷新。"; }
+    }
+    private async Task RefreshLoop()
+    {
+        using var timer = new PeriodicTimer(TimeSpan.FromSeconds(3));
+        try
+        {
+            while (await timer.WaitForNextTickAsync(_cts.Token)) await InvokeAsync(async () =>
+            {
+                var next = Radar.GetSnapshot();
+                if (next?.ScanId != _snapshot?.ScanId) await LoadHistory();
+                _snapshot = next; StateHasChanged();
+            });
+        }
+        catch (OperationCanceledException) { }
+    }
+    public async ValueTask DisposeAsync() { await _cts.CancelAsync(); if (_loop is not null) await _loop; _cts.Dispose(); }
+}

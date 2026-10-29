@@ -1,0 +1,5102 @@
+{
+  "strategy": "a",
+  "oiRequired": false,
+  "costMultiplier": 2,
+  "initialCash": 1000,
+  "finalCash": 1044.5006,
+  "net": 44.5006,
+  "returnPercent": 4.45,
+  "closedHourMaxDrawdownPercent": 7.867,
+  "trades": 64,
+  "wins": 31,
+  "profitFactor": 1.14,
+  "fees": 44.3694,
+  "fundingPaidSigned": 0.3343,
+  "settlementAdjustment": -0.7623,
+  "incompletePathTrades": 0,
+  "markProxyTrades": 56,
+  "windowEndTrades": 0,
+  "liquidationStressTrades": 2,
+  "maximumMarginInUse": 142.8378,
+  "entryCircuitPaused": false,
+  "checks": {
+    "rawCandidates": 543,
+    "oiMissing": 510
+  },
+  "skipped": {
+    "held_or_cooldown": 427,
+    "stop_liquidation_conflict": 2,
+    "two_position_limit": 50
+  },
+  "bySymbol": [
+    {
+      "symbol": "ACTUSDT",
+      "trades": 9,
+      "net": 4.0207
+    },
+    {
+      "symbol": "AUCTIONUSDT",
+      "trades": 6,
+      "net": 8.3765
+    },
+    {
+      "symbol": "BTCUSDT",
+      "trades": 15,
+      "net": 21.7872
+    },
+    {
+      "symbol": "ETHUSDT",
+      "trades": 16,
+      "net": -54.1507
+    },
+    {
+      "symbol": "MYXUSDT",
+      "trades": 1,
+      "net": 18.4795
+    },
+    {
+      "symbol": "OMUSDT",
+      "trades": 6,
+      "net": 10.0115
+    },
+    {
+      "symbol": "UNFIUSDT",
+      "trades": 11,
+      "net": 35.976
+    }
+  ],
+  "ledger": [
+    {
+      "symbol": "UNFIUSDT",
+      "entryTime": 1723892400,
+      "openedAt": "2024-08-17T11:00:00+00:00",
+      "decisionAt": "2024-08-17T11:00:00+00:00",
+      "entry": 3.007004,
+      "stop": 3.395,
+      "initialStop": 2.9324999999999997,
+      "targets": [
+        3.235,
+        3.487
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 115.56416297986152,
+      "initialMargin": 34.75019003370955,
+      "entryFee": 0.3475019003370955,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.7339083605771984,
+      "funding": 0.08412009030276134,
+      "gross": 38.90455990300744,
+      "adjustment": 0.0,
+      "returns": 73.18422338617412,
+      "exits": [
+        {
+          "time": "2024-08-18T13:00:00+00:00",
+          "reason": "partial_1",
+          "price": 3.2317649999999998,
+          "quantity": 34.66924889395845,
+          "returned": 18.080073168525253
+        },
+        {
+          "time": "2024-08-18T15:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 3.391605,
+          "quantity": 80.89491408590307,
+          "returned": 55.10415021764888
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 29,
+      "fundingPriceProxyCount": 7,
+      "oiAtDecision": null,
+      "net": 38.08653145212748,
+      "closedAt": "2024-08-18T16:00:00+00:00",
+      "durationHours": 29.0
+    },
+    {
+      "symbol": "UNFIUSDT",
+      "entryTime": 1725789600,
+      "openedAt": "2024-09-08T10:00:00+00:00",
+      "decisionAt": "2024-09-08T10:00:00+00:00",
+      "entry": 2.448446,
+      "stop": 2.5520714285714283,
+      "initialStop": 2.3276785714285713,
+      "targets": [
+        2.601,
+        2.728
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 76.592425905428,
+      "initialMargin": 18.753241883844158,
+      "entryFee": 0.18753241883844157,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.3839294344220061,
+      "funding": 0.21506130915135627,
+      "gross": 8.864596745122968,
+      "adjustment": 0.0,
+      "returns": 27.206380304232216,
+      "exits": [
+        {
+          "time": "2024-09-12T22:00:00+00:00",
+          "reason": "partial_1",
+          "price": 2.598399,
+          "quantity": 22.9777277716284,
+          "returned": 8.955638090220013
+        },
+        {
+          "time": "2024-09-13T12:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 2.5495193571428567,
+          "quantity": 53.61469813379961,
+          "returned": 18.250742214012202
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 123,
+      "fundingPriceProxyCount": 31,
+      "oiAtDecision": null,
+      "net": 8.265606001549616,
+      "closedAt": "2024-09-13T13:00:00+00:00",
+      "durationHours": 123.0
+    },
+    {
+      "symbol": "UNFIUSDT",
+      "entryTime": 1726333200,
+      "openedAt": "2024-09-14T17:00:00+00:00",
+      "decisionAt": "2024-09-14T17:00:00+00:00",
+      "entry": 2.7057029999999997,
+      "stop": 2.6293928571428573,
+      "initialStop": 2.6293928571428573,
+      "targets": [
+        2.8583232857142846,
+        3.0109435714285695
+      ],
+      "targetBasis": [
+        "2R_risk_release",
+        "risk_projection"
+      ],
+      "initialQty": 114.76713967057991,
+      "initialMargin": 31.052579410810704,
+      "entryFee": 0.31052579410810704,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.6119919234953619,
+      "funding": 0.041368933326200924,
+      "gross": -9.059664720852131,
+      "adjustment": 0.0,
+      "returns": 21.650079627245116,
+      "exits": [
+        {
+          "time": "2024-09-15T09:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 2.6267634642857143,
+          "quantity": 114.76713967057991,
+          "returned": 21.650079627245116
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 17,
+      "fundingPriceProxyCount": 4,
+      "oiAtDecision": null,
+      "net": -9.713025577673696,
+      "closedAt": "2024-09-15T10:00:00+00:00",
+      "durationHours": 17.0
+    },
+    {
+      "symbol": "UNFIUSDT",
+      "entryTime": 1726750800,
+      "openedAt": "2024-09-19T13:00:00+00:00",
+      "decisionAt": "2024-09-19T13:00:00+00:00",
+      "entry": 2.619617,
+      "stop": 2.5846785714285714,
+      "initialStop": 2.5846785714285714,
+      "targets": [
+        2.656,
+        2.712
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 220.18237164824126,
+      "initialMargin": 57.67934838700508,
+      "entryFee": 0.5767934838700508,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 1.1453250410177764,
+      "funding": 0.0,
+      "gross": -8.261926722325317,
+      "adjustment": 0.0,
+      "returns": 48.848890107532036,
+      "exits": [
+        {
+          "time": "2024-09-19T13:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 2.582093892857143,
+          "quantity": 220.18237164824126,
+          "returned": 48.848890107532036
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 1,
+      "fundingPriceProxyCount": 0,
+      "oiAtDecision": null,
+      "net": -9.407251763343092,
+      "closedAt": "2024-09-19T14:00:00+00:00",
+      "durationHours": 1.0
+    },
+    {
+      "symbol": "UNFIUSDT",
+      "entryTime": 1726966800,
+      "openedAt": "2024-09-22T01:00:00+00:00",
+      "decisionAt": "2024-09-22T01:00:00+00:00",
+      "entry": 2.7917889999999996,
+      "stop": 2.7152142857142856,
+      "initialStop": 2.7152142857142856,
+      "targets": [
+        2.881,
+        3.098087857142856
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "risk_projection"
+      ],
+      "initialQty": 113.9706729231663,
+      "initialMargin": 31.818207098949348,
+      "entryFee": 0.31818207098949347,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.6273274154636714,
+      "funding": 0.0,
+      "gross": -9.03672651531548,
+      "adjustment": 0.0,
+      "returns": 22.472335239159687,
+      "exits": [
+        {
+          "time": "2024-09-22T02:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 2.7124990714285713,
+          "quantity": 113.9706729231663,
+          "returned": 22.472335239159687
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 2,
+      "fundingPriceProxyCount": 0,
+      "oiAtDecision": null,
+      "net": -9.664053930779154,
+      "closedAt": "2024-09-22T03:00:00+00:00",
+      "durationHours": 2.0
+    },
+    {
+      "symbol": "UNFIUSDT",
+      "entryTime": 1727240400,
+      "openedAt": "2024-09-25T05:00:00+00:00",
+      "decisionAt": "2024-09-25T05:00:00+00:00",
+      "entry": 2.738736,
+      "stop": 2.71575,
+      "initialStop": 2.71575,
+      "targets": [
+        2.762,
+        2.793
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 294.6294009972149,
+      "initialMargin": 80.69121471695082,
+      "entryFee": 0.8069121471695082,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 1.6103356980878338,
+      "funding": 0.0,
+      "gross": -3.4885962511826616,
+      "adjustment": 0.0,
+      "returns": 76.39919491484983,
+      "exits": [
+        {
+          "time": "2024-09-25T05:00:00+00:00",
+          "reason": "partial_1",
+          "price": 2.759238,
+          "quantity": 88.38882029916446,
+          "returned": 25.775626217114095
+        },
+        {
+          "time": "2024-09-25T06:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 2.7130342499999998,
+          "quantity": 206.2405806980504,
+          "returned": 50.62356869773574
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 2,
+      "fundingPriceProxyCount": 0,
+      "oiAtDecision": null,
+      "net": -5.098931949270503,
+      "closedAt": "2024-09-25T07:00:00+00:00",
+      "durationHours": 2.0
+    },
+    {
+      "symbol": "UNFIUSDT",
+      "entryTime": 1727337600,
+      "openedAt": "2024-09-26T08:00:00+00:00",
+      "decisionAt": "2024-09-26T08:00:00+00:00",
+      "entry": 2.7697669999999994,
+      "stop": 3.1810714285714283,
+      "initialStop": 2.6551785714285714,
+      "targets": [
+        2.9989438571428555,
+        3.2281207142857116
+      ],
+      "targetBasis": [
+        "2R_risk_release",
+        "risk_projection"
+      ],
+      "initialQty": 79.57507130187884,
+      "initialMargin": 22.0404406514591,
+      "entryFee": 0.220404406514591,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.4696481757876459,
+      "funding": 0.26848231181897414,
+      "gross": 28.83936275846382,
+      "adjustment": 0.0,
+      "returns": 50.36207732883089,
+      "exits": [
+        {
+          "time": "2024-09-30T08:00:00+00:00",
+          "reason": "partial_1",
+          "price": 2.9959449132857126,
+          "quantity": 23.87252139056365,
+          "returned": 11.85950381585091
+        },
+        {
+          "time": "2024-09-30T10:00:00+00:00",
+          "reason": "partial_2",
+          "price": 3.224892593571426,
+          "quantity": 23.87252139056365,
+          "returned": 17.31959665239659
+        },
+        {
+          "time": "2024-09-30T11:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 3.164832,
+          "quantity": 31.830028520751537,
+          "returned": 21.18297686058339
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 100,
+      "fundingPriceProxyCount": 24,
+      "oiAtDecision": null,
+      "net": 28.101232270857203,
+      "closedAt": "2024-09-30T12:00:00+00:00",
+      "durationHours": 100.0
+    },
+    {
+      "symbol": "UNFIUSDT",
+      "entryTime": 1728270000,
+      "openedAt": "2024-10-07T03:00:00+00:00",
+      "decisionAt": "2024-10-07T03:00:00+00:00",
+      "entry": 2.6566539999999996,
+      "stop": 2.758714285714286,
+      "initialStop": 2.5142857142857142,
+      "targets": [
+        2.804,
+        2.947
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 65.36165511367679,
+      "initialMargin": 17.364330250436986,
+      "entryFee": 0.17364330250436988,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.3546642168595444,
+      "funding": 0.07716716823706836,
+      "gross": 7.377611850804659,
+      "adjustment": 0.0,
+      "returns": 24.4837540186494,
+      "exits": [
+        {
+          "time": "2024-10-08T15:00:00+00:00",
+          "reason": "partial_1",
+          "price": 2.801196,
+          "quantity": 19.608496534103036,
+          "returned": 7.9667104344183075
+        },
+        {
+          "time": "2024-10-08T17:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 2.7559555714285717,
+          "quantity": 45.75315857957375,
+          "returned": 16.517043584231093
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 39,
+      "fundingPriceProxyCount": 10,
+      "oiAtDecision": null,
+      "net": 6.945780465708044,
+      "closedAt": "2024-10-08T18:00:00+00:00",
+      "durationHours": 39.0
+    },
+    {
+      "symbol": "UNFIUSDT",
+      "entryTime": 1728918000,
+      "openedAt": "2024-10-14T15:00:00+00:00",
+      "decisionAt": "2024-10-14T15:00:00+00:00",
+      "entry": 2.7457429999999996,
+      "stop": 2.6464642857142855,
+      "initialStop": 2.6464642857142855,
+      "targets": [
+        2.847,
+        2.959
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 90.69333452861981,
+      "initialMargin": 24.902058842861614,
+      "entryFee": 0.24902058842861613,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.4887972425401644,
+      "funding": 0.06664870407439195,
+      "gross": -9.243934317067863,
+      "adjustment": 0.0,
+      "returns": 15.35169916760781,
+      "exits": [
+        {
+          "time": "2024-10-15T11:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 2.6438178214285712,
+          "quantity": 90.69333452861981,
+          "returned": 15.35169916760781
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 21,
+      "fundingPriceProxyCount": 5,
+      "oiAtDecision": null,
+      "net": -9.79938026368242,
+      "closedAt": "2024-10-15T12:00:00+00:00",
+      "durationHours": 21.0
+    },
+    {
+      "symbol": "UNFIUSDT",
+      "entryTime": 1729141200,
+      "openedAt": "2024-10-17T05:00:00+00:00",
+      "decisionAt": "2024-10-17T05:00:00+00:00",
+      "entry": 2.7887859999999995,
+      "stop": 2.9219285714285714,
+      "initialStop": 2.633321428571428,
+      "targets": [
+        2.959,
+        3.410644285714285
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "risk_projection"
+      ],
+      "initialQty": 60.01690720860056,
+      "initialMargin": 16.73743105866443,
+      "entryFee": 0.16737431058664431,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.343230867685142,
+      "funding": 0.031812861919526855,
+      "gross": 8.4822465118534,
+      "adjustment": 0.0,
+      "returns": 25.012008151499803,
+      "exits": [
+        {
+          "time": "2024-10-17T16:00:00+00:00",
+          "reason": "partial_1",
+          "price": 2.956041,
+          "quantity": 18.005072162580166,
+          "returned": 7.971789974454823
+        },
+        {
+          "time": "2024-10-17T21:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 2.919006642857143,
+          "quantity": 42.011835046020394,
+          "returned": 17.04021817704498
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 17,
+      "fundingPriceProxyCount": 4,
+      "oiAtDecision": {
+        "change": 0.09067793676662128,
+        "observedAt": "2024-10-17T04:55:00+00:00",
+        "laggedAvailableAt": "2024-10-17T05:00:00+00:00"
+      },
+      "net": 8.107202782248727,
+      "closedAt": "2024-10-17T22:00:00+00:00",
+      "durationHours": 17.0
+    },
+    {
+      "symbol": "UNFIUSDT",
+      "entryTime": 1729418400,
+      "openedAt": "2024-10-20T10:00:00+00:00",
+      "decisionAt": "2024-10-20T10:00:00+00:00",
+      "entry": 2.9749719999999997,
+      "stop": 2.841285714285714,
+      "initialStop": 2.841285714285714,
+      "targets": [
+        3.242344571428571,
+        3.509717142857142
+      ],
+      "targetBasis": [
+        "2R_risk_release",
+        "risk_projection"
+      ],
+      "initialQty": 68.68784133049,
+      "initialMargin": 20.43444046986505,
+      "entryFee": 0.2043444046986505,
+      "estimatedLossWithBuffer": 9.999999999999998,
+      "fees": 0.39931102523377815,
+      "funding": 0.07064544480840897,
+      "gross": -9.377784163522838,
+      "adjustment": 0.0,
+      "returns": 10.791044240998676,
+      "exits": [
+        {
+          "time": "2024-10-21T12:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 2.8384444285714285,
+          "quantity": 68.68784133049,
+          "returned": 10.791044240998676
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 27,
+      "fundingPriceProxyCount": 7,
+      "oiAtDecision": null,
+      "net": -9.847740633565023,
+      "closedAt": "2024-10-21T13:00:00+00:00",
+      "durationHours": 27.0
+    },
+    {
+      "symbol": "AUCTIONUSDT",
+      "entryTime": 1737079200,
+      "openedAt": "2025-01-17T02:00:00+00:00",
+      "decisionAt": "2025-01-17T02:00:00+00:00",
+      "entry": 15.539523999999997,
+      "stop": 14.900392857142858,
+      "initialStop": 14.900392857142858,
+      "targets": [
+        17.585,
+        18.231
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 14.25945165834368,
+      "initialMargin": 22.158509127167136,
+      "entryFee": 0.22158509127167136,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.43384405147679267,
+      "funding": 0.07782452228832523,
+      "gross": -9.326131066550078,
+      "adjustment": 0.0,
+      "returns": 12.54229457812361,
+      "exits": [
+        {
+          "time": "2025-01-18T05:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 14.885492464285715,
+          "quantity": 14.25945165834368,
+          "returned": 12.54229457812361
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 28,
+      "fundingPriceProxyCount": 7,
+      "oiAtDecision": null,
+      "net": -9.837799640315199,
+      "closedAt": "2025-01-18T06:00:00+00:00",
+      "durationHours": 28.0
+    },
+    {
+      "symbol": "AUCTIONUSDT",
+      "entryTime": 1738285200,
+      "openedAt": "2025-01-31T01:00:00+00:00",
+      "decisionAt": "2025-01-31T01:00:00+00:00",
+      "entry": 12.592579999999998,
+      "stop": 12.697071428571428,
+      "initialStop": 12.236678571428572,
+      "targets": [
+        13.039,
+        13.414
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 24.614066902665524,
+      "initialMargin": 30.995460659716777,
+      "entryFee": 0.3099546065971678,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.6246909965864399,
+      "funding": 0.05374616885564981,
+      "gross": 4.781783392104305,
+      "adjustment": 0.0,
+      "returns": 35.40876149297617,
+      "exits": [
+        {
+          "time": "2025-01-31T11:00:00+00:00",
+          "reason": "partial_1",
+          "price": 13.025961,
+          "quantity": 7.384220070799657,
+          "returned": 12.393249554527664
+        },
+        {
+          "time": "2025-01-31T18:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 12.684374357142858,
+          "quantity": 17.229846831865867,
+          "returned": 23.0155119384485
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 18,
+      "fundingPriceProxyCount": 4,
+      "oiAtDecision": null,
+      "net": 4.103346226662224,
+      "closedAt": "2025-01-31T19:00:00+00:00",
+      "durationHours": 18.0
+    },
+    {
+      "symbol": "AUCTIONUSDT",
+      "entryTime": 1739044800,
+      "openedAt": "2025-02-08T20:00:00+00:00",
+      "decisionAt": "2025-02-08T20:00:00+00:00",
+      "entry": 8.941932999999999,
+      "stop": 9.866785714285713,
+      "initialStop": 8.315964285714285,
+      "targets": [
+        9.949,
+        10.959
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 15.111756434346924,
+      "initialMargin": 13.512831354824907,
+      "entryFee": 0.13512831354824908,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.28421522806497473,
+      "funding": 0.012116304073930679,
+      "gross": 13.958600968476578,
+      "adjustment": 0.0,
+      "returns": 27.310229104710828,
+      "exits": [
+        {
+          "time": "2025-02-09T03:00:00+00:00",
+          "reason": "partial_1",
+          "price": 9.939051,
+          "quantity": 4.5335269303040775,
+          "returned": 8.527192175483812
+        },
+        {
+          "time": "2025-02-09T05:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 9.834156,
+          "quantity": 10.578229504042847,
+          "returned": 18.783036929227016
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 10,
+      "fundingPriceProxyCount": 2,
+      "oiAtDecision": null,
+      "net": 13.662269436337672,
+      "closedAt": "2025-02-09T06:00:00+00:00",
+      "durationHours": 10.0
+    },
+    {
+      "symbol": "ACTUSDT",
+      "entryTime": 1740128400,
+      "openedAt": "2025-02-21T09:00:00+00:00",
+      "decisionAt": "2025-02-21T09:00:00+00:00",
+      "entry": 0.18626607999999997,
+      "stop": 0.20499,
+      "initialStop": 0.180995,
+      "targets": [
+        0.19172,
+        0.197
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 1662.1941675760909,
+      "initialMargin": 30.96103917932615,
+      "entryFee": 0.3096103917932615,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.6394119680958734,
+      "funding": 0.0038112154862668035,
+      "gross": 20.19118450935045,
+      "adjustment": 0.0,
+      "returns": 50.81861089688772,
+      "exits": [
+        {
+          "time": "2025-02-21T09:00:00+00:00",
+          "reason": "partial_1",
+          "price": 0.19152828,
+          "quantity": 498.6582502728272,
+          "returned": 11.816844041400962
+        },
+        {
+          "time": "2025-02-21T11:00:00+00:00",
+          "reason": "partial_2",
+          "price": 0.196803,
+          "quantity": 498.6582502728272,
+          "returned": 14.444496404634176
+        },
+        {
+          "time": "2025-02-21T13:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 0.20478501000000002,
+          "quantity": 664.8776670304364,
+          "returned": 24.557270450852585
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 0,
+      "fundingPriceProxyCount": 0,
+      "oiAtDecision": null,
+      "net": 19.54796132576831,
+      "closedAt": "2025-02-21T14:00:00+00:00",
+      "durationHours": 5.0
+    },
+    {
+      "symbol": "OMUSDT",
+      "entryTime": 1739919600,
+      "openedAt": "2025-02-18T23:00:00+00:00",
+      "decisionAt": "2025-02-18T23:00:00+00:00",
+      "entry": 7.647900259999998,
+      "stop": 8.64626,
+      "initialStop": 7.237645,
+      "targets": [
+        8.468410779999996,
+        9.288921299999993
+      ],
+      "targetBasis": [
+        "2R_risk_release",
+        "risk_projection"
+      ],
+      "initialQty": 22.683613934346887,
+      "initialMargin": 17.348201690623114,
+      "entryFee": 0.17348201690623113,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.36820524366381335,
+      "funding": -2.222032986651806,
+      "gross": 21.241209851351023,
+      "adjustment": 0.0,
+      "returns": 40.61672130186837,
+      "exits": [
+        {
+          "time": "2025-02-23T00:00:00+00:00",
+          "reason": "partial_1",
+          "price": 8.459942369219995,
+          "quantity": 6.805084180304066,
+          "returned": 11.339514694393161
+        },
+        {
+          "time": "2025-02-23T01:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 8.637613739999999,
+          "quantity": 15.878529754042821,
+          "returned": 29.277206607475208
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 0,
+      "fundingPriceProxyCount": 0,
+      "oiAtDecision": null,
+      "net": 23.095037594339022,
+      "closedAt": "2025-02-23T02:00:00+00:00",
+      "durationHours": 99.0
+    },
+    {
+      "symbol": "ACTUSDT",
+      "entryTime": 1741557600,
+      "openedAt": "2025-03-09T22:00:00+00:00",
+      "decisionAt": "2025-03-09T22:00:00+00:00",
+      "entry": 0.19454434999999998,
+      "stop": 0.19738571428571428,
+      "initialStop": 0.18866428571428573,
+      "targets": [
+        0.20124,
+        0.2085
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 1501.8980193308005,
+      "initialMargin": 29.218577393699796,
+      "entryFee": 0.29218577393699796,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.5900774206544197,
+      "funding": 0.0977100202589313,
+      "gross": 5.705872780423833,
+      "adjustment": 0.0,
+      "returns": 34.52884850714727,
+      "exits": [
+        {
+          "time": "2025-03-11T12:00:00+00:00",
+          "reason": "partial_1",
+          "price": 0.20103876,
+          "quantity": 450.56940579924014,
+          "returned": 11.5718607521131
+        },
+        {
+          "time": "2025-03-11T13:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 0.19718832857142857,
+          "quantity": 1051.3286135315602,
+          "returned": 22.956987755034174
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 0,
+      "fundingPriceProxyCount": 0,
+      "oiAtDecision": null,
+      "net": 5.018085339510479,
+      "closedAt": "2025-03-11T14:00:00+00:00",
+      "durationHours": 40.0
+    },
+    {
+      "symbol": "ETHUSDT",
+      "entryTime": 1742014800,
+      "openedAt": "2025-03-15T05:00:00+00:00",
+      "decisionAt": "2025-03-15T05:00:00+00:00",
+      "entry": 1932.9209899999998,
+      "stop": 1894.2603571428572,
+      "initialStop": 1894.2603571428572,
+      "targets": [
+        2055.64,
+        2117.44
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 0.2155529338923821,
+      "initialMargin": 41.66467903766677,
+      "entryFee": 0.4166467903766677,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.8245518545373038,
+      "funding": 0.005243104584725529,
+      "gross": -8.741726216031516,
+      "adjustment": 0.0,
+      "returns": 32.50980465288988,
+      "exits": [
+        {
+          "time": "2025-03-16T11:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 1892.3660967857143,
+          "quantity": 0.2155529338923821,
+          "returned": 32.50980465288988
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 31,
+      "fundingPriceProxyCount": 4,
+      "oiAtDecision": null,
+      "net": -9.571521175153556,
+      "closedAt": "2025-03-16T12:00:00+00:00",
+      "durationHours": 31.0
+    },
+    {
+      "symbol": "OMUSDT",
+      "entryTime": 1742036400,
+      "openedAt": "2025-03-15T11:00:00+00:00",
+      "decisionAt": "2025-03-15T11:00:00+00:00",
+      "entry": 6.524157639999999,
+      "stop": 6.850026428571429,
+      "initialStop": 6.158381071428571,
+      "targets": [
+        7.04076,
+        7.42255
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 25.518458578347808,
+      "initialMargin": 16.648644649495136,
+      "entryFee": 0.16648644649495137,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.34257246791193857,
+      "funding": -1.2605629099874374,
+      "gross": 9.599574922035812,
+      "adjustment": 0.0,
+      "returns": 27.332696460101396,
+      "exits": [
+        {
+          "time": "2025-03-17T19:00:00+00:00",
+          "reason": "partial_1",
+          "price": 7.03371924,
+          "quantity": 7.655537573504342,
+          "returned": 9.146439474365527
+        },
+        {
+          "time": "2025-03-18T03:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 6.843176402142857,
+          "quantity": 17.862921004843464,
+          "returned": 18.186256985735866
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 65,
+      "fundingPriceProxyCount": 16,
+      "oiAtDecision": null,
+      "net": 10.517565364111308,
+      "closedAt": "2025-03-18T04:00:00+00:00",
+      "durationHours": 65.0
+    },
+    {
+      "symbol": "ETHUSDT",
+      "entryTime": 1742234400,
+      "openedAt": "2025-03-17T18:00:00+00:00",
+      "decisionAt": "2025-03-17T18:00:00+00:00",
+      "entry": 1931.6196899999998,
+      "stop": 1876.9271428571428,
+      "initialStop": 1876.9271428571428,
+      "targets": [
+        2055.64,
+        2117.44
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 0.16020756260379734,
+      "initialMargin": 30.946008241240257,
+      "entryFee": 0.3094600824124026,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.6098573072317128,
+      "funding": 0.02891016735519747,
+      "gross": -9.062857593092433,
+      "adjustment": 0.0,
+      "returns": 21.553843255973316,
+      "exits": [
+        {
+          "time": "2025-03-18T13:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 1875.0502157142857,
+          "quantity": 0.16020756260379734,
+          "returned": 21.553843255973316
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 20,
+      "fundingPriceProxyCount": 2,
+      "oiAtDecision": null,
+      "net": -9.701625067679343,
+      "closedAt": "2025-03-18T14:00:00+00:00",
+      "durationHours": 20.0
+    },
+    {
+      "symbol": "OMUSDT",
+      "entryTime": 1742356800,
+      "openedAt": "2025-03-19T04:00:00+00:00",
+      "decisionAt": "2025-03-19T04:00:00+00:00",
+      "entry": 7.0168798699999995,
+      "stop": 6.853946071428571,
+      "initialStop": 6.853946071428571,
+      "targets": [
+        7.23066,
+        7.39999
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 52.35565964684829,
+      "initialMargin": 36.737337425654104,
+      "entryFee": 0.36737337425654104,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.7258573991423547,
+      "funding": 0.0,
+      "gross": -8.889349370727412,
+      "adjustment": 0.0,
+      "returns": 27.489504030040877,
+      "exits": [
+        {
+          "time": "2025-03-19T04:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 6.847092125357142,
+          "quantity": 52.35565964684829,
+          "returned": 27.489504030040877
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 1,
+      "fundingPriceProxyCount": 0,
+      "oiAtDecision": null,
+      "net": -9.615206769869769,
+      "closedAt": "2025-03-19T05:00:00+00:00",
+      "durationHours": 1.0
+    },
+    {
+      "symbol": "BTCUSDT",
+      "entryTime": 1742392800,
+      "openedAt": "2025-03-19T14:00:00+00:00",
+      "decisionAt": "2025-03-19T14:00:00+00:00",
+      "entry": 84134.04999999999,
+      "stop": 86187.13571428573,
+      "initialStop": 82282.98928571428,
+      "targets": [
+        86128.3,
+        88990.0
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 0.004571226049322349,
+      "initialMargin": 38.45957609949889,
+      "entryFee": 0.3845957609949889,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.7774395935072533,
+      "funding": 0.024850552288217434,
+      "gross": 8.248071517275667,
+      "adjustment": 0.0,
+      "returns": 46.289953231974074,
+      "exits": [
+        {
+          "time": "2025-03-19T22:00:00+00:00",
+          "reason": "partial_1",
+          "price": 86042.1717,
+          "quantity": 0.0013713678147967046,
+          "returned": 14.030778892713046
+        },
+        {
+          "time": "2025-03-20T01:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 85893.92009999999,
+          "quantity": 0.003199858234525644,
+          "returned": 32.25917433926103
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 12,
+      "fundingPriceProxyCount": 2,
+      "oiAtDecision": null,
+      "net": 7.445781371480196,
+      "closedAt": "2025-03-20T02:00:00+00:00",
+      "durationHours": 12.0
+    },
+    {
+      "symbol": "ACTUSDT",
+      "entryTime": 1742529600,
+      "openedAt": "2025-03-21T04:00:00+00:00",
+      "decisionAt": "2025-03-21T04:00:00+00:00",
+      "entry": 0.19015996999999998,
+      "stop": 0.18835392857142857,
+      "initialStop": 0.18835392857142857,
+      "targets": [
+        0.19307,
+        0.1949
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 3896.0816703675255,
+      "initialMargin": 74.08787735546385,
+      "entryFee": 0.7408787735546385,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 1.4739872199148467,
+      "funding": 0.07379121021667373,
+      "gross": -7.770327194430256,
+      "adjustment": 0.0,
+      "returns": 65.5106505044567,
+      "exits": [
+        {
+          "time": "2025-03-21T13:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 0.18816557464285716,
+          "quantity": 3896.0816703675255,
+          "returned": 65.5106505044567
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 0,
+      "fundingPriceProxyCount": 0,
+      "oiAtDecision": null,
+      "net": -9.318105624561777,
+      "closedAt": "2025-03-21T14:00:00+00:00",
+      "durationHours": 10.0
+    },
+    {
+      "symbol": "ACTUSDT",
+      "entryTime": 1742727600,
+      "openedAt": "2025-03-23T11:00:00+00:00",
+      "decisionAt": "2025-03-23T11:00:00+00:00",
+      "entry": 0.19231212,
+      "stop": 0.1964378571428571,
+      "initialStop": 0.18873964285714287,
+      "targets": [
+        0.19727,
+        0.20228
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 2303.2316799004357,
+      "initialMargin": 44.29393672128142,
+      "entryFee": 0.44293936721281424,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.8955032313721907,
+      "funding": 0.13785444682387174,
+      "gross": 9.624496946562301,
+      "adjustment": 0.0,
+      "returns": 53.328015356860476,
+      "exits": [
+        {
+          "time": "2025-03-24T11:00:00+00:00",
+          "reason": "partial_1",
+          "price": 0.19707273,
+          "quantity": 690.9695039701306,
+          "returned": 16.401170387441404
+        },
+        {
+          "time": "2025-03-24T13:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 0.19624141928571426,
+          "quantity": 1612.2621759303051,
+          "returned": 36.92684496941907
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 0,
+      "fundingPriceProxyCount": 0,
+      "oiAtDecision": null,
+      "net": 8.591139268366243,
+      "closedAt": "2025-03-24T14:00:00+00:00",
+      "durationHours": 27.0
+    },
+    {
+      "symbol": "OMUSDT",
+      "entryTime": 1742824800,
+      "openedAt": "2025-03-24T14:00:00+00:00",
+      "decisionAt": "2025-03-24T14:00:00+00:00",
+      "entry": 6.603076479999999,
+      "stop": 6.754608571428571,
+      "initialStop": 6.2768814285714285,
+      "targets": [
+        6.93759,
+        7.907856685714279
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "risk_projection"
+      ],
+      "initialQty": 28.360156960974862,
+      "initialMargin": 18.726428539812137,
+      "entryFee": 0.18726428539812137,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.3801897407304443,
+      "funding": -0.08630345947636367,
+      "gross": 5.6611699342016255,
+      "adjustment": 0.0,
+      "returns": 24.280976478157804,
+      "exits": [
+        {
+          "time": "2025-03-24T17:00:00+00:00",
+          "reason": "partial_1",
+          "price": 6.93065241,
+          "quantity": 8.508047088292459,
+          "returned": 8.353941704331685
+        },
+        {
+          "time": "2025-03-25T01:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 6.747853962857143,
+          "quantity": 19.852109872682405,
+          "returned": 15.92703477382612
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 12,
+      "fundingPriceProxyCount": 3,
+      "oiAtDecision": null,
+      "net": 5.367283652947546,
+      "closedAt": "2025-03-25T02:00:00+00:00",
+      "durationHours": 12.0
+    },
+    {
+      "symbol": "ETHUSDT",
+      "entryTime": 1742392800,
+      "openedAt": "2025-03-19T14:00:00+00:00",
+      "decisionAt": "2025-03-19T14:00:00+00:00",
+      "entry": 2017.8157999999996,
+      "stop": 1920.1699999999998,
+      "initialStop": 1920.1699999999998,
+      "targets": [
+        2152.03,
+        2259.34
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 0.09459210932753209,
+      "initialMargin": 19.086945275642158,
+      "entryFee": 0.1908694527564216,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.3824263148846162,
+      "funding": 0.09451848949962148,
+      "gross": 0.6874093717730417,
+      "adjustment": 0.0,
+      "returns": 19.488279295787393,
+      "exits": [
+        {
+          "time": "2025-03-26T14:00:00+00:00",
+          "reason": "time_exit",
+          "price": 2025.08289,
+          "quantity": 0.09459210932753209,
+          "returned": 19.488279295787393
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 168,
+      "fundingPriceProxyCount": 21,
+      "oiAtDecision": null,
+      "net": 0.21046456738881353,
+      "closedAt": "2025-03-26T14:00:00+00:00",
+      "durationHours": 168.0
+    },
+    {
+      "symbol": "BTCUSDT",
+      "entryTime": 1742914800,
+      "openedAt": "2025-03-25T15:00:00+00:00",
+      "decisionAt": "2025-03-25T15:00:00+00:00",
+      "entry": 88050.16219999999,
+      "stop": 86561.38214285714,
+      "initialStop": 86561.38214285714,
+      "targets": [
+        91027.7223142857,
+        94005.2824285714
+      ],
+      "targetBasis": [
+        "2R_risk_release",
+        "risk_projection"
+      ],
+      "initialQty": 0.0054318874541808585,
+      "initialMargin": 47.82785713927696,
+      "entryFee": 0.47827857139276964,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.948000065385432,
+      "funding": -0.024243004408426118,
+      "gross": -8.557077400107257,
+      "adjustment": 0.0,
+      "returns": 38.82530124958545,
+      "exits": [
+        {
+          "time": "2025-03-26T14:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 86474.82076071428,
+          "quantity": 0.0054318874541808585,
+          "returned": 38.82530124958545
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 24,
+      "fundingPriceProxyCount": 3,
+      "oiAtDecision": null,
+      "net": -9.480834461084276,
+      "closedAt": "2025-03-26T15:00:00+00:00",
+      "durationHours": 24.0
+    },
+    {
+      "symbol": "ETHUSDT",
+      "entryTime": 1743490800,
+      "openedAt": "2025-04-01T07:00:00+00:00",
+      "decisionAt": "2025-04-01T07:00:00+00:00",
+      "entry": 1858.6467899999998,
+      "stop": 1877.3364285714285,
+      "initialStop": 1806.8110714285715,
+      "targets": [
+        1912.3,
+        1973.0
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 0.16871854930718647,
+      "initialMargin": 31.358819008325884,
+      "entryFee": 0.31358819008325883,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.6317808586086677,
+      "funding": 0.02476972810048337,
+      "gross": 4.604478442150014,
+      "adjustment": 0.0,
+      "returns": 35.62033505385,
+      "exits": [
+        {
+          "time": "2025-04-01T15:00:00+00:00",
+          "reason": "partial_1",
+          "price": 1910.3877,
+          "quantity": 0.05061556479215594,
+          "returned": 11.927146880731387
+        },
+        {
+          "time": "2025-04-02T02:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 1875.4590921428571,
+          "quantity": 0.11810298451503053,
+          "returned": 23.693188173118614
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 20,
+      "fundingPriceProxyCount": 3,
+      "oiAtDecision": null,
+      "net": 3.947927855440856,
+      "closedAt": "2025-04-02T03:00:00+00:00",
+      "durationHours": 20.0
+    },
+    {
+      "symbol": "OMUSDT",
+      "entryTime": 1743490800,
+      "openedAt": "2025-04-01T07:00:00+00:00",
+      "decisionAt": "2025-04-01T07:00:00+00:00",
+      "entry": 6.321184869999999,
+      "stop": 6.118343214285714,
+      "initialStop": 6.118343214285714,
+      "targets": [
+        6.60116,
+        6.82999
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 43.83534834486581,
+      "initialMargin": 27.709134072874527,
+      "entryFee": 0.27709134072874525,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.5450228471143138,
+      "funding": -0.026138044682483024,
+      "gross": -9.15983434317666,
+      "adjustment": 0.0,
+      "returns": 18.307506267994786,
+      "exits": [
+        {
+          "time": "2025-04-02T05:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 6.112224871071429,
+          "quantity": 43.83534834486581,
+          "returned": 18.307506267994786
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 0,
+      "fundingPriceProxyCount": 0,
+      "oiAtDecision": null,
+      "net": -9.678719145608486,
+      "closedAt": "2025-04-02T06:00:00+00:00",
+      "durationHours": 23.0
+    },
+    {
+      "symbol": "BTCUSDT",
+      "entryTime": 1743588000,
+      "openedAt": "2025-04-02T10:00:00+00:00",
+      "decisionAt": "2025-04-02T10:00:00+00:00",
+      "entry": 85066.98199999999,
+      "stop": 85843.32857142857,
+      "initialStop": 83605.22142857143,
+      "targets": [
+        86619.9,
+        88235.0
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 0.005549301802480423,
+      "initialMargin": 47.206235654416965,
+      "entryFee": 0.4720623565441696,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.9492480599182744,
+      "funding": 0.002468920134399006,
+      "gross": 5.123346829935147,
+      "adjustment": 0.0,
+      "returns": 51.84992786084361,
+      "exits": [
+        {
+          "time": "2025-04-02T15:00:00+00:00",
+          "reason": "partial_1",
+          "price": 86533.28009999999,
+          "quantity": 0.0016647905407441268,
+          "returned": 16.458890116946133
+        },
+        {
+          "time": "2025-04-02T20:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 85757.48524285715,
+          "quantity": 0.003884511261736296,
+          "returned": 35.39103774389748
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 11,
+      "fundingPriceProxyCount": 1,
+      "oiAtDecision": null,
+      "net": 4.171629849882473,
+      "closedAt": "2025-04-02T21:00:00+00:00",
+      "durationHours": 11.0
+    },
+    {
+      "symbol": "ACTUSDT",
+      "entryTime": 1744452000,
+      "openedAt": "2025-04-12T10:00:00+00:00",
+      "decisionAt": "2025-04-12T10:00:00+00:00",
+      "entry": 0.05795789999999999,
+      "stop": 0.0551775,
+      "initialStop": 0.0551775,
+      "targets": [
+        0.06295,
+        0.06751
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 3319.7978535249467,
+      "initialMargin": 19.240851201481348,
+      "entryFee": 0.1924085120148135,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.3754034799316234,
+      "funding": 0.06643090956219978,
+      "gross": -9.41354409800363,
+      "adjustment": 0.0,
+      "returns": 9.577881225998711,
+      "exits": [
+        {
+          "time": "2025-04-13T13:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 0.055122322499999994,
+          "quantity": 3319.7978535249467,
+          "returned": 9.577881225998711
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 0,
+      "fundingPriceProxyCount": 0,
+      "oiAtDecision": null,
+      "net": -9.85537848749745,
+      "closedAt": "2025-04-13T14:00:00+00:00",
+      "durationHours": 28.0
+    },
+    {
+      "symbol": "ETHUSDT",
+      "entryTime": 1744599600,
+      "openedAt": "2025-04-14T03:00:00+00:00",
+      "decisionAt": "2025-04-14T03:00:00+00:00",
+      "entry": 1636.26463,
+      "stop": 1543.8757142857144,
+      "initialStop": 1543.8757142857144,
+      "targets": [
+        1804.5,
+        1918.0
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 0.10107751232472478,
+      "initialMargin": 16.538955830533624,
+      "entryFee": 0.16538955830533625,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.3212846237273553,
+      "funding": 0.02455967901629042,
+      "gross": -9.494492883317202,
+      "adjustment": 0.0,
+      "returns": 6.864008202778114,
+      "exits": [
+        {
+          "time": "2025-04-16T17:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 1542.3318385714288,
+          "quantity": 0.10107751232472478,
+          "returned": 6.864008202778114
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 63,
+      "fundingPriceProxyCount": 8,
+      "oiAtDecision": null,
+      "net": -9.840337186060845,
+      "closedAt": "2025-04-16T18:00:00+00:00",
+      "durationHours": 63.0
+    },
+    {
+      "symbol": "BTCUSDT",
+      "entryTime": 1744225200,
+      "openedAt": "2025-04-09T19:00:00+00:00",
+      "decisionAt": "2025-04-09T19:00:00+00:00",
+      "entry": 81839.75799999999,
+      "stop": 75115.24642857142,
+      "initialStop": 75115.24642857142,
+      "targets": [
+        95288.78114285711,
+        108737.80428571424
+      ],
+      "targetBasis": [
+        "2R_risk_release",
+        "risk_projection"
+      ],
+      "initialQty": 0.0014180634561187322,
+      "initialMargin": 11.605397007740065,
+      "entryFee": 0.11605397007740065,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.23503858326529062,
+      "funding": 0.10542555230502124,
+      "gross": 2.9306431104893247,
+      "adjustment": 0.0,
+      "returns": 14.311629952736482,
+      "exits": [
+        {
+          "time": "2025-04-16T19:00:00+00:00",
+          "reason": "time_exit",
+          "price": 83906.4096,
+          "quantity": 0.0014180634561187322,
+          "returned": 14.311629952736482
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 168,
+      "fundingPriceProxyCount": 21,
+      "oiAtDecision": null,
+      "net": 2.5901789749190165,
+      "closedAt": "2025-04-16T19:00:00+00:00",
+      "durationHours": 168.0
+    },
+    {
+      "symbol": "ETHUSDT",
+      "entryTime": 1745035200,
+      "openedAt": "2025-04-19T04:00:00+00:00",
+      "decisionAt": "2025-04-19T04:00:00+00:00",
+      "entry": 1598.7972,
+      "stop": 1610.5957142857142,
+      "initialStop": 1580.3942857142856,
+      "targets": [
+        1618.0,
+        1638.47
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 0.4032566509395946,
+      "initialMargin": 64.47256044036013,
+      "entryFee": 0.6447256044036013,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 1.294454407220047,
+      "funding": 0.1036608493445961,
+      "gross": 5.00319841284449,
+      "adjustment": 0.0,
+      "returns": 68.72236920104356,
+      "exits": [
+        {
+          "time": "2025-04-19T17:00:00+00:00",
+          "reason": "partial_1",
+          "price": 1616.382,
+          "quantity": 0.12097699528187839,
+          "returned": 21.24248110634973
+        },
+        {
+          "time": "2025-04-19T20:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 1608.9851185714285,
+          "quantity": 0.28227965565771623,
+          "returned": 47.47988809469384
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 17,
+      "fundingPriceProxyCount": 2,
+      "oiAtDecision": null,
+      "net": 3.605083156279835,
+      "closedAt": "2025-04-19T21:00:00+00:00",
+      "durationHours": 17.0
+    },
+    {
+      "symbol": "BTCUSDT",
+      "entryTime": 1745035200,
+      "openedAt": "2025-04-19T04:00:00+00:00",
+      "decisionAt": "2025-04-19T04:00:00+00:00",
+      "entry": 84930.14529999999,
+      "stop": 84186.09285714285,
+      "initialStop": 84186.09285714285,
+      "targets": [
+        85755.0,
+        87906.35507142854
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "risk_projection"
+      ],
+      "initialQty": 0.009227024273555637,
+      "initialMargin": 78.36525122397072,
+      "entryFee": 0.7836525122397071,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 1.5596628474060843,
+      "funding": 0.021232345518120997,
+      "gross": -7.642177073329816,
+      "adjustment": 0.0,
+      "returns": 69.92583146995639,
+      "exits": [
+        {
+          "time": "2025-04-20T10:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 84101.90676428571,
+          "quantity": 0.009227024273555637,
+          "returned": 69.92583146995639
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 31,
+      "fundingPriceProxyCount": 4,
+      "oiAtDecision": null,
+      "net": -9.22307226625403,
+      "closedAt": "2025-04-20T11:00:00+00:00",
+      "durationHours": 31.0
+    },
+    {
+      "symbol": "ACTUSDT",
+      "entryTime": 1745118000,
+      "openedAt": "2025-04-20T03:00:00+00:00",
+      "decisionAt": "2025-04-20T03:00:00+00:00",
+      "entry": 0.06015008999999999,
+      "stop": 0.061314285714285724,
+      "initialStop": 0.05800071428571429,
+      "targets": [
+        0.06238,
+        0.06565
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 4184.142304850781,
+      "initialMargin": 25.167653620958188,
+      "entryFee": 0.2516765362095819,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.5093040775999378,
+      "funding": 0.06685926240820525,
+      "gross": 5.95100518077402,
+      "adjustment": 0.0,
+      "returns": 30.794171997933645,
+      "exits": [
+        {
+          "time": "2025-04-20T07:00:00+00:00",
+          "reason": "partial_1",
+          "price": 0.06231762,
+          "quantity": 1255.2426914552343,
+          "returned": 10.18902558251677
+        },
+        {
+          "time": "2025-04-21T07:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 0.06125297142857144,
+          "quantity": 2928.899613395547,
+          "returned": 20.605146415416876
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 0,
+      "fundingPriceProxyCount": 0,
+      "oiAtDecision": null,
+      "net": 5.374841840765876,
+      "closedAt": "2025-04-21T08:00:00+00:00",
+      "durationHours": 29.0
+    },
+    {
+      "symbol": "AUCTIONUSDT",
+      "entryTime": 1745226000,
+      "openedAt": "2025-04-21T09:00:00+00:00",
+      "decisionAt": "2025-04-21T09:00:00+00:00",
+      "entry": 11.564553,
+      "stop": 11.180607142857143,
+      "initialStop": 11.180607142857143,
+      "targets": [
+        11.991,
+        12.397
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 23.24478245852975,
+      "initialMargin": 26.881551871513757,
+      "entryFee": 0.26881551871513754,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.5284464087243457,
+      "funding": 0.013661357066449272,
+      "gross": -9.184628705929429,
+      "adjustment": 0.0,
+      "returns": 17.423630918508668,
+      "exits": [
+        {
+          "time": "2025-04-21T17:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 11.169426535714287,
+          "quantity": 23.24478245852975,
+          "returned": 17.423630918508668
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 9,
+      "fundingPriceProxyCount": 2,
+      "oiAtDecision": null,
+      "net": -9.726736471720226,
+      "closedAt": "2025-04-21T18:00:00+00:00",
+      "durationHours": 9.0
+    },
+    {
+      "symbol": "ETHUSDT",
+      "entryTime": 1745200800,
+      "openedAt": "2025-04-21T02:00:00+00:00",
+      "decisionAt": "2025-04-21T02:00:00+00:00",
+      "entry": 1629.6179899999997,
+      "stop": 1567.3103571428571,
+      "initialStop": 1567.3103571428571,
+      "targets": [
+        1754.233255714285,
+        1878.8485214285702
+      ],
+      "targetBasis": [
+        "2R_risk_release",
+        "risk_projection"
+      ],
+      "initialQty": 0.14529370834755256,
+      "initialMargin": 23.677324095698477,
+      "entryFee": 0.2367732409569848,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.4642658545438767,
+      "funding": 0.0428016122345815,
+      "gross": -9.280627370092864,
+      "adjustment": 0.0,
+      "returns": 14.126402499784142,
+      "exits": [
+        {
+          "time": "2025-04-21T18:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 1565.7430467857143,
+          "quantity": 0.14529370834755256,
+          "returned": 14.126402499784142
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 17,
+      "fundingPriceProxyCount": 2,
+      "oiAtDecision": null,
+      "net": -9.78769483687132,
+      "closedAt": "2025-04-21T19:00:00+00:00",
+      "durationHours": 17.0
+    },
+    {
+      "symbol": "BTCUSDT",
+      "entryTime": 1745265600,
+      "openedAt": "2025-04-21T20:00:00+00:00",
+      "decisionAt": "2025-04-21T20:00:00+00:00",
+      "entry": 87456.56919999998,
+      "stop": 92932.22857142857,
+      "initialStop": 85998.32142857142,
+      "targets": [
+        90373.06474285711,
+        93289.56028571424
+      ],
+      "targetBasis": [
+        "2R_risk_release",
+        "risk_projection"
+      ],
+      "initialQty": 0.005530746934727241,
+      "initialMargin": 48.37001520246608,
+      "entryFee": 0.48370015202466077,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.993521126162956,
+      "funding": 0.009049482814617347,
+      "gross": 26.120822113634347,
+      "adjustment": 0.0,
+      "returns": 73.97196685914751,
+      "exits": [
+        {
+          "time": "2025-04-22T13:00:00+00:00",
+          "reason": "partial_1",
+          "price": 90282.69167811425,
+          "quantity": 0.0016592240804181723,
+          "returned": 19.040221720446127
+        },
+        {
+          "time": "2025-04-22T21:00:00+00:00",
+          "reason": "partial_2",
+          "price": 93196.27072542852,
+          "quantity": 0.0016592240804181723,
+          "returned": 23.880291259555847
+        },
+        {
+          "time": "2025-04-23T14:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 92839.29634285714,
+          "quantity": 0.0022122987738908972,
+          "returned": 31.051453879145537
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 43,
+      "fundingPriceProxyCount": 5,
+      "oiAtDecision": null,
+      "net": 25.118251504656776,
+      "closedAt": "2025-04-23T15:00:00+00:00",
+      "durationHours": 43.0
+    },
+    {
+      "symbol": "AUCTIONUSDT",
+      "entryTime": 1745355600,
+      "openedAt": "2025-04-22T21:00:00+00:00",
+      "decisionAt": "2025-04-22T21:00:00+00:00",
+      "entry": 11.537525999999998,
+      "stop": 11.740714285714287,
+      "initialStop": 11.082285714285714,
+      "targets": [
+        12.111,
+        12.583
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 19.944538637245266,
+      "initialMargin": 23.01106330852218,
+      "entryFee": 0.2301106330852218,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.46625293742310436,
+      "funding": 0.047505896580054496,
+      "gross": 6.031671252660761,
+      "adjustment": 0.0,
+      "returns": 28.759086360265,
+      "exits": [
+        {
+          "time": "2025-04-23T13:00:00+00:00",
+          "reason": "partial_1",
+          "price": 12.098889,
+          "quantity": 5.98336159117358,
+          "returned": 10.17551300875015
+        },
+        {
+          "time": "2025-04-23T15:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 11.728973571428572,
+          "quantity": 13.961177046071686,
+          "returned": 18.583573351514854
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 19,
+      "fundingPriceProxyCount": 4,
+      "oiAtDecision": null,
+      "net": 5.517912418657602,
+      "closedAt": "2025-04-23T16:00:00+00:00",
+      "durationHours": 19.0
+    },
+    {
+      "symbol": "AUCTIONUSDT",
+      "entryTime": 1745510400,
+      "openedAt": "2025-04-24T16:00:00+00:00",
+      "decisionAt": "2025-04-24T16:00:00+00:00",
+      "entry": 12.090077999999998,
+      "stop": 12.246071428571428,
+      "initialStop": 11.677678571428572,
+      "targets": [
+        12.583,
+        13.121
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 21.70328507347056,
+      "initialMargin": 26.239440939449473,
+      "entryFee": 0.26239440939449477,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.5301001519731019,
+      "funding": 0.12373617657934681,
+      "gross": 5.311333184112362,
+      "adjustment": 0.0,
+      "returns": 31.15933220440388,
+      "exits": [
+        {
+          "time": "2025-04-26T01:00:00+00:00",
+          "reason": "partial_1",
+          "price": 12.570417,
+          "quantity": 6.510985522041168,
+          "returned": 10.885327877778222
+        },
+        {
+          "time": "2025-04-26T11:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 12.233825357142857,
+          "quantity": 15.192299551429393,
+          "returned": 20.274004326625658
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 44,
+      "fundingPriceProxyCount": 10,
+      "oiAtDecision": null,
+      "net": 4.657496855559914,
+      "closedAt": "2025-04-26T12:00:00+00:00",
+      "durationHours": 44.0
+    },
+    {
+      "symbol": "ETHUSDT",
+      "entryTime": 1745708400,
+      "openedAt": "2025-04-26T23:00:00+00:00",
+      "decisionAt": "2025-04-26T23:00:00+00:00",
+      "entry": 1817.1853699999997,
+      "stop": 1770.202142857143,
+      "initialStop": 1770.202142857143,
+      "targets": [
+        1911.1518242857132,
+        2005.1182785714268
+      ],
+      "targetBasis": [
+        "2R_risk_release",
+        "risk_projection"
+      ],
+      "initialQty": 0.18432510844937194,
+      "initialMargin": 33.4952890397862,
+      "entryFee": 0.334952890397862,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.6609192996553561,
+      "funding": -0.01577988328776189,
+      "gross": -8.986481140368017,
+      "adjustment": 0.0,
+      "returns": 24.198621373448454,
+      "exits": [
+        {
+          "time": "2025-04-28T00:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 1768.4319407142857,
+          "quantity": 0.18432510844937194,
+          "returned": 24.198621373448454
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 26,
+      "fundingPriceProxyCount": 4,
+      "oiAtDecision": null,
+      "net": -9.631620556735609,
+      "closedAt": "2025-04-28T01:00:00+00:00",
+      "durationHours": 26.0
+    },
+    {
+      "symbol": "ETHUSDT",
+      "entryTime": 1745917200,
+      "openedAt": "2025-04-29T09:00:00+00:00",
+      "decisionAt": "2025-04-29T09:00:00+00:00",
+      "entry": 1833.5216899999998,
+      "stop": 1779.2510714285713,
+      "initialStop": 1779.2510714285713,
+      "targets": [
+        1942.0629271428568,
+        2050.6041642857135
+      ],
+      "targetBasis": [
+        "2R_risk_release",
+        "risk_projection"
+      ],
+      "initialQty": 0.16232526308178546,
+      "initialMargin": 29.76268906954099,
+      "entryFee": 0.2976268906954099,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.5861554715553432,
+      "funding": -0.022972226608119456,
+      "gross": -9.098309835476535,
+      "adjustment": 0.0,
+      "returns": 20.39882287981264,
+      "exits": [
+        {
+          "time": "2025-04-30T12:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 1777.4718203571429,
+          "quantity": 0.16232526308178546,
+          "returned": 20.39882287981264
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 28,
+      "fundingPriceProxyCount": 3,
+      "oiAtDecision": null,
+      "net": -9.661493080423758,
+      "closedAt": "2025-04-30T13:00:00+00:00",
+      "durationHours": 28.0
+    },
+    {
+      "symbol": "BTCUSDT",
+      "entryTime": 1745506800,
+      "openedAt": "2025-04-24T15:00:00+00:00",
+      "decisionAt": "2025-04-24T15:00:00+00:00",
+      "entry": 93148.85579999999,
+      "stop": 91359.79285714286,
+      "initialStop": 91359.79285714286,
+      "targets": [
+        96726.98168571424,
+        100305.1075714285
+      ],
+      "targetBasis": [
+        "2R_risk_release",
+        "risk_projection"
+      ],
+      "initialQty": 0.004626077902513356,
+      "initialMargin": 43.091386346078295,
+      "entryFee": 0.430913863460783,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.878066291378961,
+      "funding": -0.07482400476400046,
+      "gross": 16.238564457394915,
+      "adjustment": 0.0,
+      "returns": 58.95762238031902,
+      "exits": [
+        {
+          "time": "2025-05-01T14:00:00+00:00",
+          "reason": "partial_1",
+          "price": 96630.25470402853,
+          "quantity": 0.0013878233707540068,
+          "returned": 17.64732414138071
+        },
+        {
+          "time": "2025-05-01T15:00:00+00:00",
+          "reason": "time_exit",
+          "price": 96671.43179999999,
+          "quantity": 0.003238254531759349,
+          "returned": 41.310298238938316
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 168,
+      "fundingPriceProxyCount": 21,
+      "oiAtDecision": null,
+      "net": 15.435322170779946,
+      "closedAt": "2025-05-01T15:00:00+00:00",
+      "durationHours": 168.0
+    },
+    {
+      "symbol": "ACTUSDT",
+      "entryTime": 1746097200,
+      "openedAt": "2025-05-01T11:00:00+00:00",
+      "decisionAt": "2025-05-01T11:00:00+00:00",
+      "entry": 0.05584578999999999,
+      "stop": 0.05397071428571429,
+      "initialStop": 0.05397071428571429,
+      "targets": [
+        0.05795,
+        0.05983
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 4765.401944512212,
+      "initialMargin": 26.61276362588206,
+      "entryFee": 0.2661276362588206,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.5230625909158726,
+      "funding": 0.1532127938935374,
+      "gross": -9.192681601768575,
+      "adjustment": 0.0,
+      "returns": 17.009934275562895,
+      "exits": [
+        {
+          "time": "2025-05-03T10:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 0.053916743571428574,
+          "quantity": 4765.401944512212,
+          "returned": 17.009934275562895
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 48,
+      "fundingPriceProxyCount": 12,
+      "oiAtDecision": null,
+      "net": -9.868956986577986,
+      "closedAt": "2025-05-03T11:00:00+00:00",
+      "durationHours": 48.0
+    },
+    {
+      "symbol": "ETHUSDT",
+      "entryTime": 1746111600,
+      "openedAt": "2025-05-01T15:00:00+00:00",
+      "decisionAt": "2025-05-01T15:00:00+00:00",
+      "entry": 1849.4676199999997,
+      "stop": 1793.4289285714285,
+      "initialStop": 1793.4289285714285,
+      "targets": [
+        1961.545002857142,
+        2073.622385714284
+      ],
+      "targetBasis": [
+        "2R_risk_release",
+        "risk_projection"
+      ],
+      "initialQty": 0.15763779907260173,
+      "initialMargin": 29.15460050728429,
+      "entryFee": 0.2915460050728429,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.5739754819768841,
+      "funding": 0.02861422141092963,
+      "gross": -9.116528168801779,
+      "adjustment": 0.0,
+      "returns": 19.727028640167536,
+      "exits": [
+        {
+          "time": "2025-05-05T01:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 1791.635499642857,
+          "quantity": 0.15763779907260173,
+          "returned": 19.727028640167536
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 83,
+      "fundingPriceProxyCount": 11,
+      "oiAtDecision": null,
+      "net": -9.719117872189596,
+      "closedAt": "2025-05-05T02:00:00+00:00",
+      "durationHours": 83.0
+    },
+    {
+      "symbol": "BTCUSDT",
+      "entryTime": 1746572400,
+      "openedAt": "2025-05-06T23:00:00+00:00",
+      "decisionAt": "2025-05-06T23:00:00+00:00",
+      "entry": 96302.5063,
+      "stop": 102527.82142857143,
+      "initialStop": 93030.75357142858,
+      "targets": [
+        102846.01175714283,
+        109389.51721428566
+      ],
+      "targetBasis": [
+        "2R_risk_release",
+        "risk_projection"
+      ],
+      "initialQty": 0.002734509666440279,
+      "initialMargin": 26.334013437977582,
+      "entryFee": 0.2633401343797758,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.5436838571669068,
+      "funding": 0.04108179942086187,
+      "gross": 17.00358840735515,
+      "adjustment": 0.0,
+      "returns": 43.01617632312474,
+      "exits": [
+        {
+          "time": "2025-05-08T21:00:00+00:00",
+          "reason": "partial_1",
+          "price": 102743.16574538569,
+          "quantity": 0.0008203528999320836,
+          "returned": 13.087207491096708
+        },
+        {
+          "time": "2025-05-08T22:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 102425.29360714287,
+          "quantity": 0.0019141567665081952,
+          "returned": 29.92896883202803
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 48,
+      "fundingPriceProxyCount": 6,
+      "oiAtDecision": null,
+      "net": 16.418822750767383,
+      "closedAt": "2025-05-08T23:00:00+00:00",
+      "durationHours": 48.0
+    },
+    {
+      "symbol": "ETHUSDT",
+      "entryTime": 1746579600,
+      "openedAt": "2025-05-07T01:00:00+00:00",
+      "decisionAt": "2025-05-07T01:00:00+00:00",
+      "entry": 1843.4616199999996,
+      "stop": 2425.8107142857143,
+      "initialStop": 1753.5667857142857,
+      "targets": [
+        2023.2512885714273,
+        2203.040957142855
+      ],
+      "targetBasis": [
+        "2R_risk_release",
+        "risk_projection"
+      ],
+      "initialQty": 0.10280801509055618,
+      "initialMargin": 18.952263004782107,
+      "entryFee": 0.18952263004782108,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.4188107388700712,
+      "funding": 0.07490649015739767,
+      "gross": 39.76547877442903,
+      "adjustment": 0.0,
+      "returns": 58.413547180231475,
+      "exits": [
+        {
+          "time": "2025-05-08T15:00:00+00:00",
+          "reason": "partial_1",
+          "price": 2021.228037282856,
+          "quantity": 0.030842404527166852,
+          "returned": 11.093108560340012
+        },
+        {
+          "time": "2025-05-08T21:00:00+00:00",
+          "reason": "partial_2",
+          "price": 2200.837916185712,
+          "quantity": 0.030842404527166852,
+          "returned": 16.62165650499161
+        },
+        {
+          "time": "2025-05-09T09:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 2409.0885,
+          "quantity": 0.041123206036222465,
+          "returned": 30.69878211489986
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 57,
+      "fundingPriceProxyCount": 7,
+      "oiAtDecision": null,
+      "net": 39.271761545401546,
+      "closedAt": "2025-05-09T10:00:00+00:00",
+      "durationHours": 57.0
+    },
+    {
+      "symbol": "BTCUSDT",
+      "entryTime": 1746860400,
+      "openedAt": "2025-05-10T07:00:00+00:00",
+      "decisionAt": "2025-05-10T07:00:00+00:00",
+      "entry": 104011.80789999999,
+      "stop": 102512.82142857143,
+      "initialStop": 102512.82142857143,
+      "targets": [
+        107009.78084285709,
+        110007.75378571419
+      ],
+      "targetBasis": [
+        "2R_risk_release",
+        "risk_projection"
+      ],
+      "initialQty": 0.005221840213143713,
+      "initialMargin": 54.31330411339989,
+      "entryFee": 0.5431330411339989,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 1.0779033088592351,
+      "funding": 0.28727718657377493,
+      "gross": -8.362773408762505,
+      "adjustment": 0.0,
+      "returns": 45.12848325033837,
+      "exits": [
+        {
+          "time": "2025-05-12T14:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 102410.30860714287,
+          "quantity": 0.005221840213143713,
+          "returned": 45.12848325033837
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 56,
+      "fundingPriceProxyCount": 7,
+      "oiAtDecision": null,
+      "net": -9.727953904195516,
+      "closedAt": "2025-05-12T15:00:00+00:00",
+      "durationHours": 56.0
+    },
+    {
+      "symbol": "BTCUSDT",
+      "entryTime": 1747166400,
+      "openedAt": "2025-05-13T20:00:00+00:00",
+      "decisionAt": "2025-05-13T20:00:00+00:00",
+      "entry": 104849.4447,
+      "stop": 102471.36428571428,
+      "initialStop": 102471.36428571428,
+      "targets": [
+        109605.60552857141,
+        114361.76635714283
+      ],
+      "targetBasis": [
+        "2R_risk_release",
+        "risk_projection"
+      ],
+      "initialQty": 0.003574648061499159,
+      "initialMargin": 37.47998642461182,
+      "entryFee": 0.3747998642461183,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.7407326288855179,
+      "funding": 0.08761482715961627,
+      "gross": -8.867099606718613,
+      "adjustment": 0.0,
+      "returns": 28.159339226094193,
+      "exits": [
+        {
+          "time": "2025-05-15T05:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 102368.89292142857,
+          "quantity": 0.003574648061499159,
+          "returned": 28.159339226094193
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 34,
+      "fundingPriceProxyCount": 4,
+      "oiAtDecision": null,
+      "net": -9.695447062763748,
+      "closedAt": "2025-05-15T06:00:00+00:00",
+      "durationHours": 34.0
+    },
+    {
+      "symbol": "BTCUSDT",
+      "entryTime": 1747404000,
+      "openedAt": "2025-05-16T14:00:00+00:00",
+      "decisionAt": "2025-05-16T14:00:00+00:00",
+      "entry": 104057.65369999998,
+      "stop": 102844.67142857143,
+      "initialStop": 102844.67142857143,
+      "targets": [
+        105863.1,
+        108909.5827857142
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "risk_projection"
+      ],
+      "initialQty": 0.006137933283322402,
+      "initialMargin": 63.869893602966634,
+      "entryFee": 0.6386989360296663,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 1.2693214140716775,
+      "funding": 0.04838437105814883,
+      "gross": -8.076457987655093,
+      "adjustment": 0.0,
+      "returns": 55.114428766211375,
+      "exits": [
+        {
+          "time": "2025-05-17T01:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 102741.82675714286,
+          "quantity": 0.006137933283322402,
+          "returned": 55.114428766211375
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 12,
+      "fundingPriceProxyCount": 2,
+      "oiAtDecision": null,
+      "net": -9.394163772784925,
+      "closedAt": "2025-05-17T02:00:00+00:00",
+      "durationHours": 12.0
+    },
+    {
+      "symbol": "BTCUSDT",
+      "entryTime": 1747555200,
+      "openedAt": "2025-05-18T08:00:00+00:00",
+      "decisionAt": "2025-05-18T08:00:00+00:00",
+      "entry": 103996.89299999998,
+      "stop": 105058.70714285714,
+      "initialStop": 102694.66785714286,
+      "targets": [
+        105863.1,
+        109205.79357142845
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "risk_projection"
+      ],
+      "initialQty": 0.005820001163727608,
+      "initialMargin": 60.52620382840554,
+      "entryFee": 0.6052620382840554,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 1.2174954600565613,
+      "funding": 0.06139181667548758,
+      "gross": 6.971383488450213,
+      "adjustment": 0.0,
+      "returns": 66.82396207840776,
+      "exits": [
+        {
+          "time": "2025-05-18T16:00:00+00:00",
+          "reason": "partial_1",
+          "price": 105757.2369,
+          "quantity": 0.0017460003491182824,
+          "returned": 21.028352494938108
+        },
+        {
+          "time": "2025-05-18T17:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 104953.64843571428,
+          "quantity": 0.004074000814609326,
+          "returned": 45.79560958346965
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 10,
+      "fundingPriceProxyCount": 1,
+      "oiAtDecision": null,
+      "net": 5.692496211718162,
+      "closedAt": "2025-05-18T18:00:00+00:00",
+      "durationHours": 10.0
+    },
+    {
+      "symbol": "ETHUSDT",
+      "entryTime": 1747152000,
+      "openedAt": "2025-05-13T16:00:00+00:00",
+      "decisionAt": "2025-05-13T16:00:00+00:00",
+      "entry": 2567.44488,
+      "stop": 2398.2175,
+      "initialStop": 2398.2175,
+      "targets": [
+        2905.8996399999996,
+        3244.3543999999993
+      ],
+      "targetBasis": [
+        "2R_risk_release",
+        "risk_projection"
+      ],
+      "initialQty": 0.0557111880028708,
+      "initialMargin": 14.303540439668808,
+      "entryFee": 0.14303540439668808,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.2724050517845868,
+      "funding": 0.11978684474170903,
+      "gross": -13.665757008789367,
+      "adjustment": -0.38862693874983356,
+      "returns": 0.0,
+      "exits": [
+        {
+          "time": "2025-05-18T20:00:00+00:00",
+          "reason": "liquidation_stress",
+          "price": 2322.148423423178,
+          "quantity": 0.0557111880028708,
+          "returned": 0
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 125,
+      "fundingPriceProxyCount": 15,
+      "oiAtDecision": null,
+      "net": -14.446575844065496,
+      "closedAt": "2025-05-18T21:00:00+00:00",
+      "durationHours": 125.0
+    },
+    {
+      "symbol": "BTCUSDT",
+      "entryTime": 1747702800,
+      "openedAt": "2025-05-20T01:00:00+00:00",
+      "decisionAt": "2025-05-20T01:00:00+00:00",
+      "entry": 105780.4748,
+      "stop": 104214.16785714286,
+      "initialStop": 104214.16785714286,
+      "targets": [
+        108913.08868571426,
+        112045.70257142853
+      ],
+      "targetBasis": [
+        "2R_risk_release",
+        "risk_projection"
+      ],
+      "initialQty": 0.0050265683238309156,
+      "initialMargin": 53.17127839094744,
+      "entryFee": 0.5317127839094744,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 1.0550285793195415,
+      "funding": 0.037502903090945214,
+      "gross": -8.396988499407248,
+      "adjustment": 0.0,
+      "returns": 44.213471193039176,
+      "exits": [
+        {
+          "time": "2025-05-20T13:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 104109.95368928571,
+          "quantity": 0.0050265683238309156,
+          "returned": 44.213471193039176
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 13,
+      "fundingPriceProxyCount": 1,
+      "oiAtDecision": null,
+      "net": -9.489519981817741,
+      "closedAt": "2025-05-20T14:00:00+00:00",
+      "durationHours": 13.0
+    },
+    {
+      "symbol": "ETHUSDT",
+      "entryTime": 1747702800,
+      "openedAt": "2025-05-20T01:00:00+00:00",
+      "decisionAt": "2025-05-20T01:00:00+00:00",
+      "entry": 2516.8443299999994,
+      "stop": 2474.2678571428573,
+      "initialStop": 2472.4346428571425,
+      "targets": [
+        2561.68,
+        2608.0
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 0.18356348857266558,
+      "initialMargin": 46.200072540913304,
+      "entryFee": 0.46200072540913306,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.9205406693525442,
+      "funding": 0.022139523573674394,
+      "gross": -3.460781465721914,
+      "adjustment": 0.0,
+      "returns": 42.2586116076743,
+      "exits": [
+        {
+          "time": "2025-05-20T02:00:00+00:00",
+          "reason": "partial_1",
+          "price": 2559.11832,
+          "quantity": 0.055069046571799674,
+          "returned": 16.047081880412993
+        },
+        {
+          "time": "2025-05-20T13:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 2471.7935892857145,
+          "quantity": 0.1284944420008659,
+          "returned": 26.211529727261304
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 13,
+      "fundingPriceProxyCount": 1,
+      "oiAtDecision": null,
+      "net": -4.4034616586481405,
+      "closedAt": "2025-05-20T14:00:00+00:00",
+      "durationHours": 13.0
+    },
+    {
+      "symbol": "BTCUSDT",
+      "entryTime": 1747836000,
+      "openedAt": "2025-05-21T14:00:00+00:00",
+      "decisionAt": "2025-05-21T14:00:00+00:00",
+      "entry": 107315.50829999999,
+      "stop": 109889.43571428572,
+      "initialStop": 105692.88928571428,
+      "targets": [
+        110560.7463285714,
+        113805.98435714282
+      ],
+      "targetBasis": [
+        "2R_risk_release",
+        "risk_projection"
+      ],
+      "initialQty": 0.004873576863655713,
+      "initialMargin": 52.30103783623326,
+      "entryFee": 0.5230103783623327,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 1.0590099588664694,
+      "funding": 0.20331862809698556,
+      "gross": 12.989202141804128,
+      "adjustment": 0.0,
+      "returns": 64.55092176943626,
+      "exits": [
+        {
+          "time": "2025-05-21T23:00:00+00:00",
+          "reason": "partial_1",
+          "price": 110450.18558224283,
+          "quantity": 0.0014620730590967138,
+          "returned": 20.103799114898308
+        },
+        {
+          "time": "2025-05-23T11:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 109779.54627857143,
+          "quantity": 0.003411503804558999,
+          "returned": 44.44712265453796
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 46,
+      "fundingPriceProxyCount": 6,
+      "oiAtDecision": {
+        "change": 0.03475004495220757,
+        "observedAt": "2025-05-21T13:55:00+00:00",
+        "laggedAvailableAt": "2025-05-21T14:00:00+00:00"
+      },
+      "net": 11.726873554840662,
+      "closedAt": "2025-05-23T12:00:00+00:00",
+      "durationHours": 46.0
+    },
+    {
+      "symbol": "ETHUSDT",
+      "entryTime": 1747872000,
+      "openedAt": "2025-05-22T00:00:00+00:00",
+      "decisionAt": "2025-05-22T00:00:00+00:00",
+      "entry": 2552.8102599999997,
+      "stop": 2591.1035714285717,
+      "initialStop": 2426.8539285714282,
+      "targets": [
+        2686.61,
+        3056.6355857142858
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "risk_projection"
+      ],
+      "initialQty": 0.07343892395752355,
+      "initialMargin": 18.74756385621259,
+      "entryFee": 0.1874756385621259,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.37967527148897817,
+      "funding": 0.06037983090208682,
+      "gross": 4.7239943647263996,
+      "adjustment": 0.0,
+      "returns": 23.21897875711005,
+      "exits": [
+        {
+          "time": "2025-05-22T09:00:00+00:00",
+          "reason": "partial_1",
+          "price": 2683.92339,
+          "quantity": 0.022031677187257064,
+          "returned": 8.447975931240954
+        },
+        {
+          "time": "2025-05-23T11:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 2588.5124678571433,
+          "quantity": 0.051407246770266486,
+          "returned": 14.771002825869097
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 36,
+      "fundingPriceProxyCount": 4,
+      "oiAtDecision": null,
+      "net": 4.283939262335335,
+      "closedAt": "2025-05-23T12:00:00+00:00",
+      "durationHours": 36.0
+    },
+    {
+      "symbol": "ETHUSDT",
+      "entryTime": 1748275200,
+      "openedAt": "2025-05-26T16:00:00+00:00",
+      "decisionAt": "2025-05-26T16:00:00+00:00",
+      "entry": 2567.5649999999996,
+      "stop": 2528.3310714285712,
+      "initialStop": 2528.3310714285712,
+      "targets": [
+        2614.99,
+        2679.3
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 0.20200310900099394,
+      "initialMargin": 51.8656112562137,
+      "entryFee": 0.518656112562137,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 1.02887611883751,
+      "funding": 0.0,
+      "gross": -8.436106286763826,
+      "adjustment": 0.0,
+      "returns": 42.9192849631745,
+      "exits": [
+        {
+          "time": "2025-05-26T17:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 2525.8027403571427,
+          "quantity": 0.20200310900099394,
+          "returned": 42.9192849631745
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 2,
+      "fundingPriceProxyCount": 0,
+      "oiAtDecision": null,
+      "net": -9.464982405601337,
+      "closedAt": "2025-05-26T18:00:00+00:00",
+      "durationHours": 2.0
+    },
+    {
+      "symbol": "ACTUSDT",
+      "entryTime": 1748354400,
+      "openedAt": "2025-05-27T14:00:00+00:00",
+      "decisionAt": "2025-05-27T14:00:00+00:00",
+      "entry": 0.061641579999999994,
+      "stop": 0.06235214285714286,
+      "initialStop": 0.060360357142857146,
+      "targets": [
+        0.06296,
+        0.06431
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 6545.405707547437,
+      "initialMargin": 40.34691495542419,
+      "entryFee": 0.4034691495542419,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.8162141554040792,
+      "funding": 0.028651204403647393,
+      "gross": 9.27585629559537,
+      "adjustment": 0.0,
+      "returns": 49.18137504076608,
+      "exits": [
+        {
+          "time": "2025-05-27T16:00:00+00:00",
+          "reason": "partial_1",
+          "price": 0.06289704,
+          "quantity": 1963.6217122642308,
+          "returned": 14.439691490193963
+        },
+        {
+          "time": "2025-05-27T16:00:00+00:00",
+          "reason": "partial_2",
+          "price": 0.06424569000000001,
+          "quantity": 1963.6217122642308,
+          "returned": 17.085281674016883
+        },
+        {
+          "time": "2025-05-27T22:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 0.06228979071428572,
+          "quantity": 2618.1622830189744,
+          "returned": 17.65640187655523
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 9,
+      "fundingPriceProxyCount": 2,
+      "oiAtDecision": null,
+      "net": 8.430990935787646,
+      "closedAt": "2025-05-27T23:00:00+00:00",
+      "durationHours": 9.0
+    },
+    {
+      "symbol": "ETHUSDT",
+      "entryTime": 1748401200,
+      "openedAt": "2025-05-28T03:00:00+00:00",
+      "decisionAt": "2025-05-28T03:00:00+00:00",
+      "entry": 2640.3477099999996,
+      "stop": 2618.9767857142856,
+      "initialStop": 2618.9767857142856,
+      "targets": [
+        2679.3,
+        2711.8
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 0.3131623861480484,
+      "initialMargin": 82.68575891241352,
+      "entryFee": 0.8268575891241352,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 1.6462024435852862,
+      "funding": 0.0825295625959121,
+      "gross": -7.5127346629841565,
+      "adjustment": 0.0,
+      "returns": 74.2711498323723,
+      "exits": [
+        {
+          "time": "2025-05-28T10:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 2616.357808928571,
+          "quantity": 0.3131623861480484,
+          "returned": 74.2711498323723
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 8,
+      "fundingPriceProxyCount": 1,
+      "oiAtDecision": {
+        "change": 0.22873999488781704,
+        "observedAt": "2025-05-28T02:55:00+00:00",
+        "laggedAvailableAt": "2025-05-28T03:00:00+00:00"
+      },
+      "net": -9.241466669165352,
+      "closedAt": "2025-05-28T11:00:00+00:00",
+      "durationHours": 8.0
+    },
+    {
+      "symbol": "OMUSDT",
+      "entryTime": 1748437200,
+      "openedAt": "2025-05-28T13:00:00+00:00",
+      "decisionAt": "2025-05-28T13:00:00+00:00",
+      "entry": 0.39666627,
+      "stop": 0.38536035714285716,
+      "initialStop": 0.38536035714285716,
+      "targets": [
+        0.40983,
+        0.42243
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 775.6400658390074,
+      "initialMargin": 30.767025177891348,
+      "entryFee": 0.3076702517789135,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.6062722836321566,
+      "funding": 0.0,
+      "gross": -9.068219925670386,
+      "adjustment": 0.0,
+      "returns": 21.40020322036772,
+      "exits": [
+        {
+          "time": "2025-05-28T15:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 0.3849749967857143,
+          "quantity": 775.6400658390074,
+          "returned": 21.40020322036772
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 3,
+      "fundingPriceProxyCount": 0,
+      "oiAtDecision": null,
+      "net": -9.67449220930254,
+      "closedAt": "2025-05-28T16:00:00+00:00",
+      "durationHours": 3.0
+    },
+    {
+      "symbol": "BTCUSDT",
+      "entryTime": 1748246400,
+      "openedAt": "2025-05-26T08:00:00+00:00",
+      "decisionAt": "2025-05-26T08:00:00+00:00",
+      "entry": 110159.94989999998,
+      "stop": 106801.71428571429,
+      "initialStop": 106801.71428571429,
+      "targets": [
+        116876.42112857135,
+        123592.89235714273
+      ],
+      "targetBasis": [
+        "2R_risk_release",
+        "risk_projection"
+      ],
+      "initialQty": 0.0026323579771655313,
+      "initialMargin": 28.99804228834202,
+      "entryFee": 0.2899804228834202,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.5708396271137992,
+      "funding": 0.10912883675117932,
+      "gross": -9.12121865304127,
+      "adjustment": 0.0,
+      "returns": 19.486835594319192,
+      "exits": [
+        {
+          "time": "2025-05-28T20:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 106694.91257142858,
+          "quantity": 0.0026323579771655313,
+          "returned": 19.486835594319192
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 61,
+      "fundingPriceProxyCount": 7,
+      "oiAtDecision": null,
+      "net": -9.801187116906249,
+      "closedAt": "2025-05-28T21:00:00+00:00",
+      "durationHours": 61.0
+    },
+    {
+      "symbol": "ACTUSDT",
+      "entryTime": 1748491200,
+      "openedAt": "2025-05-29T04:00:00+00:00",
+      "decisionAt": "2025-05-29T04:00:00+00:00",
+      "entry": 0.06362356,
+      "stop": 0.059255,
+      "initialStop": 0.059255,
+      "targets": [
+        0.06902,
+        0.08109779999999997
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "risk_projection"
+      ],
+      "initialQty": 2163.072177150146,
+      "initialMargin": 13.762235244724295,
+      "entryFee": 0.13762235244724294,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.26200049296619304,
+      "funding": 0.020012743782993152,
+      "gross": -13.244211928292854,
+      "adjustment": -0.37363243212949665,
+      "returns": 0.0,
+      "exits": [
+        {
+          "time": "2025-05-29T18:00:00+00:00",
+          "reason": "liquidation_stress",
+          "price": 0.05750068898894472,
+          "quantity": 2163.072177150146,
+          "returned": 0
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 15,
+      "fundingPriceProxyCount": 3,
+      "oiAtDecision": null,
+      "net": -13.899857597171538,
+      "closedAt": "2025-05-29T19:00:00+00:00",
+      "durationHours": 15.0
+    },
+    {
+      "symbol": "MYXUSDT",
+      "entryTime": 1754143200,
+      "openedAt": "2025-08-02T14:00:00+00:00",
+      "decisionAt": "2025-08-02T14:00:00+00:00",
+      "entry": 0.10893882999999999,
+      "stop": 0.12165714285714285,
+      "initialStop": 0.10348285714285715,
+      "targets": [
+        0.11767,
+        0.12786
+      ],
+      "targetBasis": [
+        "confirmed_pressure",
+        "confirmed_pressure"
+      ],
+      "initialQty": 1697.2948682180133,
+      "initialMargin": 18.490131710867452,
+      "entryFee": 0.18490131710867452,
+      "estimatedLossWithBuffer": 10.0,
+      "fees": 0.3891546963919642,
+      "funding": 0.48339890880389386,
+      "gross": 19.352062174615156,
+      "adjustment": 0.0,
+      "returns": 37.15454159739543,
+      "exits": [
+        {
+          "time": "2025-08-03T05:00:00+00:00",
+          "reason": "partial_1",
+          "price": 0.11755233,
+          "quantity": 509.188460465404,
+          "returned": 9.773515898831674
+        },
+        {
+          "time": "2025-08-03T09:00:00+00:00",
+          "reason": "structure_stop",
+          "price": 0.12153548571428571,
+          "quantity": 1188.1064077526094,
+          "returned": 27.381025698563754
+        }
+      ],
+      "incompletePath": false,
+      "markProxyHours": 20,
+      "fundingPriceProxyCount": 19,
+      "oiAtDecision": null,
+      "net": 18.479508569419302,
+      "closedAt": "2025-08-03T10:00:00+00:00",
+      "durationHours": 20.0
+    }
+  ],
+  "equity": [
+    {
+      "time": "2024-08-01T01:00:00+00:00",
+      "equity": 1000.0
+    },
+    {
+      "time": "2024-08-01T18:00:00+00:00",
+      "equity": 1000.0
+    },
+    {
+      "time": "2024-08-02T11:00:00+00:00",
+      "equity": 1000.0
+    },
+    {
+      "time": "2024-08-03T04:00:00+00:00",
+      "equity": 1000.0
+    },
+    {
+      "time": "2024-08-03T21:00:00+00:00",
+      "equity": 1000.0
+    },
+    {
+      "time": "2024-08-04T14:00:00+00:00",
+      "equity": 1000.0
+    },
+    {
+      "time": "2024-08-05T07:00:00+00:00",
+      "equity": 1000.0
+    },
+    {
+      "time": "2024-08-06T00:00:00+00:00",
+      "equity": 1000.0
+    },
+    {
+      "time": "2024-08-06T17:00:00+00:00",
+      "equity": 1000.0
+    },
+    {
+      "time": "2024-08-07T10:00:00+00:00",
+      "equity": 1000.0
+    },
+    {
+      "time": "2024-08-08T03:00:00+00:00",
+      "equity": 1000.0
+    },
+    {
+      "time": "2024-08-08T20:00:00+00:00",
+      "equity": 1000.0
+    },
+    {
+      "time": "2024-08-09T13:00:00+00:00",
+      "equity": 1000.0
+    },
+    {
+      "time": "2024-08-10T06:00:00+00:00",
+      "equity": 1000.0
+    },
+    {
+      "time": "2024-08-10T23:00:00+00:00",
+      "equity": 1000.0
+    },
+    {
+      "time": "2024-08-11T16:00:00+00:00",
+      "equity": 1000.0
+    },
+    {
+      "time": "2024-08-12T09:00:00+00:00",
+      "equity": 1000.0
+    },
+    {
+      "time": "2024-08-13T02:00:00+00:00",
+      "equity": 1000.0
+    },
+    {
+      "time": "2024-08-13T19:00:00+00:00",
+      "equity": 1000.0
+    },
+    {
+      "time": "2024-08-14T12:00:00+00:00",
+      "equity": 1000.0
+    },
+    {
+      "time": "2024-08-15T05:00:00+00:00",
+      "equity": 1000.0
+    },
+    {
+      "time": "2024-08-15T22:00:00+00:00",
+      "equity": 1000.0
+    },
+    {
+      "time": "2024-08-16T15:00:00+00:00",
+      "equity": 1000.0
+    },
+    {
+      "time": "2024-08-17T08:00:00+00:00",
+      "equity": 1000.0
+    },
+    {
+      "time": "2024-08-18T01:00:00+00:00",
+      "equity": 1007.9119
+    },
+    {
+      "time": "2024-08-18T18:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-08-19T11:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-08-20T04:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-08-20T21:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-08-21T14:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-08-22T07:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-08-23T00:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-08-23T17:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-08-24T10:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-08-25T03:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-08-25T20:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-08-26T13:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-08-27T06:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-08-27T23:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-08-28T16:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-08-29T09:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-08-30T02:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-08-30T19:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-08-31T12:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-09-01T05:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-09-01T22:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-09-02T15:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-09-03T08:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-09-04T01:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-09-04T18:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-09-05T11:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-09-06T04:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-09-06T21:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-09-07T14:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-09-08T07:00:00+00:00",
+      "equity": 1038.0865
+    },
+    {
+      "time": "2024-09-09T00:00:00+00:00",
+      "equity": 1036.6499
+    },
+    {
+      "time": "2024-09-09T17:00:00+00:00",
+      "equity": 1044.8747
+    },
+    {
+      "time": "2024-09-10T10:00:00+00:00",
+      "equity": 1046.0612
+    },
+    {
+      "time": "2024-09-11T03:00:00+00:00",
+      "equity": 1042.1321
+    },
+    {
+      "time": "2024-09-11T20:00:00+00:00",
+      "equity": 1042.0961
+    },
+    {
+      "time": "2024-09-12T13:00:00+00:00",
+      "equity": 1044.2074
+    },
+    {
+      "time": "2024-09-13T06:00:00+00:00",
+      "equity": 1047.8152
+    },
+    {
+      "time": "2024-09-13T23:00:00+00:00",
+      "equity": 1046.3521
+    },
+    {
+      "time": "2024-09-14T16:00:00+00:00",
+      "equity": 1046.3521
+    },
+    {
+      "time": "2024-09-15T09:00:00+00:00",
+      "equity": 1038.2302
+    },
+    {
+      "time": "2024-09-16T02:00:00+00:00",
+      "equity": 1036.6391
+    },
+    {
+      "time": "2024-09-16T19:00:00+00:00",
+      "equity": 1036.6391
+    },
+    {
+      "time": "2024-09-17T12:00:00+00:00",
+      "equity": 1036.6391
+    },
+    {
+      "time": "2024-09-18T05:00:00+00:00",
+      "equity": 1036.6391
+    },
+    {
+      "time": "2024-09-18T22:00:00+00:00",
+      "equity": 1036.6391
+    },
+    {
+      "time": "2024-09-19T15:00:00+00:00",
+      "equity": 1027.2319
+    },
+    {
+      "time": "2024-09-20T08:00:00+00:00",
+      "equity": 1027.2319
+    },
+    {
+      "time": "2024-09-21T01:00:00+00:00",
+      "equity": 1027.2319
+    },
+    {
+      "time": "2024-09-21T18:00:00+00:00",
+      "equity": 1027.2319
+    },
+    {
+      "time": "2024-09-22T11:00:00+00:00",
+      "equity": 1017.5678
+    },
+    {
+      "time": "2024-09-23T04:00:00+00:00",
+      "equity": 1017.5678
+    },
+    {
+      "time": "2024-09-23T21:00:00+00:00",
+      "equity": 1017.5678
+    },
+    {
+      "time": "2024-09-24T14:00:00+00:00",
+      "equity": 1017.5678
+    },
+    {
+      "time": "2024-09-25T07:00:00+00:00",
+      "equity": 1012.4689
+    },
+    {
+      "time": "2024-09-26T00:00:00+00:00",
+      "equity": 1012.4689
+    },
+    {
+      "time": "2024-09-26T17:00:00+00:00",
+      "equity": 1013.4385
+    },
+    {
+      "time": "2024-09-27T10:00:00+00:00",
+      "equity": 1016.4976
+    },
+    {
+      "time": "2024-09-28T03:00:00+00:00",
+      "equity": 1023.455
+    },
+    {
+      "time": "2024-09-28T20:00:00+00:00",
+      "equity": 1012.5878
+    },
+    {
+      "time": "2024-09-29T13:00:00+00:00",
+      "equity": 1008.0767
+    },
+    {
+      "time": "2024-09-30T06:00:00+00:00",
+      "equity": 1022.9916
+    },
+    {
+      "time": "2024-09-30T23:00:00+00:00",
+      "equity": 1040.5701
+    },
+    {
+      "time": "2024-10-01T16:00:00+00:00",
+      "equity": 1040.5701
+    },
+    {
+      "time": "2024-10-02T09:00:00+00:00",
+      "equity": 1040.5701
+    },
+    {
+      "time": "2024-10-03T02:00:00+00:00",
+      "equity": 1040.5701
+    },
+    {
+      "time": "2024-10-03T19:00:00+00:00",
+      "equity": 1040.5701
+    },
+    {
+      "time": "2024-10-04T12:00:00+00:00",
+      "equity": 1040.5701
+    },
+    {
+      "time": "2024-10-05T05:00:00+00:00",
+      "equity": 1040.5701
+    },
+    {
+      "time": "2024-10-05T22:00:00+00:00",
+      "equity": 1040.5701
+    },
+    {
+      "time": "2024-10-06T15:00:00+00:00",
+      "equity": 1040.5701
+    },
+    {
+      "time": "2024-10-07T08:00:00+00:00",
+      "equity": 1040.1489
+    },
+    {
+      "time": "2024-10-08T01:00:00+00:00",
+      "equity": 1036.2499
+    },
+    {
+      "time": "2024-10-08T18:00:00+00:00",
+      "equity": 1047.5159
+    },
+    {
+      "time": "2024-10-09T11:00:00+00:00",
+      "equity": 1047.5159
+    },
+    {
+      "time": "2024-10-10T04:00:00+00:00",
+      "equity": 1047.5159
+    },
+    {
+      "time": "2024-10-10T21:00:00+00:00",
+      "equity": 1047.5159
+    },
+    {
+      "time": "2024-10-11T14:00:00+00:00",
+      "equity": 1047.5159
+    },
+    {
+      "time": "2024-10-12T07:00:00+00:00",
+      "equity": 1047.5159
+    },
+    {
+      "time": "2024-10-13T00:00:00+00:00",
+      "equity": 1047.5159
+    },
+    {
+      "time": "2024-10-13T17:00:00+00:00",
+      "equity": 1047.5159
+    },
+    {
+      "time": "2024-10-14T10:00:00+00:00",
+      "equity": 1047.5159
+    },
+    {
+      "time": "2024-10-15T03:00:00+00:00",
+      "equity": 1051.0614
+    },
+    {
+      "time": "2024-10-15T20:00:00+00:00",
+      "equity": 1037.7165
+    },
+    {
+      "time": "2024-10-16T13:00:00+00:00",
+      "equity": 1037.7165
+    },
+    {
+      "time": "2024-10-17T06:00:00+00:00",
+      "equity": 1034.3211
+    },
+    {
+      "time": "2024-10-17T23:00:00+00:00",
+      "equity": 1045.8237
+    },
+    {
+      "time": "2024-10-18T16:00:00+00:00",
+      "equity": 1045.8237
+    },
+    {
+      "time": "2024-10-19T09:00:00+00:00",
+      "equity": 1045.8237
+    },
+    {
+      "time": "2024-10-20T02:00:00+00:00",
+      "equity": 1045.8237
+    },
+    {
+      "time": "2024-10-20T19:00:00+00:00",
+      "equity": 1044.7081
+    },
+    {
+      "time": "2024-10-21T12:00:00+00:00",
+      "equity": 1038.623
+    },
+    {
+      "time": "2024-10-22T05:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2024-10-22T22:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2024-10-23T15:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2024-10-24T08:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2024-10-25T01:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2024-10-25T18:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2024-10-26T11:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2024-10-27T04:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2024-10-27T21:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2024-10-28T14:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2024-10-29T07:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2024-10-30T00:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2024-10-30T17:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2024-10-31T10:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2025-01-01T02:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2025-01-01T19:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2025-01-02T12:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2025-01-03T05:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2025-01-03T22:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2025-01-04T15:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2025-01-05T08:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2025-01-06T01:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2025-01-06T18:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2025-01-07T11:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2025-01-08T04:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2025-01-08T21:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2025-01-09T14:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2025-01-10T07:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2025-01-11T00:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2025-01-11T17:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2025-01-12T10:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2025-01-13T03:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2025-01-13T20:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2025-01-14T13:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2025-01-15T06:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2025-01-15T23:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2025-01-16T16:00:00+00:00",
+      "equity": 1035.976
+    },
+    {
+      "time": "2025-01-17T09:00:00+00:00",
+      "equity": 1037.2078
+    },
+    {
+      "time": "2025-01-18T02:00:00+00:00",
+      "equity": 1040.0862
+    },
+    {
+      "time": "2025-01-18T19:00:00+00:00",
+      "equity": 1026.1382
+    },
+    {
+      "time": "2025-01-19T12:00:00+00:00",
+      "equity": 1026.1382
+    },
+    {
+      "time": "2025-01-20T05:00:00+00:00",
+      "equity": 1026.1382
+    },
+    {
+      "time": "2025-01-20T22:00:00+00:00",
+      "equity": 1026.1382
+    },
+    {
+      "time": "2025-01-21T15:00:00+00:00",
+      "equity": 1026.1382
+    },
+    {
+      "time": "2025-01-22T08:00:00+00:00",
+      "equity": 1026.1382
+    },
+    {
+      "time": "2025-01-23T01:00:00+00:00",
+      "equity": 1026.1382
+    },
+    {
+      "time": "2025-01-23T18:00:00+00:00",
+      "equity": 1026.1382
+    },
+    {
+      "time": "2025-01-24T11:00:00+00:00",
+      "equity": 1026.1382
+    },
+    {
+      "time": "2025-01-25T04:00:00+00:00",
+      "equity": 1026.1382
+    },
+    {
+      "time": "2025-01-25T21:00:00+00:00",
+      "equity": 1026.1382
+    },
+    {
+      "time": "2025-01-26T14:00:00+00:00",
+      "equity": 1026.1382
+    },
+    {
+      "time": "2025-01-27T07:00:00+00:00",
+      "equity": 1026.1382
+    },
+    {
+      "time": "2025-01-28T00:00:00+00:00",
+      "equity": 1026.1382
+    },
+    {
+      "time": "2025-01-28T17:00:00+00:00",
+      "equity": 1026.1382
+    },
+    {
+      "time": "2025-01-29T10:00:00+00:00",
+      "equity": 1026.1382
+    },
+    {
+      "time": "2025-01-30T03:00:00+00:00",
+      "equity": 1026.1382
+    },
+    {
+      "time": "2025-01-30T20:00:00+00:00",
+      "equity": 1026.1382
+    },
+    {
+      "time": "2025-01-31T13:00:00+00:00",
+      "equity": 1035.1514
+    },
+    {
+      "time": "2025-02-01T06:00:00+00:00",
+      "equity": 1030.2415
+    },
+    {
+      "time": "2025-02-01T23:00:00+00:00",
+      "equity": 1030.2415
+    },
+    {
+      "time": "2025-02-02T16:00:00+00:00",
+      "equity": 1030.2415
+    },
+    {
+      "time": "2025-02-03T09:00:00+00:00",
+      "equity": 1030.2415
+    },
+    {
+      "time": "2025-02-04T02:00:00+00:00",
+      "equity": 1030.2415
+    },
+    {
+      "time": "2025-02-04T19:00:00+00:00",
+      "equity": 1030.2415
+    },
+    {
+      "time": "2025-02-05T12:00:00+00:00",
+      "equity": 1030.2415
+    },
+    {
+      "time": "2025-02-06T05:00:00+00:00",
+      "equity": 1030.2415
+    },
+    {
+      "time": "2025-02-06T22:00:00+00:00",
+      "equity": 1030.2415
+    },
+    {
+      "time": "2025-02-07T15:00:00+00:00",
+      "equity": 1030.2415
+    },
+    {
+      "time": "2025-02-08T08:00:00+00:00",
+      "equity": 1030.2415
+    },
+    {
+      "time": "2025-02-09T01:00:00+00:00",
+      "equity": 1032.9415
+    },
+    {
+      "time": "2025-02-09T18:00:00+00:00",
+      "equity": 1043.9038
+    },
+    {
+      "time": "2025-02-10T11:00:00+00:00",
+      "equity": 1043.9038
+    },
+    {
+      "time": "2025-02-11T04:00:00+00:00",
+      "equity": 1043.9038
+    },
+    {
+      "time": "2025-02-11T21:00:00+00:00",
+      "equity": 1043.9038
+    },
+    {
+      "time": "2025-02-12T14:00:00+00:00",
+      "equity": 1043.9038
+    },
+    {
+      "time": "2025-02-13T07:00:00+00:00",
+      "equity": 1043.9038
+    },
+    {
+      "time": "2025-02-14T00:00:00+00:00",
+      "equity": 1043.9038
+    },
+    {
+      "time": "2025-02-14T17:00:00+00:00",
+      "equity": 1043.9038
+    },
+    {
+      "time": "2025-02-15T10:00:00+00:00",
+      "equity": 1043.9038
+    },
+    {
+      "time": "2025-02-16T03:00:00+00:00",
+      "equity": 1043.9038
+    },
+    {
+      "time": "2025-02-16T20:00:00+00:00",
+      "equity": 1043.9038
+    },
+    {
+      "time": "2025-02-17T13:00:00+00:00",
+      "equity": 1043.9038
+    },
+    {
+      "time": "2025-02-18T06:00:00+00:00",
+      "equity": 1043.9038
+    },
+    {
+      "time": "2025-02-18T23:00:00+00:00",
+      "equity": 1043.9038
+    },
+    {
+      "time": "2025-02-19T16:00:00+00:00",
+      "equity": 1041.6906
+    },
+    {
+      "time": "2025-02-20T09:00:00+00:00",
+      "equity": 1038.8151
+    },
+    {
+      "time": "2025-02-21T02:00:00+00:00",
+      "equity": 1053.1576
+    },
+    {
+      "time": "2025-02-21T19:00:00+00:00",
+      "equity": 1061.7952
+    },
+    {
+      "time": "2025-02-22T12:00:00+00:00",
+      "equity": 1063.6726
+    },
+    {
+      "time": "2025-02-23T05:00:00+00:00",
+      "equity": 1086.5468
+    },
+    {
+      "time": "2025-02-23T22:00:00+00:00",
+      "equity": 1086.5468
+    },
+    {
+      "time": "2025-02-24T15:00:00+00:00",
+      "equity": 1086.5468
+    },
+    {
+      "time": "2025-02-25T08:00:00+00:00",
+      "equity": 1086.5468
+    },
+    {
+      "time": "2025-02-26T01:00:00+00:00",
+      "equity": 1086.5468
+    },
+    {
+      "time": "2025-02-26T18:00:00+00:00",
+      "equity": 1086.5468
+    },
+    {
+      "time": "2025-02-27T11:00:00+00:00",
+      "equity": 1086.5468
+    },
+    {
+      "time": "2025-02-28T04:00:00+00:00",
+      "equity": 1086.5468
+    },
+    {
+      "time": "2025-02-28T21:00:00+00:00",
+      "equity": 1086.5468
+    },
+    {
+      "time": "2025-03-01T14:00:00+00:00",
+      "equity": 1086.5468
+    },
+    {
+      "time": "2025-03-02T07:00:00+00:00",
+      "equity": 1086.5468
+    },
+    {
+      "time": "2025-03-03T00:00:00+00:00",
+      "equity": 1086.5468
+    },
+    {
+      "time": "2025-03-03T17:00:00+00:00",
+      "equity": 1086.5468
+    },
+    {
+      "time": "2025-03-04T10:00:00+00:00",
+      "equity": 1086.5468
+    },
+    {
+      "time": "2025-03-05T03:00:00+00:00",
+      "equity": 1086.5468
+    },
+    {
+      "time": "2025-03-05T20:00:00+00:00",
+      "equity": 1086.5468
+    },
+    {
+      "time": "2025-03-06T13:00:00+00:00",
+      "equity": 1086.5468
+    },
+    {
+      "time": "2025-03-07T06:00:00+00:00",
+      "equity": 1086.5468
+    },
+    {
+      "time": "2025-03-07T23:00:00+00:00",
+      "equity": 1086.5468
+    },
+    {
+      "time": "2025-03-08T16:00:00+00:00",
+      "equity": 1086.5468
+    },
+    {
+      "time": "2025-03-09T09:00:00+00:00",
+      "equity": 1086.5468
+    },
+    {
+      "time": "2025-03-10T02:00:00+00:00",
+      "equity": 1081.8062
+    },
+    {
+      "time": "2025-03-10T19:00:00+00:00",
+      "equity": 1082.8281
+    },
+    {
+      "time": "2025-03-11T12:00:00+00:00",
+      "equity": 1088.7634
+    },
+    {
+      "time": "2025-03-12T05:00:00+00:00",
+      "equity": 1091.5649
+    },
+    {
+      "time": "2025-03-12T22:00:00+00:00",
+      "equity": 1091.5649
+    },
+    {
+      "time": "2025-03-13T15:00:00+00:00",
+      "equity": 1091.5649
+    },
+    {
+      "time": "2025-03-14T08:00:00+00:00",
+      "equity": 1091.5649
+    },
+    {
+      "time": "2025-03-15T01:00:00+00:00",
+      "equity": 1091.5649
+    },
+    {
+      "time": "2025-03-15T18:00:00+00:00",
+      "equity": 1093.2711
+    },
+    {
+      "time": "2025-03-16T11:00:00+00:00",
+      "equity": 1087.3361
+    },
+    {
+      "time": "2025-03-17T04:00:00+00:00",
+      "equity": 1090.8682
+    },
+    {
+      "time": "2025-03-17T21:00:00+00:00",
+      "equity": 1095.4623
+    },
+    {
+      "time": "2025-03-18T14:00:00+00:00",
+      "equity": 1082.8093
+    },
+    {
+      "time": "2025-03-19T07:00:00+00:00",
+      "equity": 1073.1941
+    },
+    {
+      "time": "2025-03-20T00:00:00+00:00",
+      "equity": 1087.1842
+    },
+    {
+      "time": "2025-03-20T17:00:00+00:00",
+      "equity": 1074.7705
+    },
+    {
+      "time": "2025-03-21T10:00:00+00:00",
+      "equity": 1071.098
+    },
+    {
+      "time": "2025-03-22T03:00:00+00:00",
+      "equity": 1067.6695
+    },
+    {
+      "time": "2025-03-22T20:00:00+00:00",
+      "equity": 1068.9362
+    },
+    {
+      "time": "2025-03-23T13:00:00+00:00",
+      "equity": 1070.6361
+    },
+    {
+      "time": "2025-03-24T06:00:00+00:00",
+      "equity": 1080.0091
+    },
+    {
+      "time": "2025-03-24T23:00:00+00:00",
+      "equity": 1092.3755
+    },
+    {
+      "time": "2025-03-25T16:00:00+00:00",
+      "equity": 1087.3477
+    },
+    {
+      "time": "2025-03-26T09:00:00+00:00",
+      "equity": 1088.0717
+    },
+    {
+      "time": "2025-03-27T02:00:00+00:00",
+      "equity": 1076.0098
+    },
+    {
+      "time": "2025-03-27T19:00:00+00:00",
+      "equity": 1076.0098
+    },
+    {
+      "time": "2025-03-28T12:00:00+00:00",
+      "equity": 1076.0098
+    },
+    {
+      "time": "2025-03-29T05:00:00+00:00",
+      "equity": 1076.0098
+    },
+    {
+      "time": "2025-03-29T22:00:00+00:00",
+      "equity": 1076.0098
+    },
+    {
+      "time": "2025-03-30T15:00:00+00:00",
+      "equity": 1076.0098
+    },
+    {
+      "time": "2025-03-31T08:00:00+00:00",
+      "equity": 1076.0098
+    },
+    {
+      "time": "2025-04-01T01:00:00+00:00",
+      "equity": 1076.0098
+    },
+    {
+      "time": "2025-04-01T18:00:00+00:00",
+      "equity": 1083.2421
+    },
+    {
+      "time": "2025-04-02T11:00:00+00:00",
+      "equity": 1068.4514
+    },
+    {
+      "time": "2025-04-03T04:00:00+00:00",
+      "equity": 1074.4506
+    },
+    {
+      "time": "2025-04-03T21:00:00+00:00",
+      "equity": 1074.4506
+    },
+    {
+      "time": "2025-04-04T14:00:00+00:00",
+      "equity": 1074.4506
+    },
+    {
+      "time": "2025-04-05T07:00:00+00:00",
+      "equity": 1074.4506
+    },
+    {
+      "time": "2025-04-06T00:00:00+00:00",
+      "equity": 1074.4506
+    },
+    {
+      "time": "2025-04-06T17:00:00+00:00",
+      "equity": 1074.4506
+    },
+    {
+      "time": "2025-04-07T10:00:00+00:00",
+      "equity": 1074.4506
+    },
+    {
+      "time": "2025-04-08T03:00:00+00:00",
+      "equity": 1074.4506
+    },
+    {
+      "time": "2025-04-08T20:00:00+00:00",
+      "equity": 1074.4506
+    },
+    {
+      "time": "2025-04-09T13:00:00+00:00",
+      "equity": 1074.4506
+    },
+    {
+      "time": "2025-04-10T06:00:00+00:00",
+      "equity": 1074.7166
+    },
+    {
+      "time": "2025-04-10T23:00:00+00:00",
+      "equity": 1071.2159
+    },
+    {
+      "time": "2025-04-11T16:00:00+00:00",
+      "equity": 1075.2379
+    },
+    {
+      "time": "2025-04-12T09:00:00+00:00",
+      "equity": 1076.7574
+    },
+    {
+      "time": "2025-04-13T02:00:00+00:00",
+      "equity": 1073.5767
+    },
+    {
+      "time": "2025-04-13T19:00:00+00:00",
+      "equity": 1068.4576
+    },
+    {
+      "time": "2025-04-14T12:00:00+00:00",
+      "equity": 1072.4282
+    },
+    {
+      "time": "2025-04-15T05:00:00+00:00",
+      "equity": 1069.5599
+    },
+    {
+      "time": "2025-04-15T22:00:00+00:00",
+      "equity": 1064.0737
+    },
+    {
+      "time": "2025-04-16T15:00:00+00:00",
+      "equity": 1063.3632
+    },
+    {
+      "time": "2025-04-17T08:00:00+00:00",
+      "equity": 1057.3451
+    },
+    {
+      "time": "2025-04-18T01:00:00+00:00",
+      "equity": 1057.3451
+    },
+    {
+      "time": "2025-04-18T18:00:00+00:00",
+      "equity": 1057.3451
+    },
+    {
+      "time": "2025-04-19T11:00:00+00:00",
+      "equity": 1057.1778
+    },
+    {
+      "time": "2025-04-20T04:00:00+00:00",
+      "equity": 1064.8689
+    },
+    {
+      "time": "2025-04-20T21:00:00+00:00",
+      "equity": 1057.4664
+    },
+    {
+      "time": "2025-04-21T14:00:00+00:00",
+      "equity": 1050.7352
+    },
+    {
+      "time": "2025-04-22T07:00:00+00:00",
+      "equity": 1041.156
+    },
+    {
+      "time": "2025-04-23T00:00:00+00:00",
+      "equity": 1067.2127
+    },
+    {
+      "time": "2025-04-23T17:00:00+00:00",
+      "equity": 1068.2237
+    },
+    {
+      "time": "2025-04-24T10:00:00+00:00",
+      "equity": 1068.2237
+    },
+    {
+      "time": "2025-04-25T03:00:00+00:00",
+      "equity": 1067.1255
+    },
+    {
+      "time": "2025-04-25T20:00:00+00:00",
+      "equity": 1083.9246
+    },
+    {
+      "time": "2025-04-26T13:00:00+00:00",
+      "equity": 1077.3854
+    },
+    {
+      "time": "2025-04-27T06:00:00+00:00",
+      "equity": 1071.9139
+    },
+    {
+      "time": "2025-04-27T23:00:00+00:00",
+      "equity": 1071.2882
+    },
+    {
+      "time": "2025-04-28T16:00:00+00:00",
+      "equity": 1065.7732
+    },
+    {
+      "time": "2025-04-29T09:00:00+00:00",
+      "equity": 1071.3994
+    },
+    {
+      "time": "2025-04-30T02:00:00+00:00",
+      "equity": 1062.8701
+    },
+    {
+      "time": "2025-04-30T19:00:00+00:00",
+      "equity": 1057.4127
+    },
+    {
+      "time": "2025-05-01T12:00:00+00:00",
+      "equity": 1067.396
+    },
+    {
+      "time": "2025-05-02T05:00:00+00:00",
+      "equity": 1061.0505
+    },
+    {
+      "time": "2025-05-02T22:00:00+00:00",
+      "equity": 1063.7321
+    },
+    {
+      "time": "2025-05-03T15:00:00+00:00",
+      "equity": 1056.4695
+    },
+    {
+      "time": "2025-05-04T08:00:00+00:00",
+      "equity": 1057.382
+    },
+    {
+      "time": "2025-05-05T01:00:00+00:00",
+      "equity": 1053.3851
+    },
+    {
+      "time": "2025-05-05T18:00:00+00:00",
+      "equity": 1049.4353
+    },
+    {
+      "time": "2025-05-06T11:00:00+00:00",
+      "equity": 1049.4353
+    },
+    {
+      "time": "2025-05-07T04:00:00+00:00",
+      "equity": 1047.5566
+    },
+    {
+      "time": "2025-05-07T21:00:00+00:00",
+      "equity": 1045.3825
+    },
+    {
+      "time": "2025-05-08T14:00:00+00:00",
+      "equity": 1070.5513
+    },
+    {
+      "time": "2025-05-09T07:00:00+00:00",
+      "equity": 1098.9367
+    },
+    {
+      "time": "2025-05-10T00:00:00+00:00",
+      "equity": 1105.1259
+    },
+    {
+      "time": "2025-05-10T17:00:00+00:00",
+      "equity": 1101.2618
+    },
+    {
+      "time": "2025-05-11T10:00:00+00:00",
+      "equity": 1106.0019
+    },
+    {
+      "time": "2025-05-12T03:00:00+00:00",
+      "equity": 1103.5155
+    },
+    {
+      "time": "2025-05-12T20:00:00+00:00",
+      "equity": 1095.398
+    },
+    {
+      "time": "2025-05-13T13:00:00+00:00",
+      "equity": 1095.398
+    },
+    {
+      "time": "2025-05-14T06:00:00+00:00",
+      "equity": 1097.1086
+    },
+    {
+      "time": "2025-05-14T23:00:00+00:00",
+      "equity": 1091.3279
+    },
+    {
+      "time": "2025-05-15T16:00:00+00:00",
+      "equity": 1085.2478
+    },
+    {
+      "time": "2025-05-16T09:00:00+00:00",
+      "equity": 1085.7493
+    },
+    {
+      "time": "2025-05-17T02:00:00+00:00",
+      "equity": 1070.8831
+    },
+    {
+      "time": "2025-05-17T19:00:00+00:00",
+      "equity": 1070.405
+    },
+    {
+      "time": "2025-05-18T12:00:00+00:00",
+      "equity": 1070.384
+    },
+    {
+      "time": "2025-05-19T05:00:00+00:00",
+      "equity": 1067.5543
+    },
+    {
+      "time": "2025-05-19T22:00:00+00:00",
+      "equity": 1067.5543
+    },
+    {
+      "time": "2025-05-20T15:00:00+00:00",
+      "equity": 1053.6613
+    },
+    {
+      "time": "2025-05-21T08:00:00+00:00",
+      "equity": 1053.6613
+    },
+    {
+      "time": "2025-05-22T01:00:00+00:00",
+      "equity": 1068.5997
+    },
+    {
+      "time": "2025-05-22T18:00:00+00:00",
+      "equity": 1079.6013
+    },
+    {
+      "time": "2025-05-23T11:00:00+00:00",
+      "equity": 1078.6032
+    },
+    {
+      "time": "2025-05-24T04:00:00+00:00",
+      "equity": 1069.6721
+    },
+    {
+      "time": "2025-05-24T21:00:00+00:00",
+      "equity": 1069.6721
+    },
+    {
+      "time": "2025-05-25T14:00:00+00:00",
+      "equity": 1069.6721
+    },
+    {
+      "time": "2025-05-26T07:00:00+00:00",
+      "equity": 1069.6721
+    },
+    {
+      "time": "2025-05-27T00:00:00+00:00",
+      "equity": 1057.8536
+    },
+    {
+      "time": "2025-05-27T17:00:00+00:00",
+      "equity": 1071.5048
+    },
+    {
+      "time": "2025-05-28T10:00:00+00:00",
+      "equity": 1059.1341
+    },
+    {
+      "time": "2025-05-29T03:00:00+00:00",
+      "equity": 1039.921
+    },
+    {
+      "time": "2025-05-29T20:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-05-30T13:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-05-31T06:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-05-31T23:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-01T15:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-02T08:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-03T01:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-03T18:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-04T11:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-05T04:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-05T21:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-06T14:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-07T07:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-08T00:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-08T17:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-09T10:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-10T03:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-10T20:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-11T13:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-12T06:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-12T23:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-13T16:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-14T09:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-15T02:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-15T19:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-16T12:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-17T05:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-17T22:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-18T15:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-19T08:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-20T01:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-20T18:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-21T11:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-22T04:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-22T21:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-23T14:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-24T07:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-25T00:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-25T17:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-26T10:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-27T03:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-27T20:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-28T13:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-29T06:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-29T23:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-30T16:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-07-31T09:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-08-01T02:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-08-01T19:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-08-02T12:00:00+00:00",
+      "equity": 1026.0211
+    },
+    {
+      "time": "2025-08-03T05:00:00+00:00",
+      "equity": 1036.6654
+    },
+    {
+      "time": "2025-08-03T22:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-04T15:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-05T08:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-06T01:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-06T18:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-07T11:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-08T04:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-08T21:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-09T14:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-10T07:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-11T00:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-11T17:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-12T10:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-13T03:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-13T20:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-14T13:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-15T06:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-15T23:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-16T16:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-17T09:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-18T02:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-18T19:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-19T12:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-20T05:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-20T22:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-21T15:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-22T08:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-23T01:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-23T18:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-24T11:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-25T04:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-25T21:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-26T14:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-27T07:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-28T00:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-28T17:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-29T10:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-30T03:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-30T20:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-08-31T13:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-01T06:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-01T23:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-02T16:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-03T09:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-04T02:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-04T19:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-05T12:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-06T05:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-06T22:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-07T15:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-08T08:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-09T01:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-09T18:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-10T11:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-11T04:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-11T21:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-12T14:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-13T07:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-14T00:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-14T17:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-15T10:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-16T03:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-16T20:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-17T13:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-18T06:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-18T23:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-19T16:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-20T09:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-21T02:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-21T19:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-22T12:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-23T05:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-23T22:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-24T15:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-25T08:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-26T01:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-26T18:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-27T11:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-28T04:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-28T21:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-29T14:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-09-30T07:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-01T00:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-01T17:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-02T10:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-03T03:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-03T20:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-04T13:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-05T06:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-05T23:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-06T16:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-07T09:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-08T02:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-08T19:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-09T12:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-10T05:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-10T22:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-11T15:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-12T08:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-13T01:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-13T18:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-14T11:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-15T04:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-15T21:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-16T14:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-17T07:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-18T00:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-18T17:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-19T10:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-20T03:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-20T20:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-21T13:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-22T06:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-22T23:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-23T16:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-24T09:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-25T02:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-25T19:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-26T12:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-27T05:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-27T22:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-28T15:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-29T08:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-30T01:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-30T18:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-10-31T11:00:00+00:00",
+      "equity": 1044.5006
+    },
+    {
+      "time": "2025-11-01T01:00:00+00:00",
+      "equity": 1044.5006,
+      "kind": "window_settlement"
+    }
+  ],
+  "window": "中段诊断",
+  "period": [
+    "2024-07-01",
+    "2026-01-01"
+  ]
+}

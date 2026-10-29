@@ -1,0 +1,2318 @@
+{
+  "version": "Templates-1.0",
+  "generatedAt": "2026-10-29T10:45:46+00:00",
+  "selection": "Purposeful historical case library, not a representative sample or validated trading universe. Periods selected before fetching this run; exact venue and contract retained. Case labels do not identify manipulation or owners.",
+  "cases": [
+    {
+      "key": "LABUSDT-2026-03",
+      "symbol": "LABUSDT",
+      "venue": "Binance USD-M perpetual",
+      "role": "seed",
+      "status": "observed",
+      "period": [
+        "2026-03-01T00:00:00+00:00",
+        "2026-08-01T00:00:00+00:00"
+      ],
+      "hours": 3672,
+      "gaps": 0,
+      "start": "2026-05-27T06:00:00+00:00",
+      "peak": "2026-06-02T21:00:00+00:00",
+      "postEnd": "2026-06-16T22:00:00+00:00",
+      "startClose": "4.0858000",
+      "peakHigh": "24.3998000",
+      "peakClose": "20.7746000",
+      "closeReturnToPeakHourPercent": 408.4586,
+      "anchorMethod": "maximum high within predefined window",
+      "eventTime": null,
+      "chartStart": "2026-05-30T21:00:00+00:00",
+      "chartEnd": "2026-06-05T22:00:00+00:00",
+      "riseToPeakHighPercent": 497.1854,
+      "postPeakMinLowPercent": -76.399,
+      "postPeak14dAvailable": true,
+      "unknownPeakBarSequence": true,
+      "maxHourlyHighLowRangePercent": 118.5968,
+      "maxRangeHour": "2026-06-02T23:00:00+00:00",
+      "oiQuantityChange24hAtPeakPercent": -22.5515,
+      "oiComparisonTimes": [
+        "2026-06-01T21:00:00+00:00",
+        "2026-06-02T21:00:00+00:00"
+      ],
+      "oiRows": 1440,
+      "actualFundingRows": 1306,
+      "fundingRiseRows": 75,
+      "sumFundingRisePercent": -22.19732,
+      "fundingIntervals": [
+        1,
+        4
+      ],
+      "markHours": 0,
+      "tags": [
+        "单小时大幅摆动 / 尖峰风险",
+        "阶段性大幅拉升",
+        "高位后深度回撤",
+        "峰值前24h OI数量减少",
+        "选定上升区间累计资金费为负"
+      ],
+      "breakoutTriggers": 29,
+      "failedBreakoutLabels": 8,
+      "failureExamples": [
+        {
+          "time": "2026-03-04T17:00:00+00:00",
+          "volumeRatio": 1.738,
+          "prior72hHigh": "0.1922800",
+          "signalClose": "0.1944600",
+          "nextHourOpenReference": "0.1948900",
+          "confirmedSupportCandidate": "0.1759100",
+          "supportDistancePercent": 9.7388,
+          "forward24hMaxHighPercent": 3.1454,
+          "forward24hMinLowPercent": -10.0262,
+          "forward24hClosePercent": -8.3586,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2026-03-30T09:00:00+00:00",
+          "volumeRatio": 5.481,
+          "prior72hHigh": "0.2259900",
+          "signalClose": "0.2289400",
+          "nextHourOpenReference": "0.2289300",
+          "confirmedSupportCandidate": "0.2061100",
+          "supportDistancePercent": 9.9681,
+          "forward24hMaxHighPercent": 1.341,
+          "forward24hMinLowPercent": -6.0237,
+          "forward24hClosePercent": -2.5379,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2026-04-14T03:00:00+00:00",
+          "volumeRatio": 4.561,
+          "prior72hHigh": "0.6600500",
+          "signalClose": "0.7204700",
+          "nextHourOpenReference": "0.7199800",
+          "confirmedSupportCandidate": "0.5744100",
+          "supportDistancePercent": 20.2186,
+          "forward24hMaxHighPercent": 1.9459,
+          "forward24hMinLowPercent": -41.3817,
+          "forward24hClosePercent": -41.0525,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        }
+      ],
+      "coverage": {
+        "price": "observed",
+        "volume": "observed",
+        "takerVolume": "observed",
+        "oi": "event-window only",
+        "funding": "archived settlements",
+        "mark": "missing",
+        "historicHolders": "missing",
+        "verifiedProjectWallets": "missing",
+        "newsCausation": "not verified"
+      },
+      "note": "Trough and peak selected retrospectively; descriptive pattern, not executable return or evidence of manipulation. No historical holder data fabricated.",
+      "marketComparisons": []
+    },
+    {
+      "key": "MYXUSDT-2025-07",
+      "symbol": "MYXUSDT",
+      "venue": "Binance USD-M perpetual",
+      "role": "seed",
+      "status": "observed",
+      "period": [
+        "2025-07-01T00:00:00+00:00",
+        "2025-11-01T00:00:00+00:00"
+      ],
+      "hours": 2952,
+      "gaps": 0,
+      "start": "2025-09-02T11:00:00+00:00",
+      "peak": "2025-09-11T03:00:00+00:00",
+      "postEnd": "2025-09-25T04:00:00+00:00",
+      "startClose": "1.1041000",
+      "peakHigh": "18.6500000",
+      "peakClose": "18.2560000",
+      "closeReturnToPeakHourPercent": 1553.4734,
+      "anchorMethod": "maximum high within predefined window",
+      "eventTime": null,
+      "chartStart": "2025-09-08T03:00:00+00:00",
+      "chartEnd": "2025-09-14T04:00:00+00:00",
+      "riseToPeakHighPercent": 1589.1586,
+      "postPeakMinLowPercent": -56.6756,
+      "postPeak14dAvailable": true,
+      "unknownPeakBarSequence": true,
+      "maxHourlyHighLowRangePercent": 85.4405,
+      "maxRangeHour": "2025-09-08T10:00:00+00:00",
+      "oiQuantityChange24hAtPeakPercent": -25.223,
+      "oiComparisonTimes": [
+        "2025-09-10T03:00:00+00:00",
+        "2025-09-11T03:00:00+00:00"
+      ],
+      "oiRows": 1440,
+      "actualFundingRows": 2205,
+      "fundingRiseRows": 210,
+      "sumFundingRisePercent": -31.14582,
+      "fundingIntervals": [
+        1
+      ],
+      "markHours": 0,
+      "tags": [
+        "单小时大幅摆动 / 尖峰风险",
+        "阶段性大幅拉升",
+        "高位后深度回撤",
+        "峰值前24h OI数量减少",
+        "选定上升区间累计资金费为负"
+      ],
+      "breakoutTriggers": 18,
+      "failedBreakoutLabels": 3,
+      "failureExamples": [
+        {
+          "time": "2025-07-10T14:00:00+00:00",
+          "volumeRatio": 2.028,
+          "prior72hHigh": "0.1359200",
+          "signalClose": "0.1391200",
+          "nextHourOpenReference": "0.1391200",
+          "confirmedSupportCandidate": "0.1130500",
+          "supportDistancePercent": 18.7392,
+          "forward24hMaxHighPercent": 0.6325,
+          "forward24hMinLowPercent": -35.8683,
+          "forward24hClosePercent": -32.1233,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2025-08-17T12:00:00+00:00",
+          "volumeRatio": 10.516,
+          "prior72hHigh": "2.2515000",
+          "signalClose": "2.3155000",
+          "nextHourOpenReference": "2.3152000",
+          "confirmedSupportCandidate": "1.8500000",
+          "supportDistancePercent": 20.0933,
+          "forward24hMaxHighPercent": 4.4402,
+          "forward24hMinLowPercent": -36.8391,
+          "forward24hClosePercent": -35.6902,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2025-09-03T06:00:00+00:00",
+          "volumeRatio": 1.503,
+          "prior72hHigh": "1.2233300",
+          "signalClose": "1.2306000",
+          "nextHourOpenReference": "1.2304000",
+          "confirmedSupportCandidate": "1.1600000",
+          "supportDistancePercent": 5.7217,
+          "forward24hMaxHighPercent": 0.065,
+          "forward24hMinLowPercent": -11.541,
+          "forward24hClosePercent": -10.9558,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        }
+      ],
+      "coverage": {
+        "price": "observed",
+        "volume": "observed",
+        "takerVolume": "observed",
+        "oi": "event-window only",
+        "funding": "archived settlements",
+        "mark": "missing",
+        "historicHolders": "missing",
+        "verifiedProjectWallets": "missing",
+        "newsCausation": "not verified"
+      },
+      "note": "Trough and peak selected retrospectively; descriptive pattern, not executable return or evidence of manipulation. No historical holder data fabricated.",
+      "marketComparisons": []
+    },
+    {
+      "key": "BTWUSDT-2026-06",
+      "symbol": "BTWUSDT",
+      "venue": "Binance USD-M perpetual",
+      "role": "seed",
+      "status": "observed",
+      "period": [
+        "2026-06-04T14:00:00+00:00",
+        "2026-10-01T00:00:00+00:00"
+      ],
+      "hours": 2842,
+      "gaps": 0,
+      "start": "2026-09-14T11:00:00+00:00",
+      "peak": "2026-09-28T07:00:00+00:00",
+      "postEnd": "2026-10-01T00:00:00+00:00",
+      "startClose": "0.6739900",
+      "peakHigh": "1.4472000",
+      "peakClose": "1.4243000",
+      "closeReturnToPeakHourPercent": 111.3236,
+      "anchorMethod": "maximum high within predefined window",
+      "eventTime": null,
+      "chartStart": "2026-09-25T07:00:00+00:00",
+      "chartEnd": "2026-10-01T08:00:00+00:00",
+      "riseToPeakHighPercent": 114.7213,
+      "postPeakMinLowPercent": -39.1791,
+      "postPeak14dAvailable": false,
+      "unknownPeakBarSequence": true,
+      "maxHourlyHighLowRangePercent": 61.3228,
+      "maxRangeHour": "2026-06-10T23:00:00+00:00",
+      "oiQuantityChange24hAtPeakPercent": 0.2702,
+      "oiComparisonTimes": [
+        "2026-09-27T07:00:00+00:00",
+        "2026-09-28T07:00:00+00:00"
+      ],
+      "oiRows": 1440,
+      "actualFundingRows": 709,
+      "fundingRiseRows": 84,
+      "sumFundingRisePercent": 3.6098,
+      "fundingIntervals": [
+        4
+      ],
+      "markHours": 0,
+      "tags": [
+        "单小时大幅摆动 / 尖峰风险",
+        "阶段性大幅拉升",
+        "峰值前24h OI数量增加"
+      ],
+      "breakoutTriggers": 23,
+      "failedBreakoutLabels": 3,
+      "failureExamples": [
+        {
+          "time": "2026-09-21T17:00:00+00:00",
+          "volumeRatio": 2.086,
+          "prior72hHigh": "0.9331000",
+          "signalClose": "0.9423000",
+          "nextHourOpenReference": "0.9423000",
+          "confirmedSupportCandidate": "0.8069000",
+          "supportDistancePercent": 14.3691,
+          "forward24hMaxHighPercent": 3.9902,
+          "forward24hMinLowPercent": -28.8655,
+          "forward24hClosePercent": -9.9438,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2026-09-24T05:00:00+00:00",
+          "volumeRatio": 1.571,
+          "prior72hHigh": "1.0899000",
+          "signalClose": "1.0923000",
+          "nextHourOpenReference": "1.0922000",
+          "confirmedSupportCandidate": "0.9868000",
+          "supportDistancePercent": 9.6502,
+          "forward24hMaxHighPercent": 0.5493,
+          "forward24hMinLowPercent": -17.506,
+          "forward24hClosePercent": -14.9057,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2026-09-28T08:00:00+00:00",
+          "volumeRatio": 7.349,
+          "prior72hHigh": "1.3781000",
+          "signalClose": "1.4243000",
+          "nextHourOpenReference": "1.4247000",
+          "confirmedSupportCandidate": "1.2060000",
+          "supportDistancePercent": 15.3506,
+          "forward24hMaxHighPercent": 1.3336,
+          "forward24hMinLowPercent": -38.2186,
+          "forward24hClosePercent": -14.1223,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        }
+      ],
+      "coverage": {
+        "price": "observed",
+        "volume": "observed",
+        "takerVolume": "observed",
+        "oi": "event-window only",
+        "funding": "archived settlements",
+        "mark": "missing",
+        "historicHolders": "missing",
+        "verifiedProjectWallets": "missing",
+        "newsCausation": "not verified"
+      },
+      "note": "Trough and peak selected retrospectively; descriptive pattern, not executable return or evidence of manipulation. No historical holder data fabricated.",
+      "marketComparisons": []
+    },
+    {
+      "key": "APRUSDT-2026-07",
+      "symbol": "APRUSDT",
+      "venue": "Binance USD-M perpetual",
+      "role": "seed-contrast",
+      "status": "observed",
+      "period": [
+        "2026-07-01T00:00:00+00:00",
+        "2026-10-01T00:00:00+00:00"
+      ],
+      "hours": 2208,
+      "gaps": 0,
+      "start": "2026-08-05T04:00:00+00:00",
+      "peak": "2026-08-12T23:00:00+00:00",
+      "postEnd": "2026-08-27T00:00:00+00:00",
+      "startClose": "0.1924000",
+      "peakHigh": "0.6325000",
+      "peakClose": "0.6074000",
+      "closeReturnToPeakHourPercent": 215.6965,
+      "anchorMethod": "maximum high within predefined window",
+      "eventTime": null,
+      "chartStart": "2026-08-09T23:00:00+00:00",
+      "chartEnd": "2026-08-16T00:00:00+00:00",
+      "riseToPeakHighPercent": 228.7422,
+      "postPeakMinLowPercent": -77.3597,
+      "postPeak14dAvailable": true,
+      "unknownPeakBarSequence": true,
+      "maxHourlyHighLowRangePercent": 51.9005,
+      "maxRangeHour": "2026-08-15T06:00:00+00:00",
+      "oiQuantityChange24hAtPeakPercent": 76.6626,
+      "oiComparisonTimes": [
+        "2026-08-11T23:00:00+00:00",
+        "2026-08-12T23:00:00+00:00"
+      ],
+      "oiRows": 1440,
+      "actualFundingRows": 552,
+      "fundingRiseRows": 48,
+      "sumFundingRisePercent": 1.35069,
+      "fundingIntervals": [
+        4
+      ],
+      "markHours": 0,
+      "tags": [
+        "单小时大幅摆动 / 尖峰风险",
+        "阶段性大幅拉升",
+        "高位后深度回撤",
+        "峰值前24h OI数量增加"
+      ],
+      "breakoutTriggers": 10,
+      "failedBreakoutLabels": 4,
+      "failureExamples": [
+        {
+          "time": "2026-07-12T20:00:00+00:00",
+          "volumeRatio": 6.536,
+          "prior72hHigh": "0.2321000",
+          "signalClose": "0.2334000",
+          "nextHourOpenReference": "0.2335000",
+          "confirmedSupportCandidate": "0.2122000",
+          "supportDistancePercent": 9.1221,
+          "forward24hMaxHighPercent": 2.3126,
+          "forward24hMinLowPercent": -11.7345,
+          "forward24hClosePercent": -5.9957,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2026-08-07T18:00:00+00:00",
+          "volumeRatio": 4.955,
+          "prior72hHigh": "0.2135000",
+          "signalClose": "0.2236000",
+          "nextHourOpenReference": "0.2237000",
+          "confirmedSupportCandidate": "0.1958000",
+          "supportDistancePercent": 12.4721,
+          "forward24hMaxHighPercent": 0.7599,
+          "forward24hMinLowPercent": -8.1359,
+          "forward24hClosePercent": -7.2865,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2026-08-25T20:00:00+00:00",
+          "volumeRatio": 2.279,
+          "prior72hHigh": "0.2313000",
+          "signalClose": "0.2322000",
+          "nextHourOpenReference": "0.2322000",
+          "confirmedSupportCandidate": "0.2217000",
+          "supportDistancePercent": 4.522,
+          "forward24hMaxHighPercent": 2.3686,
+          "forward24hMinLowPercent": -7.3213,
+          "forward24hClosePercent": -1.8949,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        }
+      ],
+      "coverage": {
+        "price": "observed",
+        "volume": "observed",
+        "takerVolume": "observed",
+        "oi": "event-window only",
+        "funding": "archived settlements",
+        "mark": "missing",
+        "historicHolders": "missing",
+        "verifiedProjectWallets": "missing",
+        "newsCausation": "not verified"
+      },
+      "note": "Trough and peak selected retrospectively; descriptive pattern, not executable return or evidence of manipulation. No historical holder data fabricated.",
+      "marketComparisons": []
+    },
+    {
+      "key": "TRBUSDT-2023-08",
+      "symbol": "TRBUSDT",
+      "venue": "Binance USD-M perpetual",
+      "role": "historical",
+      "status": "observed",
+      "period": [
+        "2023-08-01T00:00:00+00:00",
+        "2024-02-01T00:00:00+00:00"
+      ],
+      "hours": 4416,
+      "gaps": 0,
+      "start": "2023-12-18T09:00:00+00:00",
+      "peak": "2023-12-31T20:00:00+00:00",
+      "postEnd": "2024-01-14T21:00:00+00:00",
+      "startClose": "107.029",
+      "peakHigh": "555.000",
+      "peakClose": "413.628",
+      "closeReturnToPeakHourPercent": 286.4635,
+      "anchorMethod": "maximum high within predefined window",
+      "eventTime": null,
+      "chartStart": "2023-12-28T20:00:00+00:00",
+      "chartEnd": "2024-01-03T21:00:00+00:00",
+      "riseToPeakHighPercent": 418.551,
+      "postPeakMinLowPercent": -80.2703,
+      "postPeak14dAvailable": true,
+      "unknownPeakBarSequence": true,
+      "maxHourlyHighLowRangePercent": 67.2173,
+      "maxRangeHour": "2023-12-31T22:00:00+00:00",
+      "oiQuantityChange24hAtPeakPercent": -25.6575,
+      "oiComparisonTimes": [
+        "2023-12-30T20:00:00+00:00",
+        "2023-12-31T20:00:00+00:00"
+      ],
+      "oiRows": 1440,
+      "actualFundingRows": 887,
+      "fundingRiseRows": 81,
+      "sumFundingRisePercent": -16.03757,
+      "fundingIntervals": [
+        4
+      ],
+      "markHours": 1488,
+      "tags": [
+        "单小时大幅摆动 / 尖峰风险",
+        "阶段性大幅拉升",
+        "高位后深度回撤",
+        "峰值前24h OI数量减少",
+        "选定上升区间累计资金费为负"
+      ],
+      "breakoutTriggers": 38,
+      "failedBreakoutLabels": 9,
+      "failureExamples": [
+        {
+          "time": "2023-08-06T09:00:00+00:00",
+          "volumeRatio": 2.228,
+          "prior72hHigh": "12.070",
+          "signalClose": "12.110",
+          "nextHourOpenReference": "12.110",
+          "confirmedSupportCandidate": "11.420",
+          "supportDistancePercent": 5.6978,
+          "forward24hMaxHighPercent": 1.3212,
+          "forward24hMinLowPercent": -1.4038,
+          "forward24hClosePercent": -0.7432,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2023-08-23T17:00:00+00:00",
+          "volumeRatio": 2.14,
+          "prior72hHigh": "10.080",
+          "signalClose": "10.180",
+          "nextHourOpenReference": "10.190",
+          "confirmedSupportCandidate": "9.750",
+          "supportDistancePercent": 4.318,
+          "forward24hMaxHighPercent": 0.6869,
+          "forward24hMinLowPercent": -4.0236,
+          "forward24hClosePercent": -2.9441,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2023-09-02T05:00:00+00:00",
+          "volumeRatio": 2.864,
+          "prior72hHigh": "16.300",
+          "signalClose": "16.358",
+          "nextHourOpenReference": "16.357",
+          "confirmedSupportCandidate": "14.858",
+          "supportDistancePercent": 9.1643,
+          "forward24hMaxHighPercent": 4.8053,
+          "forward24hMinLowPercent": -11.9032,
+          "forward24hClosePercent": -5.8201,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        }
+      ],
+      "coverage": {
+        "price": "observed",
+        "volume": "observed",
+        "takerVolume": "observed",
+        "oi": "event-window only",
+        "funding": "archived settlements",
+        "mark": "focused months",
+        "historicHolders": "missing",
+        "verifiedProjectWallets": "missing",
+        "newsCausation": "not verified"
+      },
+      "note": "Trough and peak selected retrospectively; descriptive pattern, not executable return or evidence of manipulation. No historical holder data fabricated.",
+      "marketComparisons": [
+        {
+          "symbol": "BTCUSDT",
+          "sameHours": true,
+          "closeReturnPercent": 3.6984,
+          "relativeCloseMovePp": 282.7651
+        },
+        {
+          "symbol": "ETHUSDT",
+          "sameHours": true,
+          "closeReturnPercent": 5.7677,
+          "relativeCloseMovePp": 280.6958
+        }
+      ]
+    },
+    {
+      "key": "YFIUSDT-2023-09",
+      "symbol": "YFIUSDT",
+      "venue": "Binance USD-M perpetual",
+      "role": "historical",
+      "status": "observed",
+      "period": [
+        "2023-09-01T00:00:00+00:00",
+        "2024-01-01T00:00:00+00:00"
+      ],
+      "hours": 2928,
+      "gaps": 0,
+      "start": "2023-11-03T10:00:00+00:00",
+      "peak": "2023-11-17T08:00:00+00:00",
+      "postEnd": "2023-12-01T09:00:00+00:00",
+      "startClose": "5596",
+      "peakHigh": "15965",
+      "peakClose": "15526",
+      "closeReturnToPeakHourPercent": 177.4482,
+      "anchorMethod": "maximum high within predefined window",
+      "eventTime": null,
+      "chartStart": "2023-11-14T08:00:00+00:00",
+      "chartEnd": "2023-11-20T09:00:00+00:00",
+      "riseToPeakHighPercent": 185.2931,
+      "postPeakMinLowPercent": -52.897,
+      "postPeak14dAvailable": true,
+      "unknownPeakBarSequence": true,
+      "maxHourlyHighLowRangePercent": 26.928,
+      "maxRangeHour": "2023-11-18T05:00:00+00:00",
+      "oiQuantityChange24hAtPeakPercent": 18.7792,
+      "oiComparisonTimes": [
+        "2023-11-16T08:00:00+00:00",
+        "2023-11-17T08:00:00+00:00"
+      ],
+      "oiRows": 1440,
+      "actualFundingRows": 366,
+      "fundingRiseRows": 42,
+      "sumFundingRisePercent": 1.02926,
+      "fundingIntervals": [
+        8
+      ],
+      "markHours": 720,
+      "tags": [
+        "阶段性大幅拉升",
+        "高位后深度回撤",
+        "峰值前24h OI数量增加"
+      ],
+      "breakoutTriggers": 22,
+      "failedBreakoutLabels": 8,
+      "failureExamples": [
+        {
+          "time": "2023-09-14T01:00:00+00:00",
+          "volumeRatio": 1.843,
+          "prior72hHigh": "5357.0",
+          "signalClose": "5399.0",
+          "nextHourOpenReference": "5398.0",
+          "confirmedSupportCandidate": "5284.0",
+          "supportDistancePercent": 2.1119,
+          "forward24hMaxHighPercent": 0.0926,
+          "forward24hMinLowPercent": -2.2601,
+          "forward24hClosePercent": -0.9818,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2023-09-25T14:00:00+00:00",
+          "volumeRatio": 1.826,
+          "prior72hHigh": "5217",
+          "signalClose": "5233",
+          "nextHourOpenReference": "5233",
+          "confirmedSupportCandidate": "5136",
+          "supportDistancePercent": 1.8536,
+          "forward24hMaxHighPercent": 0.6879,
+          "forward24hMinLowPercent": -1.5479,
+          "forward24hClosePercent": -1.1084,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2023-09-27T12:00:00+00:00",
+          "volumeRatio": 4.498,
+          "prior72hHigh": "5269",
+          "signalClose": "5308",
+          "nextHourOpenReference": "5308",
+          "confirmedSupportCandidate": "5213",
+          "supportDistancePercent": 1.7898,
+          "forward24hMaxHighPercent": 0.0754,
+          "forward24hMinLowPercent": -3.1462,
+          "forward24hClosePercent": -2.5622,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        }
+      ],
+      "coverage": {
+        "price": "observed",
+        "volume": "observed",
+        "takerVolume": "observed",
+        "oi": "event-window only",
+        "funding": "archived settlements",
+        "mark": "focused months",
+        "historicHolders": "missing",
+        "verifiedProjectWallets": "missing",
+        "newsCausation": "not verified"
+      },
+      "note": "Trough and peak selected retrospectively; descriptive pattern, not executable return or evidence of manipulation. No historical holder data fabricated.",
+      "marketComparisons": [
+        {
+          "symbol": "BTCUSDT",
+          "sameHours": true,
+          "closeReturnPercent": 6.193,
+          "relativeCloseMovePp": 171.2552
+        },
+        {
+          "symbol": "ETHUSDT",
+          "sameHours": true,
+          "closeReturnPercent": 10.6422,
+          "relativeCloseMovePp": 166.806
+        }
+      ]
+    },
+    {
+      "key": "GASUSDT-2023-09",
+      "symbol": "GASUSDT",
+      "venue": "Binance USD-M perpetual",
+      "role": "historical",
+      "status": "observed",
+      "period": [
+        "2023-10-25T02:00:00+00:00",
+        "2024-01-01T00:00:00+00:00"
+      ],
+      "hours": 1630,
+      "gaps": 0,
+      "start": "2023-10-27T14:00:00+00:00",
+      "peak": "2023-11-10T07:00:00+00:00",
+      "postEnd": "2023-11-24T08:00:00+00:00",
+      "startClose": "3.135000",
+      "peakHigh": "28.995000",
+      "peakClose": "28.395000",
+      "closeReturnToPeakHourPercent": 805.7416,
+      "anchorMethod": "maximum high within predefined window",
+      "eventTime": null,
+      "chartStart": "2023-11-07T07:00:00+00:00",
+      "chartEnd": "2023-11-13T08:00:00+00:00",
+      "riseToPeakHighPercent": 824.8804,
+      "postPeakMinLowPercent": -75.1681,
+      "postPeak14dAvailable": true,
+      "unknownPeakBarSequence": true,
+      "maxHourlyHighLowRangePercent": 31.2693,
+      "maxRangeHour": "2023-11-01T18:00:00+00:00",
+      "oiQuantityChange24hAtPeakPercent": -3.2624,
+      "oiComparisonTimes": [
+        "2023-11-09T07:00:00+00:00",
+        "2023-11-10T07:00:00+00:00"
+      ],
+      "oiRows": 1440,
+      "actualFundingRows": 409,
+      "fundingRiseRows": 83,
+      "sumFundingRisePercent": -12.10841,
+      "fundingIntervals": [
+        4
+      ],
+      "markHours": 0,
+      "tags": [
+        "单小时大幅摆动 / 尖峰风险",
+        "阶段性大幅拉升",
+        "高位后深度回撤",
+        "峰值前24h OI数量减少",
+        "选定上升区间累计资金费为负"
+      ],
+      "breakoutTriggers": 11,
+      "failedBreakoutLabels": 4,
+      "failureExamples": [
+        {
+          "time": "2023-11-01T19:00:00+00:00",
+          "volumeRatio": 5.865,
+          "prior72hHigh": "7.077000",
+          "signalClose": "7.364000",
+          "nextHourOpenReference": "7.364000",
+          "confirmedSupportCandidate": "6.311000",
+          "supportDistancePercent": 14.2993,
+          "forward24hMaxHighPercent": 3.4628,
+          "forward24hMinLowPercent": -32.7539,
+          "forward24hClosePercent": -22.189,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2023-12-03T01:00:00+00:00",
+          "volumeRatio": 3.653,
+          "prior72hHigh": "8.372000",
+          "signalClose": "8.399000",
+          "nextHourOpenReference": "8.400000",
+          "confirmedSupportCandidate": "8.226000",
+          "supportDistancePercent": 2.0714,
+          "forward24hMaxHighPercent": 0.7976,
+          "forward24hMinLowPercent": -4.2262,
+          "forward24hClosePercent": -2.9048,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2023-12-09T02:00:00+00:00",
+          "volumeRatio": 6.649,
+          "prior72hHigh": "8.047000",
+          "signalClose": "8.135000",
+          "nextHourOpenReference": "8.136000",
+          "confirmedSupportCandidate": "7.812000",
+          "supportDistancePercent": 3.9823,
+          "forward24hMaxHighPercent": 1.6593,
+          "forward24hMinLowPercent": -6.3422,
+          "forward24hClosePercent": -1.5487,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        }
+      ],
+      "coverage": {
+        "price": "observed",
+        "volume": "observed",
+        "takerVolume": "observed",
+        "oi": "event-window only",
+        "funding": "archived settlements",
+        "mark": "missing",
+        "historicHolders": "missing",
+        "verifiedProjectWallets": "missing",
+        "newsCausation": "not verified"
+      },
+      "note": "Trough and peak selected retrospectively; descriptive pattern, not executable return or evidence of manipulation. No historical holder data fabricated.",
+      "marketComparisons": [
+        {
+          "symbol": "BTCUSDT",
+          "sameHours": true,
+          "closeReturnPercent": 7.5684,
+          "relativeCloseMovePp": 798.1732
+        },
+        {
+          "symbol": "ETHUSDT",
+          "sameHours": true,
+          "closeReturnPercent": 18.6127,
+          "relativeCloseMovePp": 787.1289
+        }
+      ]
+    },
+    {
+      "key": "BLZUSDT-2023-07",
+      "symbol": "BLZUSDT",
+      "venue": "Binance USD-M perpetual",
+      "role": "historical",
+      "status": "observed",
+      "period": [
+        "2023-07-01T00:00:00+00:00",
+        "2023-12-01T00:00:00+00:00"
+      ],
+      "hours": 3672,
+      "gaps": 0,
+      "start": "2023-10-17T13:00:00+00:00",
+      "peak": "2023-10-31T08:00:00+00:00",
+      "postEnd": "2023-11-14T09:00:00+00:00",
+      "startClose": "0.13458",
+      "peakHigh": "0.34218",
+      "peakClose": "0.33544",
+      "closeReturnToPeakHourPercent": 149.2495,
+      "anchorMethod": "maximum high within predefined window",
+      "eventTime": null,
+      "chartStart": "2023-10-28T08:00:00+00:00",
+      "chartEnd": "2023-11-03T09:00:00+00:00",
+      "riseToPeakHighPercent": 154.2577,
+      "postPeakMinLowPercent": -31.0918,
+      "postPeak14dAvailable": true,
+      "unknownPeakBarSequence": true,
+      "maxHourlyHighLowRangePercent": 36.6886,
+      "maxRangeHour": "2023-08-13T13:00:00+00:00",
+      "oiQuantityChange24hAtPeakPercent": -12.0359,
+      "oiComparisonTimes": [
+        "2023-10-30T08:00:00+00:00",
+        "2023-10-31T08:00:00+00:00"
+      ],
+      "oiRows": 1440,
+      "actualFundingRows": 682,
+      "fundingRiseRows": 83,
+      "sumFundingRisePercent": 0.80891,
+      "fundingIntervals": [
+        4
+      ],
+      "markHours": 0,
+      "tags": [
+        "单小时大幅摆动 / 尖峰风险",
+        "阶段性大幅拉升",
+        "峰值前24h OI数量减少"
+      ],
+      "breakoutTriggers": 24,
+      "failedBreakoutLabels": 8,
+      "failureExamples": [
+        {
+          "time": "2023-08-07T02:00:00+00:00",
+          "volumeRatio": 1.811,
+          "prior72hHigh": "0.05210",
+          "signalClose": "0.05251",
+          "nextHourOpenReference": "0.05251",
+          "confirmedSupportCandidate": "0.05107",
+          "supportDistancePercent": 2.7423,
+          "forward24hMaxHighPercent": 1.4473,
+          "forward24hMinLowPercent": -3.3137,
+          "forward24hClosePercent": -2.4376,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2023-09-01T20:00:00+00:00",
+          "volumeRatio": 7.763,
+          "prior72hHigh": "0.12345",
+          "signalClose": "0.12544",
+          "nextHourOpenReference": "0.12544",
+          "confirmedSupportCandidate": "0.11444",
+          "supportDistancePercent": 8.7691,
+          "forward24hMaxHighPercent": 4.7672,
+          "forward24hMinLowPercent": -8.0995,
+          "forward24hClosePercent": -5.5963,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2023-09-05T16:00:00+00:00",
+          "volumeRatio": 14.547,
+          "prior72hHigh": "0.15213",
+          "signalClose": "0.15534",
+          "nextHourOpenReference": "0.15561",
+          "confirmedSupportCandidate": "0.12123",
+          "supportDistancePercent": 22.0937,
+          "forward24hMaxHighPercent": 0.1799,
+          "forward24hMinLowPercent": -16.445,
+          "forward24hClosePercent": -10.1857,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        }
+      ],
+      "coverage": {
+        "price": "observed",
+        "volume": "observed",
+        "takerVolume": "observed",
+        "oi": "event-window only",
+        "funding": "archived settlements",
+        "mark": "missing",
+        "historicHolders": "missing",
+        "verifiedProjectWallets": "missing",
+        "newsCausation": "not verified"
+      },
+      "note": "Trough and peak selected retrospectively; descriptive pattern, not executable return or evidence of manipulation. No historical holder data fabricated.",
+      "marketComparisons": [
+        {
+          "symbol": "BTCUSDT",
+          "sameHours": true,
+          "closeReturnPercent": 21.7053,
+          "relativeCloseMovePp": 127.5442
+        },
+        {
+          "symbol": "ETHUSDT",
+          "sameHours": true,
+          "closeReturnPercent": 14.7163,
+          "relativeCloseMovePp": 134.5332
+        }
+      ]
+    },
+    {
+      "key": "UNFIUSDT-2022-05",
+      "symbol": "UNFIUSDT",
+      "venue": "Binance USD-M perpetual",
+      "role": "historical",
+      "status": "observed",
+      "period": [
+        "2022-05-01T00:00:00+00:00",
+        "2022-09-01T00:00:00+00:00"
+      ],
+      "hours": 2952,
+      "gaps": 0,
+      "start": "2022-05-27T18:00:00+00:00",
+      "peak": "2022-06-07T23:00:00+00:00",
+      "postEnd": "2022-06-22T00:00:00+00:00",
+      "startClose": "1.876",
+      "peakHigh": "43.900",
+      "peakClose": "18.782",
+      "closeReturnToPeakHourPercent": 901.1727,
+      "anchorMethod": "maximum high within predefined window",
+      "eventTime": null,
+      "chartStart": "2022-06-04T23:00:00+00:00",
+      "chartEnd": "2022-06-11T00:00:00+00:00",
+      "riseToPeakHighPercent": 2240.0853,
+      "postPeakMinLowPercent": -90.8519,
+      "postPeak14dAvailable": true,
+      "unknownPeakBarSequence": true,
+      "maxHourlyHighLowRangePercent": 656.546,
+      "maxRangeHour": "2022-06-07T20:00:00+00:00",
+      "oiQuantityChange24hAtPeakPercent": -11.4665,
+      "oiComparisonTimes": [
+        "2022-06-06T23:00:00+00:00",
+        "2022-06-07T23:00:00+00:00"
+      ],
+      "oiRows": 1440,
+      "actualFundingRows": 369,
+      "fundingRiseRows": 34,
+      "sumFundingRisePercent": 0.13951,
+      "fundingIntervals": [
+        8
+      ],
+      "markHours": 0,
+      "tags": [
+        "单小时大幅摆动 / 尖峰风险",
+        "阶段性大幅拉升",
+        "高位后深度回撤",
+        "峰值前24h OI数量减少"
+      ],
+      "breakoutTriggers": 21,
+      "failedBreakoutLabels": 9,
+      "failureExamples": [
+        {
+          "time": "2022-05-18T01:00:00+00:00",
+          "volumeRatio": 3.564,
+          "prior72hHigh": "2.251",
+          "signalClose": "2.262",
+          "nextHourOpenReference": "2.263",
+          "confirmedSupportCandidate": "1.929",
+          "supportDistancePercent": 14.7592,
+          "forward24hMaxHighPercent": 1.1047,
+          "forward24hMinLowPercent": -17.1896,
+          "forward24hClosePercent": -13.0358,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2022-05-22T15:00:00+00:00",
+          "volumeRatio": 2.121,
+          "prior72hHigh": "2.538",
+          "signalClose": "2.558",
+          "nextHourOpenReference": "2.558",
+          "confirmedSupportCandidate": "2.388",
+          "supportDistancePercent": 6.6458,
+          "forward24hMaxHighPercent": 0.6646,
+          "forward24hMinLowPercent": -7.7013,
+          "forward24hClosePercent": -4.2611,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2022-06-04T23:00:00+00:00",
+          "volumeRatio": 2.399,
+          "prior72hHigh": "2.706",
+          "signalClose": "2.720",
+          "nextHourOpenReference": "2.720",
+          "confirmedSupportCandidate": "2.563",
+          "supportDistancePercent": 5.7721,
+          "forward24hMaxHighPercent": 4.2647,
+          "forward24hMinLowPercent": -8.7868,
+          "forward24hClosePercent": -7.9044,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        }
+      ],
+      "coverage": {
+        "price": "observed",
+        "volume": "observed",
+        "takerVolume": "observed",
+        "oi": "event-window only",
+        "funding": "archived settlements",
+        "mark": "missing",
+        "historicHolders": "missing",
+        "verifiedProjectWallets": "missing",
+        "newsCausation": "not verified"
+      },
+      "note": "Trough and peak selected retrospectively; descriptive pattern, not executable return or evidence of manipulation. No historical holder data fabricated.",
+      "marketComparisons": []
+    },
+    {
+      "key": "UNFIUSDT-2024-08",
+      "symbol": "UNFIUSDT",
+      "venue": "Binance USD-M perpetual",
+      "role": "delisting-context",
+      "status": "observed",
+      "period": [
+        "2024-08-01T00:00:00+00:00",
+        "2024-11-01T00:00:00+00:00"
+      ],
+      "hours": 2208,
+      "gaps": 0,
+      "start": "2024-10-03T19:00:00+00:00",
+      "peak": "2024-10-17T19:00:00+00:00",
+      "postEnd": "2024-10-31T20:00:00+00:00",
+      "startClose": "2.424",
+      "peakHigh": "3.028",
+      "peakClose": "2.998",
+      "closeReturnToPeakHourPercent": 23.6799,
+      "anchorMethod": "peak in 7 days before largest hourly close/open loss",
+      "eventTime": "2024-10-23T07:00:00+00:00",
+      "chartStart": "2024-10-14T19:00:00+00:00",
+      "chartEnd": "2024-10-26T08:00:00+00:00",
+      "riseToPeakHighPercent": 24.9175,
+      "postPeakMinLowPercent": -50.0991,
+      "postPeak14dAvailable": true,
+      "unknownPeakBarSequence": true,
+      "maxHourlyHighLowRangePercent": 243.3955,
+      "maxRangeHour": "2024-10-23T22:00:00+00:00",
+      "oiQuantityChange24hAtPeakPercent": 33.801,
+      "oiComparisonTimes": [
+        "2024-10-16T19:00:00+00:00",
+        "2024-10-17T19:00:00+00:00"
+      ],
+      "oiRows": 2880,
+      "actualFundingRows": 552,
+      "fundingRiseRows": 85,
+      "sumFundingRisePercent": 0.27954,
+      "fundingIntervals": [
+        4
+      ],
+      "markHours": 0,
+      "tags": [
+        "单小时大幅摆动 / 尖峰风险",
+        "高位后深度回撤",
+        "峰值前24h OI数量增加"
+      ],
+      "breakoutTriggers": 14,
+      "failedBreakoutLabels": 3,
+      "failureExamples": [
+        {
+          "time": "2024-08-08T23:00:00+00:00",
+          "volumeRatio": 2.031,
+          "prior72hHigh": "2.806",
+          "signalClose": "2.853",
+          "nextHourOpenReference": "2.853",
+          "confirmedSupportCandidate": "2.720",
+          "supportDistancePercent": 4.6618,
+          "forward24hMaxHighPercent": 0.7711,
+          "forward24hMinLowPercent": -5.6432,
+          "forward24hClosePercent": -2.6639,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2024-09-20T04:00:00+00:00",
+          "volumeRatio": 2.032,
+          "prior72hHigh": "2.700",
+          "signalClose": "2.719",
+          "nextHourOpenReference": "2.718",
+          "confirmedSupportCandidate": "2.586",
+          "supportDistancePercent": 4.8565,
+          "forward24hMaxHighPercent": 1.5453,
+          "forward24hMinLowPercent": -5.2612,
+          "forward24hClosePercent": -2.6858,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2024-09-21T12:00:00+00:00",
+          "volumeRatio": 5.666,
+          "prior72hHigh": "2.760",
+          "signalClose": "2.774",
+          "nextHourOpenReference": "2.774",
+          "confirmedSupportCandidate": "2.621",
+          "supportDistancePercent": 5.5155,
+          "forward24hMaxHighPercent": 3.8572,
+          "forward24hMinLowPercent": -5.0829,
+          "forward24hClosePercent": -4.2898,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        }
+      ],
+      "coverage": {
+        "price": "observed",
+        "volume": "observed",
+        "takerVolume": "observed",
+        "oi": "event-window only",
+        "funding": "archived settlements",
+        "mark": "missing",
+        "historicHolders": "missing",
+        "verifiedProjectWallets": "missing",
+        "newsCausation": "not verified"
+      },
+      "note": "Trough and peak selected retrospectively; descriptive pattern, not executable return or evidence of manipulation. No historical holder data fabricated.",
+      "marketComparisons": []
+    },
+    {
+      "key": "LINAUSDT-2023-04",
+      "symbol": "LINAUSDT",
+      "venue": "Binance USD-M perpetual",
+      "role": "historical",
+      "status": "observed",
+      "period": [
+        "2023-04-01T00:00:00+00:00",
+        "2023-08-01T00:00:00+00:00"
+      ],
+      "hours": 2928,
+      "gaps": 0,
+      "start": "2023-05-22T01:00:00+00:00",
+      "peak": "2023-06-02T00:00:00+00:00",
+      "postEnd": "2023-06-16T01:00:00+00:00",
+      "startClose": "0.00960",
+      "peakHigh": "0.02972",
+      "peakClose": "0.02613",
+      "closeReturnToPeakHourPercent": 172.1875,
+      "anchorMethod": "maximum high within predefined window",
+      "eventTime": null,
+      "chartStart": "2023-05-30T00:00:00+00:00",
+      "chartEnd": "2023-06-05T01:00:00+00:00",
+      "riseToPeakHighPercent": 209.5833,
+      "postPeakMinLowPercent": -68.5397,
+      "postPeak14dAvailable": true,
+      "unknownPeakBarSequence": true,
+      "maxHourlyHighLowRangePercent": 30.2899,
+      "maxRangeHour": "2023-06-02T00:00:00+00:00",
+      "oiQuantityChange24hAtPeakPercent": 9.2267,
+      "oiComparisonTimes": [
+        "2023-06-01T00:00:00+00:00",
+        "2023-06-02T00:00:00+00:00"
+      ],
+      "oiRows": 1440,
+      "actualFundingRows": 366,
+      "fundingRiseRows": 33,
+      "sumFundingRisePercent": -9.51951,
+      "fundingIntervals": [
+        8
+      ],
+      "markHours": 0,
+      "tags": [
+        "单小时大幅摆动 / 尖峰风险",
+        "阶段性大幅拉升",
+        "高位后深度回撤",
+        "峰值前24h OI数量增加",
+        "选定上升区间累计资金费为负"
+      ],
+      "breakoutTriggers": 22,
+      "failedBreakoutLabels": 9,
+      "failureExamples": [
+        {
+          "time": "2023-04-14T02:00:00+00:00",
+          "volumeRatio": 10.497,
+          "prior72hHigh": "0.01532",
+          "signalClose": "0.01565",
+          "nextHourOpenReference": "0.01564",
+          "confirmedSupportCandidate": "0.01376",
+          "supportDistancePercent": 12.0205,
+          "forward24hMaxHighPercent": 1.023,
+          "forward24hMinLowPercent": -11.2532,
+          "forward24hClosePercent": -8.1202,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2023-04-18T08:00:00+00:00",
+          "volumeRatio": 3.49,
+          "prior72hHigh": "0.01529",
+          "signalClose": "0.01535",
+          "nextHourOpenReference": "0.01534",
+          "confirmedSupportCandidate": "0.01441",
+          "supportDistancePercent": 6.0626,
+          "forward24hMaxHighPercent": 2.0209,
+          "forward24hMinLowPercent": -6.91,
+          "forward24hClosePercent": -6.5189,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2023-05-03T22:00:00+00:00",
+          "volumeRatio": 6.462,
+          "prior72hHigh": "0.01252",
+          "signalClose": "0.01268",
+          "nextHourOpenReference": "0.01268",
+          "confirmedSupportCandidate": "0.01103",
+          "supportDistancePercent": 13.0126,
+          "forward24hMaxHighPercent": 4.1798,
+          "forward24hMinLowPercent": -5.205,
+          "forward24hClosePercent": -5.0473,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        }
+      ],
+      "coverage": {
+        "price": "observed",
+        "volume": "observed",
+        "takerVolume": "observed",
+        "oi": "event-window only",
+        "funding": "archived settlements",
+        "mark": "missing",
+        "historicHolders": "missing",
+        "verifiedProjectWallets": "missing",
+        "newsCausation": "not verified"
+      },
+      "note": "Trough and peak selected retrospectively; descriptive pattern, not executable return or evidence of manipulation. No historical holder data fabricated.",
+      "marketComparisons": []
+    },
+    {
+      "key": "AUCTIONUSDT-2025-01",
+      "symbol": "AUCTIONUSDT",
+      "venue": "Binance USD-M perpetual",
+      "role": "historical",
+      "status": "observed",
+      "period": [
+        "2025-01-01T00:00:00+00:00",
+        "2025-05-01T00:00:00+00:00"
+      ],
+      "hours": 2880,
+      "gaps": 0,
+      "start": "2025-03-08T09:00:00+00:00",
+      "peak": "2025-03-21T21:00:00+00:00",
+      "postEnd": "2025-04-04T22:00:00+00:00",
+      "startClose": "15.392000",
+      "peakHigh": "68.000000",
+      "peakClose": "65.837000",
+      "closeReturnToPeakHourPercent": 327.7352,
+      "anchorMethod": "maximum high within predefined window",
+      "eventTime": null,
+      "chartStart": "2025-03-18T21:00:00+00:00",
+      "chartEnd": "2025-03-24T22:00:00+00:00",
+      "riseToPeakHighPercent": 341.7879,
+      "postPeakMinLowPercent": -81.5426,
+      "postPeak14dAvailable": true,
+      "unknownPeakBarSequence": true,
+      "maxHourlyHighLowRangePercent": 27.9894,
+      "maxRangeHour": "2025-03-21T21:00:00+00:00",
+      "oiQuantityChange24hAtPeakPercent": 1.8664,
+      "oiComparisonTimes": [
+        "2025-03-20T21:00:00+00:00",
+        "2025-03-21T21:00:00+00:00"
+      ],
+      "oiRows": 1440,
+      "actualFundingRows": 720,
+      "fundingRiseRows": 81,
+      "sumFundingRisePercent": -11.90917,
+      "fundingIntervals": [
+        4
+      ],
+      "markHours": 0,
+      "tags": [
+        "阶段性大幅拉升",
+        "高位后深度回撤",
+        "峰值前24h OI数量增加",
+        "选定上升区间累计资金费为负"
+      ],
+      "breakoutTriggers": 19,
+      "failedBreakoutLabels": 5,
+      "failureExamples": [
+        {
+          "time": "2025-01-17T09:00:00+00:00",
+          "volumeRatio": 2.59,
+          "prior72hHigh": "15.608000",
+          "signalClose": "15.643000",
+          "nextHourOpenReference": "15.640000",
+          "confirmedSupportCandidate": "15.028000",
+          "supportDistancePercent": 3.913,
+          "forward24hMaxHighPercent": 2.8453,
+          "forward24hMinLowPercent": -6.4706,
+          "forward24hClosePercent": -4.8018,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2025-01-31T12:00:00+00:00",
+          "volumeRatio": 4.636,
+          "prior72hHigh": "12.957000",
+          "signalClose": "13.015000",
+          "nextHourOpenReference": "13.019000",
+          "confirmedSupportCandidate": "12.484000",
+          "supportDistancePercent": 4.1094,
+          "forward24hMaxHighPercent": 0.6145,
+          "forward24hMinLowPercent": -7.1664,
+          "forward24hClosePercent": -6.0757,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2025-02-22T02:00:00+00:00",
+          "volumeRatio": 4.946,
+          "prior72hHigh": "13.784000",
+          "signalClose": "13.888000",
+          "nextHourOpenReference": "13.888000",
+          "confirmedSupportCandidate": "12.974000",
+          "supportDistancePercent": 6.5812,
+          "forward24hMaxHighPercent": 3.7514,
+          "forward24hMinLowPercent": -10.3111,
+          "forward24hClosePercent": -7.5965,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        }
+      ],
+      "coverage": {
+        "price": "observed",
+        "volume": "observed",
+        "takerVolume": "observed",
+        "oi": "event-window only",
+        "funding": "archived settlements",
+        "mark": "missing",
+        "historicHolders": "missing",
+        "verifiedProjectWallets": "missing",
+        "newsCausation": "not verified"
+      },
+      "note": "Trough and peak selected retrospectively; descriptive pattern, not executable return or evidence of manipulation. No historical holder data fabricated.",
+      "marketComparisons": [
+        {
+          "symbol": "BTCUSDT",
+          "sameHours": true,
+          "closeReturnPercent": -1.8057,
+          "relativeCloseMovePp": 329.5409
+        },
+        {
+          "symbol": "ETHUSDT",
+          "sameHours": true,
+          "closeReturnPercent": -7.3127,
+          "relativeCloseMovePp": 335.0479
+        }
+      ]
+    },
+    {
+      "key": "ACTUSDT-2025-02",
+      "symbol": "ACTUSDT",
+      "venue": "Binance USD-M perpetual",
+      "role": "crash-context",
+      "status": "observed",
+      "period": [
+        "2025-02-01T00:00:00+00:00",
+        "2025-06-01T00:00:00+00:00"
+      ],
+      "hours": 2880,
+      "gaps": 0,
+      "start": "2025-03-18T02:00:00+00:00",
+      "peak": "2025-03-25T18:00:00+00:00",
+      "postEnd": "2025-04-08T19:00:00+00:00",
+      "startClose": "0.1879000",
+      "peakHigh": "0.2104100",
+      "peakClose": "0.1924800",
+      "closeReturnToPeakHourPercent": 2.4375,
+      "anchorMethod": "peak in 7 days before largest hourly close/open loss",
+      "eventTime": "2025-04-01T10:00:00+00:00",
+      "chartStart": "2025-03-22T18:00:00+00:00",
+      "chartEnd": "2025-04-04T11:00:00+00:00",
+      "riseToPeakHighPercent": 11.9798,
+      "postPeakMinLowPercent": -77.9003,
+      "postPeak14dAvailable": true,
+      "unknownPeakBarSequence": true,
+      "maxHourlyHighLowRangePercent": 52.0091,
+      "maxRangeHour": "2025-04-01T10:00:00+00:00",
+      "oiQuantityChange24hAtPeakPercent": -2.8739,
+      "oiComparisonTimes": [
+        "2025-03-24T18:00:00+00:00",
+        "2025-03-25T18:00:00+00:00"
+      ],
+      "oiRows": 2880,
+      "actualFundingRows": 720,
+      "fundingRiseRows": 46,
+      "sumFundingRisePercent": 0.22305,
+      "fundingIntervals": [
+        4
+      ],
+      "markHours": 1464,
+      "tags": [
+        "单小时大幅摆动 / 尖峰风险",
+        "高位后深度回撤",
+        "峰值前24h OI数量减少"
+      ],
+      "breakoutTriggers": 14,
+      "failedBreakoutLabels": 7,
+      "failureExamples": [
+        {
+          "time": "2025-02-13T01:00:00+00:00",
+          "volumeRatio": 1.534,
+          "prior72hHigh": "0.2001300",
+          "signalClose": "0.2024000",
+          "nextHourOpenReference": "0.2024000",
+          "confirmedSupportCandidate": "0.1807300",
+          "supportDistancePercent": 10.7065,
+          "forward24hMaxHighPercent": 4.8518,
+          "forward24hMinLowPercent": -7.0405,
+          "forward24hClosePercent": -5.5534,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2025-02-26T16:00:00+00:00",
+          "volumeRatio": 2.85,
+          "prior72hHigh": "0.2385200",
+          "signalClose": "0.2446100",
+          "nextHourOpenReference": "0.2446200",
+          "confirmedSupportCandidate": "0.2140100",
+          "supportDistancePercent": 12.5133,
+          "forward24hMaxHighPercent": 3.2786,
+          "forward24hMinLowPercent": -12.4847,
+          "forward24hClosePercent": -11.7243,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2025-03-11T16:00:00+00:00",
+          "volumeRatio": 2.916,
+          "prior72hHigh": "0.2022800",
+          "signalClose": "0.2062500",
+          "nextHourOpenReference": "0.2062600",
+          "confirmedSupportCandidate": "0.1950000",
+          "supportDistancePercent": 5.4591,
+          "forward24hMaxHighPercent": 1.1442,
+          "forward24hMinLowPercent": -6.1621,
+          "forward24hClosePercent": -5.7646,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        }
+      ],
+      "coverage": {
+        "price": "observed",
+        "volume": "observed",
+        "takerVolume": "observed",
+        "oi": "event-window only",
+        "funding": "archived settlements",
+        "mark": "focused months",
+        "historicHolders": "missing",
+        "verifiedProjectWallets": "missing",
+        "newsCausation": "not verified"
+      },
+      "note": "Trough and peak selected retrospectively; descriptive pattern, not executable return or evidence of manipulation. No historical holder data fabricated.",
+      "marketComparisons": [
+        {
+          "symbol": "BTCUSDT",
+          "sameHours": true,
+          "closeReturnPercent": 5.336,
+          "relativeCloseMovePp": -2.8985
+        },
+        {
+          "symbol": "ETHUSDT",
+          "sameHours": true,
+          "closeReturnPercent": 7.8874,
+          "relativeCloseMovePp": -5.4499
+        }
+      ]
+    },
+    {
+      "key": "OMUSDT-2025-02",
+      "symbol": "OMUSDT",
+      "venue": "Binance USD-M perpetual",
+      "role": "crash-context",
+      "status": "observed",
+      "period": [
+        "2025-02-01T00:00:00+00:00",
+        "2025-06-01T00:00:00+00:00"
+      ],
+      "hours": 2880,
+      "gaps": 0,
+      "start": "2025-04-06T23:00:00+00:00",
+      "peak": "2025-04-09T23:00:00+00:00",
+      "postEnd": "2025-04-24T00:00:00+00:00",
+      "startClose": "5.7338900",
+      "peakHigh": "6.8687500",
+      "peakClose": "6.7958000",
+      "closeReturnToPeakHourPercent": 18.5199,
+      "anchorMethod": "peak in 7 days before largest hourly close/open loss",
+      "eventTime": "2025-04-13T18:00:00+00:00",
+      "chartStart": "2025-04-06T23:00:00+00:00",
+      "chartEnd": "2025-04-16T19:00:00+00:00",
+      "riseToPeakHighPercent": 19.7921,
+      "postPeakMinLowPercent": -94.6271,
+      "postPeak14dAvailable": true,
+      "unknownPeakBarSequence": true,
+      "maxHourlyHighLowRangePercent": 82.8702,
+      "maxRangeHour": "2025-04-13T21:00:00+00:00",
+      "oiQuantityChange24hAtPeakPercent": 2.349,
+      "oiComparisonTimes": [
+        "2025-04-08T23:00:00+00:00",
+        "2025-04-09T23:00:00+00:00"
+      ],
+      "oiRows": 2592,
+      "actualFundingRows": 720,
+      "fundingRiseRows": 19,
+      "sumFundingRisePercent": 0.08733,
+      "fundingIntervals": [
+        4
+      ],
+      "markHours": 720,
+      "tags": [
+        "单小时大幅摆动 / 尖峰风险",
+        "高位后深度回撤",
+        "峰值前24h OI数量增加"
+      ],
+      "breakoutTriggers": 11,
+      "failedBreakoutLabels": 6,
+      "failureExamples": [
+        {
+          "time": "2025-02-07T14:00:00+00:00",
+          "volumeRatio": 4.549,
+          "prior72hHigh": "6.2920000",
+          "signalClose": "6.3252400",
+          "nextHourOpenReference": "6.3265300",
+          "confirmedSupportCandidate": "5.6924200",
+          "supportDistancePercent": 10.023,
+          "forward24hMaxHighPercent": 2.5905,
+          "forward24hMinLowPercent": -7.4621,
+          "forward24hClosePercent": -7.0121,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2025-02-20T22:00:00+00:00",
+          "volumeRatio": 14.382,
+          "prior72hHigh": "7.7186100",
+          "signalClose": "8.0188200",
+          "nextHourOpenReference": "8.0186200",
+          "confirmedSupportCandidate": "7.3529400",
+          "supportDistancePercent": 8.3017,
+          "forward24hMaxHighPercent": 2.4896,
+          "forward24hMinLowPercent": -7.7148,
+          "forward24hClosePercent": -5.6079,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2025-02-23T01:00:00+00:00",
+          "volumeRatio": 10.548,
+          "prior72hHigh": "8.4500000",
+          "signalClose": "8.7199400",
+          "nextHourOpenReference": "8.7203800",
+          "confirmedSupportCandidate": "7.5100000",
+          "supportDistancePercent": 13.8799,
+          "forward24hMaxHighPercent": 2.9537,
+          "forward24hMinLowPercent": -4.9304,
+          "forward24hClosePercent": -3.8754,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        }
+      ],
+      "coverage": {
+        "price": "observed",
+        "volume": "observed",
+        "takerVolume": "observed",
+        "oi": "event-window only",
+        "funding": "archived settlements",
+        "mark": "focused months",
+        "historicHolders": "missing",
+        "verifiedProjectWallets": "missing",
+        "newsCausation": "not verified"
+      },
+      "note": "Trough and peak selected retrospectively; descriptive pattern, not executable return or evidence of manipulation. No historical holder data fabricated.",
+      "marketComparisons": [
+        {
+          "symbol": "BTCUSDT",
+          "sameHours": true,
+          "closeReturnPercent": 5.3553,
+          "relativeCloseMovePp": 13.1646
+        },
+        {
+          "symbol": "ETHUSDT",
+          "sameHours": true,
+          "closeReturnPercent": 5.6146,
+          "relativeCloseMovePp": 12.9053
+        }
+      ]
+    },
+    {
+      "key": "LUNAUSDT-2022-03",
+      "symbol": "LUNAUSDT",
+      "venue": "Binance USD-M perpetual",
+      "role": "delisting-context",
+      "status": "observed",
+      "period": [
+        "2022-03-01T00:00:00+00:00",
+        "2022-05-13T07:00:00+00:00"
+      ],
+      "hours": 1711,
+      "gaps": 48,
+      "start": "2022-04-30T23:00:00+00:00",
+      "peak": "2022-05-05T11:00:00+00:00",
+      "postEnd": "2022-05-13T07:00:00+00:00",
+      "startClose": "78.0240",
+      "peakHigh": "86.1070",
+      "peakClose": "85.1950",
+      "closeReturnToPeakHourPercent": 9.1908,
+      "anchorMethod": "peak in 7 days before largest hourly close/open loss",
+      "eventTime": "2022-05-12T09:00:00+00:00",
+      "chartStart": "2022-05-02T11:00:00+00:00",
+      "chartEnd": "2022-05-15T10:00:00+00:00",
+      "riseToPeakHighPercent": 10.3596,
+      "postPeakMinLowPercent": -99.9964,
+      "postPeak14dAvailable": false,
+      "unknownPeakBarSequence": true,
+      "maxHourlyHighLowRangePercent": 452.0875,
+      "maxRangeHour": "2022-05-11T13:00:00+00:00",
+      "oiQuantityChange24hAtPeakPercent": -5.5897,
+      "oiComparisonTimes": [
+        "2022-05-04T11:00:00+00:00",
+        "2022-05-05T11:00:00+00:00"
+      ],
+      "oiRows": 2204,
+      "actualFundingRows": 220,
+      "fundingRiseRows": 14,
+      "sumFundingRisePercent": -0.19731,
+      "fundingIntervals": [
+        8
+      ],
+      "markHours": 744,
+      "tags": [
+        "单小时大幅摆动 / 尖峰风险",
+        "高位后深度回撤",
+        "峰值前24h OI数量减少",
+        "选定上升区间累计资金费为负"
+      ],
+      "breakoutTriggers": 10,
+      "failedBreakoutLabels": 4,
+      "failureExamples": [
+        {
+          "time": "2022-03-21T09:00:00+00:00",
+          "volumeRatio": 1.924,
+          "prior72hHigh": "95.7590",
+          "signalClose": "96.4010",
+          "nextHourOpenReference": "96.3980",
+          "confirmedSupportCandidate": "90.2010",
+          "supportDistancePercent": 6.4286,
+          "forward24hMaxHighPercent": 1.4129,
+          "forward24hMinLowPercent": -3.4887,
+          "forward24hClosePercent": -2.7449,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2022-03-30T18:00:00+00:00",
+          "volumeRatio": 2.372,
+          "prior72hHigh": "110.0000",
+          "signalClose": "110.5660",
+          "nextHourOpenReference": "110.5610",
+          "confirmedSupportCandidate": "103.3000",
+          "supportDistancePercent": 6.5674,
+          "forward24hMaxHighPercent": 0.3419,
+          "forward24hMinLowPercent": -8.2172,
+          "forward24hClosePercent": -6.2572,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2022-04-21T12:00:00+00:00",
+          "volumeRatio": 2.842,
+          "prior72hHigh": "97.4200",
+          "signalClose": "97.7230",
+          "nextHourOpenReference": "97.7230",
+          "confirmedSupportCandidate": "92.2850",
+          "supportDistancePercent": 5.5647,
+          "forward24hMaxHighPercent": 1.7161,
+          "forward24hMinLowPercent": -8.1383,
+          "forward24hClosePercent": -1.4705,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        }
+      ],
+      "coverage": {
+        "price": "observed",
+        "volume": "observed",
+        "takerVolume": "observed",
+        "oi": "event-window only",
+        "funding": "archived settlements",
+        "mark": "focused months",
+        "historicHolders": "missing",
+        "verifiedProjectWallets": "missing",
+        "newsCausation": "not verified"
+      },
+      "note": "Trough and peak selected retrospectively; descriptive pattern, not executable return or evidence of manipulation. No historical holder data fabricated.",
+      "marketComparisons": []
+    },
+    {
+      "key": "BNTUSDT-2023-09",
+      "symbol": "BNTUSDT",
+      "venue": "Binance USD-M perpetual",
+      "role": "historical",
+      "status": "observed",
+      "period": [
+        "2023-09-01T00:00:00+00:00",
+        "2023-12-01T00:00:00+00:00"
+      ],
+      "hours": 2184,
+      "gaps": 0,
+      "start": "2023-11-03T01:00:00+00:00",
+      "peak": "2023-11-13T01:00:00+00:00",
+      "postEnd": "2023-11-27T02:00:00+00:00",
+      "startClose": "0.5129000",
+      "peakHigh": "1.9500000",
+      "peakClose": "1.5687000",
+      "closeReturnToPeakHourPercent": 205.8491,
+      "anchorMethod": "maximum high within predefined window",
+      "eventTime": null,
+      "chartStart": "2023-11-10T01:00:00+00:00",
+      "chartEnd": "2023-11-16T02:00:00+00:00",
+      "riseToPeakHighPercent": 280.1911,
+      "postPeakMinLowPercent": -64.7949,
+      "postPeak14dAvailable": true,
+      "unknownPeakBarSequence": true,
+      "maxHourlyHighLowRangePercent": 30.5603,
+      "maxRangeHour": "2023-11-13T00:00:00+00:00",
+      "oiQuantityChange24hAtPeakPercent": 32.2689,
+      "oiComparisonTimes": [
+        "2023-11-12T01:00:00+00:00",
+        "2023-11-13T01:00:00+00:00"
+      ],
+      "oiRows": 1440,
+      "actualFundingRows": 273,
+      "fundingRiseRows": 30,
+      "sumFundingRisePercent": 1.1104,
+      "fundingIntervals": [
+        8
+      ],
+      "markHours": 0,
+      "tags": [
+        "单小时大幅摆动 / 尖峰风险",
+        "阶段性大幅拉升",
+        "高位后深度回撤",
+        "峰值前24h OI数量增加"
+      ],
+      "breakoutTriggers": 14,
+      "failedBreakoutLabels": 3,
+      "failureExamples": [
+        {
+          "time": "2023-10-01T23:00:00+00:00",
+          "volumeRatio": 4.919,
+          "prior72hHigh": "0.4227000",
+          "signalClose": "0.4274000",
+          "nextHourOpenReference": "0.4275000",
+          "confirmedSupportCandidate": "0.4090000",
+          "supportDistancePercent": 4.3275,
+          "forward24hMaxHighPercent": 0.0702,
+          "forward24hMinLowPercent": -7.9766,
+          "forward24hClosePercent": -6.6199,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2023-10-17T01:00:00+00:00",
+          "volumeRatio": 7.324,
+          "prior72hHigh": "0.5925000",
+          "signalClose": "0.6122000",
+          "nextHourOpenReference": "0.6123000",
+          "confirmedSupportCandidate": "0.5425000",
+          "supportDistancePercent": 11.3996,
+          "forward24hMaxHighPercent": 2.0905,
+          "forward24hMinLowPercent": -9.0642,
+          "forward24hClosePercent": -6.4674,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2023-10-18T14:00:00+00:00",
+          "volumeRatio": 17.382,
+          "prior72hHigh": "0.6251000",
+          "signalClose": "0.6309000",
+          "nextHourOpenReference": "0.6310000",
+          "confirmedSupportCandidate": "0.5846000",
+          "supportDistancePercent": 7.3534,
+          "forward24hMaxHighPercent": 3.0111,
+          "forward24hMinLowPercent": -15.9271,
+          "forward24hClosePercent": -6.4659,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        }
+      ],
+      "coverage": {
+        "price": "observed",
+        "volume": "observed",
+        "takerVolume": "observed",
+        "oi": "event-window only",
+        "funding": "archived settlements",
+        "mark": "missing",
+        "historicHolders": "missing",
+        "verifiedProjectWallets": "missing",
+        "newsCausation": "not verified"
+      },
+      "note": "Trough and peak selected retrospectively; descriptive pattern, not executable return or evidence of manipulation. No historical holder data fabricated.",
+      "marketComparisons": [
+        {
+          "symbol": "BTCUSDT",
+          "sameHours": true,
+          "closeReturnPercent": 7.5827,
+          "relativeCloseMovePp": 198.2664
+        },
+        {
+          "symbol": "ETHUSDT",
+          "sameHours": true,
+          "closeReturnPercent": 15.3717,
+          "relativeCloseMovePp": 190.4774
+        }
+      ]
+    },
+    {
+      "key": "BTCUSDT-2023-09",
+      "symbol": "BTCUSDT",
+      "venue": "Binance USD-M perpetual",
+      "role": "market-control",
+      "status": "observed",
+      "period": [
+        "2023-09-01T00:00:00+00:00",
+        "2024-02-01T00:00:00+00:00"
+      ],
+      "hours": 3672,
+      "gaps": 0,
+      "start": "2024-01-03T12:00:00+00:00",
+      "peak": "2024-01-11T14:00:00+00:00",
+      "postEnd": "2024-01-25T15:00:00+00:00",
+      "startClose": "42795.80",
+      "peakHigh": "49027.50",
+      "peakClose": "48577.90",
+      "closeReturnToPeakHourPercent": 13.5109,
+      "anchorMethod": "maximum high within predefined window",
+      "eventTime": null,
+      "chartStart": "2024-01-08T14:00:00+00:00",
+      "chartEnd": "2024-01-14T15:00:00+00:00",
+      "riseToPeakHighPercent": 14.5615,
+      "postPeakMinLowPercent": -21.3809,
+      "postPeak14dAvailable": true,
+      "unknownPeakBarSequence": true,
+      "maxHourlyHighLowRangePercent": 13.9329,
+      "maxRangeHour": "2023-10-23T22:00:00+00:00",
+      "oiQuantityChange24hAtPeakPercent": -3.4149,
+      "oiComparisonTimes": [
+        "2024-01-10T14:00:00+00:00",
+        "2024-01-11T14:00:00+00:00"
+      ],
+      "oiRows": 1440,
+      "actualFundingRows": 459,
+      "fundingRiseRows": 24,
+      "sumFundingRisePercent": 0.24,
+      "fundingIntervals": [
+        8
+      ],
+      "markHours": 0,
+      "tags": [
+        "峰值前24h OI数量减少"
+      ],
+      "breakoutTriggers": 24,
+      "failedBreakoutLabels": 7,
+      "failureExamples": [
+        {
+          "time": "2023-09-07T22:00:00+00:00",
+          "volumeRatio": 11.663,
+          "prior72hHigh": "26052.00",
+          "signalClose": "26149.50",
+          "nextHourOpenReference": "26149.60",
+          "confirmedSupportCandidate": "25602.30",
+          "supportDistancePercent": 2.093,
+          "forward24hMaxHighPercent": 1.101,
+          "forward24hMinLowPercent": -1.987,
+          "forward24hClosePercent": -1.0371,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2023-09-28T16:00:00+00:00",
+          "volumeRatio": 5.527,
+          "prior72hHigh": "26900",
+          "signalClose": "27012.30",
+          "nextHourOpenReference": "27012.30",
+          "confirmedSupportCandidate": "26373.80",
+          "supportDistancePercent": 2.3637,
+          "forward24hMaxHighPercent": 1.0973,
+          "forward24hMinLowPercent": -1.4338,
+          "forward24hClosePercent": -0.509,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2023-11-01T21:00:00+00:00",
+          "volumeRatio": 7.741,
+          "prior72hHigh": "35249",
+          "signalClose": "35493.70",
+          "nextHourOpenReference": "35494.50",
+          "confirmedSupportCandidate": "34076",
+          "supportDistancePercent": 3.9964,
+          "forward24hMaxHighPercent": 1.4239,
+          "forward24hMinLowPercent": -3.3653,
+          "forward24hClosePercent": -1.6656,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        }
+      ],
+      "coverage": {
+        "price": "observed",
+        "volume": "observed",
+        "takerVolume": "observed",
+        "oi": "event-window only",
+        "funding": "archived settlements",
+        "mark": "missing",
+        "historicHolders": "missing",
+        "verifiedProjectWallets": "missing",
+        "newsCausation": "not verified"
+      },
+      "note": "Trough and peak selected retrospectively; descriptive pattern, not executable return or evidence of manipulation. No historical holder data fabricated.",
+      "marketComparisons": [
+        {
+          "symbol": "BTCUSDT",
+          "sameHours": true,
+          "closeReturnPercent": 13.5109,
+          "relativeCloseMovePp": 0.0
+        },
+        {
+          "symbol": "ETHUSDT",
+          "sameHours": true,
+          "closeReturnPercent": 19.2967,
+          "relativeCloseMovePp": -5.7858
+        }
+      ]
+    },
+    {
+      "key": "ETHUSDT-2023-09",
+      "symbol": "ETHUSDT",
+      "venue": "Binance USD-M perpetual",
+      "role": "market-control",
+      "status": "observed",
+      "period": [
+        "2023-09-01T00:00:00+00:00",
+        "2024-02-01T00:00:00+00:00"
+      ],
+      "hours": 3672,
+      "gaps": 0,
+      "start": "2024-01-03T12:00:00+00:00",
+      "peak": "2024-01-12T15:00:00+00:00",
+      "postEnd": "2024-01-26T16:00:00+00:00",
+      "startClose": "2249.55",
+      "peakHigh": "2719.89",
+      "peakClose": "2648.40",
+      "closeReturnToPeakHourPercent": 17.7302,
+      "anchorMethod": "maximum high within predefined window",
+      "eventTime": null,
+      "chartStart": "2024-01-09T15:00:00+00:00",
+      "chartEnd": "2024-01-15T16:00:00+00:00",
+      "riseToPeakHighPercent": 20.9082,
+      "postPeakMinLowPercent": -20.3093,
+      "postPeak14dAvailable": true,
+      "unknownPeakBarSequence": true,
+      "maxHourlyHighLowRangePercent": 10.5319,
+      "maxRangeHour": "2024-01-03T12:00:00+00:00",
+      "oiQuantityChange24hAtPeakPercent": 9.6298,
+      "oiComparisonTimes": [
+        "2024-01-11T15:00:00+00:00",
+        "2024-01-12T15:00:00+00:00"
+      ],
+      "oiRows": 1440,
+      "actualFundingRows": 459,
+      "fundingRiseRows": 28,
+      "sumFundingRisePercent": 0.28,
+      "fundingIntervals": [
+        8
+      ],
+      "markHours": 0,
+      "tags": [
+        "峰值前24h OI数量增加"
+      ],
+      "breakoutTriggers": 35,
+      "failedBreakoutLabels": 17,
+      "failureExamples": [
+        {
+          "time": "2023-09-14T01:00:00+00:00",
+          "volumeRatio": 4.508,
+          "prior72hHigh": "1626.78",
+          "signalClose": "1635.20",
+          "nextHourOpenReference": "1635.20",
+          "confirmedSupportCandidate": "1594.50",
+          "supportDistancePercent": 2.489,
+          "forward24hMaxHighPercent": 0.5657,
+          "forward24hMinLowPercent": -1.4579,
+          "forward24hClosePercent": -0.7271,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2023-09-15T23:00:00+00:00",
+          "volumeRatio": 4.922,
+          "prior72hHigh": "1644.45",
+          "signalClose": "1648.96",
+          "nextHourOpenReference": "1648.95",
+          "confirmedSupportCandidate": "1616.60",
+          "supportDistancePercent": 1.9619,
+          "forward24hMaxHighPercent": 0.2438,
+          "forward24hMinLowPercent": -1.1268,
+          "forward24hClosePercent": -0.8339,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2023-09-18T13:00:00+00:00",
+          "volumeRatio": 5.605,
+          "prior72hHigh": "1658.88",
+          "signalClose": "1664.58",
+          "nextHourOpenReference": "1664.57",
+          "confirmedSupportCandidate": "1598.58",
+          "supportDistancePercent": 3.9644,
+          "forward24hMaxHighPercent": 0.1394,
+          "forward24hMinLowPercent": -2.376,
+          "forward24hClosePercent": -1.2838,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        }
+      ],
+      "coverage": {
+        "price": "observed",
+        "volume": "observed",
+        "takerVolume": "observed",
+        "oi": "event-window only",
+        "funding": "archived settlements",
+        "mark": "missing",
+        "historicHolders": "missing",
+        "verifiedProjectWallets": "missing",
+        "newsCausation": "not verified"
+      },
+      "note": "Trough and peak selected retrospectively; descriptive pattern, not executable return or evidence of manipulation. No historical holder data fabricated.",
+      "marketComparisons": [
+        {
+          "symbol": "BTCUSDT",
+          "sameHours": true,
+          "closeReturnPercent": 3.9707,
+          "relativeCloseMovePp": 13.7595
+        },
+        {
+          "symbol": "ETHUSDT",
+          "sameHours": true,
+          "closeReturnPercent": 17.7302,
+          "relativeCloseMovePp": 0.0
+        }
+      ]
+    },
+    {
+      "key": "BTCUSDT-2025-03",
+      "symbol": "BTCUSDT",
+      "venue": "Binance USD-M perpetual",
+      "role": "market-control",
+      "status": "observed",
+      "period": [
+        "2025-03-01T00:00:00+00:00",
+        "2025-06-01T00:00:00+00:00"
+      ],
+      "hours": 2208,
+      "gaps": 0,
+      "start": "2025-05-12T18:00:00+00:00",
+      "peak": "2025-05-22T17:00:00+00:00",
+      "postEnd": "2025-06-01T00:00:00+00:00",
+      "startClose": "101583.70",
+      "peakHigh": "111959.50",
+      "peakClose": "111464.10",
+      "closeReturnToPeakHourPercent": 9.7264,
+      "anchorMethod": "maximum high within predefined window",
+      "eventTime": null,
+      "chartStart": "2025-05-19T17:00:00+00:00",
+      "chartEnd": "2025-05-25T18:00:00+00:00",
+      "riseToPeakHighPercent": 10.214,
+      "postPeakMinLowPercent": -7.9738,
+      "postPeak14dAvailable": false,
+      "unknownPeakBarSequence": true,
+      "maxHourlyHighLowRangePercent": 7.4067,
+      "maxRangeHour": "2025-03-07T00:00:00+00:00",
+      "oiQuantityChange24hAtPeakPercent": 1.9596,
+      "oiComparisonTimes": [
+        "2025-05-21T17:00:00+00:00",
+        "2025-05-22T17:00:00+00:00"
+      ],
+      "oiRows": 1440,
+      "actualFundingRows": 276,
+      "fundingRiseRows": 30,
+      "sumFundingRisePercent": 0.18263,
+      "fundingIntervals": [
+        8
+      ],
+      "markHours": 0,
+      "tags": [
+        "峰值前24h OI数量增加"
+      ],
+      "breakoutTriggers": 17,
+      "failedBreakoutLabels": 8,
+      "failureExamples": [
+        {
+          "time": "2025-03-14T16:00:00+00:00",
+          "volumeRatio": 5.221,
+          "prior72hHigh": "84487.00",
+          "signalClose": "84692.20",
+          "nextHourOpenReference": "84692.10",
+          "confirmedSupportCandidate": "81730.90",
+          "supportDistancePercent": 3.4964,
+          "forward24hMaxHighPercent": 0.2559,
+          "forward24hMinLowPercent": -1.3314,
+          "forward24hClosePercent": -0.4679,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2025-03-19T19:00:00+00:00",
+          "volumeRatio": 9.226,
+          "prior72hHigh": "84855.00",
+          "signalClose": "85576.00",
+          "nextHourOpenReference": "85576.10",
+          "confirmedSupportCandidate": "82501.80",
+          "supportDistancePercent": 3.5925,
+          "forward24hMaxHighPercent": 2.2482,
+          "forward24hMinLowPercent": -2.2933,
+          "forward24hClosePercent": -1.816,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2025-04-02T16:00:00+00:00",
+          "volumeRatio": 7.475,
+          "prior72hHigh": "86100.00",
+          "signalClose": "86709.50",
+          "nextHourOpenReference": "86709.50",
+          "confirmedSupportCandidate": "84424.10",
+          "supportDistancePercent": 2.6357,
+          "forward24hMaxHighPercent": 2.0649,
+          "forward24hMinLowPercent": -6.386,
+          "forward24hClosePercent": -5.4293,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        }
+      ],
+      "coverage": {
+        "price": "observed",
+        "volume": "observed",
+        "takerVolume": "observed",
+        "oi": "event-window only",
+        "funding": "archived settlements",
+        "mark": "missing",
+        "historicHolders": "missing",
+        "verifiedProjectWallets": "missing",
+        "newsCausation": "not verified"
+      },
+      "note": "Trough and peak selected retrospectively; descriptive pattern, not executable return or evidence of manipulation. No historical holder data fabricated.",
+      "marketComparisons": [
+        {
+          "symbol": "BTCUSDT",
+          "sameHours": true,
+          "closeReturnPercent": 9.7264,
+          "relativeCloseMovePp": 0.0
+        },
+        {
+          "symbol": "ETHUSDT",
+          "sameHours": true,
+          "closeReturnPercent": 9.2043,
+          "relativeCloseMovePp": 0.5221
+        }
+      ]
+    },
+    {
+      "key": "ETHUSDT-2025-03",
+      "symbol": "ETHUSDT",
+      "venue": "Binance USD-M perpetual",
+      "role": "market-control",
+      "status": "observed",
+      "period": [
+        "2025-03-01T00:00:00+00:00",
+        "2025-06-01T00:00:00+00:00"
+      ],
+      "hours": 2208,
+      "gaps": 0,
+      "start": "2025-05-18T20:00:00+00:00",
+      "peak": "2025-05-29T02:00:00+00:00",
+      "postEnd": "2025-06-01T00:00:00+00:00",
+      "startClose": "2392.37",
+      "peakHigh": "2788.88",
+      "peakClose": "2770.21",
+      "closeReturnToPeakHourPercent": 15.7935,
+      "anchorMethod": "maximum high within predefined window",
+      "eventTime": null,
+      "chartStart": "2025-05-26T02:00:00+00:00",
+      "chartEnd": "2025-06-01T03:00:00+00:00",
+      "riseToPeakHighPercent": 16.5739,
+      "postPeakMinLowPercent": -11.2906,
+      "postPeak14dAvailable": false,
+      "unknownPeakBarSequence": true,
+      "maxHourlyHighLowRangePercent": 13.0192,
+      "maxRangeHour": "2025-03-02T16:00:00+00:00",
+      "oiQuantityChange24hAtPeakPercent": 5.7901,
+      "oiComparisonTimes": [
+        "2025-05-28T02:00:00+00:00",
+        "2025-05-29T02:00:00+00:00"
+      ],
+      "oiRows": 1440,
+      "actualFundingRows": 276,
+      "fundingRiseRows": 31,
+      "sumFundingRisePercent": 0.19244,
+      "fundingIntervals": [
+        8
+      ],
+      "markHours": 0,
+      "tags": [
+        "峰值前24h OI数量增加"
+      ],
+      "breakoutTriggers": 13,
+      "failedBreakoutLabels": 5,
+      "failureExamples": [
+        {
+          "time": "2025-04-14T11:00:00+00:00",
+          "volumeRatio": 3.652,
+          "prior72hHigh": "1669.85",
+          "signalClose": "1678.40",
+          "nextHourOpenReference": "1678.40",
+          "confirmedSupportCandidate": "1611.51",
+          "supportDistancePercent": 3.9853,
+          "forward24hMaxHighPercent": 0.7847,
+          "forward24hMinLowPercent": -4.4924,
+          "forward24hClosePercent": -2.7461,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2025-05-01T11:00:00+00:00",
+          "volumeRatio": 4.103,
+          "prior72hHigh": "1842.82",
+          "signalClose": "1847.00",
+          "nextHourOpenReference": "1847.00",
+          "confirmedSupportCandidate": "1801.24",
+          "supportDistancePercent": 2.4775,
+          "forward24hMaxHighPercent": 1.392,
+          "forward24hMinLowPercent": -1.895,
+          "forward24hClosePercent": -1.0016,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        },
+        {
+          "time": "2025-05-10T23:00:00+00:00",
+          "volumeRatio": 1.682,
+          "prior72hHigh": "2544.79",
+          "signalClose": "2576.70",
+          "nextHourOpenReference": "2576.70",
+          "confirmedSupportCandidate": "2325.31",
+          "supportDistancePercent": 9.7563,
+          "forward24hMaxHighPercent": 1.2147,
+          "forward24hMinLowPercent": -5.5036,
+          "forward24hClosePercent": -2.8928,
+          "failedBreakoutLabel": true,
+          "note": "Research trigger, not recommendation or filled trade; forward fields are outcome labels; one trigger per 24h per contract/window."
+        }
+      ],
+      "coverage": {
+        "price": "observed",
+        "volume": "observed",
+        "takerVolume": "observed",
+        "oi": "event-window only",
+        "funding": "archived settlements",
+        "mark": "missing",
+        "historicHolders": "missing",
+        "verifiedProjectWallets": "missing",
+        "newsCausation": "not verified"
+      },
+      "note": "Trough and peak selected retrospectively; descriptive pattern, not executable return or evidence of manipulation. No historical holder data fabricated.",
+      "marketComparisons": [
+        {
+          "symbol": "BTCUSDT",
+          "sameHours": true,
+          "closeReturnPercent": 4.2119,
+          "relativeCloseMovePp": 11.5816
+        },
+        {
+          "symbol": "ETHUSDT",
+          "sameHours": true,
+          "closeReturnPercent": 15.7935,
+          "relativeCloseMovePp": 0.0
+        }
+      ]
+    }
+  ],
+  "archive": {
+    "verifiedFiles": 300,
+    "missingFiles": 4,
+    "unavailableFiles": 0,
+    "manifest": "artifacts/research-archive/manifest.json"
+  },
+  "automaticTradingEnabled": false
+}

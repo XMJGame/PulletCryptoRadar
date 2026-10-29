@@ -1,0 +1,67 @@
+{
+  "version": "Structure-R1",
+  "initialCash": 1000,
+  "leverage": 10,
+  "marginCap": 100,
+  "maxPositions": 2,
+  "riskFraction": 0.01,
+  "riskCap": 10,
+  "dailyLossCap": 30,
+  "drawdownEntryPause": 0.15,
+  "feePerSide": 0.0005,
+  "slippagePerSide": 0.0005,
+  "maintenanceRate": 0.005,
+  "fundingRiskBuffer": 0.001,
+  "atrBars": 14,
+  "stopAtrBuffer": 0.5,
+  "liquidationSafetyAtr": 0.5,
+  "trailAtr": 3,
+  "maximumHours": 168,
+  "pivotRightBars": 2,
+  "compressionHours": 72,
+  "compressionRangeMax": 0.12,
+  "positionInRangeMin": 0.7,
+  "accumulationVolumeRatio": 1.2,
+  "breakoutBuffer": 0.002,
+  "breakoutVolumeRatio": 1.5,
+  "gainer24hMin": 0.08,
+  "gainer24hMax": 0.4,
+  "oi24hMin": 0,
+  "oi24hMax": 0.3,
+  "oiPublicationLagSeconds": 300,
+  "oiMaximumAgeSeconds": 900,
+  "cooldownHours": 24,
+  "firstFraction": 0.3,
+  "secondFraction": 0.3,
+  "targetRiskFallback": [
+    2,
+    4
+  ],
+  "windows": [
+    {
+      "name": "早期诊断",
+      "start": "2022-01-01",
+      "end": "2024-07-01"
+    },
+    {
+      "name": "中段诊断",
+      "start": "2024-07-01",
+      "end": "2026-01-01"
+    },
+    {
+      "name": "后段诊断（已看过）",
+      "start": "2026-01-01",
+      "end": "2027-01-01"
+    }
+  ],
+  "limitations": [
+    "所有样本事先已看过，没有真正独立留出；按日期分段仅诊断。",
+    "手选17合约，不含当时全市场可交易全集；B仅涨幅候选代理，不是涨幅榜回测。",
+    "历史OI只在事后选定事件附近采集，覆盖偏差本身与结果有关；不能据此认定多维策略有效。",
+    "尚无历史地址、已核对钱包、消息因果、精确合约步长、订单簿与真实分层维持保证金。",
+    "小时内先后未知时，先估算强平，再止损，再分批止盈；保守压力情景不代表真实成交路径。",
+    "有历史标记价时用标记价极值做清算压力检查；缺失时用成交价代理，单独计数。",
+    "费用/滑点/维持保证金是假设；资金费采用实际结算率乘当小时标记开盘价或成交开盘代理。",
+    "期末平仓与缺口后首个开盘强制退出单独标记；缺口内价格与强平路径未知。"
+  ]
+}

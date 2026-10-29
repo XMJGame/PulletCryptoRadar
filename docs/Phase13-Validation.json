@@ -1,0 +1,32 @@
+{
+  "validatedAt": "2026-10-29T19:23:03.8237698+08:00",
+  "backendTests": 326,
+  "frontendTests": 21,
+  "pythonReplayTests": 17,
+  "pythonArchiveTestsPreviouslyPassed": 11,
+  "replayVariants": 24,
+  "researchNetworkRequests": 0,
+  "engineHashVerified": true,
+  "maximumMarginObserved": 175.447,
+  "paperCash": 1000,
+  "paperEnabled": false,
+  "paperTrades": 0,
+  "networkEconomy": true,
+  "webSockets": false,
+  "dailyBudget": 150000000,
+  "monthlyBudget": 5000000000,
+  "usageAtValidation": {
+    "day": "2026-10-29",
+    "month": "2026-10",
+    "dayBytes": 3517217,
+    "monthBytes": 3517217,
+    "requests": 619,
+    "blocked": 0
+  },
+  "uiNavCount": 4,
+  "uiOverflow": false,
+  "browserConsoleErrors": 0,
+  "keyUnknownStatus": 404,
+  "keyInvalidStatus": 404,
+  "vpnDirectConfirmed": false
+}

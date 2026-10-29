@@ -1,0 +1,2386 @@
+{
+  "id": "e7fa3cdd-dc4b-4bd4-960d-59ff5a5937c4",
+  "from": "2026-10-29T14:10:50.2977248+08:00",
+  "to": "2026-10-29T14:24:05.5499163+08:00",
+  "frames": 16,
+  "observations": 7993,
+  "gapCount": 0,
+  "trace": [
+    {
+      "time": "2026-10-29T14:10:50.2977248+08:00",
+      "assetId": 392,
+      "symbol": "ARIAUSDT",
+      "price": null,
+      "up": {
+        "direction": 0,
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "score": null,
+        "dataConfidence": 0,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "上涨结构：5m % / 15m %；价格 RZ ",
+            "sourceTime": null
+          },
+          {
+            "family": "Volume",
+            "weight": 20,
+            "strength": null,
+            "confirmed": false,
+            "description": "成交量 RZ 缺失或过期",
+            "sourceTime": null
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Volume",
+          "Structure",
+          "OpenInterest",
+          "Flow",
+          "Trader",
+          "Funding",
+          "MarketCap"
+        ],
+        "reasons": [
+          "实时价格缺失、过期或源时间异常，暂停生成候选。",
+          "上涨结构：5m % / 15m %；价格 RZ ",
+          "成交量 RZ 缺失或过期",
+          "结构历史不足或已过期",
+          "Phase 3：仅价格、成交量与技术结构；置信度上限 60，未验证预测能力。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "down": {
+        "direction": 1,
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "score": null,
+        "dataConfidence": 0,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 20,
+            "strength": null,
+            "confirmed": false,
+            "description": "下跌压力：1m % / 5m % / 15m %；价格 RZ Unknown",
+            "sourceTime": null
+          },
+          {
+            "family": "Volume",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "成交量 RZ 缺失或过期",
+            "sourceTime": null
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Volume",
+          "Structure",
+          "OpenInterest",
+          "Flow",
+          "Liquidation",
+          "Funding/Crowding"
+        ],
+        "reasons": [
+          "实时价格缺失、过期或源时间异常，暂停生成候选。",
+          "下跌压力：1m % / 5m % / 15m %；价格 RZ Unknown",
+          "成交量 RZ 缺失或过期",
+          "结构历史不足或已过期",
+          "Phase 3：仅价格、成交量与技术结构；置信度上限 60，未验证预测能力。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "episodeId": null
+    },
+    {
+      "time": "2026-10-29T14:11:50.3783195+08:00",
+      "assetId": 392,
+      "symbol": "ARIAUSDT",
+      "price": 0.09043,
+      "up": {
+        "direction": 0,
+        "strategyVersion": "UpMove-2.0",
+        "score": null,
+        "dataConfidence": 0,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "上涨结构：5m % / 15m %；价格 RZ ",
+            "sourceTime": "2026-10-29T14:11:46.844+08:00"
+          },
+          {
+            "family": "Volume",
+            "weight": 20,
+            "strength": null,
+            "confirmed": false,
+            "description": "成交量 RZ 缺失或过期",
+            "sourceTime": "2026-10-29T13:54:59.999+08:00"
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          },
+          {
+            "family": "OpenInterest",
+            "weight": 20,
+            "strength": 0.004643503795467434,
+            "confirmed": false,
+            "description": "OI 数量 15m 0.06% · OI RZ -0.35 · Unknown",
+            "sourceTime": "2026-10-29T14:05:00+08:00"
+          },
+          {
+            "family": "Flow",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "Taker 主动买量占比 Unknown",
+            "sourceTime": null
+          },
+          {
+            "family": "Trader",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "Top Position 15m 变化  个百分点；Top Account 多头占比 ",
+            "sourceTime": null
+          },
+          {
+            "family": "Funding",
+            "weight": 5,
+            "strength": 0.7,
+            "confirmed": false,
+            "description": "Funding 0.000050；拥挤状态 Unknown",
+            "sourceTime": "2026-10-29T14:11:50.001+08:00"
+          },
+          {
+            "family": "MarketCap",
+            "weight": 5,
+            "strength": null,
+            "confirmed": false,
+            "description": "市值/流动性映射未接入",
+            "sourceTime": null
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Volume",
+          "Structure",
+          "Flow",
+          "Trader",
+          "MarketCap",
+          "OnChain",
+          "Wallet"
+        ],
+        "reasons": [
+          "上涨结构：5m % / 15m %；价格 RZ ",
+          "成交量 RZ 缺失或过期",
+          "结构历史不足或已过期",
+          "OI 数量 15m 0.06% · OI RZ -0.35 · Unknown",
+          "Taker 主动买量占比 Unknown",
+          "Top Position 15m 变化  个百分点；Top Account 多头占比 ",
+          "Funding 0.000050；拥挤状态 Unknown",
+          "市值/流动性映射未接入",
+          "V2 使用 OI 数量变化；市值/链上风险仍未知。强平为观测样本，无法保证完整。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "down": {
+        "direction": 1,
+        "strategyVersion": "DownMove-2.0",
+        "score": null,
+        "dataConfidence": 0,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 20,
+            "strength": null,
+            "confirmed": false,
+            "description": "下跌压力：1m % / 5m % / 15m %；价格 RZ Unknown",
+            "sourceTime": "2026-10-29T14:11:46.844+08:00"
+          },
+          {
+            "family": "Volume",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "成交量 RZ 缺失或过期",
+            "sourceTime": "2026-10-29T13:54:59.999+08:00"
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          },
+          {
+            "family": "OpenInterest",
+            "weight": 20,
+            "strength": 0.06242810177416972,
+            "confirmed": false,
+            "description": "OI 数量 15m 0.06% · OI RZ -0.35 · Unknown",
+            "sourceTime": "2026-10-29T14:05:00+08:00"
+          },
+          {
+            "family": "Flow",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "Taker 主动买量占比 Unknown",
+            "sourceTime": null
+          },
+          {
+            "family": "Liquidation",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "观测多头强平 15m $（1s 抽样，非完整总额）",
+            "sourceTime": null
+          },
+          {
+            "family": "Funding",
+            "weight": 5,
+            "strength": null,
+            "confirmed": false,
+            "description": "Funding/多头拥挤作为风险背景，不作为独立确认家族",
+            "sourceTime": "2026-10-29T14:11:50.001+08:00"
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Volume",
+          "Structure",
+          "Flow",
+          "Liquidation",
+          "Funding",
+          "OnChain",
+          "Wallet"
+        ],
+        "reasons": [
+          "下跌压力：1m % / 5m % / 15m %；价格 RZ Unknown",
+          "成交量 RZ 缺失或过期",
+          "结构历史不足或已过期",
+          "OI 数量 15m 0.06% · OI RZ -0.35 · Unknown",
+          "Taker 主动买量占比 Unknown",
+          "观测多头强平 15m $（1s 抽样，非完整总额）",
+          "Funding/多头拥挤作为风险背景，不作为独立确认家族",
+          "V2 使用 OI 数量变化；市值/链上风险仍未知。强平为观测样本，无法保证完整。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "episodeId": null
+    },
+    {
+      "time": "2026-10-29T14:12:50.3925283+08:00",
+      "assetId": 392,
+      "symbol": "ARIAUSDT",
+      "price": 0.08988,
+      "up": {
+        "direction": 0,
+        "strategyVersion": "UpMove-2.0",
+        "score": null,
+        "dataConfidence": 0,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "上涨结构：5m % / 15m %；价格 RZ ",
+            "sourceTime": "2026-10-29T14:12:48.427+08:00"
+          },
+          {
+            "family": "Volume",
+            "weight": 20,
+            "strength": null,
+            "confirmed": false,
+            "description": "成交量 RZ 缺失或过期",
+            "sourceTime": "2026-10-29T13:54:59.999+08:00"
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          },
+          {
+            "family": "OpenInterest",
+            "weight": 20,
+            "strength": 0.004643503795467434,
+            "confirmed": false,
+            "description": "OI 数量 15m 0.06% · OI RZ -0.35 · Unknown",
+            "sourceTime": "2026-10-29T14:05:00+08:00"
+          },
+          {
+            "family": "Flow",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "Taker 主动买量占比 Unknown",
+            "sourceTime": null
+          },
+          {
+            "family": "Trader",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "Top Position 15m 变化  个百分点；Top Account 多头占比 ",
+            "sourceTime": null
+          },
+          {
+            "family": "Funding",
+            "weight": 5,
+            "strength": 0.7,
+            "confirmed": false,
+            "description": "Funding 0.000050；拥挤状态 Unknown",
+            "sourceTime": "2026-10-29T14:12:50.001+08:00"
+          },
+          {
+            "family": "MarketCap",
+            "weight": 5,
+            "strength": null,
+            "confirmed": false,
+            "description": "市值/流动性映射未接入",
+            "sourceTime": null
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Volume",
+          "Structure",
+          "Flow",
+          "Trader",
+          "MarketCap",
+          "OnChain",
+          "Wallet"
+        ],
+        "reasons": [
+          "上涨结构：5m % / 15m %；价格 RZ ",
+          "成交量 RZ 缺失或过期",
+          "结构历史不足或已过期",
+          "OI 数量 15m 0.06% · OI RZ -0.35 · Unknown",
+          "Taker 主动买量占比 Unknown",
+          "Top Position 15m 变化  个百分点；Top Account 多头占比 ",
+          "Funding 0.000050；拥挤状态 Unknown",
+          "市值/流动性映射未接入",
+          "V2 使用 OI 数量变化；市值/链上风险仍未知。强平为观测样本，无法保证完整。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "down": {
+        "direction": 1,
+        "strategyVersion": "DownMove-2.0",
+        "score": null,
+        "dataConfidence": 0,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 20,
+            "strength": null,
+            "confirmed": false,
+            "description": "下跌压力：1m -1.07% / 5m % / 15m %；价格 RZ Unknown",
+            "sourceTime": "2026-10-29T14:12:48.427+08:00"
+          },
+          {
+            "family": "Volume",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "成交量 RZ 缺失或过期",
+            "sourceTime": "2026-10-29T13:54:59.999+08:00"
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          },
+          {
+            "family": "OpenInterest",
+            "weight": 20,
+            "strength": 0.06242810177416972,
+            "confirmed": false,
+            "description": "OI 数量 15m 0.06% · OI RZ -0.35 · Unknown",
+            "sourceTime": "2026-10-29T14:05:00+08:00"
+          },
+          {
+            "family": "Flow",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "Taker 主动买量占比 Unknown",
+            "sourceTime": null
+          },
+          {
+            "family": "Liquidation",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "观测多头强平 15m $（1s 抽样，非完整总额）",
+            "sourceTime": null
+          },
+          {
+            "family": "Funding",
+            "weight": 5,
+            "strength": null,
+            "confirmed": false,
+            "description": "Funding/多头拥挤作为风险背景，不作为独立确认家族",
+            "sourceTime": "2026-10-29T14:12:50.001+08:00"
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Volume",
+          "Structure",
+          "Flow",
+          "Liquidation",
+          "Funding",
+          "OnChain",
+          "Wallet"
+        ],
+        "reasons": [
+          "下跌压力：1m -1.07% / 5m % / 15m %；价格 RZ Unknown",
+          "成交量 RZ 缺失或过期",
+          "结构历史不足或已过期",
+          "OI 数量 15m 0.06% · OI RZ -0.35 · Unknown",
+          "Taker 主动买量占比 Unknown",
+          "观测多头强平 15m $（1s 抽样，非完整总额）",
+          "Funding/多头拥挤作为风险背景，不作为独立确认家族",
+          "V2 使用 OI 数量变化；市值/链上风险仍未知。强平为观测样本，无法保证完整。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "episodeId": null
+    },
+    {
+      "time": "2026-10-29T14:13:28.56704+08:00",
+      "assetId": 392,
+      "symbol": "ARIAUSDT",
+      "price": null,
+      "up": {
+        "direction": 0,
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "score": null,
+        "dataConfidence": 0,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "上涨结构：5m % / 15m %；价格 RZ ",
+            "sourceTime": null
+          },
+          {
+            "family": "Volume",
+            "weight": 20,
+            "strength": null,
+            "confirmed": false,
+            "description": "成交量 RZ 缺失或过期",
+            "sourceTime": null
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Volume",
+          "Structure",
+          "OpenInterest",
+          "Flow",
+          "Trader",
+          "Funding",
+          "MarketCap"
+        ],
+        "reasons": [
+          "实时价格缺失、过期或源时间异常，暂停生成候选。",
+          "上涨结构：5m % / 15m %；价格 RZ ",
+          "成交量 RZ 缺失或过期",
+          "结构历史不足或已过期",
+          "Phase 3：仅价格、成交量与技术结构；置信度上限 60，未验证预测能力。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "down": {
+        "direction": 1,
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "score": null,
+        "dataConfidence": 0,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 20,
+            "strength": null,
+            "confirmed": false,
+            "description": "下跌压力：1m % / 5m % / 15m %；价格 RZ Unknown",
+            "sourceTime": null
+          },
+          {
+            "family": "Volume",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "成交量 RZ 缺失或过期",
+            "sourceTime": null
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Volume",
+          "Structure",
+          "OpenInterest",
+          "Flow",
+          "Liquidation",
+          "Funding/Crowding"
+        ],
+        "reasons": [
+          "实时价格缺失、过期或源时间异常，暂停生成候选。",
+          "下跌压力：1m % / 5m % / 15m %；价格 RZ Unknown",
+          "成交量 RZ 缺失或过期",
+          "结构历史不足或已过期",
+          "Phase 3：仅价格、成交量与技术结构；置信度上限 60，未验证预测能力。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "episodeId": null
+    },
+    {
+      "time": "2026-10-29T14:14:28.6267826+08:00",
+      "assetId": 392,
+      "symbol": "ARIAUSDT",
+      "price": 0.0899,
+      "up": {
+        "direction": 0,
+        "strategyVersion": "UpMove-2.0",
+        "score": null,
+        "dataConfidence": 0,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "上涨结构：5m % / 15m %；价格 RZ ",
+            "sourceTime": "2026-10-29T14:14:26.487+08:00"
+          },
+          {
+            "family": "Volume",
+            "weight": 20,
+            "strength": null,
+            "confirmed": false,
+            "description": "成交量 RZ 缺失或过期",
+            "sourceTime": "2026-10-29T13:54:59.999+08:00"
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          },
+          {
+            "family": "OpenInterest",
+            "weight": 20,
+            "strength": 0.004643503795467434,
+            "confirmed": false,
+            "description": "OI 数量 15m 0.06% · OI RZ -0.35 · Unknown",
+            "sourceTime": "2026-10-29T14:05:00+08:00"
+          },
+          {
+            "family": "Flow",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "Taker 主动买量占比 Unknown",
+            "sourceTime": null
+          },
+          {
+            "family": "Trader",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "Top Position 15m 变化  个百分点；Top Account 多头占比 ",
+            "sourceTime": null
+          },
+          {
+            "family": "Funding",
+            "weight": 5,
+            "strength": 0.7,
+            "confirmed": false,
+            "description": "Funding 0.000050；拥挤状态 Unknown",
+            "sourceTime": "2026-10-29T14:14:28+08:00"
+          },
+          {
+            "family": "MarketCap",
+            "weight": 5,
+            "strength": null,
+            "confirmed": false,
+            "description": "市值/流动性映射未接入",
+            "sourceTime": null
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Volume",
+          "Structure",
+          "Flow",
+          "Trader",
+          "MarketCap",
+          "OnChain",
+          "Wallet"
+        ],
+        "reasons": [
+          "上涨结构：5m % / 15m %；价格 RZ ",
+          "成交量 RZ 缺失或过期",
+          "结构历史不足或已过期",
+          "OI 数量 15m 0.06% · OI RZ -0.35 · Unknown",
+          "Taker 主动买量占比 Unknown",
+          "Top Position 15m 变化  个百分点；Top Account 多头占比 ",
+          "Funding 0.000050；拥挤状态 Unknown",
+          "市值/流动性映射未接入",
+          "V2 使用 OI 数量变化；市值/链上风险仍未知。强平为观测样本，无法保证完整。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "down": {
+        "direction": 1,
+        "strategyVersion": "DownMove-2.0",
+        "score": null,
+        "dataConfidence": 0,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 20,
+            "strength": null,
+            "confirmed": false,
+            "description": "下跌压力：1m % / 5m % / 15m %；价格 RZ Unknown",
+            "sourceTime": "2026-10-29T14:14:26.487+08:00"
+          },
+          {
+            "family": "Volume",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "成交量 RZ 缺失或过期",
+            "sourceTime": "2026-10-29T13:54:59.999+08:00"
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          },
+          {
+            "family": "OpenInterest",
+            "weight": 20,
+            "strength": 0.06242810177416972,
+            "confirmed": false,
+            "description": "OI 数量 15m 0.06% · OI RZ -0.35 · Unknown",
+            "sourceTime": "2026-10-29T14:05:00+08:00"
+          },
+          {
+            "family": "Flow",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "Taker 主动买量占比 Unknown",
+            "sourceTime": null
+          },
+          {
+            "family": "Liquidation",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "观测多头强平 15m $（1s 抽样，非完整总额）",
+            "sourceTime": null
+          },
+          {
+            "family": "Funding",
+            "weight": 5,
+            "strength": null,
+            "confirmed": false,
+            "description": "Funding/多头拥挤作为风险背景，不作为独立确认家族",
+            "sourceTime": "2026-10-29T14:14:28+08:00"
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Volume",
+          "Structure",
+          "Flow",
+          "Liquidation",
+          "Funding",
+          "OnChain",
+          "Wallet"
+        ],
+        "reasons": [
+          "下跌压力：1m % / 5m % / 15m %；价格 RZ Unknown",
+          "成交量 RZ 缺失或过期",
+          "结构历史不足或已过期",
+          "OI 数量 15m 0.06% · OI RZ -0.35 · Unknown",
+          "Taker 主动买量占比 Unknown",
+          "观测多头强平 15m $（1s 抽样，非完整总额）",
+          "Funding/多头拥挤作为风险背景，不作为独立确认家族",
+          "V2 使用 OI 数量变化；市值/链上风险仍未知。强平为观测样本，无法保证完整。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "episodeId": null
+    },
+    {
+      "time": "2026-10-29T14:15:28.641372+08:00",
+      "assetId": 392,
+      "symbol": "ARIAUSDT",
+      "price": 0.08962,
+      "up": {
+        "direction": 0,
+        "strategyVersion": "UpMove-2.0",
+        "score": null,
+        "dataConfidence": 0,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "上涨结构：5m % / 15m %；价格 RZ ",
+            "sourceTime": "2026-10-29T14:15:26.093+08:00"
+          },
+          {
+            "family": "Volume",
+            "weight": 20,
+            "strength": 0,
+            "confirmed": false,
+            "description": "5m 成交量 RZ -0.36",
+            "sourceTime": "2026-10-29T14:14:59.999+08:00"
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          },
+          {
+            "family": "OpenInterest",
+            "weight": 20,
+            "strength": 0.004643503795467434,
+            "confirmed": false,
+            "description": "OI 数量 15m 0.06% · OI RZ -0.35 · Unknown",
+            "sourceTime": "2026-10-29T14:05:00+08:00"
+          },
+          {
+            "family": "Flow",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "Taker 主动买量占比 Unknown",
+            "sourceTime": null
+          },
+          {
+            "family": "Trader",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "Top Position 15m 变化  个百分点；Top Account 多头占比 ",
+            "sourceTime": null
+          },
+          {
+            "family": "Funding",
+            "weight": 5,
+            "strength": 0.7,
+            "confirmed": false,
+            "description": "Funding 0.000050；拥挤状态 Unknown",
+            "sourceTime": "2026-10-29T14:15:28.002+08:00"
+          },
+          {
+            "family": "MarketCap",
+            "weight": 5,
+            "strength": null,
+            "confirmed": false,
+            "description": "市值/流动性映射未接入",
+            "sourceTime": null
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Structure",
+          "Flow",
+          "Trader",
+          "MarketCap",
+          "OnChain",
+          "Wallet"
+        ],
+        "reasons": [
+          "上涨结构：5m % / 15m %；价格 RZ ",
+          "5m 成交量 RZ -0.36",
+          "结构历史不足或已过期",
+          "OI 数量 15m 0.06% · OI RZ -0.35 · Unknown",
+          "Taker 主动买量占比 Unknown",
+          "Top Position 15m 变化  个百分点；Top Account 多头占比 ",
+          "Funding 0.000050；拥挤状态 Unknown",
+          "市值/流动性映射未接入",
+          "V2 使用 OI 数量变化；市值/链上风险仍未知。强平为观测样本，无法保证完整。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "down": {
+        "direction": 1,
+        "strategyVersion": "DownMove-2.0",
+        "score": null,
+        "dataConfidence": 0,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 20,
+            "strength": null,
+            "confirmed": false,
+            "description": "下跌压力：1m -0.10% / 5m % / 15m %；价格 RZ Unknown",
+            "sourceTime": "2026-10-29T14:15:26.093+08:00"
+          },
+          {
+            "family": "Volume",
+            "weight": 15,
+            "strength": 0,
+            "confirmed": false,
+            "description": "5m 放量卖压待核实：成交量 RZ -0.36；主动卖盘 Unknown",
+            "sourceTime": "2026-10-29T14:14:59.999+08:00"
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          },
+          {
+            "family": "OpenInterest",
+            "weight": 20,
+            "strength": 0.06242810177416972,
+            "confirmed": false,
+            "description": "OI 数量 15m 0.06% · OI RZ -0.35 · Unknown",
+            "sourceTime": "2026-10-29T14:05:00+08:00"
+          },
+          {
+            "family": "Flow",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "Taker 主动买量占比 Unknown",
+            "sourceTime": null
+          },
+          {
+            "family": "Liquidation",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "观测多头强平 15m $（1s 抽样，非完整总额）",
+            "sourceTime": null
+          },
+          {
+            "family": "Funding",
+            "weight": 5,
+            "strength": null,
+            "confirmed": false,
+            "description": "Funding/多头拥挤作为风险背景，不作为独立确认家族",
+            "sourceTime": "2026-10-29T14:15:28.002+08:00"
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Structure",
+          "Flow",
+          "Liquidation",
+          "Funding",
+          "OnChain",
+          "Wallet"
+        ],
+        "reasons": [
+          "下跌压力：1m -0.10% / 5m % / 15m %；价格 RZ Unknown",
+          "5m 放量卖压待核实：成交量 RZ -0.36；主动卖盘 Unknown",
+          "结构历史不足或已过期",
+          "OI 数量 15m 0.06% · OI RZ -0.35 · Unknown",
+          "Taker 主动买量占比 Unknown",
+          "观测多头强平 15m $（1s 抽样，非完整总额）",
+          "Funding/多头拥挤作为风险背景，不作为独立确认家族",
+          "V2 使用 OI 数量变化；市值/链上风险仍未知。强平为观测样本，无法保证完整。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "episodeId": null
+    },
+    {
+      "time": "2026-10-29T14:16:28.6529141+08:00",
+      "assetId": 392,
+      "symbol": "ARIAUSDT",
+      "price": 0.08943,
+      "up": {
+        "direction": 0,
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "score": null,
+        "dataConfidence": 26,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "上涨结构：5m % / 15m %；价格 RZ ",
+            "sourceTime": "2026-10-29T14:16:27.56+08:00"
+          },
+          {
+            "family": "Volume",
+            "weight": 20,
+            "strength": 0,
+            "confirmed": false,
+            "description": "5m 成交量 RZ -0.36",
+            "sourceTime": "2026-10-29T14:14:59.999+08:00"
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Structure",
+          "OpenInterest",
+          "Flow",
+          "Trader",
+          "Funding",
+          "MarketCap"
+        ],
+        "reasons": [
+          "上涨结构：5m % / 15m %；价格 RZ ",
+          "5m 成交量 RZ -0.36",
+          "结构历史不足或已过期",
+          "Phase 3：仅价格、成交量与技术结构；置信度上限 60，未验证预测能力。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "down": {
+        "direction": 1,
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "score": null,
+        "dataConfidence": 20,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 20,
+            "strength": null,
+            "confirmed": false,
+            "description": "下跌压力：1m -0.69% / 5m % / 15m %；价格 RZ Unknown",
+            "sourceTime": "2026-10-29T14:16:27.56+08:00"
+          },
+          {
+            "family": "Volume",
+            "weight": 15,
+            "strength": 0,
+            "confirmed": false,
+            "description": "5m 放量卖压待核实：成交量 RZ -0.36；主动卖盘 Unknown",
+            "sourceTime": "2026-10-29T14:14:59.999+08:00"
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Structure",
+          "OpenInterest",
+          "Flow",
+          "Liquidation",
+          "Funding/Crowding"
+        ],
+        "reasons": [
+          "下跌压力：1m -0.69% / 5m % / 15m %；价格 RZ Unknown",
+          "5m 放量卖压待核实：成交量 RZ -0.36；主动卖盘 Unknown",
+          "结构历史不足或已过期",
+          "Phase 3：仅价格、成交量与技术结构；置信度上限 60，未验证预测能力。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "episodeId": null
+    },
+    {
+      "time": "2026-10-29T14:17:28.6742657+08:00",
+      "assetId": 392,
+      "symbol": "ARIAUSDT",
+      "price": 0.08875,
+      "up": {
+        "direction": 0,
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "score": null,
+        "dataConfidence": 26,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "上涨结构：5m % / 15m %；价格 RZ ",
+            "sourceTime": "2026-10-29T14:17:27.308+08:00"
+          },
+          {
+            "family": "Volume",
+            "weight": 20,
+            "strength": 0,
+            "confirmed": false,
+            "description": "5m 成交量 RZ -0.36",
+            "sourceTime": "2026-10-29T14:14:59.999+08:00"
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Structure",
+          "OpenInterest",
+          "Flow",
+          "Trader",
+          "Funding",
+          "MarketCap"
+        ],
+        "reasons": [
+          "上涨结构：5m % / 15m %；价格 RZ ",
+          "5m 成交量 RZ -0.36",
+          "结构历史不足或已过期",
+          "Phase 3：仅价格、成交量与技术结构；置信度上限 60，未验证预测能力。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "down": {
+        "direction": 1,
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "score": null,
+        "dataConfidence": 20,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 20,
+            "strength": null,
+            "confirmed": false,
+            "description": "下跌压力：1m -0.93% / 5m % / 15m %；价格 RZ Unknown",
+            "sourceTime": "2026-10-29T14:17:27.308+08:00"
+          },
+          {
+            "family": "Volume",
+            "weight": 15,
+            "strength": 0,
+            "confirmed": false,
+            "description": "5m 放量卖压待核实：成交量 RZ -0.36；主动卖盘 Unknown",
+            "sourceTime": "2026-10-29T14:14:59.999+08:00"
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Structure",
+          "OpenInterest",
+          "Flow",
+          "Liquidation",
+          "Funding/Crowding"
+        ],
+        "reasons": [
+          "下跌压力：1m -0.93% / 5m % / 15m %；价格 RZ Unknown",
+          "5m 放量卖压待核实：成交量 RZ -0.36；主动卖盘 Unknown",
+          "结构历史不足或已过期",
+          "Phase 3：仅价格、成交量与技术结构；置信度上限 60，未验证预测能力。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "episodeId": null
+    },
+    {
+      "time": "2026-10-29T14:17:42.1512781+08:00",
+      "assetId": 392,
+      "symbol": "ARIAUSDT",
+      "price": null,
+      "up": {
+        "direction": 0,
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "score": null,
+        "dataConfidence": 0,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "上涨结构：5m % / 15m %；价格 RZ ",
+            "sourceTime": null
+          },
+          {
+            "family": "Volume",
+            "weight": 20,
+            "strength": null,
+            "confirmed": false,
+            "description": "成交量 RZ 缺失或过期",
+            "sourceTime": null
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Volume",
+          "Structure",
+          "OpenInterest",
+          "Flow",
+          "Trader",
+          "Funding",
+          "MarketCap"
+        ],
+        "reasons": [
+          "实时价格缺失、过期或源时间异常，暂停生成候选。",
+          "上涨结构：5m % / 15m %；价格 RZ ",
+          "成交量 RZ 缺失或过期",
+          "结构历史不足或已过期",
+          "Phase 3：仅价格、成交量与技术结构；置信度上限 60，未验证预测能力。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "down": {
+        "direction": 1,
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "score": null,
+        "dataConfidence": 0,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 20,
+            "strength": null,
+            "confirmed": false,
+            "description": "下跌压力：1m % / 5m % / 15m %；价格 RZ Unknown",
+            "sourceTime": null
+          },
+          {
+            "family": "Volume",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "成交量 RZ 缺失或过期",
+            "sourceTime": null
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Volume",
+          "Structure",
+          "OpenInterest",
+          "Flow",
+          "Liquidation",
+          "Funding/Crowding"
+        ],
+        "reasons": [
+          "实时价格缺失、过期或源时间异常，暂停生成候选。",
+          "下跌压力：1m % / 5m % / 15m %；价格 RZ Unknown",
+          "成交量 RZ 缺失或过期",
+          "结构历史不足或已过期",
+          "Phase 3：仅价格、成交量与技术结构；置信度上限 60，未验证预测能力。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "episodeId": null
+    },
+    {
+      "time": "2026-10-29T14:18:42.2116654+08:00",
+      "assetId": 392,
+      "symbol": "ARIAUSDT",
+      "price": 0.08891,
+      "up": {
+        "direction": 0,
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "score": null,
+        "dataConfidence": 26,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "上涨结构：5m % / 15m %；价格 RZ ",
+            "sourceTime": "2026-10-29T14:18:41.038+08:00"
+          },
+          {
+            "family": "Volume",
+            "weight": 20,
+            "strength": 0,
+            "confirmed": false,
+            "description": "5m 成交量 RZ -0.36",
+            "sourceTime": "2026-10-29T14:14:59.999+08:00"
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Structure",
+          "OpenInterest",
+          "Flow",
+          "Trader",
+          "Funding",
+          "MarketCap"
+        ],
+        "reasons": [
+          "上涨结构：5m % / 15m %；价格 RZ ",
+          "5m 成交量 RZ -0.36",
+          "结构历史不足或已过期",
+          "Phase 3：仅价格、成交量与技术结构；置信度上限 60，未验证预测能力。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "down": {
+        "direction": 1,
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "score": null,
+        "dataConfidence": 20,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 20,
+            "strength": null,
+            "confirmed": false,
+            "description": "下跌压力：1m % / 5m % / 15m %；价格 RZ Unknown",
+            "sourceTime": "2026-10-29T14:18:41.038+08:00"
+          },
+          {
+            "family": "Volume",
+            "weight": 15,
+            "strength": 0,
+            "confirmed": false,
+            "description": "5m 放量卖压待核实：成交量 RZ -0.36；主动卖盘 Unknown",
+            "sourceTime": "2026-10-29T14:14:59.999+08:00"
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Structure",
+          "OpenInterest",
+          "Flow",
+          "Liquidation",
+          "Funding/Crowding"
+        ],
+        "reasons": [
+          "下跌压力：1m % / 5m % / 15m %；价格 RZ Unknown",
+          "5m 放量卖压待核实：成交量 RZ -0.36；主动卖盘 Unknown",
+          "结构历史不足或已过期",
+          "Phase 3：仅价格、成交量与技术结构；置信度上限 60，未验证预测能力。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "episodeId": null
+    },
+    {
+      "time": "2026-10-29T14:19:42.2275525+08:00",
+      "assetId": 392,
+      "symbol": "ARIAUSDT",
+      "price": 0.08918,
+      "up": {
+        "direction": 0,
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "score": null,
+        "dataConfidence": 26,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "上涨结构：5m % / 15m %；价格 RZ ",
+            "sourceTime": "2026-10-29T14:19:32.608+08:00"
+          },
+          {
+            "family": "Volume",
+            "weight": 20,
+            "strength": 0,
+            "confirmed": false,
+            "description": "5m 成交量 RZ -0.36",
+            "sourceTime": "2026-10-29T14:14:59.999+08:00"
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Structure",
+          "OpenInterest",
+          "Flow",
+          "Trader",
+          "Funding",
+          "MarketCap"
+        ],
+        "reasons": [
+          "上涨结构：5m % / 15m %；价格 RZ ",
+          "5m 成交量 RZ -0.36",
+          "结构历史不足或已过期",
+          "Phase 3：仅价格、成交量与技术结构；置信度上限 60，未验证预测能力。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "down": {
+        "direction": 1,
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "score": null,
+        "dataConfidence": 20,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 20,
+            "strength": null,
+            "confirmed": false,
+            "description": "下跌压力：1m 0.29% / 5m % / 15m %；价格 RZ Unknown",
+            "sourceTime": "2026-10-29T14:19:32.608+08:00"
+          },
+          {
+            "family": "Volume",
+            "weight": 15,
+            "strength": 0,
+            "confirmed": false,
+            "description": "5m 放量卖压待核实：成交量 RZ -0.36；主动卖盘 Unknown",
+            "sourceTime": "2026-10-29T14:14:59.999+08:00"
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Structure",
+          "OpenInterest",
+          "Flow",
+          "Liquidation",
+          "Funding/Crowding"
+        ],
+        "reasons": [
+          "下跌压力：1m 0.29% / 5m % / 15m %；价格 RZ Unknown",
+          "5m 放量卖压待核实：成交量 RZ -0.36；主动卖盘 Unknown",
+          "结构历史不足或已过期",
+          "Phase 3：仅价格、成交量与技术结构；置信度上限 60，未验证预测能力。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "episodeId": null
+    },
+    {
+      "time": "2026-10-29T14:21:05.462454+08:00",
+      "assetId": 392,
+      "symbol": "ARIAUSDT",
+      "price": 0.08919,
+      "up": {
+        "direction": 0,
+        "strategyVersion": "UpMove-2.0",
+        "score": null,
+        "dataConfidence": 0,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "上涨结构：5m % / 15m %；价格 RZ ",
+            "sourceTime": "2026-10-29T14:21:03.955+08:00"
+          },
+          {
+            "family": "Volume",
+            "weight": 20,
+            "strength": 0,
+            "confirmed": false,
+            "description": "5m 成交量 RZ -0.36",
+            "sourceTime": "2026-10-29T14:14:59.999+08:00"
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          },
+          {
+            "family": "OpenInterest",
+            "weight": 20,
+            "strength": 0,
+            "confirmed": false,
+            "description": "OI 数量 15m -0.11% · OI RZ -0.37 · Unknown",
+            "sourceTime": "2026-10-29T14:15:00+08:00"
+          },
+          {
+            "family": "Flow",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "Taker 主动买量占比 Unknown",
+            "sourceTime": null
+          },
+          {
+            "family": "Trader",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "Top Position 15m 变化  个百分点；Top Account 多头占比 ",
+            "sourceTime": null
+          },
+          {
+            "family": "Funding",
+            "weight": 5,
+            "strength": 0.7,
+            "confirmed": false,
+            "description": "Funding 0.000050；拥挤状态 Unknown",
+            "sourceTime": "2026-10-29T14:21:05+08:00"
+          },
+          {
+            "family": "MarketCap",
+            "weight": 5,
+            "strength": null,
+            "confirmed": false,
+            "description": "市值/流动性映射未接入",
+            "sourceTime": null
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Structure",
+          "Flow",
+          "Trader",
+          "MarketCap",
+          "OnChain",
+          "Wallet"
+        ],
+        "reasons": [
+          "上涨结构：5m % / 15m %；价格 RZ ",
+          "5m 成交量 RZ -0.36",
+          "结构历史不足或已过期",
+          "OI 数量 15m -0.11% · OI RZ -0.37 · Unknown",
+          "Taker 主动买量占比 Unknown",
+          "Top Position 15m 变化  个百分点；Top Account 多头占比 ",
+          "Funding 0.000050；拥挤状态 Unknown",
+          "市值/流动性映射未接入",
+          "V2 使用 OI 数量变化；市值/链上风险仍未知。强平为观测样本，无法保证完整。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "down": {
+        "direction": 1,
+        "strategyVersion": "DownMove-2.0",
+        "score": null,
+        "dataConfidence": 0,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 20,
+            "strength": null,
+            "confirmed": false,
+            "description": "下跌压力：1m % / 5m % / 15m %；价格 RZ Unknown",
+            "sourceTime": "2026-10-29T14:21:03.955+08:00"
+          },
+          {
+            "family": "Volume",
+            "weight": 15,
+            "strength": 0,
+            "confirmed": false,
+            "description": "5m 放量卖压待核实：成交量 RZ -0.36；主动卖盘 Unknown",
+            "sourceTime": "2026-10-29T14:14:59.999+08:00"
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          },
+          {
+            "family": "OpenInterest",
+            "weight": 20,
+            "strength": 0.07074025346280312,
+            "confirmed": false,
+            "description": "OI 数量 15m -0.11% · OI RZ -0.37 · Unknown",
+            "sourceTime": "2026-10-29T14:15:00+08:00"
+          },
+          {
+            "family": "Flow",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "Taker 主动买量占比 Unknown",
+            "sourceTime": null
+          },
+          {
+            "family": "Liquidation",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "观测多头强平 15m $（1s 抽样，非完整总额）",
+            "sourceTime": null
+          },
+          {
+            "family": "Funding",
+            "weight": 5,
+            "strength": null,
+            "confirmed": false,
+            "description": "Funding/多头拥挤作为风险背景，不作为独立确认家族",
+            "sourceTime": "2026-10-29T14:21:05+08:00"
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Structure",
+          "Flow",
+          "Liquidation",
+          "Funding",
+          "OnChain",
+          "Wallet"
+        ],
+        "reasons": [
+          "下跌压力：1m % / 5m % / 15m %；价格 RZ Unknown",
+          "5m 放量卖压待核实：成交量 RZ -0.36；主动卖盘 Unknown",
+          "结构历史不足或已过期",
+          "OI 数量 15m -0.11% · OI RZ -0.37 · Unknown",
+          "Taker 主动买量占比 Unknown",
+          "观测多头强平 15m $（1s 抽样，非完整总额）",
+          "Funding/多头拥挤作为风险背景，不作为独立确认家族",
+          "V2 使用 OI 数量变化；市值/链上风险仍未知。强平为观测样本，无法保证完整。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "episodeId": null
+    },
+    {
+      "time": "2026-10-29T14:22:05.4850944+08:00",
+      "assetId": 392,
+      "symbol": "ARIAUSDT",
+      "price": 0.08884,
+      "up": {
+        "direction": 0,
+        "strategyVersion": "UpMove-2.0",
+        "score": null,
+        "dataConfidence": 0,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "上涨结构：5m % / 15m %；价格 RZ ",
+            "sourceTime": "2026-10-29T14:22:03.841+08:00"
+          },
+          {
+            "family": "Volume",
+            "weight": 20,
+            "strength": 0,
+            "confirmed": false,
+            "description": "5m 成交量 RZ -0.36",
+            "sourceTime": "2026-10-29T14:14:59.999+08:00"
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          },
+          {
+            "family": "OpenInterest",
+            "weight": 20,
+            "strength": 0,
+            "confirmed": false,
+            "description": "OI 数量 15m -0.11% · OI RZ -0.37 · Unknown",
+            "sourceTime": "2026-10-29T14:15:00+08:00"
+          },
+          {
+            "family": "Flow",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "Taker 主动买量占比 Unknown",
+            "sourceTime": null
+          },
+          {
+            "family": "Trader",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "Top Position 15m 变化  个百分点；Top Account 多头占比 ",
+            "sourceTime": null
+          },
+          {
+            "family": "Funding",
+            "weight": 5,
+            "strength": 0.7,
+            "confirmed": false,
+            "description": "Funding 0.000050；拥挤状态 Unknown",
+            "sourceTime": "2026-10-29T14:22:05+08:00"
+          },
+          {
+            "family": "MarketCap",
+            "weight": 5,
+            "strength": null,
+            "confirmed": false,
+            "description": "市值/流动性映射未接入",
+            "sourceTime": null
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Structure",
+          "Flow",
+          "Trader",
+          "MarketCap",
+          "OnChain",
+          "Wallet"
+        ],
+        "reasons": [
+          "上涨结构：5m % / 15m %；价格 RZ ",
+          "5m 成交量 RZ -0.36",
+          "结构历史不足或已过期",
+          "OI 数量 15m -0.11% · OI RZ -0.37 · Unknown",
+          "Taker 主动买量占比 Unknown",
+          "Top Position 15m 变化  个百分点；Top Account 多头占比 ",
+          "Funding 0.000050；拥挤状态 Unknown",
+          "市值/流动性映射未接入",
+          "V2 使用 OI 数量变化；市值/链上风险仍未知。强平为观测样本，无法保证完整。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "down": {
+        "direction": 1,
+        "strategyVersion": "DownMove-2.0",
+        "score": null,
+        "dataConfidence": 0,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 20,
+            "strength": null,
+            "confirmed": false,
+            "description": "下跌压力：1m % / 5m % / 15m %；价格 RZ Unknown",
+            "sourceTime": "2026-10-29T14:22:03.841+08:00"
+          },
+          {
+            "family": "Volume",
+            "weight": 15,
+            "strength": 0,
+            "confirmed": false,
+            "description": "5m 放量卖压待核实：成交量 RZ -0.36；主动卖盘 Unknown",
+            "sourceTime": "2026-10-29T14:14:59.999+08:00"
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          },
+          {
+            "family": "OpenInterest",
+            "weight": 20,
+            "strength": 0.07074025346280312,
+            "confirmed": false,
+            "description": "OI 数量 15m -0.11% · OI RZ -0.37 · Unknown",
+            "sourceTime": "2026-10-29T14:15:00+08:00"
+          },
+          {
+            "family": "Flow",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "Taker 主动买量占比 Unknown",
+            "sourceTime": null
+          },
+          {
+            "family": "Liquidation",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "观测多头强平 15m $（1s 抽样，非完整总额）",
+            "sourceTime": null
+          },
+          {
+            "family": "Funding",
+            "weight": 5,
+            "strength": null,
+            "confirmed": false,
+            "description": "Funding/多头拥挤作为风险背景，不作为独立确认家族",
+            "sourceTime": "2026-10-29T14:22:05+08:00"
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Structure",
+          "Flow",
+          "Liquidation",
+          "Funding",
+          "OnChain",
+          "Wallet"
+        ],
+        "reasons": [
+          "下跌压力：1m % / 5m % / 15m %；价格 RZ Unknown",
+          "5m 放量卖压待核实：成交量 RZ -0.36；主动卖盘 Unknown",
+          "结构历史不足或已过期",
+          "OI 数量 15m -0.11% · OI RZ -0.37 · Unknown",
+          "Taker 主动买量占比 Unknown",
+          "观测多头强平 15m $（1s 抽样，非完整总额）",
+          "Funding/多头拥挤作为风险背景，不作为独立确认家族",
+          "V2 使用 OI 数量变化；市值/链上风险仍未知。强平为观测样本，无法保证完整。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "episodeId": null
+    },
+    {
+      "time": "2026-10-29T14:23:05.5062504+08:00",
+      "assetId": 392,
+      "symbol": "ARIAUSDT",
+      "price": 0.08849,
+      "up": {
+        "direction": 0,
+        "strategyVersion": "UpMove-2.0",
+        "score": null,
+        "dataConfidence": 0,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "上涨结构：5m % / 15m %；价格 RZ ",
+            "sourceTime": "2026-10-29T14:23:02.647+08:00"
+          },
+          {
+            "family": "Volume",
+            "weight": 20,
+            "strength": 0,
+            "confirmed": false,
+            "description": "5m 成交量 RZ -0.36",
+            "sourceTime": "2026-10-29T14:14:59.999+08:00"
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          },
+          {
+            "family": "OpenInterest",
+            "weight": 20,
+            "strength": 0,
+            "confirmed": false,
+            "description": "OI 数量 15m -0.11% · OI RZ -0.37 · Unknown",
+            "sourceTime": "2026-10-29T14:15:00+08:00"
+          },
+          {
+            "family": "Flow",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "Taker 主动买量占比 Unknown",
+            "sourceTime": null
+          },
+          {
+            "family": "Trader",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "Top Position 15m 变化  个百分点；Top Account 多头占比 ",
+            "sourceTime": null
+          },
+          {
+            "family": "Funding",
+            "weight": 5,
+            "strength": 0.7,
+            "confirmed": false,
+            "description": "Funding 0.000050；拥挤状态 Unknown",
+            "sourceTime": "2026-10-29T14:23:05+08:00"
+          },
+          {
+            "family": "MarketCap",
+            "weight": 5,
+            "strength": null,
+            "confirmed": false,
+            "description": "市值/流动性映射未接入",
+            "sourceTime": null
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Structure",
+          "Flow",
+          "Trader",
+          "MarketCap",
+          "OnChain",
+          "Wallet"
+        ],
+        "reasons": [
+          "上涨结构：5m % / 15m %；价格 RZ ",
+          "5m 成交量 RZ -0.36",
+          "结构历史不足或已过期",
+          "OI 数量 15m -0.11% · OI RZ -0.37 · Unknown",
+          "Taker 主动买量占比 Unknown",
+          "Top Position 15m 变化  个百分点；Top Account 多头占比 ",
+          "Funding 0.000050；拥挤状态 Unknown",
+          "市值/流动性映射未接入",
+          "V2 使用 OI 数量变化；市值/链上风险仍未知。强平为观测样本，无法保证完整。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "down": {
+        "direction": 1,
+        "strategyVersion": "DownMove-2.0",
+        "score": null,
+        "dataConfidence": 0,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 20,
+            "strength": null,
+            "confirmed": false,
+            "description": "下跌压力：1m -0.72% / 5m % / 15m %；价格 RZ Unknown",
+            "sourceTime": "2026-10-29T14:23:02.647+08:00"
+          },
+          {
+            "family": "Volume",
+            "weight": 15,
+            "strength": 0,
+            "confirmed": false,
+            "description": "5m 放量卖压待核实：成交量 RZ -0.36；主动卖盘 Unknown",
+            "sourceTime": "2026-10-29T14:14:59.999+08:00"
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          },
+          {
+            "family": "OpenInterest",
+            "weight": 20,
+            "strength": 0.07074025346280312,
+            "confirmed": false,
+            "description": "OI 数量 15m -0.11% · OI RZ -0.37 · Unknown",
+            "sourceTime": "2026-10-29T14:15:00+08:00"
+          },
+          {
+            "family": "Flow",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "Taker 主动买量占比 Unknown",
+            "sourceTime": null
+          },
+          {
+            "family": "Liquidation",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "观测多头强平 15m $（1s 抽样，非完整总额）",
+            "sourceTime": null
+          },
+          {
+            "family": "Funding",
+            "weight": 5,
+            "strength": null,
+            "confirmed": false,
+            "description": "Funding/多头拥挤作为风险背景，不作为独立确认家族",
+            "sourceTime": "2026-10-29T14:23:05+08:00"
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Structure",
+          "Flow",
+          "Liquidation",
+          "Funding",
+          "OnChain",
+          "Wallet"
+        ],
+        "reasons": [
+          "下跌压力：1m -0.72% / 5m % / 15m %；价格 RZ Unknown",
+          "5m 放量卖压待核实：成交量 RZ -0.36；主动卖盘 Unknown",
+          "结构历史不足或已过期",
+          "OI 数量 15m -0.11% · OI RZ -0.37 · Unknown",
+          "Taker 主动买量占比 Unknown",
+          "观测多头强平 15m $（1s 抽样，非完整总额）",
+          "Funding/多头拥挤作为风险背景，不作为独立确认家族",
+          "V2 使用 OI 数量变化；市值/链上风险仍未知。强平为观测样本，无法保证完整。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "episodeId": null
+    },
+    {
+      "time": "2026-10-29T14:24:05.5499163+08:00",
+      "assetId": 392,
+      "symbol": "ARIAUSDT",
+      "price": null,
+      "up": {
+        "direction": 0,
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "score": null,
+        "dataConfidence": 0,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "上涨结构：5m % / 15m %；价格 RZ ",
+            "sourceTime": null
+          },
+          {
+            "family": "Volume",
+            "weight": 20,
+            "strength": null,
+            "confirmed": false,
+            "description": "成交量 RZ 缺失或过期",
+            "sourceTime": null
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Volume",
+          "Structure",
+          "OpenInterest",
+          "Flow",
+          "Trader",
+          "Funding",
+          "MarketCap"
+        ],
+        "reasons": [
+          "实时价格缺失、过期或源时间异常，暂停生成候选。",
+          "上涨结构：5m % / 15m %；价格 RZ ",
+          "成交量 RZ 缺失或过期",
+          "结构历史不足或已过期",
+          "Phase 3：仅价格、成交量与技术结构；置信度上限 60，未验证预测能力。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "down": {
+        "direction": 1,
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "score": null,
+        "dataConfidence": 0,
+        "stage": "Unknown",
+        "status": 2,
+        "isCandidate": false,
+        "components": [
+          {
+            "family": "Price",
+            "weight": 20,
+            "strength": null,
+            "confirmed": false,
+            "description": "下跌压力：1m % / 5m % / 15m %；价格 RZ Unknown",
+            "sourceTime": null
+          },
+          {
+            "family": "Volume",
+            "weight": 15,
+            "strength": null,
+            "confirmed": false,
+            "description": "成交量 RZ 缺失或过期",
+            "sourceTime": null
+          },
+          {
+            "family": "Structure",
+            "weight": 10,
+            "strength": null,
+            "confirmed": false,
+            "description": "结构历史不足或已过期",
+            "sourceTime": null
+          }
+        ],
+        "confirmedFamilies": [],
+        "missingFamilies": [
+          "Price",
+          "Volume",
+          "Structure",
+          "OpenInterest",
+          "Flow",
+          "Liquidation",
+          "Funding/Crowding"
+        ],
+        "reasons": [
+          "实时价格缺失、过期或源时间异常，暂停生成候选。",
+          "下跌压力：1m % / 5m % / 15m %；价格 RZ Unknown",
+          "成交量 RZ 缺失或过期",
+          "结构历史不足或已过期",
+          "Phase 3：仅价格、成交量与技术结构；置信度上限 60，未验证预测能力。"
+        ],
+        "risk": 0,
+        "isWatchListCritical": false
+      },
+      "episodeId": null
+    }
+  ],
+  "signals": [
+    {
+      "key": "ReplayEpisode:1793254528641001",
+      "assetId": 391,
+      "symbol": "QUSDT",
+      "direction": 1,
+      "time": "2026-10-29T14:15:28.641372+08:00",
+      "price": 0.05298,
+      "score": 62.22,
+      "strategyVersion": "DownMove-Phase3-1.0",
+      "episodeId": 1793254528641001,
+      "referencePrice": 0.07311216604106867,
+      "isNotification": false
+    }
+  ],
+  "simulatedNotifications": [],
+  "mode": "RecordedFeatureSnapshots",
+  "note": "复用生产 Detector、EpisodeEngine、MarketRegime 和 AlertPolicy；输入为生产 FeatureEngine 当时的快照，不是原始 tick 重建。通知预算从空状态开始，按每次扫描评估；模拟通知不会调用 Windows，也不写入生产 Episode/通知预算。缺口计数、市场清单覆盖变化和冷启动会影响结果，不能声称逐条复原历史通知。",
+  "coverage": [
+    {
+      "time": "2026-10-29T14:10:50.2977248+08:00",
+      "assets": 522,
+      "freshPrices": 0
+    },
+    {
+      "time": "2026-10-29T14:11:50.3783195+08:00",
+      "assets": 522,
+      "freshPrices": 479
+    },
+    {
+      "time": "2026-10-29T14:12:50.3925283+08:00",
+      "assets": 522,
+      "freshPrices": 502
+    },
+    {
+      "time": "2026-10-29T14:13:28.56704+08:00",
+      "assets": 522,
+      "freshPrices": 0
+    },
+    {
+      "time": "2026-10-29T14:14:28.6267826+08:00",
+      "assets": 522,
+      "freshPrices": 489
+    },
+    {
+      "time": "2026-10-29T14:15:28.641372+08:00",
+      "assets": 522,
+      "freshPrices": 512
+    },
+    {
+      "time": "2026-10-29T14:16:28.6529141+08:00",
+      "assets": 522,
+      "freshPrices": 482
+    },
+    {
+      "time": "2026-10-29T14:17:28.6742657+08:00",
+      "assets": 522,
+      "freshPrices": 519
+    },
+    {
+      "time": "2026-10-29T14:17:42.1512781+08:00",
+      "assets": 522,
+      "freshPrices": 0
+    },
+    {
+      "time": "2026-10-29T14:18:42.2116654+08:00",
+      "assets": 522,
+      "freshPrices": 515
+    },
+    {
+      "time": "2026-10-29T14:19:42.2275525+08:00",
+      "assets": 522,
+      "freshPrices": 506
+    },
+    {
+      "time": "2026-10-29T14:20:05.403576+08:00",
+      "assets": 163,
+      "freshPrices": 0
+    },
+    {
+      "time": "2026-10-29T14:21:05.462454+08:00",
+      "assets": 522,
+      "freshPrices": 518
+    },
+    {
+      "time": "2026-10-29T14:22:05.4850944+08:00",
+      "assets": 522,
+      "freshPrices": 512
+    },
+    {
+      "time": "2026-10-29T14:23:05.5062504+08:00",
+      "assets": 522,
+      "freshPrices": 511
+    },
+    {
+      "time": "2026-10-29T14:24:05.5499163+08:00",
+      "assets": 522,
+      "freshPrices": 0
+    }
+  ]
+}

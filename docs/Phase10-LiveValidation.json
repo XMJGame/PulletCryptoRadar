@@ -1,0 +1,1262 @@
+{
+  "validatedAt": "2026-10-29T17:23:00.1458675+08:00",
+  "assetId": 392,
+  "provider": "Binplorer",
+  "sourceTime": "2026-10-29T16:42:47+08:00",
+  "receivedTime": "2026-10-29T17:14:45.0690541+08:00",
+  "holderCount": 84143,
+  "returnedHolders": 100,
+  "rawTopPercent": {
+    "10": {
+      "value": 85.76442204226255,
+      "status": 0,
+      "sourceTime": "2026-10-29T16:42:47+08:00",
+      "source": "Binplorer"
+    },
+    "25": {
+      "value": 96.25193557446433,
+      "status": 0,
+      "sourceTime": "2026-10-29T16:42:47+08:00",
+      "source": "Binplorer"
+    },
+    "50": {
+      "value": 97.68937265724425,
+      "status": 0,
+      "sourceTime": "2026-10-29T16:42:47+08:00",
+      "source": "Binplorer"
+    },
+    "100": {
+      "value": 98.42531896836238,
+      "status": 0,
+      "sourceTime": "2026-10-29T16:42:47+08:00",
+      "source": "Binplorer"
+    }
+  },
+  "classificationCoveragePercent": 0,
+  "concentrationUsable": false,
+  "holderChange24h": {
+    "value": null,
+    "status": 2,
+    "sourceTime": "2026-10-29T16:42:47+08:00",
+    "source": "Binplorer"
+  },
+  "bindingRevision": 1,
+  "verifiedLabels": 0,
+  "backendTests": 283,
+  "frontendTests": 13,
+  "apiChecks": {
+    "bindingWithoutConfirmation": 400,
+    "labelWithoutConfirmation": 400,
+    "staleBindingRevision": 409,
+    "speculativeAudit": [
+      {
+        "id": "b6373024-656e-4f83-a581-0bae1e2c0b3b",
+        "asOf": "2026-10-29T17:21:11.5688442+08:00",
+        "status": "Match",
+        "rows": 522,
+        "mismatches": 0,
+        "reason": "使用保存的独立交易所输入、映射状态、时间和参数复算；不读取当前行情"
+      },
+      {
+        "id": "99c56bc4-29c4-40da-b676-3324c398632c",
+        "asOf": "2026-10-29T17:14:15.4003752+08:00",
+        "status": "Match",
+        "rows": 522,
+        "mismatches": 0,
+        "reason": "使用保存的独立交易所输入、映射状态、时间和参数复算；不读取当前行情"
+      },
+      {
+        "id": "6532142b-ce75-43bc-8462-0d833ca1a5be",
+        "asOf": "2026-10-29T17:09:41.4414464+08:00",
+        "status": "Match",
+        "rows": 1027,
+        "mismatches": 0,
+        "reason": "使用保存的独立交易所输入、映射状态、时间和参数复算；不读取当前行情"
+      }
+    ],
+    "watchAudit": [
+      {
+        "asOf": "2026-10-29T17:21:24.645803+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T17:21:09.5635409+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T17:17:14.4181392+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T17:16:14.3736111+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T17:15:14.317797+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T17:14:58.5018946+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T17:14:28.4877505+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T17:14:13.39869+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T17:12:12.2115718+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T17:11:57.2041331+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T17:11:12.1584013+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T17:10:12.1016309+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T17:09:12.0448256+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T17:08:12.0013657+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T17:07:11.9706543+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T17:06:11.9363851+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T17:05:56.924732+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T17:05:41.9015289+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T17:05:26.896125+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T17:05:11.8885573+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T17:04:11.848197+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T17:03:11.8142448+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T17:02:11.7688544+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T17:01:11.7188356+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T17:00:11.6509151+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T16:59:11.5932132+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T16:58:11.5547247+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T16:57:11.5183113+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T16:56:11.4755865+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      },
+      {
+        "asOf": "2026-10-29T16:55:11.3944544+08:00",
+        "assetId": 392,
+        "status": "Match",
+        "reason": "使用冻结输入与参数；不读取现在的行情"
+      }
+    ],
+    "legacyAudit": [
+      {
+        "eventId": "da3ef6f4-3d63-4fcc-9159-53800b32f4fc",
+        "symbol": "INITUSDT",
+        "time": "2026-10-29T17:17:13.5410823+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 58.53,
+        "replayedScore": 58.53,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "32a9e7e1-0602-4ac6-9a92-d7f5388d2a64",
+        "symbol": "IDOLUSDT",
+        "time": "2026-10-29T17:17:13.5410823+08:00",
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 70.18,
+        "replayedScore": 70.18,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "25ad0d36-4fec-4046-a9dc-d618a5014a19",
+        "symbol": "EVAAUSDT",
+        "time": "2026-10-29T17:17:13.5410823+08:00",
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 90,
+        "replayedScore": 90,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "80468c76-f6b0-434f-8bcc-d29b3f079b26",
+        "symbol": "APRUSDT",
+        "time": "2026-10-29T17:17:13.5410823+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 49.6,
+        "replayedScore": 49.6,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "1b255b90-9b90-4da6-bfda-bb36211062e4",
+        "symbol": "APRUSDT",
+        "time": "2026-10-29T17:15:13.4986022+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 48.91,
+        "replayedScore": 48.91,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "dfd80857-47d3-47de-9412-d853961a5fa1",
+        "symbol": "TAGUSDT",
+        "time": "2026-10-29T17:11:39.9949537+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 51.62,
+        "replayedScore": 51.62,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "e673203e-4112-4231-b15f-0d1d3361fc32",
+        "symbol": "QUSDT",
+        "time": "2026-10-29T17:11:39.9949537+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 38.69,
+        "replayedScore": 38.69,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "b39911ef-d748-4a26-83b9-5ce61a409e9c",
+        "symbol": "QUSDT",
+        "time": "2026-10-29T17:10:39.9785933+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 47.64,
+        "replayedScore": 47.64,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "248028bf-b909-4feb-95e8-4494cbfd424a",
+        "symbol": "JCTUSDT",
+        "time": "2026-10-29T17:10:39.9785933+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 35.1,
+        "replayedScore": 35.1,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "b8ae4e50-9881-494e-8912-3b5f48c3d74d",
+        "symbol": "APRUSDT",
+        "time": "2026-10-29T17:10:39.9785933+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 36.01,
+        "replayedScore": 36.01,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "b9f20630-a09e-490d-a977-31d2ae05f01f",
+        "symbol": "PREDICTUSDT",
+        "time": "2026-10-29T17:09:39.9513071+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 54.69,
+        "replayedScore": 54.69,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "3ab7d0da-22d2-4bc6-8fcb-e3fb65c74c64",
+        "symbol": "PREDICTUSDT",
+        "time": "2026-10-29T17:08:39.927864+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 62.69,
+        "replayedScore": 62.69,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "6b23c382-1ae5-454b-a8fc-ba070daa6bad",
+        "symbol": "APRUSDT",
+        "time": "2026-10-29T17:08:39.927864+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 42.72,
+        "replayedScore": 42.72,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "728e94d7-f5cc-41c1-a6cb-c67ee19885d2",
+        "symbol": "PREDICTUSDT",
+        "time": "2026-10-29T17:06:39.8831215+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 53.96,
+        "replayedScore": 53.96,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "3345cab6-b32a-4e4d-9f26-d9ac9e0e722a",
+        "symbol": "PREDICTUSDT",
+        "time": "2026-10-29T17:05:39.8383472+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 66.01,
+        "replayedScore": 66.01,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "23f2fc15-7843-47df-b9d5-ecd4ec902640",
+        "symbol": "JCTUSDT",
+        "time": "2026-10-29T17:05:39.8383472+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 41.65,
+        "replayedScore": 41.65,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "e256a53b-ad61-4844-8fbb-f8574f503377",
+        "symbol": "JCTUSDT",
+        "time": "2026-10-29T17:03:39.8078709+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 46.35,
+        "replayedScore": 46.35,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "10e0fd56-0706-4fbd-9e63-f3c61aa781af",
+        "symbol": "APRUSDT",
+        "time": "2026-10-29T17:03:39.8078709+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 49.01,
+        "replayedScore": 49.01,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "25ea89a7-5d73-4d08-a54c-ef46048d1ed4",
+        "symbol": "APRUSDT",
+        "time": "2026-10-29T17:03:39.8078709+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 49.01,
+        "replayedScore": 49.01,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "2833b3ae-3884-4c26-b732-1ee4ae9b2247",
+        "symbol": "JCTUSDT",
+        "time": "2026-10-29T17:02:39.7796432+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 46.35,
+        "replayedScore": 46.35,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "cf7ac77e-4191-4160-a0d4-e4413c626423",
+        "symbol": "INITUSDT",
+        "time": "2026-10-29T17:02:39.7796432+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 49.97,
+        "replayedScore": 49.97,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "bb6de75d-2df2-48a0-a4da-51ed445d502d",
+        "symbol": "INITUSDT",
+        "time": "2026-10-29T17:01:39.7539047+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 55.47,
+        "replayedScore": 55.47,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "e5b18b10-c71b-4642-80c2-fd4a19a7cbca",
+        "symbol": "QUSDT",
+        "time": "2026-10-29T17:00:39.6978241+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 38.98,
+        "replayedScore": 38.98,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "51470fc1-5637-4f28-b308-a47d5220af33",
+        "symbol": "JCTUSDT",
+        "time": "2026-10-29T17:00:39.6978241+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 45.59,
+        "replayedScore": 45.59,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "407e38be-fb7f-440d-80dc-5ca5cdfb4c4c",
+        "symbol": "INITUSDT",
+        "time": "2026-10-29T17:00:39.6978241+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 46.24,
+        "replayedScore": 46.24,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "34d96c22-1e3a-4b77-8995-3f638ee5a43f",
+        "symbol": "APRUSDT",
+        "time": "2026-10-29T17:00:39.6978241+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 55.06,
+        "replayedScore": 55.06,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "03fcb412-1895-4058-9054-08c5e4d2c45a",
+        "symbol": "HAEDALUSDT",
+        "time": "2026-10-29T16:59:39.675477+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 29.5,
+        "replayedScore": 29.5,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "bb2911a6-4d21-490e-a937-556069b70660",
+        "symbol": "QUSDT",
+        "time": "2026-10-29T16:58:39.6526418+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 41.77,
+        "replayedScore": 41.77,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "763e4b53-73b3-4629-9c35-f366f64a3752",
+        "symbol": "EVAAUSDT",
+        "time": "2026-10-29T16:56:39.6149651+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 38.91,
+        "replayedScore": 38.91,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "35c59020-d49a-4e85-986c-5ce1a663dfba",
+        "symbol": "QUSDT",
+        "time": "2026-10-29T16:55:39.5907123+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 52.47,
+        "replayedScore": 52.47,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "61854a62-0710-48e0-b46f-144b2cf64af4",
+        "symbol": "HAEDALUSDT",
+        "time": "2026-10-29T16:55:39.5907123+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 45.97,
+        "replayedScore": 45.97,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "d6c0b20d-9ce4-4072-be52-96e8fd91d9ed",
+        "symbol": "APRUSDT",
+        "time": "2026-10-29T16:55:39.5907123+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 66.82,
+        "replayedScore": 66.82,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "b9fdb002-71b1-489a-9174-1a048bd6ca5b",
+        "symbol": "APRUSDT",
+        "time": "2026-10-29T16:55:39.5907123+08:00",
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 66.82,
+        "replayedScore": 66.82,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "06284cb7-0029-4561-92d7-820a6995bccc",
+        "symbol": "AIOTUSDT",
+        "time": "2026-10-29T16:55:39.5907123+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 30.78,
+        "replayedScore": 30.78,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "edbba732-6a90-450b-90a7-c12d59b3987b",
+        "symbol": "QUSDT",
+        "time": "2026-10-29T16:54:39.5453067+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 45.47,
+        "replayedScore": 45.47,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "e787c200-4c46-44bc-9cf4-2cd1ca4316d5",
+        "symbol": "QUSDT",
+        "time": "2026-10-29T16:54:39.5453067+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 42.52,
+        "replayedScore": 42.52,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "fe5e513c-cd8d-4ef8-95ab-e6678c76be51",
+        "symbol": "APRUSDT",
+        "time": "2026-10-29T16:51:39.4897947+08:00",
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 100,
+        "replayedScore": 100,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "f7c61287-60b5-4ac7-b2fb-28066636efe5",
+        "symbol": "APRUSDT",
+        "time": "2026-10-29T16:51:39.4897947+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 100,
+        "replayedScore": 100,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "8a806790-782c-476c-a0da-c440b243b515",
+        "symbol": "QUSDT",
+        "time": "2026-10-29T16:50:39.4763007+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 44.82,
+        "replayedScore": 44.82,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "bd1577d6-d62c-454d-acfd-8b07f5db673d",
+        "symbol": "EVAAUSDT",
+        "time": "2026-10-29T16:50:39.4763007+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 44.55,
+        "replayedScore": 44.55,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "22ea601c-4e56-4fd6-9640-0c9a90968168",
+        "symbol": "BULLAUSDT",
+        "time": "2026-10-29T16:50:39.4763007+08:00",
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 20.22,
+        "replayedScore": 20.22,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "6377067e-daa5-449c-a059-e1dee14203b7",
+        "symbol": "APRUSDT",
+        "time": "2026-10-29T16:50:39.4763007+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 63.14,
+        "replayedScore": 63.14,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "6531cb4a-5362-4063-81e7-215d18b85c7f",
+        "symbol": "AIOTUSDT",
+        "time": "2026-10-29T16:50:39.4763007+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 45.66,
+        "replayedScore": 45.66,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "532af1c6-0402-4393-8f84-0cd1e3c1d510",
+        "symbol": "QUSDT",
+        "time": "2026-10-29T16:49:39.4524024+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 50.32,
+        "replayedScore": 50.32,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "7eab563d-3641-4231-a975-7f3a276ba60f",
+        "symbol": "HAEDALUSDT",
+        "time": "2026-10-29T16:49:39.4524024+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 63.29,
+        "replayedScore": 63.29,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "434a64e3-2e37-4e95-acec-9dddf17cdd92",
+        "symbol": "EVAAUSDT",
+        "time": "2026-10-29T16:49:39.4524024+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 45.25,
+        "replayedScore": 45.25,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "473153cf-8819-4556-9515-59d6bc979bf3",
+        "symbol": "COLLECTUSDT",
+        "time": "2026-10-29T16:49:39.4524024+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 39.9,
+        "replayedScore": 39.9,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "ad460d04-7439-49ee-9029-560b28575705",
+        "symbol": "AIOTUSDT",
+        "time": "2026-10-29T16:49:39.4524024+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 46.27,
+        "replayedScore": 46.27,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "9033a769-6e74-4647-9043-8b37bdac550a",
+        "symbol": "EVAAUSDT",
+        "time": "2026-10-29T16:48:39.4100864+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 39.77,
+        "replayedScore": 39.77,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "f5c97a6a-0bb0-46f9-b470-4f1573ecf7c6",
+        "symbol": "COLLECTUSDT",
+        "time": "2026-10-29T16:48:39.4100864+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 40.18,
+        "replayedScore": 40.18,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "9e3cedc3-797c-44cc-bb32-3f6326b74ff9",
+        "symbol": "BULLAUSDT",
+        "time": "2026-10-29T16:48:39.4100864+08:00",
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 67.93,
+        "replayedScore": 67.93,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "83ad5730-eae6-4c5d-91e0-009fa3ab2c59",
+        "symbol": "QUSDT",
+        "time": "2026-10-29T16:47:39.394121+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 43.89,
+        "replayedScore": 43.89,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "d1b35b88-3754-4124-89bd-eec358447ede",
+        "symbol": "BULLAUSDT",
+        "time": "2026-10-29T16:47:39.394121+08:00",
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 72.31,
+        "replayedScore": 72.31,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "e585dc16-7d59-4813-baa2-6b6ecc95307e",
+        "symbol": "QUSDT",
+        "time": "2026-10-29T16:46:39.3659187+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 49.39,
+        "replayedScore": 49.39,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "3351ea16-f739-4997-a4b4-c7aae12f745e",
+        "symbol": "EVAAUSDT",
+        "time": "2026-10-29T16:45:39.349869+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 41.89,
+        "replayedScore": 41.89,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "b344f96b-9395-497c-831e-ab3fa77224b3",
+        "symbol": "BULLAUSDT",
+        "time": "2026-10-29T16:45:39.349869+08:00",
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 77.78,
+        "replayedScore": 77.78,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "13adc370-1043-43ff-ab0c-b1d3ba2b8e32",
+        "symbol": "XPINUSDT",
+        "time": "2026-10-29T16:44:39.3332836+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 36.81,
+        "replayedScore": 36.81,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "bdcc07c0-9cab-4ff6-833e-778956c4c7a0",
+        "symbol": "EVAAUSDT",
+        "time": "2026-10-29T16:44:39.3332836+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 47.39,
+        "replayedScore": 47.39,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "2e2b99b2-4368-4a9e-b441-8ed8954e0c9f",
+        "symbol": "COLLECTUSDT",
+        "time": "2026-10-29T16:44:39.3332836+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 45.54,
+        "replayedScore": 45.54,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "1133ac18-ad97-441e-9505-89b59d27a991",
+        "symbol": "EVAAUSDT",
+        "time": "2026-10-29T16:43:39.3184465+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 46.49,
+        "replayedScore": 46.49,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "2d3c310e-ca2e-41ee-9999-9c0a4df11b61",
+        "symbol": "COLLECTUSDT",
+        "time": "2026-10-29T16:43:39.3184465+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 57.58,
+        "replayedScore": 57.58,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "e0bf8522-bb9d-4735-8cae-f0738977b6af",
+        "symbol": "JCTUSDT",
+        "time": "2026-10-29T16:42:39.2745784+08:00",
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 34.68,
+        "replayedScore": 34.68,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "e3ea05b1-f71c-40a3-add4-8fa0e9a84fa0",
+        "symbol": "QUSDT",
+        "time": "2026-10-29T16:41:39.2584118+08:00",
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 40.28,
+        "replayedScore": 40.28,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "62c70568-07a0-44c9-95d6-4cf5deb85090",
+        "symbol": "JCTUSDT",
+        "time": "2026-10-29T16:41:39.2584118+08:00",
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 63.32,
+        "replayedScore": 63.32,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "5a107a86-7d03-456e-ba5b-8286595e626c",
+        "symbol": "APRUSDT",
+        "time": "2026-10-29T16:41:39.2584118+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 53.16,
+        "replayedScore": 53.16,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "d795ab09-7fe6-4f3f-ae55-28bfbea4d2f5",
+        "symbol": "TUSDT",
+        "time": "2026-10-29T16:40:39.2443375+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 37.03,
+        "replayedScore": 37.03,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "d7d67aff-7791-489b-b85c-eacf1dcd58a8",
+        "symbol": "SYRUPUSDT",
+        "time": "2026-10-29T16:40:39.2443375+08:00",
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 40.22,
+        "replayedScore": 40.22,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "7652e0e2-7b57-4c40-b357-70344bdbe1f3",
+        "symbol": "QUSDT",
+        "time": "2026-10-29T16:40:39.2443375+08:00",
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 63.81,
+        "replayedScore": 63.81,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "6bfae949-00fc-415f-953b-391b01bb5fd5",
+        "symbol": "KATUSDT",
+        "time": "2026-10-29T16:40:39.2443375+08:00",
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 41.96,
+        "replayedScore": 41.96,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "63bbfef3-02ed-4c63-931d-9ee6a2db8e19",
+        "symbol": "JCTUSDT",
+        "time": "2026-10-29T16:40:39.2443375+08:00",
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 72.89,
+        "replayedScore": 72.89,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "9714d135-59eb-4454-aa42-e1926ef78804",
+        "symbol": "INITUSDT",
+        "time": "2026-10-29T16:40:39.2443375+08:00",
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 20.91,
+        "replayedScore": 20.91,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "414bdcf5-8c16-4f83-9697-79313bfd0c23",
+        "symbol": "CTKUSDT",
+        "time": "2026-10-29T16:40:39.2443375+08:00",
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 24.47,
+        "replayedScore": 24.47,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "32b6612b-5e31-4d2f-9a49-3fc048835507",
+        "symbol": "APRUSDT",
+        "time": "2026-10-29T16:40:39.2443375+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 57.25,
+        "replayedScore": 57.25,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "6841385a-4cd5-48c6-800c-d758cd1008d1",
+        "symbol": "XPINUSDT",
+        "time": "2026-10-29T16:39:39.2245175+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 50.87,
+        "replayedScore": 50.87,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "c502e26f-a3ec-4327-a1bd-6b4ec1294b15",
+        "symbol": "XPINUSDT",
+        "time": "2026-10-29T16:39:39.2245175+08:00",
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 50.87,
+        "replayedScore": 50.87,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "7629c3c2-e953-43f9-8a63-200e7a5af1a8",
+        "symbol": "XANUSDT",
+        "time": "2026-10-29T16:39:39.2245175+08:00",
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 43.14,
+        "replayedScore": 43.14,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "90fd1171-f0c6-48cf-81db-7755b7709c8d",
+        "symbol": "UAIUSDT",
+        "time": "2026-10-29T16:39:39.2245175+08:00",
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 37.28,
+        "replayedScore": 37.28,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "9fccdbfe-3164-42a7-bea4-2defb8dc408a",
+        "symbol": "TUSDT",
+        "time": "2026-10-29T16:39:39.2245175+08:00",
+        "strategyVersion": "DownMove-2.0",
+        "status": "Match",
+        "savedScore": 50.33,
+        "replayedScore": 50.33,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "567d40a2-847e-436c-8be3-21d2d045e1b0",
+        "symbol": "TUSDT",
+        "time": "2026-10-29T16:39:39.2245175+08:00",
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 50.33,
+        "replayedScore": 50.33,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "7d8ab7e4-050f-4391-8922-ca46b2cdea85",
+        "symbol": "ONUSDT",
+        "time": "2026-10-29T16:39:39.2245175+08:00",
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 25.8,
+        "replayedScore": 25.8,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "2dbb6f81-eeec-4f70-8657-bbee343744ba",
+        "symbol": "INITUSDT",
+        "time": "2026-10-29T16:39:39.2245175+08:00",
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 41.55,
+        "replayedScore": 41.55,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "b860f2f3-4c63-43ab-9458-69a28953db0b",
+        "symbol": "IDOLUSDT",
+        "time": "2026-10-29T16:39:39.2245175+08:00",
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 24.48,
+        "replayedScore": 24.48,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "f5e32bf6-62ae-4f00-8b24-cdad398326ff",
+        "symbol": "FIGHTUSDT",
+        "time": "2026-10-29T16:39:39.2245175+08:00",
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 27.01,
+        "replayedScore": 27.01,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "767de43a-0c1c-40da-9fc0-88c350fdc4ac",
+        "symbol": "EVAAUSDT",
+        "time": "2026-10-29T16:39:39.2245175+08:00",
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 43.66,
+        "replayedScore": 43.66,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "23c60ec0-8e6d-44d7-812d-9d1f9aef719f",
+        "symbol": "EULUSDT",
+        "time": "2026-10-29T16:39:39.2245175+08:00",
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 39.84,
+        "replayedScore": 39.84,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "d081579d-b3b6-4aa7-8675-58fb947cb9c5",
+        "symbol": "QUSDT",
+        "time": "2026-10-29T16:38:39.211364+08:00",
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 69.33,
+        "replayedScore": 69.33,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "78864714-4df8-4ba0-9c12-16f5761471a7",
+        "symbol": "ONUSDT",
+        "time": "2026-10-29T16:38:39.211364+08:00",
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 50.44,
+        "replayedScore": 50.44,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "0a2f2db9-9ed9-4ff3-8114-c7472e145627",
+        "symbol": "APRUSDT",
+        "time": "2026-10-29T16:38:39.211364+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 43.48,
+        "replayedScore": 43.48,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "a746f71d-28a4-4768-8412-ecceb1deba81",
+        "symbol": "QUSDT",
+        "time": "2026-10-29T16:37:39.1928226+08:00",
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 50.91,
+        "replayedScore": 50.91,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "1e39e303-f71b-4e2c-a7da-de29b0d59e2d",
+        "symbol": "KATUSDT",
+        "time": "2026-10-29T16:37:39.1928226+08:00",
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 65.35,
+        "replayedScore": 65.35,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "d73d86de-faef-4c50-aebf-c865c9902ab2",
+        "symbol": "APRUSDT",
+        "time": "2026-10-29T16:37:39.1928226+08:00",
+        "strategyVersion": "UpMove-2.0",
+        "status": "Match",
+        "savedScore": 49.09,
+        "replayedScore": 49.09,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "12702db2-7f34-4900-b18f-df8b11f2781d",
+        "symbol": "AINUSDT",
+        "time": "2026-10-29T16:37:39.1928226+08:00",
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 29.54,
+        "replayedScore": 29.54,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "5c505cce-d7dc-4b2f-8520-a91e7bed2628",
+        "symbol": "XPINUSDT",
+        "time": "2026-10-29T16:36:39.1765413+08:00",
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 61.06,
+        "replayedScore": 61.06,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "1f792896-501b-48f6-b4a9-3de9173d1914",
+        "symbol": "XANUSDT",
+        "time": "2026-10-29T16:36:39.1765413+08:00",
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 61.6,
+        "replayedScore": 61.6,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "1efe7a71-3309-42ca-807a-22e9cf0a0a8e",
+        "symbol": "TUSDT",
+        "time": "2026-10-29T16:36:39.1765413+08:00",
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 66.52,
+        "replayedScore": 66.52,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "c83d0ff8-10ba-47b1-bfaf-cdd31c0fa472",
+        "symbol": "QUSDT",
+        "time": "2026-10-29T16:36:39.1765413+08:00",
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 40.45,
+        "replayedScore": 40.45,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "45beecdf-919d-4bbf-a66a-c9c56a0aa25c",
+        "symbol": "EVAAUSDT",
+        "time": "2026-10-29T16:36:39.1765413+08:00",
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 71.1,
+        "replayedScore": 71.1,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "67578be4-c579-426f-a4cd-00d7c7bf323b",
+        "symbol": "XPINUSDT",
+        "time": "2026-10-29T16:35:39.1606767+08:00",
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 77.78,
+        "replayedScore": 77.78,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "337fd9b9-082e-4a43-a3ff-1be5920bede0",
+        "symbol": "XANUSDT",
+        "time": "2026-10-29T16:35:39.1606767+08:00",
+        "strategyVersion": "DownMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 69.01,
+        "replayedScore": 69.01,
+        "reason": "历史输入 + 历史参数复算一致"
+      },
+      {
+        "eventId": "d9509ac2-1152-4a52-b468-0e649555ebd1",
+        "symbol": "UAIUSDT",
+        "time": "2026-10-29T16:35:39.1606767+08:00",
+        "strategyVersion": "UpMove-Phase3-1.0",
+        "status": "Match",
+        "savedScore": 47.38,
+        "replayedScore": 47.38,
+        "reason": "历史输入 + 历史参数复算一致"
+      }
+    ]
+  }
+}
