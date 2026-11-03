@@ -31,16 +31,30 @@ public sealed class AlternativeWorker(IAlternativeMarketProvider provider,IAlter
         while(!ct.IsCancellationRequested)
         {
             var assets=market.GetAll();if(assets.Count==0){await Task.Delay(TimeSpan.FromSeconds(2),time,ct);continue;}
-            var bases=assets.OrderByDescending(m=>m.Instrument.Symbol is "ARIAUSDT" or "BTCUSDT" or "ETHUSDT")
+            var now = time.GetUtcNow();
+            var bases=assets.Where(m => m.Instrument.Active && !SpeculativeService.HasBinancePrice(m, now)).OrderByDescending(m=>m.Instrument.Symbol is "ARIAUSDT" or "BTCUSDT" or "ETHUSDT")
                 .ThenByDescending(m=>Math.Abs(m.Features.PriceRobustZ5m.Value??0)+Math.Max(0,m.Features.VolumeRobustZ.Value??0))
                 .Select(m=>m.Instrument.BaseAsset).Distinct(StringComparer.Ordinal).Take(options.Value.DeepCandidates).ToArray();
-            try{var quotes=await provider.GetGateAsync(bases,ct);alternative.Set(quotes);if(quotes.Count>0)health.Success("Gate Perpetual",freshnessSeconds:options.Value.PollSeconds+120);}
+            if (bases.Length == 0)
+            {
+                await Task.Delay(TimeSpan.FromSeconds(30), time, ct);
+                continue;
+            }
+            IReadOnlyList<VenueQuote> gateQuotes = [];
+            try{var quotes=await provider.GetGateAsync(bases,ct);gateQuotes=quotes;alternative.Set(quotes);if(quotes.Count>0)health.Success("Gate Perpetual",freshnessSeconds:options.Value.PollSeconds+120);}
             catch(OperationCanceledException)when(ct.IsCancellationRequested){break;}
             catch(Exception ex){health.Failure("Gate Perpetual",ex.Message);logger.LogWarning("Gate collection: {Error}",ex.Message);}
             // Coinbase is an independent spot reference when Binance is unavailable. It cannot supply perpetual OI.
             try
             {
-                var quotes=await provider.GetCoinbaseAsync(bases,ct);alternative.Set(quotes);
+                var fallback = bases.Where(asset => !gateQuotes.Any(q => q.BaseAsset == asset && q.Price > 0 &&
+                    q.SourceTime <= time.GetUtcNow() && time.GetUtcNow() - q.SourceTime <= TimeSpan.FromMinutes(3))).ToArray();
+                if (fallback.Length == 0)
+                {
+                    await Task.Delay(TimeSpan.FromSeconds(options.Value.PollSeconds), time, ct);
+                    continue;
+                }
+                var quotes=await provider.GetCoinbaseAsync(fallback,ct);alternative.Set(quotes);
                 if(quotes.Count>0)health.Success("Coinbase Spot Reference",freshnessSeconds:options.Value.PollSeconds+120);
             }
             catch(OperationCanceledException)when(ct.IsCancellationRequested){break;}

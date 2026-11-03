@@ -61,7 +61,7 @@ public sealed class WatchStorageTests:IDisposable
         {
             var instruments=await queue.SyncAsync([new("ARIAUSDT","ARIA",Now.AddDays(-30))],default);var market=new MarketRuntimeStore();market.Register(instruments);
             market.Apply(new TickerEvent("ARIAUSDT",.088m,1_000_000,3,Now,Now));var settings=new WatchOptions();var repo=new WatchRepository(db);
-            var service=new WatchService(market,new AlternativeMarketStore(),new SpeculativeRepository(db),repo,new WatchPersistence(queue),new(settings),settings,new(new()),new(new()),new EmptyRadar(),clock);
+            var service=new WatchService(market,repo,new WatchPersistence(queue),new(settings),settings,new(new()),new(new()),new EmptyRadar(),clock);
             await service.TickAsync(default);var first=Assert.Single(service.Overview());Assert.True(first.Config.IsSpecificationExample);Assert.False(first.Config.EnableAlerts);
             Assert.Equal(354.54545454545454545454545455m,first.Result!.ToCostPercent);
             var request=new WatchRequest(1,false,.40m,null,null,null,null,false);

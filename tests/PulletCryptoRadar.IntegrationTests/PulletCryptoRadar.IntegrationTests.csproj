@@ -25,6 +25,7 @@
     <ProjectReference Include="..\..\src\PulletCryptoRadar.Providers.OnChain\PulletCryptoRadar.Providers.OnChain.csproj" />
     <ProjectReference Include="..\..\src\PulletCryptoRadar.Supervisor\PulletCryptoRadar.Supervisor.csproj" ReferenceOutputAssembly="false" />
     <ProjectReference Include="..\PulletCryptoRadar.SupervisorFixture\PulletCryptoRadar.SupervisorFixture.csproj" ReferenceOutputAssembly="false" />
+    <ProjectReference Include="..\..\src\PulletCryptoRadar.Host\PulletCryptoRadar.Host.csproj" />
   </ItemGroup>
 
 </Project>

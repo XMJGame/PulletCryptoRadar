@@ -42,16 +42,14 @@ public sealed class SpeculativeService(IMarketRuntimeStore market,IAlternativeMa
             foreach(var original in market.GetAll())
             {
                 var m=original with{Features=original.Features with{Capital=capitalEngine.Calculate(original,capital.Get(original.Instrument.AssetId),now)}};
-                var binance=Binance(m,now);var gate=quotes.FirstOrDefault(q=>q.Exchange=="Gate"&&q.BaseAsset==m.Instrument.BaseAsset);
-                bool Fresh<T>(FeatureValue<T> f,int seconds)where T:struct=>f.Status==DataStatus.Valid&&f.Value is not null&&f.SourceTime<=now&&now-f.SourceTime<=TimeSpan.FromSeconds(seconds);
-                var binanceReady=Fresh(binance.Price,30)&&Fresh(binance.Volume24hUsd,30)&&Fresh(binance.OpenInterestUsd,660);
-                var useGate=!binanceReady&&gate is {}&&gate.Price>0&&gate.SourceTime<=now&&now-gate.SourceTime<=TimeSpan.FromSeconds(180);
-                rows.Add(new(binance,onChain?.Detect(binance,now)??detector.Detect(binance,now),!useGate){BinanceUp=up.Detect(m,now),BinanceDown=down.Detect(m,now)});
+                var binance = Binance(m, now);
+                rows.Add(new(binance,onChain?.Detect(binance,now)??detector.Detect(binance,now),true){BinanceUp=up.Detect(m,now),BinanceDown=down.Detect(m,now)});
+                if (HasBinancePrice(m, now)) continue;
                 foreach(var q in quotes.Where(q=>q.BaseAsset==m.Instrument.BaseAsset))
                 {
                     var verified=bindings.Any(b=>b.AssetId==m.Instrument.AssetId&&b.Exchange==q.Exchange&&b.Symbol==q.Symbol);
                     var input=External(m,q,verified,now);
-                    rows.Add(new(input,onChain?.Detect(input,now)??detector.Detect(input,now),useGate&&q.Exchange=="Gate"));
+                    rows.Add(new(input,onChain?.Detect(input,now)??detector.Detect(input,now),false));
                 }
             }
             var snapshot=new SpeculativeSnapshot(Guid.NewGuid(),now,onChain is null?SpeculativeDetector.Version:SpeculativeOnChainDetector.Version,JsonSerializer.Serialize(options),rows);
@@ -60,6 +58,10 @@ public sealed class SpeculativeService(IMarketRuntimeStore market,IAlternativeMa
         }
         finally{_gate.Release();}
     }
+    public static bool HasBinancePrice(MarketView market, DateTimeOffset now) =>
+        market.Price is > 0 && market.PriceSourceTime is { } source && market.PriceReceivedTime is { } received &&
+        source <= received && received <= now && now - source <= TimeSpan.FromSeconds(30);
+
     public static SpeculativeInput Binance(MarketView m,DateTimeOffset now)
     {
         FeatureValue<decimal> Field(decimal? v,DateTimeOffset? source)=>new(v,v is null?DataStatus.Missing:source>now||m.PriceReceivedTime>now?DataStatus.Invalid:

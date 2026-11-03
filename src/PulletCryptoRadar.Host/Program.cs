@@ -32,6 +32,10 @@ builder.Services.AddSingleton(s=>s.GetRequiredService<IOptions<NetworkOptions>>(
 builder.Services.AddSingleton<IOpportunityRepository,OpportunityRepository>();
 builder.Services.AddSingleton<OpportunityService>();
 builder.Services.AddSingleton<NetworkUsage>();
+builder.Services.AddSingleton<PulletCryptoRadar.Host.MarketFoundation>();
+builder.Services.AddSingleton<PulletCryptoRadar.Host.ProviderRouter>();
+builder.Services.AddHostedService<PulletCryptoRadar.Host.MarketFoundationWorker>();
+builder.Services.AddHttpClient("MarketFoundation", http => http.Timeout = TimeSpan.FromSeconds(12)).RemoveAllLoggers();
 builder.Services.AddSingleton<INetworkTraffic>(s=>s.GetRequiredService<NetworkUsage>());
 builder.Services.AddTransient<MeteredNetworkHandler>();
 builder.Services.ConfigureHttpClientDefaults(client=>client.ConfigureHttpClient(http=>http.DefaultRequestHeaders.AcceptEncoding.ParseAdd("gzip"))
@@ -332,6 +336,7 @@ app.MapGet("/api/opportunities",(OpportunityService service)=>service.Latest() i
 app.MapGet("/api/opportunities/history",(int? limit,OpportunityService service)=>service.History(limit??6));
 app.MapGet("/api/research/tenfold",()=>Results.File(Path.Combine(AppContext.BaseDirectory,"Research","Tenfold","Summary.json"),"application/json"));
 app.MapGet("/api/forward",(ForwardService service,CancellationToken ct)=>service.OverviewAsync(ct));
+app.MapPost("/api/data-foundation/market", (string coinId, string chain, bool? includeOwnership, bool? compareMarketCapital, PulletCryptoRadar.Host.MarketFoundation foundation, CancellationToken ct) => foundation.Collect(coinId, chain, includeOwnership == true, ct, compareMarketCapital: compareMarketCapital == true));
 app.MapGet("/api/network",(NetworkUsage usage)=>usage.Snapshot());
 app.MapGet("/api/research/backtest",()=>Results.File(Path.Combine(AppContext.BaseDirectory,"Research","Backtest","Summary.json"),"application/json"));
 app.MapGet("/api/research/backtest/{key}",(string key)=>

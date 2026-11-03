@@ -4,7 +4,7 @@ using PulletCryptoRadar.Scanner;
 
 namespace PulletCryptoRadar.Application;
 
-public sealed class WatchService(IMarketRuntimeStore market,IAlternativeMarketStore alternatives,ISpeculativeRepository venues,IWatchRepository repository,
+public sealed class WatchService(IMarketRuntimeStore market,IWatchRepository repository,
     IWatchPersistence persistence,WatchStrategyEngine engine,WatchOptions options,UpMoveDetector up,DownMoveDetector down,IRadarSnapshotSource radar,TimeProvider time,WatchOnChainStrategyEngine? onChain=null,IFlowFeatureSource? flows=null,WatchFlowStrategyEngine? flowEngine=null)
 {
     private readonly SemaphoreSlim _gate=new(1,1);
@@ -44,18 +44,13 @@ public sealed class WatchService(IMarketRuntimeStore market,IAlternativeMarketSt
                 await persistence.SaveConfigAsync(new(aria.Instrument.AssetId,true,.40m,null,null,null,null,false,[],1,now,now,true),0,ct);
                 configs=repository.Configs();
             }
-            var old=repository.Checkpoints().ToDictionary(c=>c.Result.AssetId);var bindings=venues.Bindings();var quotes=alternatives.GetAll();
+            var old=repository.Checkpoints().ToDictionary(c=>c.Result.AssetId);
             var checkpoints=new List<WatchCheckpoint>();var notifications=new List<NotificationRecord>();var candles=new List<WatchCandle>();
             foreach(var config in configs)
             {
                 var m=market.Get(config.AssetId);if(m is null)continue;
                 var input=SpeculativeService.Binance(m,now);
-                if(!(input.Price.Value>0&&input.Price.Status==DataStatus.Valid))
-                {
-                    var q=quotes.FirstOrDefault(q=>q.Exchange=="Gate"&&q.BaseAsset==m.Instrument.BaseAsset);
-                    if(q is not null)input=SpeculativeService.External(m,q,bindings.Any(b=>b.AssetId==config.AssetId&&b.Exchange==q.Exchange&&b.Symbol==q.Symbol),now);
-                }
-                var data=new WatchInput(config,input,input.Exchange=="Binance"?up.Detect(m,now):null,input.Exchange=="Binance"?down.Detect(m,now):null,radar.GetSnapshot()?.Market){Flow=flows?.Features(config.AssetId,now)??new()};
+                var data=new WatchInput(config,input,up.Detect(m,now),down.Detect(m,now),radar.GetSnapshot()?.Market){Flow=flows?.Features(config.AssetId,now)??new()};
                 var result=flowEngine?.Evaluate(data,now)??onChain?.Evaluate(data,now)??engine.Evaluate(data,now);var next=engine.Advance(data,result,old.GetValueOrDefault(config.AssetId),now);
                 checkpoints.Add(next.Checkpoint with{ParametersJson=JsonSerializer.Serialize(options)});if(next.Notification is {} n)notifications.Add(n);
                 if(config.Enabled) candles.AddRange(market.GetCandles(config.AssetId,1).Where(c=>c.EndTime<=now&&c.SourceTime<=now&&c.ReceivedTime<=now).TakeLast(10).Select(c=>new WatchCandle(config.AssetId,c)));

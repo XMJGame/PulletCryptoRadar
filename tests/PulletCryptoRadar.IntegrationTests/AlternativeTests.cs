@@ -97,7 +97,7 @@ public sealed class AlternativeTests
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request,CancellationToken cancellationToken)
         {Calls++;var response=new HttpResponseMessage(System.Net.HttpStatusCode.TooManyRequests);response.Headers.RetryAfter=new(TimeSpan.FromMinutes(3));return Task.FromResult(response);}
     }
-    [Fact] public async Task SingleWriterFallbackNeedsExplicitBindingAndAuditUsesSavedParameters()
+    [Fact] public async Task BinanceRemainsSelectedAndStalePriceAllowsIndependentReference()
     {
         var db=Db();var clock=new Clock();var queue=new PersistenceQueue();var health=new ProviderHealthStore(clock);
         using var worker=new PersistenceWorker(db,queue,health,Microsoft.Extensions.Logging.Abstractions.NullLogger<PersistenceWorker>.Instance);
@@ -111,16 +111,27 @@ public sealed class AlternativeTests
             capital.SetMappings([new(id,"bitcoin",MappingStatus.ManualVerified,["bitcoin"],1,null,null,1,Now,"Fixture")]);
             capital.SetMarkets([new("bitcoin",Now,Now,50_000_000,100_000_000,null,null,null,null,null)]);
             var settings=new SpeculativeOptions();var service=new SpeculativeService(market,alt,new SpeculativeRepository(db),new SpeculativePersistence(queue),settings,new(settings),new(),capital,new(new()),new(new()),clock);
-            var first=await service.ScanAsync(default);var gate=Assert.Single(first.Rows,r=>r.IsSelectedSource);Assert.Equal("Gate",gate.Input.Exchange);Assert.Null(gate.Assessment.AnomalyScore);
+            var first = await service.ScanAsync(default);
+            Assert.Equal("Binance", Assert.Single(first.Rows).Input.Exchange);
+            clock.Current = Now.AddSeconds(31);
+            var stale = await service.ScanAsync(default);
+            Assert.Equal("Binance", Assert.Single(stale.Rows, r => r.IsSelectedSource).Input.Exchange);
+            var gate = Assert.Single(stale.Rows, r => r.Input.Exchange == "Gate");
+            Assert.False(gate.IsSelectedSource);
+            Assert.Null(gate.Assessment.AnomalyScore);
             await Assert.ThrowsAsync<ArgumentException>(()=>service.SetVenueBindingAsync(id,new("Gate","BTC_USDT",0,false),default));
             await service.SetVenueBindingAsync(id,new("Gate","BTC_USDT",0,true),default);var second=await service.ScanAsync(default);
-            Assert.NotNull(second.Rows.Single(r=>r.IsSelectedSource).Assessment.AnomalyScore);
+            Assert.NotNull(second.Rows.Single(r=>r.Input.Exchange=="Gate").Assessment.AnomalyScore);
             settings.EntryScore=99;Assert.All(service.Audit(3),a=>Assert.Equal("Match",a.Status));
             await Assert.ThrowsAsync<MappingConflictException>(()=>service.SetVenueBindingAsync(id,new("Gate","BTC_USDT",0,true),default));
             await service.SetVenueBindingAsync(id,new("Gate","BTC_USDT",1,false,true),default);
-            Assert.Null((await service.ScanAsync(default)).Rows.Single(r=>r.IsSelectedSource).Assessment.AnomalyScore);
+            Assert.Null((await service.ScanAsync(default)).Rows.Single(r=>r.Input.Exchange=="Gate").Assessment.AnomalyScore);
         }
         finally{await worker.StopAsync(default);}
     }
-    private sealed class Clock:TimeProvider{public override DateTimeOffset GetUtcNow()=>Now;}
+    private sealed class Clock:TimeProvider
+    {
+        public DateTimeOffset Current { get; set; } = Now;
+        public override DateTimeOffset GetUtcNow() => Current;
+    }
 }
