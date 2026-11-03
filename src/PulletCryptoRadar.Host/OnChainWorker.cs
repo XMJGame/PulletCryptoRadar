@@ -16,7 +16,9 @@ public sealed class OnChainWorker(OnChainService service,IOnChainProvider provid
             {
                 if(options.SeedAriaReference)await service.SeedAsync(ct);
                 var watchIds=watches.Configs().Where(w=>w.Enabled).Select(w=>w.AssetId).ToHashSet();
-                foreach(var binding in service.Bindings().Where(b=>b.Enabled).OrderByDescending(b=>watchIds.Contains(b.AssetId)).Take(options.MaximumTargets))
+                foreach(var binding in service.Bindings().Where(b=>b.Enabled&&watchIds.Contains(b.AssetId)))
+                    await service.PromoteWatchAsync(binding,options.WatchMinutes,ct);
+                foreach(var binding in service.DueBindings(watchIds,time.GetUtcNow(),options.MaximumTargets))
                 {
                     var now=time.GetUtcNow();if(!service.Due(binding,now))continue;
                     var next=now+(watchIds.Contains(binding.AssetId)?TimeSpan.FromMinutes(options.WatchMinutes):TimeSpan.FromHours(options.CandidateHours));
@@ -27,8 +29,11 @@ public sealed class OnChainWorker(OnChainService service,IOnChainProvider provid
                     }
                     try
                     {
-                        var sample=await provider.FetchAsync(binding,ct);await service.SaveSampleAsync(new(sample,attempt with{Error=null}),ct);
-                        health.Success("OnChain",freshnessSeconds:options.WatchMinutes*60+300);
+                        var sample=await provider.FetchAsync(binding,ct);
+                        var retry=sample.Security?.RetryAt;
+                        await service.SaveSampleAsync(new(sample,attempt with{Error=sample.Security?.Error,NextAttempt=retry>attempt.NextAttempt?retry.Value:attempt.NextAttempt}),ct);
+                        if(sample.Security?.Error is {} error)health.Failure("OnChain",error);
+                        else health.Success("OnChain",freshnessSeconds:options.WatchMinutes*60+300);
                     }
                     catch(OperationCanceledException)when(ct.IsCancellationRequested){throw;}
                     catch(Exception ex)

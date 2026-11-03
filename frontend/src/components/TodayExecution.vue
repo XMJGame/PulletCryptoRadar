@@ -1,0 +1,11 @@
+<script setup lang="ts">
+import {ref} from 'vue'
+import {api} from '../api'
+import {usePolling} from '../usePolling'
+import {time,number} from '../format'
+import {executionAction,type DailyReport} from '../quantDaily'
+const data=ref<DailyReport|null>(null)
+const {error}=usePolling(async signal=>{data.value=await api('/api/quant/daily',{signal})},60000)
+</script>
+<template><section class="detail today-execution" aria-label="当前策略 · 今日执行"><div class="section-heading"><h2>当前策略 · 今日执行</h2><RouterLink to="/journal">完整复盘 →</RouterLink></div><p v-if="error" role="alert">{{error}}；已有内容保留原生成时间。</p><template v-if="data"><div class="today-flow"><span><strong>{{data.funnel.priceCandidates}}</strong>价格触发</span><span><strong>{{data.funnel.everReady}}</strong>曾通过计划</span><span><strong>{{data.funnel.observedIntents}}</strong>形成意向</span><span><strong>{{data.funnel.openings}}</strong>实际模拟开仓</span></div><p>当日已结算净额 <b>{{number(data.costs.realizedNet,4)}} U</b> · 取消意向 {{data.funnel.cancellations}}笔。未平浮盈亏另看持仓，不计作已实现盈利。</p><p v-if="data.accountStale||data.auditTruncated" class="radar-notice">{{data.accountStale?'账户调度超时，请先检查服务。':''}}{{data.auditTruncated?'审计截断，意向与取消数仅为可观察下界。':''}}</p><p v-if="!data.funnel.priceCandidates">已冻结{{data.funnel.observations}}项判断，尚无价格触发。覆盖缺口与资料不足详见复盘。</p><p v-for="(e,i) in data.executionEvents.slice(0,3)" :key="i" class="today-event"><span>{{time(e.time)}} · {{e.symbol}}</span><b>{{executionAction(e.action)}}</b><span>{{e.reason}}</span></p><small>上海日期 {{data.date}} · 更新 {{time(data.generatedAt)}}。计划通过仍须后续行情复核。</small></template><p v-else-if="!error">尚未形成当前策略的日报。</p><div class="context-actions"><RouterLink to="/signals">查看当前信号条件 →</RouterLink><RouterLink to="/execution">执行与费用明细 →</RouterLink></div></section></template>
+<style scoped>.today-flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:20px 0}.today-flow>span{display:flex;align-items:baseline;gap:12px;padding:15px;border:1px solid #293d43;border-radius:7px;color:#9caebc;font-size:12px}.today-flow strong{font-size:26px;color:#69dab5}.today-event{display:flex;gap:12px;flex-wrap:wrap;border-top:1px solid #26343c;padding-top:12px}.today-event>span:last-child{flex-basis:100%;font-size:11px}.today-event b{color:#b7d4ca;font-weight:500}@media(max-width:700px){.today-flow{grid-template-columns:repeat(2,minmax(0,1fr))}}</style>

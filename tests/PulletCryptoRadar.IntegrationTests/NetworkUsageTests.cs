@@ -35,7 +35,30 @@ public sealed class NetworkUsageTests : IDisposable
     [Fact] public void InvalidLedgerFailsClosed()
     {
         Directory.CreateDirectory(root);File.WriteAllText(Path.Combine(root,"network-usage.json"),"bad json");
-        Assert.Throws<JsonException>(()=>Meter(new Clock()));
+        var meter=Meter(new Clock());Assert.True(State(meter).GetProperty("Paused").GetBoolean());Assert.Throws<NetworkBudgetExceededException>(meter.BeforeRequest);
+        Assert.Equal(30,State(meter).GetProperty("Usage").GetProperty("MonthBytes").GetInt64());
+        var preserved=Assert.Single(Directory.GetFiles(root,"*.corrupt-*.json"));Assert.Equal("bad json",File.ReadAllText(preserved));
+    }
+    [Fact]public void ZeroFilledPrimaryUsesDurablePreviousCopyWithoutGrantingFreshTraffic()
+    {
+        var clock=new Clock();var meter=Meter(clock);meter.BeforeRequest();meter.Record(8);var path=Path.Combine(root,"network-usage.json");
+        File.WriteAllBytes(path,new byte[112]);var recovered=Meter(clock);var snapshot=State(recovered);
+        Assert.True(snapshot.GetProperty("Paused").GetBoolean());Assert.True(snapshot.GetProperty("Usage").GetProperty("MonthBytes").GetInt64()>=8);
+        Assert.NotEqual(JsonValueKind.Null,snapshot.GetProperty("Recovery").ValueKind);Assert.Throws<NetworkBudgetExceededException>(recovered.BeforeRequest);
+        var restored=State(Meter(clock));Assert.Equal(State(recovered).GetProperty("Usage").GetProperty("ReservedMonthBytes").GetInt64(),restored.GetProperty("Usage").GetProperty("ReservedMonthBytes").GetInt64());
+        Assert.Equal(new byte[112],File.ReadAllBytes(Assert.Single(Directory.GetFiles(root,"*.corrupt-*.json"))));
+    }
+    [Fact]public void BothDamagedCopiesAndNegativeCountersRemainVisibleAndPaused()
+    {
+        Directory.CreateDirectory(root);File.WriteAllText(Path.Combine(root,"network-usage.json"),"{}");File.WriteAllText(Path.Combine(root,"network-usage.json.bak"),"truncated");
+        var meter=Meter(new Clock());Assert.True(State(meter).GetProperty("Paused").GetBoolean());Assert.Equal(2,Directory.GetFiles(root,"*.corrupt-*.json").Length);
+        File.WriteAllText(Path.Combine(root,"network-usage.json"),JsonSerializer.Serialize(new NetworkUsage.Ledger("2026-10-29","2026-10",1,1,0,-1)));
+        var again=Meter(new Clock());Assert.True(State(again).GetProperty("Paused").GetBoolean());
+    }
+    [Fact]public void IncompleteTemporaryFileIsNeverAcceptedAsCommittedUsage()
+    {
+        var clock=new Clock();var meter=Meter(clock,100,1000);meter.Record(7);File.WriteAllText(Path.Combine(root,"network-usage.json.crash.tmp"),"bad json");
+        var restored=State(Meter(clock,100,1000));Assert.Equal(7,restored.GetProperty("Usage").GetProperty("MonthBytes").GetInt64());Assert.False(restored.GetProperty("Paused").GetBoolean());
     }
     private sealed class Source : HttpMessageHandler
     {

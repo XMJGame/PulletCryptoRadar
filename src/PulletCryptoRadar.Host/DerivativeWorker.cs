@@ -3,12 +3,13 @@ using Microsoft.Extensions.Options;
 using PulletCryptoRadar.Core;
 using PulletCryptoRadar.Infrastructure;
 using PulletCryptoRadar.Providers.Binance;
+using PulletCryptoRadar.Application;
 
 namespace PulletCryptoRadar.Host;
 
 public sealed class DerivativeWorker(IDerivativeRestProvider provider, IMarketRuntimeStore market, IMarketEventBus bus,
     PersistenceQueue queue, DerivativeRepository repository, IDerivativeRuntimeStore runtime, IOptions<DerivativeOptions> options,
-    IOptions<BinanceOptions> binance, IOptions<NetworkOptions> network, IProviderHealthStore health, TimeProvider time, ILogger<DerivativeWorker> logger) : BackgroundService
+    IOptions<BinanceOptions> binance, IOptions<NetworkOptions> network, IProviderHealthStore health, TimeProvider time, PaperService paper, ILogger<DerivativeWorker> logger) : BackgroundService
 {
     private readonly HashSet<string> _restored = [];
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -21,7 +22,8 @@ public sealed class DerivativeWorker(IDerivativeRestProvider provider, IMarketRu
     {
         while (!ct.IsCancellationRequested)
         {
-            var start = Stopwatch.StartNew(); var assets = market.GetAll().Where(a=>a.Instrument.Active).OrderByDescending(a=>Priority(a.Instrument.Symbol)).ThenByDescending(a=>a.Volume24h).Take(network.Value.EconomyMode ? network.Value.HistorySymbols : int.MaxValue).ToArray();
+            var start = Stopwatch.StartNew();var state=(await paper.OverviewAsync(ct)).State;
+            var assets=(network.Value.EconomyMode?PaperUniverse.Warmup(market.GetAll(),state,time.GetUtcNow(),network.Value.HistorySymbols):market.GetAll().Where(m=>m.Instrument.Active)).ToArray();
             if (assets.Length == 0) { await Task.Delay(TimeSpan.FromSeconds(2), time, ct); continue; }
             await Parallel.ForEachAsync(assets.OrderByDescending(x => Priority(x.Instrument.Symbol)).ThenByDescending(x => x.Volume24h),
                 new ParallelOptions { CancellationToken = ct, MaxDegreeOfParallelism = options.Value.Concurrency }, async (asset, token) =>
@@ -43,9 +45,10 @@ public sealed class DerivativeWorker(IDerivativeRestProvider provider, IMarketRu
         while (!ct.IsCancellationRequested)
         {
             var start = Stopwatch.StartNew();
-            var candidates = market.GetAll().OrderByDescending(m => Priority(m.Instrument.Symbol)).ThenByDescending(m =>
-                Math.Abs(m.Features.PriceRobustZ5m.Value ?? 0) + Math.Max(0, m.Features.VolumeRobustZ.Value ?? 0))
-                .ThenByDescending(m => m.Volume24h).Take(network.Value.EconomyMode ? Math.Min(10, options.Value.DeepCandidateCount) : options.Value.DeepCandidateCount).ToArray();
+            var state=(await paper.OverviewAsync(ct)).State;
+            var candidates = (network.Value.EconomyMode?PaperUniverse.Warmup(market.GetAll(),state,time.GetUtcNow(),network.Value.HistorySymbols):market.GetAll().Where(m=>m.Instrument.Active).OrderByDescending(m=>Priority(m.Instrument.Symbol)).ThenByDescending(m=>Math.Abs(m.Features.PriceRobustZ5m.Value??0)+Math.Max(0,m.Features.VolumeRobustZ.Value??0)).Take(options.Value.DeepCandidateCount))
+                .OrderByDescending(m=>state.Positions.Any(p=>p.Symbol==m.Instrument.Symbol)).ToArray();
+            var detailed=candidates.Take(20).Select(m=>m.Instrument.Symbol).ToHashSet(StringComparer.Ordinal);
             if (candidates.Length == 0) { await Task.Delay(TimeSpan.FromSeconds(2), time, ct); continue; }
             // Rehydrate each selected symbol once; a new source time is never invented for restored data.
             foreach (var candidate in candidates)
@@ -62,6 +65,7 @@ public sealed class DerivativeWorker(IDerivativeRestProvider provider, IMarketRu
             {
                 foreach (var kind in new[] { DerivativeKind.OpenInterest5m, DerivativeKind.GlobalLongShort5m, DerivativeKind.TopAccount5m, DerivativeKind.TopPosition5m, DerivativeKind.Taker5m })
                 {
+                    if(network.Value.EconomyMode&&kind!=DerivativeKind.OpenInterest5m&&!detailed.Contains(asset.Instrument.Symbol))continue;
                     try
                     {
                         var points = await provider.GetSeriesAsync(asset.Instrument.Symbol, kind, network.Value.EconomyMode ? 35 : options.Value.HistoryLimit, token);

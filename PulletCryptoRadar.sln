@@ -29,6 +29,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PulletCryptoRadar.Providers
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PulletCryptoRadar.Providers.OnChain", "src\PulletCryptoRadar.Providers.OnChain\PulletCryptoRadar.Providers.OnChain.csproj", "{8F85DA22-8F3C-4EF8-8345-6BF64301CED5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PulletCryptoRadar.Supervisor", "src\PulletCryptoRadar.Supervisor\PulletCryptoRadar.Supervisor.csproj", "{E510897B-46D8-4428-B68E-7E3A4533B677}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PulletCryptoRadar.SupervisorFixture", "tests\PulletCryptoRadar.SupervisorFixture\PulletCryptoRadar.SupervisorFixture.csproj", "{D179ECD6-B773-41B9-8378-950C4A96F4E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -171,6 +175,30 @@ Global
 		{8F85DA22-8F3C-4EF8-8345-6BF64301CED5}.Release|x64.Build.0 = Release|Any CPU
 		{8F85DA22-8F3C-4EF8-8345-6BF64301CED5}.Release|x86.ActiveCfg = Release|Any CPU
 		{8F85DA22-8F3C-4EF8-8345-6BF64301CED5}.Release|x86.Build.0 = Release|Any CPU
+		{E510897B-46D8-4428-B68E-7E3A4533B677}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E510897B-46D8-4428-B68E-7E3A4533B677}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E510897B-46D8-4428-B68E-7E3A4533B677}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E510897B-46D8-4428-B68E-7E3A4533B677}.Debug|x64.Build.0 = Debug|Any CPU
+		{E510897B-46D8-4428-B68E-7E3A4533B677}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E510897B-46D8-4428-B68E-7E3A4533B677}.Debug|x86.Build.0 = Debug|Any CPU
+		{E510897B-46D8-4428-B68E-7E3A4533B677}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E510897B-46D8-4428-B68E-7E3A4533B677}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E510897B-46D8-4428-B68E-7E3A4533B677}.Release|x64.ActiveCfg = Release|Any CPU
+		{E510897B-46D8-4428-B68E-7E3A4533B677}.Release|x64.Build.0 = Release|Any CPU
+		{E510897B-46D8-4428-B68E-7E3A4533B677}.Release|x86.ActiveCfg = Release|Any CPU
+		{E510897B-46D8-4428-B68E-7E3A4533B677}.Release|x86.Build.0 = Release|Any CPU
+		{D179ECD6-B773-41B9-8378-950C4A96F4E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D179ECD6-B773-41B9-8378-950C4A96F4E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D179ECD6-B773-41B9-8378-950C4A96F4E6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D179ECD6-B773-41B9-8378-950C4A96F4E6}.Debug|x64.Build.0 = Debug|Any CPU
+		{D179ECD6-B773-41B9-8378-950C4A96F4E6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D179ECD6-B773-41B9-8378-950C4A96F4E6}.Debug|x86.Build.0 = Debug|Any CPU
+		{D179ECD6-B773-41B9-8378-950C4A96F4E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D179ECD6-B773-41B9-8378-950C4A96F4E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D179ECD6-B773-41B9-8378-950C4A96F4E6}.Release|x64.ActiveCfg = Release|Any CPU
+		{D179ECD6-B773-41B9-8378-950C4A96F4E6}.Release|x64.Build.0 = Release|Any CPU
+		{D179ECD6-B773-41B9-8378-950C4A96F4E6}.Release|x86.ActiveCfg = Release|Any CPU
+		{D179ECD6-B773-41B9-8378-950C4A96F4E6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -187,5 +215,7 @@ Global
 		{AF7727D9-334E-4BC7-AC34-5CEC3ADB63D2} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
 		{C848C4B3-1733-46FD-BFA4-A62E0770B38F} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{8F85DA22-8F3C-4EF8-8345-6BF64301CED5} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{E510897B-46D8-4428-B68E-7E3A4533B677} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{D179ECD6-B773-41B9-8378-950C4A96F4E6} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
 	EndGlobalSection
 EndGlobal

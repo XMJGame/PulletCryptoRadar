@@ -1,14 +1,20 @@
 namespace PulletCryptoRadar.Core;
 
-public enum WalletLabelType { Unknown,Project,Team,Investor,Treasury,Exchange,LP,Bridge,Burn,Whale,Contract }
+public enum WalletLabelType { Unknown,Project,Team,Investor,Treasury,Exchange,LP,Bridge,Burn,Whale,Contract,MarketMaker,Broker,Custodian }
 public sealed record ChainBinding(int AssetId,string Chain,string ContractAddress,string CoinGeckoId,bool Enabled,bool Verified,
     long Revision,DateTimeOffset UpdatedAt,string Verification,IReadOnlyList<string> EvidenceUrls);
-public sealed record ChainBindingRequest(string Chain,string ContractAddress,string CoinGeckoId,bool Enabled,long ExpectedRevision,bool ConfirmIdentity);
+public sealed record ChainBindingRequest(string Chain,string ContractAddress,string CoinGeckoId,bool Enabled,long ExpectedRevision,bool ConfirmIdentity,
+    IReadOnlyList<string>? EvidenceUrls=null);
 public sealed record AddressLabel(string Chain,string Address,WalletLabelType Type,bool Verified,string EvidenceUrl,long Revision,DateTimeOffset UpdatedAt);
 public sealed record AddressLabelRequest(string Chain,string Address,WalletLabelType Type,string EvidenceUrl,long ExpectedRevision,bool ConfirmEvidence);
 public sealed record TokenHolder(string Address,string RawBalance,decimal Percent,string ReportedTag="");
+public sealed record SecurityHolderHint(string Address,decimal Percent,string ReportedTag,bool? IsContract,bool? IsLocked,string? TokenAccount=null);
+public sealed record TokenSecurityEvidence(string Provider,string Chain,string ContractAddress,string EvidenceUrl,
+    DateTimeOffset? SourceTime,DateTimeOffset ReceivedTime,long? HolderCount,IReadOnlyDictionary<string,bool?> Flags,
+    IReadOnlyList<SecurityHolderHint> Holders,string? Error=null,DateTimeOffset? RetryAt=null);
 public sealed record OnChainSample(Guid Id,string Chain,string ContractAddress,string Provider,DateTimeOffset SourceTime,DateTimeOffset ReceivedTime,
-    string TimeBasis,long? HolderCount,string RawTotalSupply,int? Decimals,IReadOnlyList<TokenHolder> Holders,int RequestedCount,bool OrderedTopHolders);
+    string TimeBasis,long? HolderCount,string RawTotalSupply,int? Decimals,IReadOnlyList<TokenHolder> Holders,int RequestedCount,bool OrderedTopHolders,
+    TokenSecurityEvidence? Security=null);
 public sealed record OnChainFeatures
 {
     public bool TrustedIdentity {get;init;}
@@ -22,6 +28,7 @@ public sealed record OnChainFeatures
     public FeatureValue<decimal> HolderChange24hPercent {get;init;}=FeatureValue<decimal>.Missing();
     public Dictionary<int,FeatureValue<decimal>> RawTopPercent {get;init;}=[];
     public FeatureValue<decimal> AdjustedTop10Percent {get;init;}=FeatureValue<decimal>.Missing();
+    public FeatureValue<decimal> NonCustodialTop10Percent {get;init;}=FeatureValue<decimal>.Missing();
     public FeatureValue<decimal> ObservedExchangePercent {get;init;}=FeatureValue<decimal>.Missing();
     public FeatureValue<decimal> ObservedProjectPercent {get;init;}=FeatureValue<decimal>.Missing();
     public decimal ClassificationCoveragePercent {get;init;}

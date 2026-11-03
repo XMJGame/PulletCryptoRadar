@@ -23,6 +23,8 @@
     <ProjectReference Include="..\..\src\PulletCryptoRadar.Providers.Binance\PulletCryptoRadar.Providers.Binance.csproj" />
     <ProjectReference Include="..\..\src\PulletCryptoRadar.Providers.Market\PulletCryptoRadar.Providers.Market.csproj" />
     <ProjectReference Include="..\..\src\PulletCryptoRadar.Providers.OnChain\PulletCryptoRadar.Providers.OnChain.csproj" />
+    <ProjectReference Include="..\..\src\PulletCryptoRadar.Supervisor\PulletCryptoRadar.Supervisor.csproj" ReferenceOutputAssembly="false" />
+    <ProjectReference Include="..\PulletCryptoRadar.SupervisorFixture\PulletCryptoRadar.SupervisorFixture.csproj" ReferenceOutputAssembly="false" />
   </ItemGroup>
 
 </Project>

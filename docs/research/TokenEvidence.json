@@ -1,0 +1,53 @@
+[
+  {
+    "CoinGeckoId": "olaxbt", "Platform": "binance-smart-chain", "ContractAddress": "0x81a7da4074b8e0ed51bea40f9dcbdf4d9d4832b4",
+    "Category": "AddressHint", "Title": "AIO 最大地址：Vesting 代码名称线索",
+    "Summary": "BscScan已索引的该地址合约页显示名称Vesting及release/allocations等接口。本次直接访问受安全验证限制，不能由名称断言全部余额都锁定、受益人是谁或能否提前提取；保持历史代码线索，不从集中度扣除。",
+    "SourceUrl": "https://bscscan.com/address/0x78818ee5d3899176f99d79dda24d3d626b958bb6#code", "SourceKind": "ExplorerHistoricalRecord",
+    "PublishedAt": null, "CheckedAt": "2026-10-31T02:05:00Z", "ReviewAfter": "2026-11-01T02:05:00Z",
+    "Address": "0x78818ee5d3899176f99d79dda24d3d626b958bb6", "RoleHint": "Vesting合约（用途/受益人待复核）"
+  },
+  {
+    "CoinGeckoId": "olaxbt", "Platform": "binance-smart-chain", "ContractAddress": "0x81a7da4074b8e0ed51bea40f9dcbdf4d9d4832b4",
+    "Category": "AddressHint", "Title": "AIO 大地址：Gate 1 历史标签线索",
+    "Summary": "BscScan的历史BSC交易页将完整地址标为Gate 1。本次地址页安全验证未通过，当前归属尚未重新确认；作为交易所线索留档，不按普通庄家解释，也不自动计入已核验托管剔除项。",
+    "SourceUrl": "https://bscscan.com/tx/0x8334769e3f12ca6f276d913f9cb34479b58b348f7e6ae3f7aabc229048f14700", "SourceKind": "ExplorerHistoricalRecord",
+    "PublishedAt": null, "CheckedAt": "2026-10-31T02:05:00Z", "ReviewAfter": "2026-11-01T02:05:00Z", "EventAt": "2026-06-23T14:18:37Z",
+    "Address": "0x0d0707963952f2fba59dd06f2b425ace40b492fe", "RoleHint": "疑似交易所 · Gate 1（历史标签待复核）"
+  },
+  {
+    "CoinGeckoId": "olaxbt", "Platform": "binance-smart-chain", "ContractAddress": "0x81a7da4074b8e0ed51bea40f9dcbdf4d9d4832b4",
+    "Category": "Tokenomics", "Title": "AIO 官方供应与锁仓条款",
+    "Summary": "项目文件声明总供应10亿；团队15%、投资者14%，均无TGE释放、锁12个月再归属24个月。其余配置也有释放安排，不能只盯团队份额。本页没有足以生成完整逐日解锁日历的链上履约证据；不推算本周精确释放量。",
+    "SourceUrl": "https://olaxbt-docs.gitbook.io/olaxbt-doc/project-info/tokenomic", "SourceKind": "ProjectDocumentation",
+    "PublishedAt": null, "CheckedAt": "2026-10-31T01:54:33Z", "ReviewAfter": "2026-11-07T01:54:33Z"
+  },
+  {
+    "CoinGeckoId": "olaxbt", "Platform": "binance-smart-chain", "ContractAddress": "0x81a7da4074b8e0ed51bea40f9dcbdf4d9d4832b4",
+    "Category": "Product", "Title": "AIO 的用途声明与价值捕获缺口",
+    "Summary": "文件将代币用途描述为MCP工具/Agent访问、数据贡献激励和费用优惠。这些是设计声明；尚无本次核验的付费用户、收入、费用流向或团队履历证据，不能因此认定已形成稳定需求。",
+    "SourceUrl": "https://olaxbt-docs.gitbook.io/olaxbt-doc/project-info/tokenomic", "SourceKind": "ProjectDocumentation",
+    "PublishedAt": null, "CheckedAt": "2026-10-31T01:54:33Z", "ReviewAfter": "2026-11-07T01:54:33Z"
+  },
+  {
+    "CoinGeckoId": "zerobase", "Platform": "binance-smart-chain", "ContractAddress": "0xfab99fcf605fd8f4593edb70a43ba56542777777",
+    "Category": "Tokenomics", "Title": "ZBT 官方分配与释放条款",
+    "Summary": "项目文件声明总供应10亿；团队/顾问20%，锁1年后线性归属48个月；投资者11.25%，锁1年后归属24个月；节点激励43.75%，TGE一月后开始释放。多类供应需同时观察；条款未给出足够的完整精确日期/数量及履约记录，本周解锁量保持未知。",
+    "SourceUrl": "https://zerobase.pro/docs/economic-model-roadmap/", "SourceKind": "ProjectDocumentation",
+    "PublishedAt": null, "CheckedAt": "2026-10-31T01:54:33Z", "ReviewAfter": "2026-11-07T01:54:33Z"
+  },
+  {
+    "CoinGeckoId": "zerobase", "Platform": "binance-smart-chain", "ContractAddress": "0xfab99fcf605fd8f4593edb70a43ba56542777777",
+    "Category": "Product", "Title": "ZBT 的网络用途不等于分红权",
+    "Summary": "项目文件将ZBT用于证明网络服务及节点激励，并明确代币不代表股权或收入/利润请求权。仍须独立核验真实证明任务、付费需求及奖励补贴占比；尚未获得本次可核验的收入或用户数据。",
+    "SourceUrl": "https://zerobase.pro/docs/economic-model-roadmap/", "SourceKind": "ProjectDocumentation",
+    "PublishedAt": null, "CheckedAt": "2026-10-31T01:54:33Z", "ReviewAfter": "2026-11-07T01:54:33Z"
+  },
+  {
+    "CoinGeckoId": "zerobase", "Platform": "binance-smart-chain", "ContractAddress": "0xfab99fcf605fd8f4593edb70a43ba56542777777",
+    "Category": "Announcement", "Title": "历史事件：ZBTUSDT 永续上线",
+    "Summary": "币安原公告指定2025-10-17 11:30 UTC上线ZBTUSDT永续。这是历史上所背景，不是今天的新利好，不足以解释本次价格变化，也不用于推定当前资金费率或上市资格。",
+    "SourceUrl": "https://www.binance.com/en/support/announcement/detail/f3c13e979ddc4e0e9dcb1ce721d9608c", "SourceKind": "ExchangeAnnouncement",
+    "PublishedAt": null, "CheckedAt": "2026-10-31T01:54:33Z", "ReviewAfter": "2026-11-07T01:54:33Z", "EventAt": "2025-10-17T11:30:00Z"
+  }
+]

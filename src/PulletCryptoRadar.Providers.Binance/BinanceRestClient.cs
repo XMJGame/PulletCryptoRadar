@@ -34,17 +34,19 @@ public sealed partial class BinanceRestClient(HttpClient http, IRequestLimiter l
     }
     public async Task<IReadOnlyList<Candle>> GetCandlesAsync(string symbol, int intervalMinutes, int limit, DateTimeOffset? endTime, CancellationToken ct)
     {
-        if (intervalMinutes is not (1 or 5 or 15)) throw new ArgumentOutOfRangeException(nameof(intervalMinutes));
-        limit = Math.Clamp(limit, 1, 499);
+        if (intervalMinutes is not (1 or 5 or 15 or 60)) throw new ArgumentOutOfRangeException(nameof(intervalMinutes));
+        limit = Math.Clamp(limit, 1, intervalMinutes==60?1000:499);
         var end = endTime is null ? "" : $"&endTime={endTime.Value.ToUnixTimeMilliseconds()}";
-        using var document = await GetAsync($"/fapi/v1/klines?symbol={Uri.EscapeDataString(symbol)}&interval={intervalMinutes}m&limit={limit}{end}", limit < 100 ? 1 : 2, ct);
+        var interval=intervalMinutes==60?"1h":$"{intervalMinutes}m";
+        using var document = await GetAsync($"/fapi/v1/klines?symbol={Uri.EscapeDataString(symbol)}&interval={interval}&limit={limit}{end}", limit < 100 ? 1 : limit<500?2:5, ct);
         return BinanceParser.Candles(document.RootElement, symbol, intervalMinutes, time.GetUtcNow());
     }
-    private async Task<JsonDocument> GetAsync(string path, int weight, CancellationToken ct)
+    private async Task<JsonDocument> GetAsync(string path, int weight, CancellationToken ct,bool requireFreshDate=false)
     {
         for (var attempt = 0; ; attempt++)
         {
             if (path.StartsWith("/futures/data/", StringComparison.Ordinal)) await limiter.WaitAsync("BinanceStatistics", 1, ct);
+            if(path.StartsWith("/fapi/v1/fundingRate",StringComparison.Ordinal)||path.StartsWith("/fapi/v1/fundingInfo",StringComparison.Ordinal))await limiter.WaitAsync("BinanceFunding",1,ct);
             await limiter.WaitAsync("Binance", weight, ct);
             var stopwatch = Stopwatch.StartNew();
             try
@@ -67,6 +69,8 @@ public sealed partial class BinanceRestClient(HttpClient http, IRequestLimiter l
                     throw new HttpRequestException($"Binance cooldown HTTP {(int)response.StatusCode}; retry after UTC {now.Add(pause):O}", null, response.StatusCode);
                 }
                 response.EnsureSuccessStatusCode();
+                if(requireFreshDate&&(response.Headers.Date is not {} date||date>time.GetUtcNow().AddSeconds(5)||time.GetUtcNow()-date>TimeSpan.FromSeconds(90)))
+                    throw new InvalidDataException("Execution response HTTP Date missing, future or stale");
                 var stream = await response.Content.ReadAsStreamAsync(ct);
                 var json = await JsonDocument.ParseAsync(stream, cancellationToken: ct);
                 health.Success("Binance REST", stopwatch.Elapsed.TotalMilliseconds, 180);

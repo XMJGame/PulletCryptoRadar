@@ -16,7 +16,7 @@ public sealed record Candle(string Symbol, int IntervalMinutes, DateTimeOffset O
     decimal High, decimal Low, decimal Close, decimal QuoteVolume, DateTimeOffset SourceTime, DateTimeOffset ReceivedTime)
 {
     public DateTimeOffset EndTime => OpenTime.AddMinutes(IntervalMinutes);
-    public bool IsValid => IntervalMinutes is 1 or 5 or 15 or 60 && Open > 0 && Close > 0 && Low > 0
+    public bool IsValid => !string.IsNullOrWhiteSpace(Symbol) && IntervalMinutes is 1 or 5 or 15 or 60 && Open > 0 && Close > 0 && Low > 0
         && High >= Low && High >= Math.Max(Open, Close) && Low <= Math.Min(Open, Close) && QuoteVolume >= 0;
 }
 
@@ -50,7 +50,8 @@ public sealed record AssetFeatures
 public sealed record MarketView(Instrument Instrument, decimal? Price, decimal? Volume24h, decimal? ExchangeReturn24h,
     decimal? MarkPrice, decimal? FundingRate, DateTimeOffset? PriceSourceTime, DateTimeOffset? PriceReceivedTime,
     DateTimeOffset? FundingSourceTime, int MinuteSamples, int FiveMinuteSamples, int FifteenMinuteSamples,
-    AssetFeatures Features);
+    AssetFeatures Features)
+{public DateTimeOffset? NextFundingTime {get;init;} public DateTimeOffset? MarkReceivedTime {get;init;}}
 
 public sealed record ProviderHealth(string Name, DateTimeOffset? LastSuccess, DateTimeOffset? LastFailure,
     double? LatencyMs, long ErrorCount, string? Error, int FreshnessSeconds)

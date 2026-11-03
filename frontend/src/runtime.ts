@@ -1,0 +1,3 @@
+export type RuntimeReliability={asOf:string;startedAt:string;lastHeartbeatAt:string|null;supervisorFresh:boolean;supervisor:{at:string;phase:string;processId:number;serverProcessId:number|null;unexpectedExits10Minutes:number;lastExitCode:number|null;lastExitAt:string|null;retryAt:string|null;message:string}|null;gaps:{lastEvidenceAt:string;resumedAt:string;previousProcessId:number;cleanExit:boolean;meaning:string}[];notices:string[]}
+export const supervisorLabel=(state:RuntimeReliability|null,offline:boolean)=>offline?'连接中断 · 数据可能停更':!state?'正在读取运行状态':state.supervisorFresh?'守护已连接': '守护未确认活跃'
+export const shanghaiDate=(at=new Date())=>new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).format(at)

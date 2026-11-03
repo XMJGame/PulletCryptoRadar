@@ -8,7 +8,7 @@ public static class PaperEngine
         &&now-m.PriceSourceTime<=TimeSpan.FromSeconds(15)&&now-m.PriceReceivedTime<=TimeSpan.FromSeconds(15)
         &&m.FundingSourceTime<=now&&now-m.FundingSourceTime<=TimeSpan.FromSeconds(15);
     public static DateOnly Day(DateTimeOffset time)=>DateOnly.FromDateTime(time.ToOffset(TimeSpan.FromHours(8)).DateTime);
-    public static decimal EstimatedLiquidation(PaperPosition p,PaperRules r)=>Math.Max(0,(p.Quantity*p.EntryPrice-p.RemainingMargin)/(p.Quantity*(1-r.MaintenanceRate)));
+    public static decimal EstimatedLiquidation(PaperPosition p,PaperRules r)=>p.Direction=="Short"?Math.Max(0,(p.Quantity*p.EntryPrice+p.RemainingMargin)/(p.Quantity*(1+r.MaintenanceRate))):Math.Max(0,(p.Quantity*p.EntryPrice-p.RemainingMargin)/(p.Quantity*(1-r.MaintenanceRate)));
     public static string? Reject(RadarObservation o,DateTimeOffset now)
     {
         var m=o.Input;var a=o.Up;var returns=m.Features.Returns.GetValueOrDefault(60);
@@ -56,7 +56,7 @@ public static class PaperEngine
             var current=latest.GetValueOrDefault(intent.AssetId);
             if(current is null||radar?.AsOf>now||now-radar?.AsOf>TimeSpan.FromSeconds(90)||Reject(current,now) is {} reason)
             {decisions.Add(new(now,intent.Symbol,"取消模拟意向","执行时信号或数据门槛已失效",intent.Key));continue;}
-            if(m.Price>intent.Evidence.Input.Price*1.01m){decisions.Add(new(now,intent.Symbol,"跳过","信号后已上涨超过1%，不假设按旧价成交",intent.Key));continue;}
+            if(intent.Evidence is null||m.Price>intent.Evidence.Input.Price*1.01m){decisions.Add(new(now,intent.Symbol,"跳过","信号后已上涨超过1%或原始证据缺失，不假设按旧价成交",intent.Key));continue;}
             var entry=m.Price!.Value*(1+rules.SlippageRate);var notional=rules.MarginPerTrade*rules.Leverage;var qty=notional/entry;var fee=notional*rules.FeeRate;
             if(cash<rules.MarginPerTrade+fee){decisions.Add(new(now,intent.Symbol,"跳过","可用模拟余额不足保证金及手续费",intent.Key));continue;}
             cash-=rules.MarginPerTrade+fee;

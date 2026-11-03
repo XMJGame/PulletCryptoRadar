@@ -8,7 +8,7 @@ namespace PulletCryptoRadar.Host;
 
 public sealed class BinanceWorker(IMarketRestProvider rest, IPriorityQuoteProvider priorityQuotes, IMarketStreamProvider stream, IMarketEventBus bus,
     IMarketRuntimeStore runtime, PersistenceQueue persistence, AssetRepository repository, IProviderHealthStore health,
-    IOptions<BinanceOptions> options, IOptions<NetworkOptions> network, TimeProvider time, MarketHistoryLoader historyLoader, ILogger<BinanceWorker> logger) : BackgroundService
+    IOptions<BinanceOptions> options, IOptions<NetworkOptions> network, TimeProvider time, MarketHistoryLoader historyLoader, PaperService paper, ILogger<BinanceWorker> logger) : BackgroundService
 {
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
@@ -83,13 +83,17 @@ public sealed class BinanceWorker(IMarketRestProvider rest, IPriorityQuoteProvid
                     nextMarket=time.GetUtcNow().AddSeconds(60);
                 }
                 if(network.Value.EconomyMode)
-                    await Parallel.ForEachAsync(runtime.GetAll().Where(a=>a.Instrument.Active&&network.Value.PrioritySymbols.Contains(a.Instrument.Symbol)),
+                {
+                    var state=(await paper.OverviewAsync(ct)).State;
+                    var fast=network.Value.PrioritySymbols.Concat(state.Positions.Select(p=>p.Symbol)).Concat(state.Pending.Select(p=>p.Symbol)).ToHashSet(StringComparer.Ordinal);
+                    await Parallel.ForEachAsync(runtime.GetAll().Where(a=>a.Instrument.Active&&fast.Contains(a.Instrument.Symbol)),
                         new ParallelOptions{CancellationToken=ct,MaxDegreeOfParallelism=2},async(asset,token)=>
                         {
                             try { foreach(var e in await priorityQuotes.GetPriorityQuotesAsync(asset.Instrument.Symbol,token))await bus.PublishAsync(e,token); }
                             catch(OperationCanceledException)when(token.IsCancellationRequested){}
                             catch(Exception ex){logger.LogWarning("Priority quote {Symbol}: {Reason}",asset.Instrument.Symbol,ex.Message);}
                         });
+                }
             }
             catch (OperationCanceledException) when (ct.IsCancellationRequested) { break; }
             catch (Exception ex) { logger.LogWarning("REST ticker fallback failed: {Reason}", ex.Message); }
@@ -100,7 +104,8 @@ public sealed class BinanceWorker(IMarketRestProvider rest, IPriorityQuoteProvid
     {
         while (!ct.IsCancellationRequested)
         {
-            var assets = runtime.GetAll().Where(x=>x.Instrument.Active).OrderByDescending(x=>network.Value.PrioritySymbols.Contains(x.Instrument.Symbol)).ThenByDescending(x => x.Volume24h ?? 0).Take(network.Value.EconomyMode ? network.Value.HistorySymbols : int.MaxValue).ToArray();
+            var state=(await paper.OverviewAsync(ct)).State;
+            var assets = (network.Value.EconomyMode?PaperUniverse.Warmup(runtime.GetAll(),state,time.GetUtcNow(),network.Value.HistorySymbols):runtime.GetAll().Where(x=>x.Instrument.Active)).ToArray();
             if (assets.Length == 0) { await Task.Delay(TimeSpan.FromSeconds(2), time, ct); continue; }
             // First give the entire market a usable baseline, then fill the complete retention windows.
             foreach (var quick in network.Value.EconomyMode ? new[] { true } : new[] { true, false })

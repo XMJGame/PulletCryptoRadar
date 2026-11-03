@@ -96,11 +96,35 @@ public sealed class BinanceTests
         Assert.Equal(123.111111111m,m.MarkPrice);Assert.Equal(-.0003m,m.FundingRate);
         Assert.Equal(1793246401000,m.SourceTime.ToUnixTimeMilliseconds());
     }
+    private sealed class HourlyHandler:HttpMessageHandler
+    {
+        public string? Query;
+        protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request,CancellationToken ct)
+        {
+            Query=request.RequestUri!.Query;
+            return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK){Content=new StringContent("""[[1793246400000,"100","101","99","100","10",1793249999999,"1000"]]""")});
+        }
+    }
+    [Fact]public async Task PaperWarmupRequestsNativeOneHourCandlesNotInvalidSixtyMinuteToken()
+    {
+        var handler=new HourlyHandler();using var http=new HttpClient(handler){BaseAddress=new("https://example.invalid")};
+        var provider=new BinanceRestClient(http,new FakeLimiter(),new ProviderHealthStore(TimeProvider.System),TimeProvider.System);
+        var rows=await provider.GetCandlesAsync("BTCUSDT",60,400,null,default);
+        Assert.Contains("interval=1h",handler.Query);Assert.Equal(60,Assert.Single(rows).IntervalMinutes);
+    }
+    [Fact]public async Task MonthlyBaselineRequestsEightHundredHoursAndChargesCorrectWeight()
+    {
+        var handler=new HourlyHandler();var limiter=new FakeLimiter();using var http=new HttpClient(handler){BaseAddress=new("https://example.invalid")};
+        var provider=new BinanceRestClient(http,limiter,new ProviderHealthStore(TimeProvider.System),TimeProvider.System);
+        await provider.GetCandlesAsync("LABUSDT",60,800,null,default);
+        Assert.Contains("limit=800",handler.Query);Assert.Equal(5,Assert.Single(limiter.Weights));
+    }
     private sealed class FakeLimiter : IRequestLimiter
     {
         public TimeSpan Paused;
         public List<string> Waits = [];
-        public Task WaitAsync(string provider, int weight, CancellationToken ct) { Waits.Add(provider); return Task.CompletedTask; }
+        public List<int> Weights=[];
+        public Task WaitAsync(string provider, int weight, CancellationToken ct) { Waits.Add(provider);Weights.Add(weight); return Task.CompletedTask; }
         public void Pause(string provider, TimeSpan duration) => Paused = duration;
     }
     private sealed class StubHandler(params HttpResponseMessage[] responses) : HttpMessageHandler

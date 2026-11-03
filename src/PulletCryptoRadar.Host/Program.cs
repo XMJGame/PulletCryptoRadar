@@ -9,6 +9,7 @@ using PulletCryptoRadar.Providers.OnChain;
 using PulletCryptoRadar.Scanner;
 using Serilog;
 
+ConsoleSetup.Initialize();
 if(OperatingSystem.IsWindows()&&!Console.IsOutputRedirected)Console.Title="PulletCryptoRadar Server - http://localhost:5218";
 
 var builder = WebApplication.CreateBuilder(new WebApplicationOptions { Args = args, ContentRootPath = AppContext.BaseDirectory });
@@ -20,8 +21,16 @@ builder.Host.UseSerilog((context, services, logger) => logger.MinimumLevel.Infor
     .MinimumLevel.Override("Microsoft.AspNetCore", Serilog.Events.LogEventLevel.Warning)
     .MinimumLevel.Override("System.Net.Http.HttpClient", Serilog.Events.LogEventLevel.Warning)
     .WriteTo.Console().WriteTo.File("Logs/PulletCryptoRadar-.log", rollingInterval: RollingInterval.Day, retainedFileCountLimit: 14));
+ServerInstanceLease serverLease;
+try{serverLease=new ServerInstanceLease(builder.Configuration["Storage:Directory"]??"Data");}
+catch(InvalidOperationException ex){Console.Error.WriteLine(ex.Message);Environment.ExitCode=2;return;}
+using var serverOwnership=serverLease;
+builder.Services.Configure<HostOptions>(options=>options.ShutdownTimeout=TimeSpan.FromSeconds(45));
 builder.Services.AddSingleton(TimeProvider.System);
 builder.Services.AddOptions<NetworkOptions>().BindConfiguration("Network").Validate(o=>o.IsValid(),"Invalid network settings").ValidateOnStart();
+builder.Services.AddSingleton(s=>s.GetRequiredService<IOptions<NetworkOptions>>().Value);
+builder.Services.AddSingleton<IOpportunityRepository,OpportunityRepository>();
+builder.Services.AddSingleton<OpportunityService>();
 builder.Services.AddSingleton<NetworkUsage>();
 builder.Services.AddSingleton<INetworkTraffic>(s=>s.GetRequiredService<NetworkUsage>());
 builder.Services.AddTransient<MeteredNetworkHandler>();
@@ -52,6 +61,22 @@ builder.Services.AddSingleton<AssetMappingEngine>();
 builder.Services.AddSingleton<IMappingRepository, MappingRepository>();
 builder.Services.AddSingleton<IMappingPersistence, MappingPersistence>();
 builder.Services.AddSingleton<MappingService>();
+builder.Services.AddSingleton<ITokenCheckRepository,TokenCheckRepository>();
+builder.Services.AddSingleton<ITokenResearchRepository,TokenResearchRepository>();
+builder.Services.AddSingleton<ITokenFollowupRepository,TokenFollowupRepository>();
+builder.Services.AddSingleton<ITokenMonitorRepository,TokenMonitorRepository>();
+builder.Services.AddSingleton<TokenMonitorService>();
+builder.Services.AddSingleton<RuntimeReliabilityService>();
+builder.Services.AddSingleton<IDailyResearchRepository,DailyResearchRepository>();
+builder.Services.AddSingleton<DailyResearchService>();
+builder.Services.AddHttpClient<ITokenMonitorProvider,TokenMonitorProvider>(http=>
+{
+    var endpoint=Environment.GetEnvironmentVariable("PULLET_BSC_RPC_URL")??"https://bsc-rpc.publicnode.com";
+    if(!Uri.TryCreate(endpoint,UriKind.Absolute,out var uri)||uri.Scheme!="https"||uri.UserInfo.Length>0)throw new InvalidOperationException("BSC research RPC must be HTTPS without user info");
+    http.BaseAddress=uri;http.Timeout=TimeSpan.FromSeconds(25);http.DefaultRequestHeaders.UserAgent.ParseAdd("PulletCryptoRadar/1.0");
+}).RemoveAllLoggers();
+builder.Services.AddSingleton<TokenCheckService>();
+builder.Services.AddHttpClient<ITokenCheckProvider,TokenCheckProvider>(http=>{http.Timeout=TimeSpan.FromSeconds(20);http.DefaultRequestHeaders.UserAgent.ParseAdd("PulletCryptoRadar/1.0");}).RemoveAllLoggers();
 builder.Services.AddOptions<OnChainOptions>().BindConfiguration("OnChain").Validate(o=>o.IsValid(),"Invalid OnChain settings").ValidateOnStart();
 builder.Services.AddSingleton(s=>s.GetRequiredService<IOptions<OnChainOptions>>().Value);
 builder.Services.AddSingleton<OnChainFeatureEngine>();
@@ -83,6 +108,29 @@ builder.Services.AddSingleton<WatchService>();
 builder.Services.AddSingleton<IPaperRepository,PaperRepository>();
 builder.Services.AddSingleton<IPaperPersistence,PaperPersistence>();
 builder.Services.AddSingleton<PaperService>();
+builder.Services.AddSingleton<PaperPerformanceService>();
+builder.Services.AddSingleton<IQuantExecutionFeed,QuantExecutionFeed>();
+builder.Services.AddSingleton<IQuantExecutionCoordinator,QuantExecutionCoordinator>();
+builder.Services.AddSingleton<IExecutionEvidenceRepository,ExecutionEvidenceRepository>();
+builder.Services.AddSingleton<ExecutionEvidenceService>();
+builder.Services.AddSingleton<IQuantShadowRepository,QuantShadowRepository>();
+builder.Services.AddSingleton<QuantShadowService>();
+builder.Services.AddSingleton<IQuantDailyRepository,QuantDailyRepository>();
+builder.Services.AddSingleton<QuantDailyService>();
+builder.Services.AddSingleton<IQuantPortfolioValidationRepository,QuantPortfolioValidationRepository>();
+builder.Services.AddSingleton<QuantPortfolioValidationService>();
+builder.Services.AddSingleton<IHourlyWarmupRepository,HourlyWarmupRepository>();
+builder.Services.AddSingleton<HourlyWarmupTracker>();
+builder.Services.AddHostedService<QuantDailyWorker>();
+builder.Services.AddSingleton<IQuantShadowTargets>(s=>s.GetRequiredService<QuantShadowService>());
+builder.Services.AddHostedService<ExecutionEvidenceWorker>();
+builder.Services.AddHostedService<QuantShadowWorker>();
+builder.Services.AddSingleton<IQuantStudyRepository,QuantStudyRepository>();
+builder.Services.AddSingleton<QuantStudyService>();
+builder.Services.AddSingleton<QuantDiagnosticService>();
+builder.Services.AddSingleton<IQuantRehearsalRepository,QuantRehearsalRepository>();
+builder.Services.AddSingleton<QuantRehearsalService>();
+builder.Services.AddHostedService<QuantStudyWorker>();
 builder.Services.AddSingleton<IForwardRepository,ForwardRepository>();
 builder.Services.AddSingleton<ForwardService>();
 builder.Services.AddSingleton<IWatchRepository,WatchRepository>();
@@ -150,7 +198,9 @@ builder.Services.AddHttpClient<IMarketRestProvider, BinanceRestClient>((services
 builder.Services.AddSingleton<IMarketStreamProvider, BinanceWebSocketClient>();
 builder.Services.AddTransient<IDerivativeRestProvider>(s => (BinanceRestClient)s.GetRequiredService<IMarketRestProvider>());
 builder.Services.AddTransient<IPriorityQuoteProvider>(s => (BinanceRestClient)s.GetRequiredService<IMarketRestProvider>());
+builder.Services.AddTransient<IExecutionEvidenceProvider>(s => (BinanceRestClient)s.GetRequiredService<IMarketRestProvider>());
 builder.Services.AddHostedService<PersistenceWorker>();
+builder.Services.AddHostedService<LocalServerControl>();
 builder.Services.AddHostedService<MarketEventWorker>();
 builder.Services.AddHostedService<FeatureWorker>();
 builder.Services.AddHostedService<SnapshotWorker>();
@@ -168,6 +218,11 @@ builder.Services.AddHostedService<WatchWorker>();
 builder.Services.AddHostedService<OnChainWorker>();
 builder.Services.AddHostedService<FlowWorker>();
 builder.Services.AddHostedService<PaperWorker>();
+builder.Services.AddHostedService<PaperWarmupWorker>();
+builder.Services.AddHostedService<OpportunityWorker>();
+builder.Services.AddHostedService<TokenFollowupWorker>();
+builder.Services.AddHostedService<TokenMonitorWorker>();
+builder.Services.AddHostedService<DailyResearchWorker>();
 builder.Services.AddResponseCompression();
 var app = builder.Build();
 app.UseResponseCompression();
@@ -194,8 +249,88 @@ app.MapGet("/api/replay/availability", (EvaluationService service) => service.Ge
 app.MapGet("/api/replay/audit", (int? limit, EvaluationService service) => service.Audit(limit ?? 100));
 app.MapGet("/api/mappings", (MappingService service) => service.GetOverview());
 app.MapGet("/api/onchain",(OnChainService service)=>service.Overview());
+app.MapGet("/api/token-check/search",(string? q,TokenCheckService service)=>service.Search(q??""));
+app.MapGet("/api/token-monitoring",(TokenMonitorService service)=>new{Targets=service.Overview(),Budget=service.Budget(),PollMinutes=30,Scope="固定合约研究；不改自选/绑定/模拟仓"});
+app.MapGet("/api/runtime/reliability",(RuntimeReliabilityService service)=>service.Status());
+app.MapGet("/api/research/daily",(string? date,DailyResearchService service,TimeProvider time)=>
+{
+    var selected=DateOnly.FromDateTime(time.GetUtcNow().ToOffset(TimeSpan.FromHours(8)).DateTime);
+    if(date is not null&&!DateOnly.TryParseExact(date,"yyyy-MM-dd",out selected))return Results.BadRequest(new{Error="日期格式应为yyyy-MM-dd"});
+    try{return Results.Ok(service.Build(selected));}catch(ArgumentException ex){return Results.BadRequest(new{Error=ex.Message});}
+});
+app.MapGet("/api/research/daily/archive",(string date,DailyResearchService service)=>DateOnly.TryParseExact(date,"yyyy-MM-dd",out var selected)?
+    service.Saved(selected) is {} saved?Results.Ok(saved):Results.NotFound():Results.BadRequest(new{Error="日期格式应为yyyy-MM-dd"}));
+app.MapGet("/api/token-check/recent",(TokenCheckService service)=>service.Recent().Select(r=>new{r.Id,r.Version,r.AsOf,r.ExpiresAt,r.Coin,r.Verdict,r.EvidenceCoverage,r.Platform,r.ContractAddress}));
+app.MapGet("/api/token-check/{id:guid}",(Guid id,TokenCheckService service)=>service.Get(id) is {} r?Results.Ok(r):Results.NotFound());
+app.MapGet("/api/token-check/{id:guid}/followup",async(Guid id,TokenCheckService service,CancellationToken ct)=>await service.FollowupAsync(id,ct) is {} r?Results.Ok(r):Results.NotFound());
+app.MapPost("/api/token-check",async(TokenCheckRequest request,TokenCheckService service,CancellationToken ct)=>
+{
+    try{return Results.Ok(await service.CheckAsync(request,ct));}
+    catch(ArgumentException ex){return Results.BadRequest(new{Error=ex.Message});}
+    catch(InvalidOperationException ex){return Results.Conflict(new{Error=ex.Message});}
+});
 app.MapGet("/api/flows",(FlowService service)=>service.Overview());
+app.MapGet("/api/paper/holding-history",async(Guid? positionId,int? limit,long? before,PaperService service,CancellationToken ct)=>
+{try{return Results.Ok(await service.HoldingHistoryAsync(positionId,Math.Clamp(limit??200,1,1000),before,ct));}catch(ArgumentException ex){return Results.BadRequest(new{Error=ex.Message});}});
 app.MapGet("/api/paper",(PaperService service,CancellationToken ct)=>service.OverviewAsync(ct));
+app.MapGet("/api/paper/performance",async(string? date,PaperPerformanceService service,CancellationToken ct)=>
+{try{DateOnly? selected=date is null?null:DateOnly.ParseExact(date,"yyyy-MM-dd",System.Globalization.CultureInfo.InvariantCulture);return Results.Ok(await service.GetAsync(selected,ct));}
+ catch(FormatException){return Results.BadRequest(new{error="日期格式应为yyyy-MM-dd"});}catch(ArgumentException ex){return Results.BadRequest(new{error=ex.Message});}});
+app.MapGet("/api/paper/activity",(PaperService service,CancellationToken ct)=>service.ActivityAsync(ct));
+app.MapGet("/api/execution/status",async(ExecutionEvidenceService evidence,PaperService paper,IMarketRuntimeStore market,CancellationToken ct)=>
+    evidence.Status((await paper.ExecutionContextAsync(ct)).State,market.GetAll()));
+app.MapPost("/api/execution/preview",(ExecutionQuoteRequest request,ExecutionEvidenceService evidence)=>Results.Ok(evidence.Preview(request)));
+app.MapGet("/api/quant/status",(QuantShadowService service)=>Results.Ok(service.Status()));
+app.MapGet("/api/quant/warmup",(HourlyWarmupTracker tracker)=>Results.Ok(tracker.Status()));
+app.MapGet("/api/quant/execution",async(PaperService paper,CancellationToken ct)=>(await paper.QuantStatusAsync(ct)) with{EntryImplementationVersion=QuantEntryEngine.Version});
+app.MapGet("/api/quant/entry-review/{id}",(string id,IPaperRepository repository)=>
+{
+    if(id.Length!=64||!id.All(Uri.IsHexDigit))return Results.BadRequest(new{error="入场复核ID须为64位摘要"});
+    return repository.EntryReview(id) is {} review?Results.Ok(review):Results.NotFound(new{error="没有已提交的入场复核记录"});
+});
+app.MapPost("/api/quant/execution/activate",async(PaperService paper,QuantShadowService shadow,ExecutionEvidenceService execution,CancellationToken ct)=>
+{try{var cohort=shadow.Status().Cohort;if(cohort is null)return Results.Conflict(new{error="前瞻核心尚未就绪"});await paper.ActivateQuantAsync(cohort,execution.Model,ct);return Results.Ok(await paper.QuantStatusAsync(ct));}catch(InvalidOperationException ex){return Results.Conflict(new{error=ex.Message});}});
+app.MapGet("/api/quant/history",(QuantShadowService service)=>Results.Ok(service.Status().ForwardHours));
+app.MapGet("/api/quant/daily",async(string? date,QuantDailyService service,CancellationToken ct)=>
+{
+    if(date is not null&&!DateOnly.TryParseExact(date,"yyyy-MM-dd",System.Globalization.CultureInfo.InvariantCulture,System.Globalization.DateTimeStyles.None,out _))return Results.BadRequest(new{error="日期格式须为yyyy-MM-dd"});
+    try{return Results.Ok(await service.GetAsync(date is null?null:DateOnly.ParseExact(date,"yyyy-MM-dd",System.Globalization.CultureInfo.InvariantCulture),ct));}
+    catch(ArgumentException ex){return Results.BadRequest(new{error=ex.Message});}
+});
+app.MapGet("/api/quant/validation",(QuantStudyService service)=>Results.Ok(service.Status()));
+app.MapGet("/api/quant/portfolio-validation",(QuantPortfolioValidationService service)=>
+{try{var report=service.Status();return report is null?Results.Content("null","application/json"):Results.Ok(report);}catch(Exception ex)when(ex is InvalidDataException or IOException){return Results.Conflict(new{error="组合核验档案缺失或未通过检查"});}});
+app.MapGet("/api/quant/portfolio-validation/runs/{id:guid}",(Guid id,QuantPortfolioValidationService service)=>
+{try{return service.Read(id) is {} run?Results.Ok(run):Results.NotFound();}catch(Exception ex)when(ex is InvalidDataException or IOException){return Results.Conflict(new{error="冻结组合资料缺失、冲突或无法重放"});}});
+app.MapPost("/api/quant/portfolio-validation/run",async(string? date,QuantPortfolioValidationService service,CancellationToken ct)=>
+{
+    if(date is not null&&!DateOnly.TryParseExact(date,"yyyy-MM-dd",System.Globalization.CultureInfo.InvariantCulture,System.Globalization.DateTimeStyles.None,out _))return Results.BadRequest(new{error="日期格式须为yyyy-MM-dd"});
+    try{return Results.Ok(await service.RunAsync(date is null?null:DateOnly.ParseExact(date,"yyyy-MM-dd",System.Globalization.CultureInfo.InvariantCulture),ct));}
+    catch(ArgumentException ex){return Results.BadRequest(new{error=ex.Message});}
+    catch(InvalidOperationException ex){return Results.Conflict(new{error=ex.Message});}
+    catch(Exception ex)when(ex is InvalidDataException or IOException){return Results.Conflict(new{error="冻结组合资料核验失败；未修改原模拟账户"});}
+});
+app.MapGet("/api/quant/rehearsal",async(QuantRehearsalService service,PaperService paper,CancellationToken ct)=>{var active=(await paper.ExecutionContextAsync(ct)).State.QuantControl is not null;return Results.Ok(new{report=service.Status(),mode=active?"ArchivedLegacyCopy":"FrozenCopyOnly",canGenerate=!active});});
+app.MapPost("/api/quant/rehearsal/run",async(QuantRehearsalService service,CancellationToken ct)=>
+{
+    try{return Results.Ok(await service.RunAsync(ct));}
+    catch(InvalidOperationException ex){return Results.Conflict(new{error=ex.Message});}
+    catch(InvalidDataException){return Results.Conflict(new{error="副本数据未通过一致性检查，未修改原账户"});}
+});
+app.MapGet("/api/quant/validation/diagnostics",(Guid id,string? window,string? strategy,string? policy,int? cost,QuantDiagnosticService service)=>
+{
+    try{var result=service.Read(id,window??"Holdout",strategy??"TrendPullback",policy??"ScaleTail",cost??1);return result is null?Results.NotFound(new{error="研究报告不存在"}):Results.Ok(result);}
+    catch(ArgumentException ex){return Results.BadRequest(new{error=ex.Message});}
+    catch(InvalidDataException){return Results.Conflict(new{error="研究存档校对未通过，诊断结果未生成"});}
+});
+app.MapPost("/api/quant/validation/run",(QuantStudyService service)=>
+{try{return Results.Accepted("/api/quant/validation",service.Start());}catch(InvalidOperationException ex){return Results.Conflict(new{error=ex.Message});}});
+app.MapGet("/api/quant/validation/trades",(Guid id,string? window,string? strategy,string? policy,int? cost,int? limit,IQuantStudyRepository repository)=>
+    Results.Ok(repository.Trades(id,window,strategy,policy,Math.Clamp(cost??1,1,3),Math.Clamp(limit??25,1,100))));
+app.MapGet("/api/paper/strategies",(PaperService paper,OpportunityService opportunities,CancellationToken ct)=>paper.StrategyReviewAsync(opportunities.Latest(),ct));
+app.MapGet("/api/opportunities",(OpportunityService service)=>service.Latest() is {} snapshot?Results.Ok(snapshot):Results.StatusCode(503));
+app.MapGet("/api/opportunities/history",(int? limit,OpportunityService service)=>service.History(limit??6));
+app.MapGet("/api/research/tenfold",()=>Results.File(Path.Combine(AppContext.BaseDirectory,"Research","Tenfold","Summary.json"),"application/json"));
 app.MapGet("/api/forward",(ForwardService service,CancellationToken ct)=>service.OverviewAsync(ct));
 app.MapGet("/api/network",(NetworkUsage usage)=>usage.Snapshot());
 app.MapGet("/api/research/backtest",()=>Results.File(Path.Combine(AppContext.BaseDirectory,"Research","Backtest","Summary.json"),"application/json"));
@@ -277,7 +412,10 @@ app.MapPost("/api/replay", async (ReplayRequest request, EvaluationService servi
     catch (Exception ex) when (ex is ArgumentException or InvalidDataException) { return Results.BadRequest(new { Error = ex.Message }); }
 });
 app.MapGet("/api/settings", (IOptions<BinanceOptions> binance, IOptions<StorageOptions> storage, VolatilityOptions volatility, AlertOptions alert, IOptions<DerivativeOptions> derivatives, EvaluationOptions evaluation, IOptions<CoinGeckoOptions> coingecko) => new { Binance = binance.Value, Storage = storage.Value, Volatility = volatility, Alert = alert, Derivatives = derivatives.Value, Evaluation = evaluation, CoinGecko = coingecko.Value });
-app.MapGet("/health", (PersistenceQueue queue) => queue.Ready.Task.IsCompletedSuccessfully ? Results.Ok(new { Application = "PulletCryptoRadar", Status = "Ready", Version = "1.0", Phase = "0-14", Frontend = "Vue 3" }) : Results.StatusCode(503));
+app.MapGet("/health", (PersistenceQueue queue) => queue.Ready.Task.IsCompletedSuccessfully ? Results.Ok(new { Application = "PulletCryptoRadar", Status = "Ready", Version = "1.0", Phase = "0-16", Frontend = "Vue 3",
+    InstanceId=LocalServerControl.PipeName(AppContext.BaseDirectory),ProcessId=Environment.ProcessId }) : Results.StatusCode(503));
 app.MapMethods("/api/{**path}", ["GET", "POST", "PUT", "PATCH", "DELETE"], () => Results.NotFound(new { Error = "API endpoint not found" }));
 app.MapFallbackToFile("index.html");
-app.Run();
+using var sessionJournal=new RuntimeSessionJournal(Path.Combine(AppContext.BaseDirectory,"Logs"),app.Lifetime);
+try{app.Run();}
+finally{Log.CloseAndFlush();}

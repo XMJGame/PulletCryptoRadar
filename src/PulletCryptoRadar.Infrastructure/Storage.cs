@@ -66,6 +66,7 @@ public sealed partial class SqliteDatabase(IOptions<StorageOptions> options)
         InitializeOnChain(business, market);
         InitializeFlows(business, market);
         InitializePaper(business);
+        InitializeOpportunities(business);
     }
     public IReadOnlyList<Instrument> Synchronize(IReadOnlyList<SymbolDefinition> symbols)
     {

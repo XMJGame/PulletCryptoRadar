@@ -25,7 +25,7 @@ public sealed class MarketRuntimeStore : IMarketRuntimeStore
         public readonly Dictionary<int, RollingWindow> Windows = new() { [1] = new(2880), [5] = new(2016), [15] = new(2880) };
         public MarketView View() => new(Instrument, Ticker?.Price, Ticker?.QuoteVolume24h, Ticker?.Return24h,
             Mark?.MarkPrice, Mark?.FundingRate, Ticker?.SourceTime, Ticker?.ReceivedTime, Mark?.SourceTime,
-            Windows[1].Count, Windows[5].Count, Windows[15].Count, Features);
+            Windows[1].Count, Windows[5].Count, Windows[15].Count, Features){NextFundingTime=Mark?.NextFundingTime,MarkReceivedTime=Mark?.ReceivedTime};
     }
     private readonly ConcurrentDictionary<int, State> _states = new();
     private readonly ConcurrentDictionary<string, int> _symbols = new(StringComparer.Ordinal);
@@ -47,6 +47,7 @@ public sealed class MarketRuntimeStore : IMarketRuntimeStore
     }
     public void Apply(MarketEvent marketEvent)
     {
+        if(string.IsNullOrWhiteSpace(marketEvent.Symbol))return;
         if (!_symbols.TryGetValue(marketEvent.Symbol, out var id) || !_states.TryGetValue(id, out var state)) return;
         lock (state.Gate)
         {
@@ -54,9 +55,9 @@ public sealed class MarketRuntimeStore : IMarketRuntimeStore
             {
                 case TickerEvent ticker when ticker.Price > 0 && ticker.QuoteVolume24h >= 0 && (state.Ticker is null || ticker.SourceTime >= state.Ticker.SourceTime): state.Ticker = ticker; break;
                 case MarkPriceEvent mark when mark.MarkPrice > 0 && (state.Mark is null || mark.SourceTime >= state.Mark.SourceTime): state.Mark = mark; break;
-                case CandleEvent candle when state.Windows.TryGetValue(candle.Candle.IntervalMinutes, out var window): window.Add(candle.Candle); break;
+                case CandleEvent candle when candle.Candle.Symbol==state.Instrument.Symbol&&state.Windows.TryGetValue(candle.Candle.IntervalMinutes, out var window): window.Add(candle.Candle); break;
                 case HistoryEvent history:
-                    foreach (var group in history.Candles.GroupBy(x => x.IntervalMinutes))
+                    foreach (var group in history.Candles.Where(c=>c.Symbol==state.Instrument.Symbol).GroupBy(x => x.IntervalMinutes))
                         if (state.Windows.TryGetValue(group.Key, out var historyWindow)) historyWindow.AddRange(group);
                     break;
             }

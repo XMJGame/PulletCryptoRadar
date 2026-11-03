@@ -32,7 +32,12 @@ public sealed record ForwardPlan(decimal ReferenceEntry,decimal Stop,decimal Qua
 public sealed record ForwardDecision(string Id,string Symbol,string Strategy,DateTimeOffset DecisionAt,DateTimeOffset CapturedAt,
     string Status,string Reason,int Hours,int? Rank,decimal? QuoteVolumeRatio,decimal? Return24h,
     decimal? Oi24hPercent,DateTimeOffset? OiSourceTime,DateTimeOffset? OiReceivedTime,
-    string OiConfirmation,ForwardPlan? Plan,string RulesHash);
+    string OiConfirmation,ForwardPlan? Plan,string RulesHash)
+{
+    public string Direction {get;init;}="Long";
+    public IReadOnlyList<SignalCondition> Conditions {get;init;}=[];
+}
+public sealed record SignalCondition(string Key,string Name,decimal? Actual,string Requirement,bool Passed);
 public sealed record ForwardOutcome(string Id,string DecisionId,int HorizonHours,DateTimeOffset DueAt,DateTimeOffset EvaluatedAt,
     string Status,int Samples,int ExpectedSamples,bool CoverageComplete,decimal? EndPrice,decimal? EndReturnPercent,
     decimal? SampledMaxReturnPercent,decimal? SampledMinReturnPercent,bool? SampledStopCrossed,

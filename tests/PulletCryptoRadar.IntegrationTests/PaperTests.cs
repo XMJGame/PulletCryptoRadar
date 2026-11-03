@@ -78,7 +78,9 @@ public sealed class PaperTests:IDisposable
         var db=new SqliteDatabase(Options.Create(new StorageOptions{Directory=_root}));db.Initialize();var state=State();db.SavePaper(new(state,0,[]));
         Assert.Throws<MappingConflictException>(()=>db.SavePaper(new(state,0,[])));var batch=PaperEngine.Tick(state,Radar(Observation()),Markets(Now),Now);db.SavePaper(batch);
         var restored=new PaperRepository(db).Restore()!;Assert.Equal(batch.State.Revision,restored.Revision);Assert.Single(restored.Pending);Assert.Equal(1000,restored.Cash);
-        var roundtrip=JsonSerializer.Deserialize<PaperState>(JsonSerializer.Serialize(restored))!;Assert.Equal(restored.Pending[0].Evidence.Up.Score,roundtrip.Pending[0].Evidence.Up.Score);
+        var roundtrip=JsonSerializer.Deserialize<PaperState>(JsonSerializer.Serialize(restored))!;
+        var left=Assert.IsType<RadarObservation>(restored.Pending[0].Evidence);var right=Assert.IsType<RadarObservation>(roundtrip.Pending[0].Evidence);
+        Assert.Equal(left.Up.Score,right.Up.Score);
     }
     public void Dispose(){SqliteConnection.ClearAllPools();if(Directory.Exists(_root))Directory.Delete(_root,true);}
 }

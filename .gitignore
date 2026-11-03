@@ -68,6 +68,16 @@ project.lock.json
 project.fragment.lock.json
 artifacts/
 
+# Local validation snapshots and machine diagnostics (keep docs/research inputs).
+/docs/*.json
+/docs/*-20??-??-??/*
+!/docs/*-20??-??-??/*.png
+*.dmp
+*.etl
+.env
+.env.*
+!.env.example
+
 # Tye
 .tye/
 

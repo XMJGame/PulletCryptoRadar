@@ -32,10 +32,7 @@ public sealed partial class SqliteDatabase
         return output.ToArray();
     }
     internal static T Decompress<T>(byte[] value)
-    {
-        using var input = new MemoryStream(value); using var zip = new GZipStream(input, CompressionMode.Decompress);
-        return JsonSerializer.Deserialize<T>(zip) ?? throw new InvalidDataException("空的压缩记录");
-    }
+        =>StorageRecordCodec.Decode<T>(value);
     public void SaveEvaluation(EvaluationReport report)
     {
         using var c = Open(); using var tx = c.BeginTransaction();

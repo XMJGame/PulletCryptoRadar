@@ -11,6 +11,13 @@ public sealed class OnChainFeatureTests
     private static OnChainSample Sample(int rows=100)=>new(Guid.NewGuid(),"bsc",Address(999),"Binplorer",Now,Now,"fixture",1000,"1000000000000000000000000000",18,
         Enumerable.Range(1,rows).Select(i=>new TokenHolder(Address(i),"1",i<=10?11-i:.1m)).ToArray(),100,true);
     private static AddressLabel Label(int id,WalletLabelType type)=>new("bsc",Address(id),type,true,"https://example.com/evidence",1,Now);
+    [Theory][InlineData(WalletLabelType.Custodian,45.1)][InlineData(WalletLabelType.Broker,45.1)][InlineData(WalletLabelType.MarketMaker,55)]
+    public void CustodialBusinessRolesAreExcludedButMarketMakingDoesNotImplyCustody(WalletLabelType type,double expected)
+    {
+        var result=new OnChainFeatureEngine().Calculate(Binding,Sample(),[Label(1,type)],null,true,Now);
+        Assert.Equal((decimal)expected,result.NonCustodialTop10Percent.Value);
+        Assert.Equal(55,result.RawTopPercent[10].Value);Assert.Equal(0,result.ObservedExchangePercent.Value);
+    }
     [Fact] public void AdjustedTop10ReranksAfterExclusionAndKeepsTotalSupplyDenominator()
     {
         var result=new OnChainFeatureEngine().Calculate(Binding,Sample(),[Label(1,WalletLabelType.Burn),Label(2,WalletLabelType.LP),Label(3,WalletLabelType.Contract)],null,true,Now);

@@ -57,7 +57,7 @@ public sealed class RadarTests : IDisposable
         {
             Assert.Equal(2, c.QuerySingle<int>("SELECT count(*) FROM RadarScan"));
             Assert.Contains("EpisodeQuietMinutes", c.QueryFirst<string>("SELECT ParametersJson FROM RadarScan"));
-            Assert.Equal(11, c.QuerySingle<int>("SELECT MAX(Version) FROM SchemaVersion"));
+            Assert.Equal(16, c.QuerySingle<int>("SELECT MAX(Version) FROM SchemaVersion"));
         }
         await worker.StopAsync(CancellationToken.None);
     }

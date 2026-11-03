@@ -20,22 +20,32 @@ public sealed class OnChainService(IOnChainRepository repository,IOnChainPersist
 {
     private readonly SemaphoreSlim _gate=new(1,1);private readonly object _cacheGate=new();
     private OnChainState _state=new([],[],[],[]);private bool _restored;
-    private static string Platform(string chain)=>chain switch{"bsc"=>"binance-smart-chain","ethereum"=>"ethereum","base"=>"base","arbitrum"=>"arbitrum-one","polygon"=>"polygon-pos",_=>throw new ArgumentException("不支持的链")};
-    private static bool Address(string value)=>System.Text.RegularExpressions.Regex.IsMatch(value??"",@"\A0x[0-9a-fA-F]{40}\z");
+    private static string Platform(string chain)=>ChainIdentity.Platform(chain);
     public async Task RestoreAsync(CancellationToken ct)
     {await _gate.WaitAsync(ct);try{if(_restored)return;var state=repository.Restore();lock(_cacheGate)_state=state;_restored=true;}finally{_gate.Release();}}
     public IReadOnlyList<ChainBinding> Bindings(){lock(_cacheGate)return _state.Bindings;}
+    public IReadOnlyList<AddressLabel> Labels(){lock(_cacheGate)return _state.Labels;}
+    public static IReadOnlyList<ChainBinding> DueBatch(IReadOnlyList<ChainBinding> bindings,IReadOnlyList<ChainAttempt> attempts,
+        IReadOnlySet<int> watchIds,DateTimeOffset now,int limit)
+    {
+        var schedule=attempts.ToDictionary(a=>(a.Chain,ChainIdentity.Normalize(a.Chain,a.ContractAddress)));
+        DateTimeOffset DueAt(ChainBinding b)=>schedule.TryGetValue((b.Chain,ChainIdentity.Normalize(b.Chain,b.ContractAddress)),out var a)?a.NextAttempt:DateTimeOffset.MinValue;
+        return bindings.Where(b=>b.Enabled&&DueAt(b)<=now).OrderBy(DueAt).ThenByDescending(b=>watchIds.Contains(b.AssetId))
+            .ThenBy(b=>b.AssetId).Take(Math.Max(0,limit)).ToArray();
+    }
+    public IReadOnlyList<ChainBinding> DueBindings(IReadOnlySet<int> watchIds,DateTimeOffset now,int limit)
+    {lock(_cacheGate)return DueBatch(_state.Bindings,_state.Attempts,watchIds,now,limit);}
     private bool Identity(ChainBinding b)
     {
         var coin=capital.Catalog?.Coins.FirstOrDefault(c=>c.Id==b.CoinGeckoId);
-        return b.Verified&&b.Enabled&&coin?.Platforms.TryGetValue(Platform(b.Chain),out var address)==true&&address.Equals(b.ContractAddress,StringComparison.OrdinalIgnoreCase);
+        return b.Verified&&b.Enabled&&coin?.Platforms.TryGetValue(Platform(b.Chain),out var address)==true&&ChainIdentity.Same(b.Chain,address,b.ContractAddress);
     }
     public OnChainFeatures Features(int assetId,DateTimeOffset now)
     {
         lock(_cacheGate)
         {
             var b=_state.Bindings.FirstOrDefault(b=>b.AssetId==assetId&&b.Enabled);if(b is null)return new();
-            var snapshots=_state.Samples.Where(s=>s.Chain==b.Chain&&s.ContractAddress.Equals(b.ContractAddress,StringComparison.OrdinalIgnoreCase)).OrderByDescending(s=>s.SourceTime).ThenByDescending(s=>s.ReceivedTime).ToArray();
+            var snapshots=_state.Samples.Where(s=>s.Chain==b.Chain&&ChainIdentity.Same(b.Chain,s.ContractAddress,b.ContractAddress)).OrderByDescending(s=>s.SourceTime).ThenByDescending(s=>s.ReceivedTime).ToArray();
             var latest=snapshots.FirstOrDefault();var prior=latest is null?null:snapshots.Where(s=>s.Provider==latest.Provider&&s.SourceTime<=latest.SourceTime.AddHours(-23)
                 &&s.SourceTime>=latest.SourceTime.AddHours(-25.5)).MinBy(s=>Math.Abs((s.SourceTime-latest.SourceTime.AddHours(-24)).TotalSeconds));
             return engine.Calculate(b,latest,_state.Labels,prior,Identity(b),now);
@@ -43,7 +53,7 @@ public sealed class OnChainService(IOnChainRepository repository,IOnChainPersist
     }
     public IReadOnlyList<OnChainView> Overview()
     {
-        lock(_cacheGate)return _state.Bindings.Select(b=>new OnChainView(b,Features(b.AssetId,time.GetUtcNow()),_state.Samples.Where(s=>s.Chain==b.Chain&&s.ContractAddress.Equals(b.ContractAddress,StringComparison.OrdinalIgnoreCase)).MaxBy(s=>s.SourceTime),
+        lock(_cacheGate)return _state.Bindings.Select(b=>new OnChainView(b,Features(b.AssetId,time.GetUtcNow()),_state.Samples.Where(s=>s.Chain==b.Chain&&ChainIdentity.Same(b.Chain,s.ContractAddress,b.ContractAddress)).OrderByDescending(s=>s.SourceTime).ThenByDescending(s=>s.ReceivedTime).FirstOrDefault(),
             _state.Attempts.FirstOrDefault(a=>a.Chain==b.Chain&&a.ContractAddress==b.ContractAddress))).ToArray();
     }
     public IReadOnlyList<OnChainSample> History(int assetId,int limit)
@@ -54,11 +64,16 @@ public sealed class OnChainService(IOnChainRepository repository,IOnChainPersist
         try
         {
             if(market.Get(assetId) is null)throw new KeyNotFoundException("资产不存在");
-            if(!request.ConfirmIdentity||!Address(request.ContractAddress))throw new ArgumentException("须核对完整 EVM 合约身份；本功能不按符号猜测地址");
+            if(!request.ConfirmIdentity||!ChainIdentity.Address(request.Chain,request.ContractAddress))throw new ArgumentException("须核对完整链与合约 / Mint 身份；本功能不按符号猜测地址");
             var platform=Platform(request.Chain);var coin=capital.Catalog?.Coins.FirstOrDefault(c=>c.Id==request.CoinGeckoId);
-            if(coin is null||!coin.Platforms.TryGetValue(platform,out var address)||!address.Equals(request.ContractAddress,StringComparison.OrdinalIgnoreCase))throw new ArgumentException("链与地址必须匹配所选 CoinGecko ID 的当前目录");
-            var b=new ChainBinding(assetId,request.Chain,request.ContractAddress.ToLowerInvariant(),request.CoinGeckoId,request.Enabled,true,request.ExpectedRevision+1,time.GetUtcNow(),"Manual confirmation",
-                [$"https://www.coingecko.com/en/coins/{Uri.EscapeDataString(request.CoinGeckoId)}"]);
+            if(coin is null||!coin.Platforms.TryGetValue(platform,out var address)||!ChainIdentity.Same(request.Chain,address,request.ContractAddress))throw new ArgumentException("链与地址必须匹配所选 CoinGecko ID 的当前目录");
+            ChainBinding? previous;lock(_cacheGate)previous=_state.Bindings.FirstOrDefault(b=>b.AssetId==assetId&&b.Chain==request.Chain
+                &&b.CoinGeckoId==request.CoinGeckoId&&ChainIdentity.Same(request.Chain,b.ContractAddress,request.ContractAddress));
+            var evidence=request.EvidenceUrls??previous?.EvidenceUrls??[];
+            if(evidence.Count>5||evidence.Any(url=>url is null||url.Length>1000||!Uri.TryCreate(url,UriKind.Absolute,out var uri)||uri.Scheme!="https"||uri.UserInfo.Length>0))
+                throw new ArgumentException("身份依据最多五条，须为无凭证的 HTTPS 链接");
+            var b=new ChainBinding(assetId,request.Chain,ChainIdentity.Normalize(request.Chain,request.ContractAddress),request.CoinGeckoId,request.Enabled,true,request.ExpectedRevision+1,time.GetUtcNow(),"Manual confirmation",
+                evidence.Prepend($"https://www.coingecko.com/en/coins/{Uri.EscapeDataString(request.CoinGeckoId)}").Distinct(StringComparer.Ordinal).ToArray());
             await persistence.SaveBindingAsync(b,request.ExpectedRevision,ct);lock(_cacheGate)_state=_state with{Bindings=_state.Bindings.Where(x=>x.AssetId!=assetId).Append(b).ToArray()};return b;
         }
         finally{_gate.Release();}
@@ -68,10 +83,10 @@ public sealed class OnChainService(IOnChainRepository repository,IOnChainPersist
         await RestoreAsync(ct);await _gate.WaitAsync(ct);
         try
         {
-            _=Platform(request.Chain);if(!Address(request.Address)||!Enum.IsDefined(request.Type))throw new ArgumentException("地址或标签类型无效");
+            _=Platform(request.Chain);if(!ChainIdentity.Address(request.Chain,request.Address)||!Enum.IsDefined(request.Type))throw new ArgumentException("地址或标签类型无效");
             if(request.Type!=WalletLabelType.Unknown&&(!request.ConfirmEvidence||!Uri.TryCreate(request.EvidenceUrl,UriKind.Absolute,out var uri)||uri.Scheme!="https"||uri.UserInfo.Length>0||request.EvidenceUrl.Length>1000))
                 throw new ArgumentException("非 Unknown 标签须确认依据并提供 HTTPS 证据链接");
-            var label=new AddressLabel(request.Chain,request.Address.ToLowerInvariant(),request.Type,request.Type!=WalletLabelType.Unknown,request.EvidenceUrl??"",request.ExpectedRevision+1,time.GetUtcNow());
+            var label=new AddressLabel(request.Chain,ChainIdentity.Normalize(request.Chain,request.Address),request.Type,request.Type!=WalletLabelType.Unknown,request.EvidenceUrl??"",request.ExpectedRevision+1,time.GetUtcNow());
             await persistence.SaveLabelAsync(label,request.ExpectedRevision,ct);lock(_cacheGate)_state=_state with{Labels=_state.Labels.Where(l=>l.Chain!=label.Chain||l.Address!=label.Address).Append(label).ToArray()};return label;
         }
         finally{_gate.Release();}
@@ -93,6 +108,14 @@ public sealed class OnChainService(IOnChainRepository repository,IOnChainPersist
         finally{_gate.Release();}
     }
     public bool Due(ChainBinding b,DateTimeOffset now){lock(_cacheGate)return _state.Attempts.FirstOrDefault(a=>a.Chain==b.Chain&&a.ContractAddress==b.ContractAddress)?.NextAttempt<=now||!_state.Attempts.Any(a=>a.Chain==b.Chain&&a.ContractAddress==b.ContractAddress);}
+    public static ChainAttempt PromoteWatchAttempt(ChainAttempt attempt,int minutes)=>attempt.Error is null&&attempt.NextAttempt>attempt.LastAttempt.AddMinutes(minutes)
+        ?attempt with{NextAttempt=attempt.LastAttempt.AddMinutes(minutes)}:attempt;
+    public async Task PromoteWatchAsync(ChainBinding binding,int minutes,CancellationToken ct)
+    {
+        ChainAttempt? old;lock(_cacheGate)old=_state.Attempts.FirstOrDefault(a=>a.Chain==binding.Chain&&a.ContractAddress==binding.ContractAddress);
+        if(old is null)return;var next=PromoteWatchAttempt(old,minutes);
+        if(!ReferenceEquals(old,next))await SaveSampleAsync(new(null,next),ct);
+    }
     public async Task<bool> ReserveAsync(ChainAttempt attempt,OnChainOptions options,CancellationToken ct)
     {
         var reserved=await persistence.ReserveAsync(new(attempt,3,options.HourRequestBudget,options.DayRequestBudget,options.WeekRequestBudget),ct);

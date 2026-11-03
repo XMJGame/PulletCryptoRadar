@@ -54,6 +54,7 @@ public static class ForwardEngine
             {oi=(latest.Quantity!.Value/old.Quantity!.Value-1)*100;oiTime=latest.SourceTime;oiReceived=latest.ReceivedTime;oiStatus=oi is >=0 and <=30?"范围内：数量24h增幅0～30%":"反证：数量24h增幅不在0～30%";}
         }
         bool a=false,b=false;decimal atr=0,support=0;List<decimal> pressures=[];
+        IReadOnlyList<SignalCondition> aConditions=[],bConditions=[];
         if(missing is null)
         {
             var i=bars.Length-1;var c=bars[i];var prior=bars.Skip(i-72).Take(72).ToArray();var low=prior.Min(x=>x.Low);var high=prior.Max(x=>x.High);
@@ -65,8 +66,9 @@ public static class ForwardEngine
                 if(bars[j].Low<other.Min(x=>x.Low)&&bars[j].Low<c.Close)support=bars[j].Low;
                 if(bars[j].High>other.Max(x=>x.High)&&bars[j].High>c.Close)pressures.Add(bars[j].High);
             }
-            a=high/low-1<=rules.CompressionMax&&c.Close>=low+(high-low)*.7m&&c.Close<=high&&ret is >=0 and <=.12m&&ratio>=rules.VolumeRatioA;
-            b=ret is >=.08m and <=.4m&&c.Close>high*(1+rules.BreakoutBuffer)&&ratio>=rules.VolumeRatioB&&c.High>c.Low&&(c.Close-c.Low)/(c.High-c.Low)>=.7m;
+            aConditions=SignalConditionEngine.Check("A","Long",low,high,c.Close,c.Low,c.High,ret.Value,ratio.Value,rules);
+            bConditions=SignalConditionEngine.Check("B","Long",low,high,c.Close,c.Low,c.High,ret.Value,ratio.Value,rules);
+            a=aConditions.All(g=>g.Passed);b=bConditions.All(g=>g.Passed);
         }
         var result=new List<ForwardDecision>();
         foreach(var strategy in new[]{"A","B"})
@@ -89,7 +91,7 @@ public static class ForwardEngine
                 }
             }
             result.Add(new($"{end.ToUnixTimeSeconds()}:{market.Instrument.Symbol}:{strategy}",market.Instrument.Symbol,strategy,end,now,status,reason,count,rank.Rank,ratio,ret*100,
-                oi,oiTime,oiReceived,oiStatus,plan,cohort.RulesHash));
+                oi,oiTime,oiReceived,oiStatus,plan,cohort.RulesHash){Conditions=strategy=="A"?aConditions:bConditions});
         }
         return result;
     }

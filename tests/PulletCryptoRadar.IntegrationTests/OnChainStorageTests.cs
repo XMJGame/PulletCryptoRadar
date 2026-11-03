@@ -37,6 +37,16 @@ public sealed class OnChainStorageTests:IDisposable
         var history=new OnChainRepository(db).History("bsc",Contract,10);Assert.Equal(2,history.Count);Assert.Equal(sample.Holders[0].RawBalance,history.Single(s=>s.Provider=="Binplorer").Holders[0].RawBalance);
         Assert.Throws<InvalidDataException>(()=>db.SaveOnChain(new(sample with{ContractAddress="wrong"},a)));
     }
+    [Fact] public void SupplementalClaimsRoundTripWithoutReplacingPrimaryAndRejectWrongIdentity()
+    {
+        var db=Db();var evidence=new TokenSecurityEvidence("GoPlus","bsc",Contract,"https://api.gopluslabs.io/",Now,Now,900,
+            new Dictionary<string,bool?>{{"is_mintable",null}},[new("0x2222222222222222222222222222222222222222",30,"Unverified",true,false)]);
+        var sample=Sample() with{Security=evidence};var attempt=new ChainAttempt("bsc",Contract,Now,Now.AddMinutes(30),null);
+        db.SaveOnChain(new(sample,attempt));var restored=Assert.Single(new OnChainRepository(db).History("bsc",Contract,10));
+        Assert.Equal(1000,restored.HolderCount);Assert.Equal(900,restored.Security!.HolderCount);
+        Assert.Null(restored.Security.Flags["is_mintable"]);Assert.True(restored.Security.Holders[0].IsContract);
+        Assert.Throws<InvalidDataException>(()=>db.SaveOnChain(new(sample with{Security=evidence with{Chain="base"}},attempt)));
+    }
     [Fact] public async Task SingleWriterServiceValidatesIdentityLabelsAndRestoresFeatures()
     {
         var db=Db();var queue=new PersistenceQueue();using var worker=new PersistenceWorker(db,queue,new ProviderHealthStore(new Clock()),NullLogger<PersistenceWorker>.Instance);await worker.StartAsync(default);await queue.Ready.Task;
@@ -47,13 +57,36 @@ public sealed class OnChainStorageTests:IDisposable
             OnChainService Service()=>new(new OnChainRepository(db),new OnChainPersistence(queue),market,capital,new(),new Clock());
             var service=Service();await service.RestoreAsync(default);
             await Assert.ThrowsAsync<ArgumentException>(()=>service.SaveBindingAsync(id,new("bsc",Contract,"coin",true,0,false),default));
-            await service.SaveBindingAsync(id,new("bsc",Contract,"coin",true,0,true),default);
+            await Assert.ThrowsAsync<ArgumentException>(()=>service.SaveBindingAsync(id,new("bsc",Contract,"coin",true,0,true,["http://invalid.example/"]),default));
+            var binding=await service.SaveBindingAsync(id,new("bsc",Contract,"coin",true,0,true,["https://project.example/contracts"]),default);
+            Assert.Contains("https://project.example/contracts",binding.EvidenceUrls);
             await Assert.ThrowsAsync<ArgumentException>(()=>service.SaveLabelAsync(new("bsc",Contract,WalletLabelType.LP,"",0,false),default));
             await service.SaveLabelAsync(new("bsc",Contract,WalletLabelType.LP,"https://example.com",0,true),default);
             await service.SaveLabelAsync(new("bsc",Contract,WalletLabelType.Unknown,"",1,false),default);
             await service.SaveSampleAsync(new(Sample(),new("bsc",Contract,Now,Now.AddMinutes(30),null)),default);
             var restored=Service();await restored.RestoreAsync(default);Assert.True(restored.Features(id,Now).TrustedIdentity);Assert.Equal(2,Assert.Single(restored.Features(id,Now).Labels).Revision);
             Assert.Null(restored.Features(id,Now).HolderChange24h.Value);
+        }
+        finally{await worker.StopAsync(default);}
+    }
+    [Fact]public async Task SolanaBindingSourceEvidenceAndLabelsSurviveRestartWithoutLowercasing()
+    {
+        const string mint="DvjbEsdca43oQcw2h3HW1CT7N3x5vRcr3QrvTUHnXvgV";
+        var db=Db();var queue=new PersistenceQueue();using var worker=new PersistenceWorker(db,queue,new ProviderHealthStore(new Clock()),NullLogger<PersistenceWorker>.Instance);
+        await worker.StartAsync(default);await queue.Ready.Task;
+        try
+        {
+            var market=new MarketRuntimeStore();market.Register(await queue.SyncAsync([new("DOODUSDT","DOOD",Now)],default));var id=market.GetAll()[0].Instrument.AssetId;
+            var capital=new CapitalRuntimeStore();capital.SetCatalog(new(Now,[new("doodles","dood","Doodles",new Dictionary<string,string>{{"solana",mint}})]));
+            OnChainService Service()=>new(new OnChainRepository(db),new OnChainPersistence(queue),market,capital,new(),new Clock());
+            var service=Service();await service.RestoreAsync(default);
+            await Assert.ThrowsAsync<ArgumentException>(()=>service.SaveBindingAsync(id,new("solana",mint.ToLowerInvariant(),"doodles",true,0,true),default));
+            await service.SaveBindingAsync(id,new("solana",mint,"doodles",true,0,true,["https://project.example/mint"]),default);
+            await service.SaveBindingAsync(id,new("solana",mint,"doodles",true,1,true),default);
+            await service.SaveLabelAsync(new("solana",mint,WalletLabelType.Contract,"https://project.example/mint",0,true),default);
+            var restored=Service();await restored.RestoreAsync(default);var binding=Assert.Single(restored.Bindings());
+            Assert.Equal(mint,binding.ContractAddress);Assert.Contains("https://project.example/mint",binding.EvidenceUrls);
+            Assert.Equal(mint,Assert.Single(restored.Features(id,Now).Labels).Address);
         }
         finally{await worker.StopAsync(default);}
     }

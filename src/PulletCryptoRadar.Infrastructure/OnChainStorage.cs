@@ -57,6 +57,8 @@ public sealed partial class SqliteDatabase
         if(write.Sample is {} s)
         {
             if(s.Chain!=write.Attempt.Chain||s.ContractAddress!=write.Attempt.ContractAddress||s.SourceTime>s.ReceivedTime||s.Holders.Count>s.RequestedCount)throw new InvalidDataException("链上样本身份、时间或覆盖无效");
+            if(s.Security is {} evidence&&(evidence.Chain!=s.Chain||!ChainIdentity.Same(s.Chain,evidence.ContractAddress,s.ContractAddress)
+                ||evidence.SourceTime>evidence.ReceivedTime||evidence.Holders.Count>10))throw new InvalidDataException("补充证据身份、时间或覆盖无效");
             using var m=Open(true);using var tx=m.BeginTransaction();
             m.Execute("INSERT INTO OnChainSnapshot VALUES(@Chain,@ContractAddress,@Provider,@Source,@Received,@Payload) ON CONFLICT(Chain,ContractAddress,Provider,SourceTime) DO UPDATE SET ReceivedTime=excluded.ReceivedTime,Payload=excluded.Payload WHERE excluded.ReceivedTime>=OnChainSnapshot.ReceivedTime",
                 new{s.Chain,s.ContractAddress,s.Provider,Source=s.SourceTime.ToUnixTimeMilliseconds(),Received=s.ReceivedTime.ToUnixTimeMilliseconds(),Payload=Compress(s)},tx);

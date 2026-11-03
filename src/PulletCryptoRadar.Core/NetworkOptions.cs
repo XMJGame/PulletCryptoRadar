@@ -7,10 +7,10 @@ public sealed class NetworkOptions
 {
     public bool EconomyMode { get; set; } = true;
     public bool UseSystemProxy { get; set; } = false;
-    public long DailyBudgetBytes { get; set; } = 150_000_000;
-    public long MonthlyBudgetBytes { get; set; } = 5_000_000_000;
+    public long DailyBudgetBytes { get; set; } = 900_000_000;
+    public long MonthlyBudgetBytes { get; set; } = 30_000_000_000;
     public string[] PrioritySymbols { get; set; } = ["BTCUSDT", "ETHUSDT", "APRUSDT", "LABUSDT", "MYXUSDT", "BTWUSDT", "TRBUSDT"];
-    public int HistorySymbols { get; set; } = 20;
+    public int HistorySymbols { get; set; } = 60;
     public int TickerSeconds { get; set; } = 20;
     public bool IsValid() => PrioritySymbols is {Length:<=20} && PrioritySymbols.Distinct(StringComparer.Ordinal).Count()==PrioritySymbols.Length
         && PrioritySymbols.All(s=>s is not null && System.Text.RegularExpressions.Regex.IsMatch(s,@"\A[A-Z0-9]{2,30}USDT\z"))

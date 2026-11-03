@@ -1,0 +1,8 @@
+export type MonitorTarget={id:string;coinGeckoId:string;symbol:string;platform:string;contractAddress:string;vestingContract:string|null;sourceUrl:string|null;permissionReview:string|null}
+export type TokenMonitor={target:MonitorTarget;identityStatus:string;identity:{sourceTime:string;checkedAt:string;reviewAfter:string;evidenceUrl:string;basis:string}|null;identityError:string|null;rpcError:string|null;nextAttempt:string;halted:boolean;fresh:boolean;blockNumber:number|null;blockHash:string|null;sourceTime:string|null;baselineTime:string|null;trackedSupplyPercent:number|null;
+balances:{address:string;amount:string;supplyPercent:number|null;change24hAmount:string|null;change24hPercentagePoints:number|null;role:string;evidenceStatus:string}[];
+vesting:{address:string;runtimeSha256:string;token:string;admin:string;tokenSet:boolean;tgeReleased:boolean;rawBalance:string;sourceUrl:string;permissionReview:string}|null;
+releases:{name:string;recipient:string;cap:string;released:string;remaining:string;perRelease:string;periodSeconds:number;nextRelease:string|null;status:string;earliestPermitted7Days:string}[];
+earliestPermitted7Days:string|null;earliestPermitted7DaysSupplyPercent:number|null;transferCoverage:string;flowStartedAt:string|null;flowThroughTime:string|null;observedTransfers:number|null;confirmedExchangeInflows:number|null;candidateExchangeInflows:number|null;
+transferEvidence:{transactionHash:string;blockNumber:number;blockTime:string;from:string;to:string;rawAmount:string}[];caveats:string[];findingVersion:string|null;finding:string|null;analyzedAt:string|null}
+export type TokenMonitorOverview={targets:TokenMonitor[];budget:{reservedHour:number;reservedDay:number;hourLimit:number;dayLimit:number};pollMinutes:number;scope:string}

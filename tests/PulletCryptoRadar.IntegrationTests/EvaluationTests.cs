@@ -48,7 +48,7 @@ public sealed class EvaluationTests : IDisposable
         var db = Database(); db.Initialize(); var b = Batch(db); db.SaveRadar(b);
         using (var c = db.Open()) c.Execute("DROP TABLE ReplayFrame; DROP TABLE EvaluationEntry; DROP TABLE SignalEvaluation; DELETE FROM SchemaVersion WHERE Version=5");
         db.Initialize();
-        using var migrated = db.Open(); Assert.Equal(11, migrated.QuerySingle<int>("SELECT MAX(Version) FROM SchemaVersion"));
+        using var migrated = db.Open(); Assert.Equal(16, migrated.QuerySingle<int>("SELECT MAX(Version) FROM SchemaVersion"));
         Assert.Equal(1, migrated.QuerySingle<int>("SELECT count(*) FROM RadarEvent")); Assert.Equal(1, migrated.QuerySingle<int>("SELECT count(*) FROM Asset"));
     }
     [Fact]

@@ -25,7 +25,7 @@ public sealed class RequestLimiter(IOptions<BinanceOptions> options, TimeProvide
                 if (delay <= TimeSpan.Zero) break;
                 await Task.Delay(delay, time, ct);
             }
-            var capacity = provider == "BinanceStatistics" ? options.Value.StatisticsRequestsPerMinute : options.Value.RequestWeightPerMinute;
+            var capacity = provider == "BinanceStatistics" ? options.Value.StatisticsRequestsPerMinute : provider=="BinanceFunding"?90:options.Value.RequestWeightPerMinute;
             lock (_pauseGate)
             {
                 if (_pausedUntil != default && _pausedUntil <= time.GetUtcNow())

@@ -149,6 +149,9 @@
           "xunit.extensibility.core": "[2.9.3]"
         }
       },
+      "PulletCryptoRadar": {
+        "type": "Project"
+      },
       "pulletcryptoradar.application": {
         "type": "Project",
         "dependencies": {
@@ -187,6 +190,12 @@
         }
       },
       "pulletcryptoradar.scanner": {
+        "type": "Project",
+        "dependencies": {
+          "PulletCryptoRadar.Core": "[1.0.0, )"
+        }
+      },
+      "pulletcryptoradar.supervisor": {
         "type": "Project",
         "dependencies": {
           "PulletCryptoRadar.Core": "[1.0.0, )"

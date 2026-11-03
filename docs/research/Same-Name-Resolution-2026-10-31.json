@@ -1,0 +1,110 @@
+[
+  {
+    "AssetId": 236,
+    "Symbol": null,
+    "History": [
+      {
+        "assetId": 236,
+        "coinGeckoId": "peanut-the-squirrel",
+        "status": 4,
+        "candidateIds": [
+          "peanut-the-squirrel"
+        ],
+        "contractMultiplier": 1,
+        "platform": "solana",
+        "contractAddress": "2qEHjDLDLbuBgRYvsxhc5D6uDWAivNFZGan56P1tpump",
+        "revision": 2,
+        "updatedAt": "2026-10-31T09:09:55.1971672+08:00",
+        "reason": "Exact case-sensitive Solana Mint verified: https://www.binance.com/en/square/post/16083152529082 ; https://api.gateio.ws/api/v4/spot/currencies/PNUT ; CoinGecko catalog. Names/metadata/trusted_token alone are not proof. Research only."
+      },
+      {
+        "assetId": 236,
+        "coinGeckoId": null,
+        "status": 2,
+        "candidateIds": [
+          "peanut-3",
+          "peanut-the-squirrel",
+          "pnut",
+          "pnut-the-squirrel"
+        ],
+        "contractMultiplier": 1,
+        "platform": null,
+        "contractAddress": null,
+        "revision": 1,
+        "updatedAt": "2026-10-29T14:59:50.7778824+08:00",
+        "reason": "发现 4 个同名候选，禁止按市值或排名自动选择"
+      }
+    ]
+  },
+  {
+    "AssetId": 435,
+    "Symbol": null,
+    "History": [
+      {
+        "assetId": 435,
+        "coinGeckoId": "lab",
+        "status": 4,
+        "candidateIds": [
+          "lab"
+        ],
+        "contractMultiplier": 1,
+        "platform": "binance-smart-chain",
+        "contractAddress": "0x7ec43cf65f1663f820427c62a5780b8f2e25593a",
+        "revision": 2,
+        "updatedAt": "2026-10-31T09:03:03.9675776+08:00",
+        "reason": "Contract identity cross-check: https://www.binance.com/en/support/announcement/detail/b7c479f8dfa64156a34e8bcefc241732 ; https://api.gateio.ws/api/v4/spot/currencies/LAB ; CoinGecko catalog exact chain/address. Research observation, not an entry recommendation."
+      },
+      {
+        "assetId": 435,
+        "coinGeckoId": null,
+        "status": 2,
+        "candidateIds": [
+          "lab",
+          "labs-on-gold",
+          "the-professor"
+        ],
+        "contractMultiplier": 1,
+        "platform": null,
+        "contractAddress": null,
+        "revision": 1,
+        "updatedAt": "2026-10-29T14:59:50.7639246+08:00",
+        "reason": "发现 3 个同名候选，禁止按市值或排名自动选择"
+      }
+    ]
+  },
+  {
+    "AssetId": 508,
+    "Symbol": null,
+    "History": [
+      {
+        "assetId": 508,
+        "coinGeckoId": "bitway",
+        "status": 4,
+        "candidateIds": [
+          "bitway"
+        ],
+        "contractMultiplier": 1,
+        "platform": "binance-smart-chain",
+        "contractAddress": "0x444045b0ee1ee319a660a5e3d604ca0ffa35acaa",
+        "revision": 2,
+        "updatedAt": "2026-10-31T09:03:03.9980622+08:00",
+        "reason": "Contract identity cross-check: https://docs.bitway.com/resources/btw-bitway-token ; https://api.gateio.ws/api/v4/spot/currencies/BTW ; CoinGecko catalog exact chain/address. Research observation, not an entry recommendation."
+      },
+      {
+        "assetId": 508,
+        "coinGeckoId": null,
+        "status": 2,
+        "candidateIds": [
+          "banana-tape-wall",
+          "bitway"
+        ],
+        "contractMultiplier": 1,
+        "platform": null,
+        "contractAddress": null,
+        "revision": 1,
+        "updatedAt": "2026-10-29T14:59:50.7371954+08:00",
+        "reason": "发现 2 个同名候选，禁止按市值或排名自动选择"
+      }
+    ]
+  }
+]

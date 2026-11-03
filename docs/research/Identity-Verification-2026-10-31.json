@@ -1,0 +1,22 @@
+[
+  {
+    "GateEvidence": "https://api.gateio.ws/api/v4/spot/currencies/PARTI",
+    "Contract": "0x59264f02d301281f3393e1385c0aefd446eb0f00",
+    "VerifiedAt": "2026-10-31T08:39:33.7160455+08:00",
+    "Symbol": "PARTIUSDT",
+    "MappingRevision": 2,
+    "AssetId": 302,
+    "OfficialEvidence": "https://www.binance.com/en/support/announcement/detail/3ec6cdfea3394ffa9ce6bfeabe8191e5",
+    "CoinGeckoId": "particle-network"
+  },
+  {
+    "GateEvidence": "https://api.gateio.ws/api/v4/spot/currencies/MYX",
+    "Contract": "0xd82544bf0dfe8385ef8fa34d67e6e4940cc63e16",
+    "VerifiedAt": "2026-10-31T08:39:33.7671523+08:00",
+    "Symbol": "MYXUSDT",
+    "MappingRevision": 2,
+    "AssetId": 350,
+    "OfficialEvidence": "https://myxfinance.gitbook.io/myx/protocol/tokenomics",
+    "CoinGeckoId": "myx-finance"
+  }
+]

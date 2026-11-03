@@ -1,0 +1,5 @@
+export type EntryValue={key:string;name:string;approved:number|null;proposed:number|null;selected:number|null;passed:boolean|null;meaning:string}
+export type EntrySummary={id:string;version:string;at:string;revision:number;symbol:string;direction:string;decisionId:string;phase:string;outcome:string;reason:string;values:EntryValue[];capped:boolean;bookAt:string|null}
+export type EntryWindow={records:EntrySummary[];truncated:boolean}
+export type EntryDetail={id:string;version:string;at:string;phase:string;outcome:string;reason:string;values:EntryValue[];proposed:{status:string;reason:string;checks:{key:string;name:string;actual:number|null;requirement:string;passed:boolean}[]}|null;selected:EntryDetail['proposed'];evidence:{market:{priceAt:string|null;priceReceivedAt:string|null;markAt:string|null;markReceivedAt:string|null}|null;cashReserved:number;signalVerified:boolean;frames:{symbol:string;hour:string;issue:string|null;bars:unknown[]}[]};intent:{createdAt:string}}
+export const entryOutcome=(outcome:string)=>({Created:'保存原批准计划',Waiting:'等待资料',Filled:'已模拟成交',Cancelled:'已取消',Ready:'复核通过'}[outcome]??outcome)

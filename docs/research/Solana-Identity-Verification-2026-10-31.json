@@ -1,0 +1,38 @@
+[
+  {
+    "AssetId": 330,
+    "Symbol": "DOOD",
+    "CoinGeckoId": "doodles",
+    "Chain": "solana",
+    "Mint": "DvjbEsdca43oQcw2h3HW1CT7N3x5vRcr3QrvTUHnXvgV",
+    "PrimaryEvidence": "https://ascendex.com/de/support/articles/130337-doodles-dood",
+    "GateEvidence": "https://api.gateio.ws/api/v4/spot/currencies/DOOD",
+    "VerifiedAt": "2026-10-31T09:09:55.1346675+08:00",
+    "MappingRevision": 2,
+    "ChainRevision": 1
+  },
+  {
+    "AssetId": 255,
+    "Symbol": "PENGU",
+    "CoinGeckoId": "pudgy-penguins",
+    "Chain": "solana",
+    "Mint": "2zMMhcVQEXDtdE6vsFS7S7D5oUodfJHE8vd1gnBouauv",
+    "PrimaryEvidence": "https://www.binance.com/en/support/announcement/detail/b60b629a7396476ba3c3391b016074e1",
+    "GateEvidence": "https://api.gateio.ws/api/v4/spot/currencies/PENGU",
+    "VerifiedAt": "2026-10-31T09:09:55.1690007+08:00",
+    "MappingRevision": 2,
+    "ChainRevision": 1
+  },
+  {
+    "AssetId": 236,
+    "Symbol": "PNUT",
+    "CoinGeckoId": "peanut-the-squirrel",
+    "Chain": "solana",
+    "Mint": "2qEHjDLDLbuBgRYvsxhc5D6uDWAivNFZGan56P1tpump",
+    "PrimaryEvidence": "https://www.binance.com/en/square/post/16083152529082",
+    "GateEvidence": "https://api.gateio.ws/api/v4/spot/currencies/PNUT",
+    "VerifiedAt": "2026-10-31T09:09:55.2006434+08:00",
+    "MappingRevision": 2,
+    "ChainRevision": 1
+  }
+]

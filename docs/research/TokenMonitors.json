@@ -1,0 +1,14 @@
+[
+  {
+    "Id": "olaxbt-bsc", "CoinGeckoId": "olaxbt", "Symbol": "AIO", "Platform": "binance-smart-chain",
+    "ContractAddress": "0x81a7da4074b8e0ed51bea40f9dcbdf4d9d4832b4",
+    "VestingContract": "0x78818ee5d3899176f99d79dda24d3d626b958bb6",
+    "VestingRuntimeSha256": "41d36f85e1eb9ba9d79d7b293758eba9eb07dbc940982c7995bfc700f3ff2aa4",
+    "SourceUrl": "https://sourcify.dev/server/v2/contract/56/0x78818ee5d3899176f99d79dda24d3d626b958bb6?fields=all",
+    "PermissionReview": "已核对Sourcify精确匹配源码，采集时再次比对运行代码：release/tgeRelease/setTokenAddress/releaseLeftTokens仅admin可调用；普通释放受当前nextRelease、cap和TGE状态限制；剩余余额转出需五类归属计划完成。管理员实际归属、是否多签及外部代币行为未获证明，非完整安全审计。源码部分初始时间为部署后11×30天，与文档月份描述起点不同；release将下次时间设为实际调用时间+period，不是固定日历。"
+  },
+  {
+    "Id": "zerobase-bsc", "CoinGeckoId": "zerobase", "Symbol": "ZBT", "Platform": "binance-smart-chain",
+    "ContractAddress": "0xfab99fcf605fd8f4593edb70a43ba56542777777"
+  }
+]

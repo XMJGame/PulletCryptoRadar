@@ -1,0 +1,1827 @@
+[
+  {
+    "id": "1fd81a61-da36-4c72-b144-273fd3b0faa2",
+    "version": "Token-QuickCheck-1.1",
+    "asOf": "2026-10-31T09:30:13.4359185+08:00",
+    "expiresAt": "2026-10-31T09:32:13.4359185+08:00",
+    "coin": {
+      "id": "olaxbt",
+      "symbol": "aio",
+      "name": "OlaXBT",
+      "platforms": {
+        "binance-smart-chain": "0x81a7da4074b8e0ed51bea40f9dcbdf4d9d4832b4"
+      }
+    },
+    "platform": "binance-smart-chain",
+    "contractAddress": "0x81a7da4074b8e0ed51bea40f9dcbdf4d9d4832b4",
+    "assetId": 380,
+    "instrument": "AIOUSDT",
+    "identityVerified": true,
+    "identityReason": "本次Gate链合约元数据与精确CoinGecko ID/链/完整地址一致",
+    "verdict": "暂不考虑当前买入",
+    "summary": "当前结构或风险存在明确反证，优先等待风险缓解与新证据。",
+    "potential": "长期潜力待核验；先补齐流通估值、稀释、产品使用与团队资料。",
+    "evidenceCoverage": 50,
+    "evidenceMeaning": "10项核验中的已取比例：市场六项；归属、解锁/公告、项目尽调、盘口深度待补。不是胜率/上涨概率",
+    "project": null,
+    "price": 0.02929,
+    "perpetualVolume24h": 1771763.31962,
+    "fundingRate": 5E-05,
+    "oi24hPercent": 1.2928393189570877,
+    "oiSourceTime": "2026-10-31T09:25:00+08:00",
+    "technical": {
+      "hours": 168,
+      "continuous": true,
+      "lastClosedPrice": 0.02924,
+      "return24h": 2.668539325842697,
+      "ema20": 0.028911143939386142,
+      "ema60": 0.030147273571372226,
+      "atr14": 0.0005078571428571429,
+      "support": 0.02905,
+      "supportTime": "2026-10-30T16:00:00+08:00",
+      "resistance": 0.02988,
+      "resistanceTime": "2026-10-30T15:00:00+08:00",
+      "invalidation": 0.028796071428571428,
+      "rewardRiskToResistance": 1.1945046999276934,
+      "trend": "震荡或趋势未确认",
+      "confirmation": "等待小时收盘站稳历史压力 0.02988，并复核成交量与OI；跌破结构支撑须重新评估"
+    },
+    "chainSample": {
+      "id": "cf215f9b-507e-4567-b0fd-2825e47aa16f",
+      "chain": "bsc",
+      "contractAddress": "0x81a7da4074b8e0ed51bea40f9dcbdf4d9d4832b4",
+      "provider": "Binplorer",
+      "sourceTime": "2026-10-31T09:07:03+08:00",
+      "receivedTime": "2026-10-31T09:26:23.5566363+08:00",
+      "timeBasis": "Indexer lastUpdated / HTTP Date minimum; observation, not a verified block timestamp",
+      "holderCount": 60040,
+      "rawTotalSupply": "1000000000000000000000000000",
+      "decimals": 18,
+      "holders": [
+        {
+          "address": "0x78818ee5d3899176f99d79dda24d3d626b958bb6",
+          "rawBalance": "679533231000000000000000000",
+          "percent": 67.9533231,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x207d87cd5710ad33c00615c423093ec89d273f51",
+          "rawBalance": "60228589453437900000000000",
+          "percent": 6.02285894534379,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x4cad1efbfd5f0848e0c3c14fab23f92b2fa81f17",
+          "rawBalance": "46112765352118130000000000",
+          "percent": 4.611276535211813,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xdf788c546cb62fca5f346a02a856ede993a310fb",
+          "rawBalance": "27479650000000000000000000",
+          "percent": 2.747965,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x0d0707963952f2fba59dd06f2b425ace40b492fe",
+          "rawBalance": "20956614043570530343289262",
+          "percent": 2.095661404357053,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xfab38084dc933790b4f74620c2eb215c7fada58b",
+          "rawBalance": "18750000000000000000000000",
+          "percent": 1.875,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x73d8bd54f7cf5fab43fe4ef40a62d390644946db",
+          "rawBalance": "14868123379712630095943872",
+          "percent": 1.486812337971263,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x216ef93e51bd6d1498bed395cebd72bef6cc9e83",
+          "rawBalance": "13458837563369950000000000",
+          "percent": 1.345883756336995,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xb7c850ed5ab0dad79ee0d96ad6ea51397a8c18a1",
+          "rawBalance": "11666667000000000000000000",
+          "percent": 1.1666667,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x8dac80ce96f69f9762bc450faa4d7fbd5891ae18",
+          "rawBalance": "11156391840000000000000000",
+          "percent": 1.115639184,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x4982085c9e2f89f2ecb8131eca71afad896e89cb",
+          "rawBalance": "11004987500048418143601658",
+          "percent": 1.1004987500048418,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xa0d6d1942c2e4790234601544e7afe6431b193e5",
+          "rawBalance": "10802707915194677000000000",
+          "percent": 1.0802707915194678,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xc24ad068e42b8293db1ac6d920aed665ab3fe8d2",
+          "rawBalance": "8563022416200000000000000",
+          "percent": 0.85630224162,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x69be413d648ae00f0fbd9856f1355e22b36ee5e0",
+          "rawBalance": "5929986578039103680523219",
+          "percent": 0.5929986578039104,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x53f78a071d04224b8e254e243fffc6d9f2f3fa23",
+          "rawBalance": "5067303192145084047808090",
+          "percent": 0.5067303192145084,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xe0559a26532d244dec36cab758eeff1eacefb37b",
+          "rawBalance": "4438998000000000000000000",
+          "percent": 0.4438998,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x79431d989ad051ce4b8e9a75987b867c92a09627",
+          "rawBalance": "3815153000000000000000000",
+          "percent": 0.3815153,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x025315786d51cdfae43a4e830c6fe6fd0eb34737",
+          "rawBalance": "3419979210000000000000000",
+          "percent": 0.341997921,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x2a78eb7f935875277a2199eb7c8605cd67075386",
+          "rawBalance": "3200000000000000000000000",
+          "percent": 0.32,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x17a30350771d02409046a683b18fe1c13ccfc4a8",
+          "rawBalance": "3132354310000000000000000",
+          "percent": 0.313235431,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xa741f6555871790b85dcb276f97e5954a1a3c137",
+          "rawBalance": "2697190748710671590301493",
+          "percent": 0.26971907487106717,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x841b863179df4a40a07e178aa93b3fa37ef16cd4",
+          "rawBalance": "2341786480000000000000000",
+          "percent": 0.234178648,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x28b79e34403c01eda59a40449947ab1c0991e5ae",
+          "rawBalance": "2329929540000000000000000",
+          "percent": 0.232992954,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x05cb4e18a2b3a93f8e69f40b307b2c0112db738e",
+          "rawBalance": "2312920540000000000000000",
+          "percent": 0.231292054,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x1f1f71fb35c0b08334c3158259fb0643b9b7803d",
+          "rawBalance": "2263814160000000000000000",
+          "percent": 0.226381416,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x7d3fca272b9be87334dcac6013168424c0b8953e",
+          "rawBalance": "2246187160000000000000000",
+          "percent": 0.224618716,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xaef05659644e656194aeeb1abb8ab4df5f1b1bf8",
+          "rawBalance": "2218410480000000000000000",
+          "percent": 0.221841048,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xd6c1eb3136ddc799e8dcaf658a1fe9c26cca33a7",
+          "rawBalance": "2189600620000000000000000",
+          "percent": 0.218960062,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x0e77a5666ab991085eb2b8d3a95f61d4d254cf80",
+          "rawBalance": "2175693540000000000000000",
+          "percent": 0.217569354,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x7dafba1d69f6c01ae7567ffd7b046ca03b706f83",
+          "rawBalance": "1479562369010000000000000",
+          "percent": 0.147956236901,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x7eb8317c77de6fb2e6e3495cffaaa29fee0af69a",
+          "rawBalance": "1459710681622897043463985",
+          "percent": 0.1459710681622897,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x7c47947a0a8b67355434caeb2fa5066994cdefe2",
+          "rawBalance": "1100000000000000000000000",
+          "percent": 0.11,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xd2dd7b597fd2435b6db61ddf48544fd931e6869f",
+          "rawBalance": "1084559476000000000000000",
+          "percent": 0.1084559476,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x050ef1d50572de2c545126cae0ad51fb3f451f18",
+          "rawBalance": "1000000000000000000000000",
+          "percent": 0.1,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xc2e9cd9f098ff50a6fc7ee930c8a758b6f0e6323",
+          "rawBalance": "860000000000000000000000",
+          "percent": 0.086,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x537f572e9502bd2ec5d46c7ae917992cac96474f",
+          "rawBalance": "785129983200672177312704",
+          "percent": 0.07851299832006722,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xcc282e2004428939ee5149a9e7872f0b4d5d5ec7",
+          "rawBalance": "771340941810000000000000",
+          "percent": 0.077134094181,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xed9ab5bc05a0152b9dc2f7902e8369af7bc18771",
+          "rawBalance": "680706278269960520000000",
+          "percent": 0.06807062782699605,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xb8e6d31e7b212b2b7250ee9c26c56cebbfbe6b23",
+          "rawBalance": "506933403799551718362219",
+          "percent": 0.05069334037995517,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xefb14b3735f9a182e430abee7072632a4ebd18b8",
+          "rawBalance": "474000000000000000000000",
+          "percent": 0.0474,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x7817dbf38e9d1c95671625f0052c147864692fe0",
+          "rawBalance": "473523635343773194106574",
+          "percent": 0.04735236353437732,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x92240be371374e0be68cd529088bbf27632ef17a",
+          "rawBalance": "333613124509611281877103",
+          "percent": 0.03336131245096113,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x97620e003c03381eacbde7135f28d94303bb5672",
+          "rawBalance": "293703273074706965362282",
+          "percent": 0.029370327307470696,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xfafdd70cd35ef9eeb46032a59cfe1433a8356ca2",
+          "rawBalance": "211990067226270084659185",
+          "percent": 0.02119900672262701,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x9d22292d44052467292f47d823c46e071fe979db",
+          "rawBalance": "198161266187152770276643",
+          "percent": 0.019816126618715277,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x76febb2d912d7e2cb2d3d701bcee9bf7c273cf43",
+          "rawBalance": "177670510802830000000000",
+          "percent": 0.017767051080283,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x6249643031d0c13636ee40fcbf1aa0be847a455f",
+          "rawBalance": "176678831700000000000000",
+          "percent": 0.01766788317,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xea0505f0cdb4da5ef23c87ba4e30f5c0ccafc677",
+          "rawBalance": "125764277299727658056092",
+          "percent": 0.012576427729972766,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x504ce9e51e508c85a161058c12e970a903d482fc",
+          "rawBalance": "124915527100000000000000",
+          "percent": 0.01249155271,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x81a7da4074b8e0ed51bea40f9dcbdf4d9d4832b4",
+          "rawBalance": "115901040986690470385250",
+          "percent": 0.011590104098669047,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xb7b1d3901b33ffc5ca3bcfc937f5625294d32561",
+          "rawBalance": "115716210181581131035671",
+          "percent": 0.011571621018158113,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xe19ed11103265687a351662aab588a890ec598b4",
+          "rawBalance": "108015424010000000000000",
+          "percent": 0.010801542401,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xdbf7122c0b7af893580df087eabac0b3be3e9483",
+          "rawBalance": "92487499074076120214611",
+          "percent": 0.009248749907407611,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x93deb693b170d56bdde1b0a5222b14c0f885d976",
+          "rawBalance": "86100000000000000000000",
+          "percent": 0.00861,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xf975e7e240c59146e67971e2aa5497f0f22441ff",
+          "rawBalance": "78653848191405946393603",
+          "percent": 0.007865384819140593,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x4e7ed91e702ef2ff0c58e251c6e20d1dc1e31a5f",
+          "rawBalance": "73157640396679984385426",
+          "percent": 0.007315764039667998,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x5929b0514dfeb8210438f7a22242c20856329288",
+          "rawBalance": "62874195783778040280748",
+          "percent": 0.006287419578377804,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x035ae7d933dcbfe617ffba194a88af0c2867b90c",
+          "rawBalance": "62456100000000000000000",
+          "percent": 0.00624561,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x28e2ea090877bf75740558f6bfb36a5ffee9e9df",
+          "rawBalance": "60712690401048550668254",
+          "percent": 0.006071269040104855,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xd3b7e0ac7bc72fbafdb24985888a64b6e10907f9",
+          "rawBalance": "60412429499181597103636",
+          "percent": 0.006041242949918159,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x4ff1d40fb7b56665bf95d8d8e3a5320de46709a1",
+          "rawBalance": "57736309582973037492231",
+          "percent": 0.005773630958297303,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x20d688ba37fbe110b0317de84133dc2f5400d174",
+          "rawBalance": "51263545727843083903216",
+          "percent": 0.005126354572784308,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x40ad68c61f1ebfe2708aa638a5662a4fa4ef45c3",
+          "rawBalance": "48375920052202338143362",
+          "percent": 0.004837592005220233,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x47dd05784206d7e942839561fc690dd78edabe35",
+          "rawBalance": "48064862459977965086133",
+          "percent": 0.004806486245997796,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x5a23b8f2ed7a15d38923a8fbd84df2c8a18c0f48",
+          "rawBalance": "47271213289597198532989",
+          "percent": 0.004727121328959719,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xe004b53e8b51ed9c365ec37f4fd41bdfcf2c44af",
+          "rawBalance": "46188969030780487480659",
+          "percent": 0.004618896903078048,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x0d60baf1cc9ebc7c50cf075e4cb75717265adcc3",
+          "rawBalance": "44741228204385045067453",
+          "percent": 0.004474122820438504,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x9d532199b7fcea6ce8a35f3de420de975e061e08",
+          "rawBalance": "43559487266580000000000",
+          "percent": 0.004355948726658,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xf205699d6b1a45a890438cc677c8fd7a490cd84c",
+          "rawBalance": "41171565286127689312502",
+          "percent": 0.004117156528612768,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x8484359d761f111885bda1651b2d9d62318a293e",
+          "rawBalance": "41151706996734834184746",
+          "percent": 0.004115170699673483,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x3d6035e23ce306a0b3dd23977f6aa904c9bd3154",
+          "rawBalance": "40307004119755092669983",
+          "percent": 0.004030700411975509,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x937533636a08622813eb670edcdf3a07d8991544",
+          "rawBalance": "31995500000000000000000",
+          "percent": 0.00319955,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x3eff7a02c4b6982ccc631cffec2e7d62594dce45",
+          "rawBalance": "31341834562067370195486",
+          "percent": 0.003134183456206737,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x190119f681dd7cbffea872fcb71cae4216b5261f",
+          "rawBalance": "30000000000000000000000",
+          "percent": 0.003,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xda728a2e3c413b905b90d626e7d942435f80fc38",
+          "rawBalance": "28705538399254043094831",
+          "percent": 0.002870553839925404,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x886f7b5b708f2c697678b84218e6168879756315",
+          "rawBalance": "28320042744430000000000",
+          "percent": 0.002832004274443,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xdfc1db4904dc1e7718d4783bd4be02ac1967ae86",
+          "rawBalance": "26916277574041912838871",
+          "percent": 0.002691627757404191,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x94cced19bc7cb64a82f733861362084739f0a360",
+          "rawBalance": "26708822271343440047304",
+          "percent": 0.002670882227134344,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xb94741fb32409f914c67d161efa718815c038b3f",
+          "rawBalance": "24169058469993441053891",
+          "percent": 0.002416905846999344,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x6e1b2a5bc88227d7067b4d02ef82dd1b8c4fcd7b",
+          "rawBalance": "23665182922477620142605",
+          "percent": 0.002366518292247762,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xff78e7db109eb3be901b4a4014fc25aeed6baa0b",
+          "rawBalance": "23541278350000000000000",
+          "percent": 0.002354127835,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x10d0066b13a4bc4ead2bab4bf98a80ea79da4ed8",
+          "rawBalance": "23364562208056454659490",
+          "percent": 0.002336456220805645,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xa4bb762c8c18fe1cb56e010116544ca5866b192b",
+          "rawBalance": "23312227160000000000000",
+          "percent": 0.002331222716,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x653dd7677aea3030eab68c97ed3594bacf560158",
+          "rawBalance": "23047774790000000000000",
+          "percent": 0.002304777479,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x1dfee2bcbc7cc553bc26bd9f2415dee5ef245d67",
+          "rawBalance": "23029125077880549113678",
+          "percent": 0.002302912507788054,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x6d71e81c7c51fb0d8a77a8f67bf942585f25a229",
+          "rawBalance": "22983000000000000000000",
+          "percent": 0.0022983,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x486f0f75caa6d6189890e386934fdeb6a88b0826",
+          "rawBalance": "22808865309952756669415",
+          "percent": 0.002280886530995275,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x586a0ef7fe8e2b18dcca900af8258fda2e846bfe",
+          "rawBalance": "22493460315631832719428",
+          "percent": 0.002249346031563183,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x483b5fcfbc07b83724599575483afd18ef9172a3",
+          "rawBalance": "22219700000000000000000",
+          "percent": 0.00222197,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x078ca5aa5fff9e5c369134d19b58fdf9b2ee57b3",
+          "rawBalance": "21948860661344999785113",
+          "percent": 0.002194886066134499,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x6990e7e90ab50c12111f99b84183d3fe298bb3e4",
+          "rawBalance": "21478504802996286352724",
+          "percent": 0.002147850480299628,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x7ca2cf792a197ef2a1ea9d26c7f77d9cc5a76406",
+          "rawBalance": "20021397390230000000000",
+          "percent": 0.002002139739023,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xa7240b6a0f1254282c89ceabf3273d9d3aa0f0e2",
+          "rawBalance": "20000000000000000000000",
+          "percent": 0.002,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x30b7d52e5954e4b87ebc4e936c1d9ff419091a9b",
+          "rawBalance": "19518492319647238732230",
+          "percent": 0.001951849231964723,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x45a2e455b2f7054f02317533057ed60196c90f73",
+          "rawBalance": "19391161951020495774211",
+          "percent": 0.001939116195102049,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xac30203cb479ee89696d9e7ec98dca08fd538065",
+          "rawBalance": "18910395295654121421380",
+          "percent": 0.001891039529565412,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xe08966344a4365b16d80c237f8881bbb110b4930",
+          "rawBalance": "18810147848997929723673",
+          "percent": 0.001881014784899792,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x4068626796a4ffb573452d5297db134371a33a1c",
+          "rawBalance": "18574924027508000000000",
+          "percent": 0.0018574924027508,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xbdb430a13dca3004e6153e05c1d01acc286e6ea7",
+          "rawBalance": "18555042976921237027707",
+          "percent": 0.001855504297692123,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x46147a20c2b9094b540b0a43c82f17d5c45f34a1",
+          "rawBalance": "18409116447364860672552",
+          "percent": 0.001840911644736486,
+          "reportedTag": ""
+        }
+      ],
+      "requestedCount": 100,
+      "orderedTopHolders": true,
+      "security": {
+        "provider": "GoPlus",
+        "chain": "bsc",
+        "contractAddress": "0x81a7da4074b8e0ed51bea40f9dcbdf4d9d4832b4",
+        "evidenceUrl": "https://api.gopluslabs.io/api/v1/token_security/56?contract_addresses=0x81a7da4074b8e0ed51bea40f9dcbdf4d9d4832b4",
+        "sourceTime": "2026-10-31T09:26:24+08:00",
+        "receivedTime": "2026-10-31T09:26:24.7092485+08:00",
+        "holderCount": 59415,
+        "flags": {
+          "is_open_source": true,
+          "is_proxy": false,
+          "is_mintable": false,
+          "is_honeypot": false,
+          "cannot_sell_all": false,
+          "transfer_pausable": false,
+          "owner_change_balance": false,
+          "hidden_owner": false,
+          "selfdestruct": false
+        },
+        "holders": [
+          {
+            "address": "0x78818ee5d3899176f99d79dda24d3d626b958bb6",
+            "percent": 67.9533231,
+            "reportedTag": "",
+            "isContract": true,
+            "isLocked": false,
+            "tokenAccount": null
+          },
+          {
+            "address": "0x207d87cd5710ad33c00615c423093ec89d273f51",
+            "percent": 6.02285894534379,
+            "reportedTag": "",
+            "isContract": false,
+            "isLocked": false,
+            "tokenAccount": null
+          },
+          {
+            "address": "0x4cad1efbfd5f0848e0c3c14fab23f92b2fa81f17",
+            "percent": 4.611276535211813,
+            "reportedTag": "",
+            "isContract": false,
+            "isLocked": false,
+            "tokenAccount": null
+          },
+          {
+            "address": "0xdf788c546cb62fca5f346a02a856ede993a310fb",
+            "percent": 2.747965,
+            "reportedTag": "",
+            "isContract": false,
+            "isLocked": false,
+            "tokenAccount": null
+          },
+          {
+            "address": "0x0d0707963952f2fba59dd06f2b425ace40b492fe",
+            "percent": 2.095661404357053,
+            "reportedTag": "",
+            "isContract": false,
+            "isLocked": false,
+            "tokenAccount": null
+          },
+          {
+            "address": "0xfab38084dc933790b4f74620c2eb215c7fada58b",
+            "percent": 1.875,
+            "reportedTag": "",
+            "isContract": true,
+            "isLocked": false,
+            "tokenAccount": null
+          },
+          {
+            "address": "0x73d8bd54f7cf5fab43fe4ef40a62d390644946db",
+            "percent": 1.486812337971263,
+            "reportedTag": "",
+            "isContract": true,
+            "isLocked": false,
+            "tokenAccount": null
+          },
+          {
+            "address": "0x216ef93e51bd6d1498bed395cebd72bef6cc9e83",
+            "percent": 1.345883756336995,
+            "reportedTag": "",
+            "isContract": true,
+            "isLocked": false,
+            "tokenAccount": null
+          },
+          {
+            "address": "0xb7c850ed5ab0dad79ee0d96ad6ea51397a8c18a1",
+            "percent": 1.1666667,
+            "reportedTag": "",
+            "isContract": true,
+            "isLocked": false,
+            "tokenAccount": null
+          },
+          {
+            "address": "0x8dac80ce96f69f9762bc450faa4d7fbd5891ae18",
+            "percent": 1.115639184,
+            "reportedTag": "",
+            "isContract": true,
+            "isLocked": false,
+            "tokenAccount": null
+          }
+        ],
+        "error": null,
+        "retryAt": null
+      }
+    },
+    "supporting": [
+      "所选链与完整合约/Mint已通过身份交叉核对，分析只对应当前选定项目",
+      "同合约OI数量24h变化1.29%，可与量价交叉观察，不能当作净买入"
+    ],
+    "risks": [
+      "该永续合约24h报价成交额不足500万USDT，执行流动性须进一步核对盘口",
+      "按当前参考价至历史压力的结构收益风险比不足1.5，入场空间偏窄；未扣费用"
+    ],
+    "missing": [
+      "快查来源时间未来或过期",
+      "缺少新鲜的项目估值/流通供应资料",
+      "交易所托管/项目方/桥/LP归属尚需逐项核验，原始大地址不等于庄家",
+      "未自动核验最新退市公告、近期解锁日历、团队/产品收入和重大新闻",
+      "没有盘口深度/预期滑点，成交额不能替代流动性深度"
+    ],
+    "nextChecks": [
+      "等待小时收盘站稳历史压力 0.02988，并复核成交量与OI；跌破结构支撑须重新评估",
+      "先核对近期解锁/退市与项目资料，再决定是否值得观察；快查不会执行买卖",
+      "价格或来源超过有效时间后重新分析；结构价位仅作参考，跌破后重新评估"
+    ],
+    "sources": [
+      {
+        "name": "CoinGecko项目资料",
+        "status": "Unavailable",
+        "sourceTime": null,
+        "receivedTime": "2026-10-31T09:30:10.9610523+08:00",
+        "url": "https://www.coingecko.com/en/coins/olaxbt",
+        "note": "快查来源时间未来或过期"
+      },
+      {
+        "name": "Gate链合约元数据",
+        "status": "Observed",
+        "sourceTime": "2026-10-31T09:30:11+08:00",
+        "receivedTime": "2026-10-31T09:30:11.076818+08:00",
+        "url": "https://api.gateio.ws/api/v4/spot/currencies/AIO",
+        "note": "只核对身份，不把Gate暂停充提等同其他交易所下架"
+      },
+      {
+        "name": "Binance永续报价",
+        "status": "Observed",
+        "sourceTime": "2026-10-31T09:29:44.024+08:00",
+        "receivedTime": "2026-10-31T09:30:11.5017406+08:00",
+        "url": "https://www.binance.com/en/futures/AIOUSDT",
+        "note": "该合约报价成交额不代表现货深度；资金费率按本次原值，不假设固定8小时结算"
+      },
+      {
+        "name": "Binance闭合小时线",
+        "status": "Observed",
+        "sourceTime": "2026-10-31T08:59:59.999+08:00",
+        "receivedTime": "2026-10-31T09:30:11.7297532+08:00",
+        "url": "https://www.binance.com/en/futures/AIOUSDT",
+        "note": "按需169根；结构拐点须有右侧两根闭合线；不向模拟仓或全市场缓存回填"
+      },
+      {
+        "name": "Binance合约OI数量",
+        "status": "Observed",
+        "sourceTime": "2026-10-31T09:25:00+08:00",
+        "receivedTime": "2026-10-31T09:30:13.4348043+08:00",
+        "url": "https://www.binance.com/en/futures/AIOUSDT",
+        "note": "比较同合约数量，24h间隔允许10分钟误差，不能用价格上涨造成的名义额变化代替增仓"
+      },
+      {
+        "name": "Binplorer",
+        "status": "Valid",
+        "sourceTime": "2026-10-31T09:07:03+08:00",
+        "receivedTime": "2026-10-31T09:26:23.5566363+08:00",
+        "url": "https://binplorer.com/token/0x81a7da4074b8e0ed51bea40f9dcbdf4d9d4832b4",
+        "note": "Indexer lastUpdated / HTTP Date minimum; observation, not a verified block timestamp"
+      },
+      {
+        "name": "GoPlus安全检测",
+        "status": "Valid",
+        "sourceTime": "2026-10-31T09:26:24+08:00",
+        "receivedTime": "2026-10-31T09:26:24.7092485+08:00",
+        "url": "https://api.gopluslabs.io/api/v1/token_security/56?contract_addresses=0x81a7da4074b8e0ed51bea40f9dcbdf4d9d4832b4",
+        "note": "提供者检测声明，不自动确认地址归属或保证安全"
+      }
+    ],
+    "isolation": "独立按需快查：不修改妖币池、资产映射、自选或模拟仓；不发送真实委托；复用带原始时间的缓存与受预算限制的采集"
+  },
+  {
+    "id": "7ac7a9e8-c754-41c6-a2ed-13ca201bc30b",
+    "version": "Token-QuickCheck-1.1",
+    "asOf": "2026-10-31T09:29:24.7865157+08:00",
+    "expiresAt": "2026-10-31T09:31:24.7865157+08:00",
+    "coin": {
+      "id": "zerobase",
+      "symbol": "zbt",
+      "name": "ZEROBASE",
+      "platforms": {
+        "ethereum": "0xfab99fcf605fd8f4593edb70a43ba56542777777",
+        "binance-smart-chain": "0xfab99fcf605fd8f4593edb70a43ba56542777777",
+        "base": "0xfab99fcf605fd8f4593edb70a43ba56542777777"
+      }
+    },
+    "platform": "binance-smart-chain",
+    "contractAddress": "0xfab99fcf605fd8f4593edb70a43ba56542777777",
+    "assetId": 434,
+    "instrument": "ZBTUSDT",
+    "identityVerified": false,
+    "identityReason": "独立链合约证据未对应；选择候选并不等于已证明身份",
+    "verdict": "资料不足",
+    "summary": "关键身份、时效或结构证据未齐，当前不能给出可买判断。",
+    "potential": "小市值研究对象；估值空间只是条件之一。尚无证据估计十倍概率或长期收益。",
+    "evidenceCoverage": 10,
+    "evidenceMeaning": "10项核验中的已取比例：市场六项；归属、解锁/公告、项目尽调、盘口深度待补。不是胜率/上涨概率",
+    "project": {
+      "coinGeckoId": "zerobase",
+      "sourceTime": "2026-10-31T09:28:53+08:00",
+      "receivedTime": "2026-10-31T09:29:24.2009427+08:00",
+      "priceUsd": 0.071131,
+      "return24h": 8.55227,
+      "marketCapUsd": 23240610,
+      "fdvUsd": 71055543,
+      "spotVolume24hUsd": 3668481,
+      "circulatingSupply": 327076660.0,
+      "totalSupply": 1000000000.0,
+      "platforms": {
+        "ethereum": "0xfab99fcf605fd8f4593edb70a43ba56542777777",
+        "base": "0xfab99fcf605fd8f4593edb70a43ba56542777777",
+        "binance-smart-chain": "0xfab99fcf605fd8f4593edb70a43ba56542777777"
+      },
+      "websites": [
+        "https://zerobase.pro/"
+      ]
+    },
+    "price": 0.071131,
+    "perpetualVolume24h": null,
+    "fundingRate": null,
+    "oi24hPercent": null,
+    "oiSourceTime": null,
+    "technical": {
+      "hours": 0,
+      "continuous": false,
+      "lastClosedPrice": null,
+      "return24h": null,
+      "ema20": null,
+      "ema60": null,
+      "atr14": null,
+      "support": null,
+      "supportTime": null,
+      "resistance": null,
+      "resistanceTime": null,
+      "invalidation": null,
+      "rewardRiskToResistance": null,
+      "trend": "历史不足或不连续",
+      "confirmation": "补齐至少72根连续且新鲜的闭合小时线"
+    },
+    "chainSample": null,
+    "supporting": [
+      "流通市值在3亿美元以下，具备小市值研究空间；这不证明低估或十倍潜力"
+    ],
+    "risks": [
+      "FDV约为流通市值的3.1倍，未流通供应构成稀释观察项；不等于近期全部解锁"
+    ],
+    "missing": [
+      "快查来源时间未来或过期",
+      "独立来源未确认完整链合约，不能把同名交易对或市值合入可信结论",
+      "缺少身份已关联且90秒内的新鲜交易所报价，不能评价当前入场时点",
+      "小时线不足或不连续，支撑压力和趋势暂不输出",
+      "缺少右侧两根闭合K线确认的历史支撑，不能随意设止损",
+      "缺少上方已确认历史压力，目标位暂不编造",
+      "缺少同合约新鲜且约24h可比的OI数量基线",
+      "持币分布失鲜或尚未取得，不将旧筹码当作当前吸筹证据",
+      "尚无新鲜安全检测证据；未检出不等于安全",
+      "交易所托管/项目方/桥/LP归属尚需逐项核验，原始大地址不等于庄家",
+      "未自动核验最新退市公告、近期解锁日历、团队/产品收入和重大新闻",
+      "没有盘口深度/预期滑点，成交额不能替代流动性深度"
+    ],
+    "nextChecks": [
+      "补齐至少72根连续且新鲜的闭合小时线",
+      "先核对近期解锁/退市与项目资料，再决定是否值得观察；快查不会执行买卖",
+      "价格或来源超过有效时间后重新分析；结构价位仅作参考，跌破后重新评估"
+    ],
+    "sources": [
+      {
+        "name": "CoinGecko项目资料",
+        "status": "Valid",
+        "sourceTime": "2026-10-31T09:28:53+08:00",
+        "receivedTime": "2026-10-31T09:29:24.2009427+08:00",
+        "url": "https://www.coingecko.com/en/coins/zerobase",
+        "note": "按精确ID获取；USD价格/市值/现货聚合成交额与永续数据分列"
+      },
+      {
+        "name": "Gate链合约元数据",
+        "status": "Unavailable",
+        "sourceTime": null,
+        "receivedTime": "2026-10-31T09:29:24.7863586+08:00",
+        "url": "https://api.gateio.ws/api/v4/spot/currencies/ZBT",
+        "note": "快查来源时间未来或过期"
+      }
+    ],
+    "isolation": "独立按需快查：不修改妖币池、资产映射、自选或模拟仓；不发送真实委托；复用带原始时间的缓存与受预算限制的采集"
+  },
+  {
+    "id": "029b6c81-7680-4fd2-999e-2b1d583c8f40",
+    "version": "Token-QuickCheck-1.1",
+    "asOf": "2026-10-31T09:28:17.7265879+08:00",
+    "expiresAt": "2026-10-31T09:30:17.7265879+08:00",
+    "coin": {
+      "id": "olaxbt",
+      "symbol": "aio",
+      "name": "OlaXBT",
+      "platforms": {
+        "binance-smart-chain": "0x81a7da4074b8e0ed51bea40f9dcbdf4d9d4832b4"
+      }
+    },
+    "platform": "binance-smart-chain",
+    "contractAddress": "0x81a7da4074b8e0ed51bea40f9dcbdf4d9d4832b4",
+    "assetId": 380,
+    "instrument": "AIOUSDT",
+    "identityVerified": true,
+    "identityReason": "本次Gate链合约元数据与精确CoinGecko ID/链/完整地址一致",
+    "verdict": "暂不考虑当前买入",
+    "summary": "当前结构或风险存在明确反证，优先等待风险缓解与新证据。",
+    "potential": "小市值研究对象；估值空间只是条件之一。尚无证据估计十倍概率或长期收益。",
+    "evidenceCoverage": 60,
+    "evidenceMeaning": "10项核验中的已取比例：市场六项；归属、解锁/公告、项目尽调、盘口深度待补。不是胜率/上涨概率",
+    "project": {
+      "coinGeckoId": "olaxbt",
+      "sourceTime": "2026-10-31T09:26:51+08:00",
+      "receivedTime": "2026-10-31T09:28:09.1327936+08:00",
+      "priceUsd": 0.02913025,
+      "return24h": 4.18872,
+      "marketCapUsd": 6707240,
+      "fdvUsd": 29130249,
+      "spotVolume24hUsd": 633085,
+      "circulatingSupply": 230250000.0,
+      "totalSupply": 1000000000.0,
+      "platforms": {
+        "binance-smart-chain": "0x81a7da4074b8e0ed51bea40f9dcbdf4d9d4832b4"
+      },
+      "websites": [
+        "https://olaxbt.xyz/"
+      ]
+    },
+    "price": 0.02941,
+    "perpetualVolume24h": 1770285.12182,
+    "fundingRate": null,
+    "oi24hPercent": 1.2928393189570877,
+    "oiSourceTime": "2026-10-31T09:25:00+08:00",
+    "technical": {
+      "hours": 168,
+      "continuous": true,
+      "lastClosedPrice": 0.02924,
+      "return24h": 2.668539325842697,
+      "ema20": 0.028911143939386142,
+      "ema60": 0.030147273571372226,
+      "atr14": 0.0005078571428571429,
+      "support": 0.02905,
+      "supportTime": "2026-10-30T16:00:00+08:00",
+      "resistance": 0.02988,
+      "resistanceTime": "2026-10-30T15:00:00+08:00",
+      "invalidation": 0.028796071428571428,
+      "rewardRiskToResistance": 0.7655613728912158,
+      "trend": "震荡或趋势未确认",
+      "confirmation": "等待小时收盘站稳历史压力 0.02988，并复核成交量与OI；跌破结构支撑须重新评估"
+    },
+    "chainSample": {
+      "id": "cf215f9b-507e-4567-b0fd-2825e47aa16f",
+      "chain": "bsc",
+      "contractAddress": "0x81a7da4074b8e0ed51bea40f9dcbdf4d9d4832b4",
+      "provider": "Binplorer",
+      "sourceTime": "2026-10-31T09:07:03+08:00",
+      "receivedTime": "2026-10-31T09:26:23.5566363+08:00",
+      "timeBasis": "Indexer lastUpdated / HTTP Date minimum; observation, not a verified block timestamp",
+      "holderCount": 60040,
+      "rawTotalSupply": "1000000000000000000000000000",
+      "decimals": 18,
+      "holders": [
+        {
+          "address": "0x78818ee5d3899176f99d79dda24d3d626b958bb6",
+          "rawBalance": "679533231000000000000000000",
+          "percent": 67.9533231,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x207d87cd5710ad33c00615c423093ec89d273f51",
+          "rawBalance": "60228589453437900000000000",
+          "percent": 6.02285894534379,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x4cad1efbfd5f0848e0c3c14fab23f92b2fa81f17",
+          "rawBalance": "46112765352118130000000000",
+          "percent": 4.611276535211813,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xdf788c546cb62fca5f346a02a856ede993a310fb",
+          "rawBalance": "27479650000000000000000000",
+          "percent": 2.747965,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x0d0707963952f2fba59dd06f2b425ace40b492fe",
+          "rawBalance": "20956614043570530343289262",
+          "percent": 2.095661404357053,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xfab38084dc933790b4f74620c2eb215c7fada58b",
+          "rawBalance": "18750000000000000000000000",
+          "percent": 1.875,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x73d8bd54f7cf5fab43fe4ef40a62d390644946db",
+          "rawBalance": "14868123379712630095943872",
+          "percent": 1.486812337971263,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x216ef93e51bd6d1498bed395cebd72bef6cc9e83",
+          "rawBalance": "13458837563369950000000000",
+          "percent": 1.345883756336995,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xb7c850ed5ab0dad79ee0d96ad6ea51397a8c18a1",
+          "rawBalance": "11666667000000000000000000",
+          "percent": 1.1666667,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x8dac80ce96f69f9762bc450faa4d7fbd5891ae18",
+          "rawBalance": "11156391840000000000000000",
+          "percent": 1.115639184,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x4982085c9e2f89f2ecb8131eca71afad896e89cb",
+          "rawBalance": "11004987500048418143601658",
+          "percent": 1.1004987500048418,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xa0d6d1942c2e4790234601544e7afe6431b193e5",
+          "rawBalance": "10802707915194677000000000",
+          "percent": 1.0802707915194678,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xc24ad068e42b8293db1ac6d920aed665ab3fe8d2",
+          "rawBalance": "8563022416200000000000000",
+          "percent": 0.85630224162,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x69be413d648ae00f0fbd9856f1355e22b36ee5e0",
+          "rawBalance": "5929986578039103680523219",
+          "percent": 0.5929986578039104,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x53f78a071d04224b8e254e243fffc6d9f2f3fa23",
+          "rawBalance": "5067303192145084047808090",
+          "percent": 0.5067303192145084,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xe0559a26532d244dec36cab758eeff1eacefb37b",
+          "rawBalance": "4438998000000000000000000",
+          "percent": 0.4438998,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x79431d989ad051ce4b8e9a75987b867c92a09627",
+          "rawBalance": "3815153000000000000000000",
+          "percent": 0.3815153,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x025315786d51cdfae43a4e830c6fe6fd0eb34737",
+          "rawBalance": "3419979210000000000000000",
+          "percent": 0.341997921,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x2a78eb7f935875277a2199eb7c8605cd67075386",
+          "rawBalance": "3200000000000000000000000",
+          "percent": 0.32,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x17a30350771d02409046a683b18fe1c13ccfc4a8",
+          "rawBalance": "3132354310000000000000000",
+          "percent": 0.313235431,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xa741f6555871790b85dcb276f97e5954a1a3c137",
+          "rawBalance": "2697190748710671590301493",
+          "percent": 0.26971907487106717,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x841b863179df4a40a07e178aa93b3fa37ef16cd4",
+          "rawBalance": "2341786480000000000000000",
+          "percent": 0.234178648,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x28b79e34403c01eda59a40449947ab1c0991e5ae",
+          "rawBalance": "2329929540000000000000000",
+          "percent": 0.232992954,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x05cb4e18a2b3a93f8e69f40b307b2c0112db738e",
+          "rawBalance": "2312920540000000000000000",
+          "percent": 0.231292054,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x1f1f71fb35c0b08334c3158259fb0643b9b7803d",
+          "rawBalance": "2263814160000000000000000",
+          "percent": 0.226381416,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x7d3fca272b9be87334dcac6013168424c0b8953e",
+          "rawBalance": "2246187160000000000000000",
+          "percent": 0.224618716,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xaef05659644e656194aeeb1abb8ab4df5f1b1bf8",
+          "rawBalance": "2218410480000000000000000",
+          "percent": 0.221841048,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xd6c1eb3136ddc799e8dcaf658a1fe9c26cca33a7",
+          "rawBalance": "2189600620000000000000000",
+          "percent": 0.218960062,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x0e77a5666ab991085eb2b8d3a95f61d4d254cf80",
+          "rawBalance": "2175693540000000000000000",
+          "percent": 0.217569354,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x7dafba1d69f6c01ae7567ffd7b046ca03b706f83",
+          "rawBalance": "1479562369010000000000000",
+          "percent": 0.147956236901,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x7eb8317c77de6fb2e6e3495cffaaa29fee0af69a",
+          "rawBalance": "1459710681622897043463985",
+          "percent": 0.1459710681622897,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x7c47947a0a8b67355434caeb2fa5066994cdefe2",
+          "rawBalance": "1100000000000000000000000",
+          "percent": 0.11,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xd2dd7b597fd2435b6db61ddf48544fd931e6869f",
+          "rawBalance": "1084559476000000000000000",
+          "percent": 0.1084559476,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x050ef1d50572de2c545126cae0ad51fb3f451f18",
+          "rawBalance": "1000000000000000000000000",
+          "percent": 0.1,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xc2e9cd9f098ff50a6fc7ee930c8a758b6f0e6323",
+          "rawBalance": "860000000000000000000000",
+          "percent": 0.086,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x537f572e9502bd2ec5d46c7ae917992cac96474f",
+          "rawBalance": "785129983200672177312704",
+          "percent": 0.07851299832006722,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xcc282e2004428939ee5149a9e7872f0b4d5d5ec7",
+          "rawBalance": "771340941810000000000000",
+          "percent": 0.077134094181,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xed9ab5bc05a0152b9dc2f7902e8369af7bc18771",
+          "rawBalance": "680706278269960520000000",
+          "percent": 0.06807062782699605,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xb8e6d31e7b212b2b7250ee9c26c56cebbfbe6b23",
+          "rawBalance": "506933403799551718362219",
+          "percent": 0.05069334037995517,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xefb14b3735f9a182e430abee7072632a4ebd18b8",
+          "rawBalance": "474000000000000000000000",
+          "percent": 0.0474,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x7817dbf38e9d1c95671625f0052c147864692fe0",
+          "rawBalance": "473523635343773194106574",
+          "percent": 0.04735236353437732,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x92240be371374e0be68cd529088bbf27632ef17a",
+          "rawBalance": "333613124509611281877103",
+          "percent": 0.03336131245096113,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x97620e003c03381eacbde7135f28d94303bb5672",
+          "rawBalance": "293703273074706965362282",
+          "percent": 0.029370327307470696,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xfafdd70cd35ef9eeb46032a59cfe1433a8356ca2",
+          "rawBalance": "211990067226270084659185",
+          "percent": 0.02119900672262701,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x9d22292d44052467292f47d823c46e071fe979db",
+          "rawBalance": "198161266187152770276643",
+          "percent": 0.019816126618715277,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x76febb2d912d7e2cb2d3d701bcee9bf7c273cf43",
+          "rawBalance": "177670510802830000000000",
+          "percent": 0.017767051080283,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x6249643031d0c13636ee40fcbf1aa0be847a455f",
+          "rawBalance": "176678831700000000000000",
+          "percent": 0.01766788317,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xea0505f0cdb4da5ef23c87ba4e30f5c0ccafc677",
+          "rawBalance": "125764277299727658056092",
+          "percent": 0.012576427729972766,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x504ce9e51e508c85a161058c12e970a903d482fc",
+          "rawBalance": "124915527100000000000000",
+          "percent": 0.01249155271,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x81a7da4074b8e0ed51bea40f9dcbdf4d9d4832b4",
+          "rawBalance": "115901040986690470385250",
+          "percent": 0.011590104098669047,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xb7b1d3901b33ffc5ca3bcfc937f5625294d32561",
+          "rawBalance": "115716210181581131035671",
+          "percent": 0.011571621018158113,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xe19ed11103265687a351662aab588a890ec598b4",
+          "rawBalance": "108015424010000000000000",
+          "percent": 0.010801542401,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xdbf7122c0b7af893580df087eabac0b3be3e9483",
+          "rawBalance": "92487499074076120214611",
+          "percent": 0.009248749907407611,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x93deb693b170d56bdde1b0a5222b14c0f885d976",
+          "rawBalance": "86100000000000000000000",
+          "percent": 0.00861,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xf975e7e240c59146e67971e2aa5497f0f22441ff",
+          "rawBalance": "78653848191405946393603",
+          "percent": 0.007865384819140593,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x4e7ed91e702ef2ff0c58e251c6e20d1dc1e31a5f",
+          "rawBalance": "73157640396679984385426",
+          "percent": 0.007315764039667998,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x5929b0514dfeb8210438f7a22242c20856329288",
+          "rawBalance": "62874195783778040280748",
+          "percent": 0.006287419578377804,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x035ae7d933dcbfe617ffba194a88af0c2867b90c",
+          "rawBalance": "62456100000000000000000",
+          "percent": 0.00624561,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x28e2ea090877bf75740558f6bfb36a5ffee9e9df",
+          "rawBalance": "60712690401048550668254",
+          "percent": 0.006071269040104855,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xd3b7e0ac7bc72fbafdb24985888a64b6e10907f9",
+          "rawBalance": "60412429499181597103636",
+          "percent": 0.006041242949918159,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x4ff1d40fb7b56665bf95d8d8e3a5320de46709a1",
+          "rawBalance": "57736309582973037492231",
+          "percent": 0.005773630958297303,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x20d688ba37fbe110b0317de84133dc2f5400d174",
+          "rawBalance": "51263545727843083903216",
+          "percent": 0.005126354572784308,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x40ad68c61f1ebfe2708aa638a5662a4fa4ef45c3",
+          "rawBalance": "48375920052202338143362",
+          "percent": 0.004837592005220233,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x47dd05784206d7e942839561fc690dd78edabe35",
+          "rawBalance": "48064862459977965086133",
+          "percent": 0.004806486245997796,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x5a23b8f2ed7a15d38923a8fbd84df2c8a18c0f48",
+          "rawBalance": "47271213289597198532989",
+          "percent": 0.004727121328959719,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xe004b53e8b51ed9c365ec37f4fd41bdfcf2c44af",
+          "rawBalance": "46188969030780487480659",
+          "percent": 0.004618896903078048,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x0d60baf1cc9ebc7c50cf075e4cb75717265adcc3",
+          "rawBalance": "44741228204385045067453",
+          "percent": 0.004474122820438504,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x9d532199b7fcea6ce8a35f3de420de975e061e08",
+          "rawBalance": "43559487266580000000000",
+          "percent": 0.004355948726658,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xf205699d6b1a45a890438cc677c8fd7a490cd84c",
+          "rawBalance": "41171565286127689312502",
+          "percent": 0.004117156528612768,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x8484359d761f111885bda1651b2d9d62318a293e",
+          "rawBalance": "41151706996734834184746",
+          "percent": 0.004115170699673483,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x3d6035e23ce306a0b3dd23977f6aa904c9bd3154",
+          "rawBalance": "40307004119755092669983",
+          "percent": 0.004030700411975509,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x937533636a08622813eb670edcdf3a07d8991544",
+          "rawBalance": "31995500000000000000000",
+          "percent": 0.00319955,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x3eff7a02c4b6982ccc631cffec2e7d62594dce45",
+          "rawBalance": "31341834562067370195486",
+          "percent": 0.003134183456206737,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x190119f681dd7cbffea872fcb71cae4216b5261f",
+          "rawBalance": "30000000000000000000000",
+          "percent": 0.003,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xda728a2e3c413b905b90d626e7d942435f80fc38",
+          "rawBalance": "28705538399254043094831",
+          "percent": 0.002870553839925404,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x886f7b5b708f2c697678b84218e6168879756315",
+          "rawBalance": "28320042744430000000000",
+          "percent": 0.002832004274443,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xdfc1db4904dc1e7718d4783bd4be02ac1967ae86",
+          "rawBalance": "26916277574041912838871",
+          "percent": 0.002691627757404191,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x94cced19bc7cb64a82f733861362084739f0a360",
+          "rawBalance": "26708822271343440047304",
+          "percent": 0.002670882227134344,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xb94741fb32409f914c67d161efa718815c038b3f",
+          "rawBalance": "24169058469993441053891",
+          "percent": 0.002416905846999344,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x6e1b2a5bc88227d7067b4d02ef82dd1b8c4fcd7b",
+          "rawBalance": "23665182922477620142605",
+          "percent": 0.002366518292247762,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xff78e7db109eb3be901b4a4014fc25aeed6baa0b",
+          "rawBalance": "23541278350000000000000",
+          "percent": 0.002354127835,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x10d0066b13a4bc4ead2bab4bf98a80ea79da4ed8",
+          "rawBalance": "23364562208056454659490",
+          "percent": 0.002336456220805645,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xa4bb762c8c18fe1cb56e010116544ca5866b192b",
+          "rawBalance": "23312227160000000000000",
+          "percent": 0.002331222716,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x653dd7677aea3030eab68c97ed3594bacf560158",
+          "rawBalance": "23047774790000000000000",
+          "percent": 0.002304777479,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x1dfee2bcbc7cc553bc26bd9f2415dee5ef245d67",
+          "rawBalance": "23029125077880549113678",
+          "percent": 0.002302912507788054,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x6d71e81c7c51fb0d8a77a8f67bf942585f25a229",
+          "rawBalance": "22983000000000000000000",
+          "percent": 0.0022983,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x486f0f75caa6d6189890e386934fdeb6a88b0826",
+          "rawBalance": "22808865309952756669415",
+          "percent": 0.002280886530995275,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x586a0ef7fe8e2b18dcca900af8258fda2e846bfe",
+          "rawBalance": "22493460315631832719428",
+          "percent": 0.002249346031563183,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x483b5fcfbc07b83724599575483afd18ef9172a3",
+          "rawBalance": "22219700000000000000000",
+          "percent": 0.00222197,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x078ca5aa5fff9e5c369134d19b58fdf9b2ee57b3",
+          "rawBalance": "21948860661344999785113",
+          "percent": 0.002194886066134499,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x6990e7e90ab50c12111f99b84183d3fe298bb3e4",
+          "rawBalance": "21478504802996286352724",
+          "percent": 0.002147850480299628,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x7ca2cf792a197ef2a1ea9d26c7f77d9cc5a76406",
+          "rawBalance": "20021397390230000000000",
+          "percent": 0.002002139739023,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xa7240b6a0f1254282c89ceabf3273d9d3aa0f0e2",
+          "rawBalance": "20000000000000000000000",
+          "percent": 0.002,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x30b7d52e5954e4b87ebc4e936c1d9ff419091a9b",
+          "rawBalance": "19518492319647238732230",
+          "percent": 0.001951849231964723,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x45a2e455b2f7054f02317533057ed60196c90f73",
+          "rawBalance": "19391161951020495774211",
+          "percent": 0.001939116195102049,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xac30203cb479ee89696d9e7ec98dca08fd538065",
+          "rawBalance": "18910395295654121421380",
+          "percent": 0.001891039529565412,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xe08966344a4365b16d80c237f8881bbb110b4930",
+          "rawBalance": "18810147848997929723673",
+          "percent": 0.001881014784899792,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x4068626796a4ffb573452d5297db134371a33a1c",
+          "rawBalance": "18574924027508000000000",
+          "percent": 0.0018574924027508,
+          "reportedTag": ""
+        },
+        {
+          "address": "0xbdb430a13dca3004e6153e05c1d01acc286e6ea7",
+          "rawBalance": "18555042976921237027707",
+          "percent": 0.001855504297692123,
+          "reportedTag": ""
+        },
+        {
+          "address": "0x46147a20c2b9094b540b0a43c82f17d5c45f34a1",
+          "rawBalance": "18409116447364860672552",
+          "percent": 0.001840911644736486,
+          "reportedTag": ""
+        }
+      ],
+      "requestedCount": 100,
+      "orderedTopHolders": true,
+      "security": {
+        "provider": "GoPlus",
+        "chain": "bsc",
+        "contractAddress": "0x81a7da4074b8e0ed51bea40f9dcbdf4d9d4832b4",
+        "evidenceUrl": "https://api.gopluslabs.io/api/v1/token_security/56?contract_addresses=0x81a7da4074b8e0ed51bea40f9dcbdf4d9d4832b4",
+        "sourceTime": "2026-10-31T09:26:24+08:00",
+        "receivedTime": "2026-10-31T09:26:24.7092485+08:00",
+        "holderCount": 59415,
+        "flags": {
+          "is_open_source": true,
+          "is_proxy": false,
+          "is_mintable": false,
+          "is_honeypot": false,
+          "cannot_sell_all": false,
+          "transfer_pausable": false,
+          "owner_change_balance": false,
+          "hidden_owner": false,
+          "selfdestruct": false
+        },
+        "holders": [
+          {
+            "address": "0x78818ee5d3899176f99d79dda24d3d626b958bb6",
+            "percent": 67.9533231,
+            "reportedTag": "",
+            "isContract": true,
+            "isLocked": false,
+            "tokenAccount": null
+          },
+          {
+            "address": "0x207d87cd5710ad33c00615c423093ec89d273f51",
+            "percent": 6.02285894534379,
+            "reportedTag": "",
+            "isContract": false,
+            "isLocked": false,
+            "tokenAccount": null
+          },
+          {
+            "address": "0x4cad1efbfd5f0848e0c3c14fab23f92b2fa81f17",
+            "percent": 4.611276535211813,
+            "reportedTag": "",
+            "isContract": false,
+            "isLocked": false,
+            "tokenAccount": null
+          },
+          {
+            "address": "0xdf788c546cb62fca5f346a02a856ede993a310fb",
+            "percent": 2.747965,
+            "reportedTag": "",
+            "isContract": false,
+            "isLocked": false,
+            "tokenAccount": null
+          },
+          {
+            "address": "0x0d0707963952f2fba59dd06f2b425ace40b492fe",
+            "percent": 2.095661404357053,
+            "reportedTag": "",
+            "isContract": false,
+            "isLocked": false,
+            "tokenAccount": null
+          },
+          {
+            "address": "0xfab38084dc933790b4f74620c2eb215c7fada58b",
+            "percent": 1.875,
+            "reportedTag": "",
+            "isContract": true,
+            "isLocked": false,
+            "tokenAccount": null
+          },
+          {
+            "address": "0x73d8bd54f7cf5fab43fe4ef40a62d390644946db",
+            "percent": 1.486812337971263,
+            "reportedTag": "",
+            "isContract": true,
+            "isLocked": false,
+            "tokenAccount": null
+          },
+          {
+            "address": "0x216ef93e51bd6d1498bed395cebd72bef6cc9e83",
+            "percent": 1.345883756336995,
+            "reportedTag": "",
+            "isContract": true,
+            "isLocked": false,
+            "tokenAccount": null
+          },
+          {
+            "address": "0xb7c850ed5ab0dad79ee0d96ad6ea51397a8c18a1",
+            "percent": 1.1666667,
+            "reportedTag": "",
+            "isContract": true,
+            "isLocked": false,
+            "tokenAccount": null
+          },
+          {
+            "address": "0x8dac80ce96f69f9762bc450faa4d7fbd5891ae18",
+            "percent": 1.115639184,
+            "reportedTag": "",
+            "isContract": true,
+            "isLocked": false,
+            "tokenAccount": null
+          }
+        ],
+        "error": null,
+        "retryAt": null
+      }
+    },
+    "supporting": [
+      "所选链与完整合约/Mint已通过身份交叉核对，分析只对应当前选定项目",
+      "流通市值在3亿美元以下，具备小市值研究空间；这不证明低估或十倍潜力",
+      "同合约OI数量24h变化1.29%，可与量价交叉观察，不能当作净买入"
+    ],
+    "risks": [
+      "FDV约为流通市值的4.3倍，未流通供应构成稀释观察项；不等于近期全部解锁",
+      "该永续合约24h报价成交额不足500万USDT，执行流动性须进一步核对盘口",
+      "按当前参考价至历史压力的结构收益风险比不足1.5，入场空间偏窄；未扣费用"
+    ],
+    "missing": [
+      "交易所托管/项目方/桥/LP归属尚需逐项核验，原始大地址不等于庄家",
+      "未自动核验最新退市公告、近期解锁日历、团队/产品收入和重大新闻",
+      "没有盘口深度/预期滑点，成交额不能替代流动性深度"
+    ],
+    "nextChecks": [
+      "等待小时收盘站稳历史压力 0.02988，并复核成交量与OI；跌破结构支撑须重新评估",
+      "先核对近期解锁/退市与项目资料，再决定是否值得观察；快查不会执行买卖",
+      "价格或来源超过有效时间后重新分析；结构价位仅作参考，跌破后重新评估"
+    ],
+    "sources": [
+      {
+        "name": "CoinGecko项目资料",
+        "status": "Valid",
+        "sourceTime": "2026-10-31T09:26:51+08:00",
+        "receivedTime": "2026-10-31T09:28:09.1327936+08:00",
+        "url": "https://www.coingecko.com/en/coins/olaxbt",
+        "note": "按精确ID获取；USD价格/市值/现货聚合成交额与永续数据分列"
+      },
+      {
+        "name": "Gate链合约元数据",
+        "status": "Observed",
+        "sourceTime": "2026-10-31T09:28:09+08:00",
+        "receivedTime": "2026-10-31T09:28:09.6307664+08:00",
+        "url": "https://api.gateio.ws/api/v4/spot/currencies/AIO",
+        "note": "只核对身份，不把Gate暂停充提等同其他交易所下架"
+      },
+      {
+        "name": "Binance永续报价",
+        "status": "Observed",
+        "sourceTime": "2026-10-31T09:28:05.659+08:00",
+        "receivedTime": "2026-10-31T09:28:10.9232988+08:00",
+        "url": "https://www.binance.com/en/futures/AIOUSDT",
+        "note": "该合约报价成交额不代表现货深度；资金费率按本次原值，不假设固定8小时结算"
+      },
+      {
+        "name": "Binance闭合小时线",
+        "status": "Observed",
+        "sourceTime": "2026-10-31T08:59:59.999+08:00",
+        "receivedTime": "2026-10-31T09:28:11.6989083+08:00",
+        "url": "https://www.binance.com/en/futures/AIOUSDT",
+        "note": "按需169根；结构拐点须有右侧两根闭合线；不向模拟仓或全市场缓存回填"
+      },
+      {
+        "name": "Binance合约OI数量",
+        "status": "Observed",
+        "sourceTime": "2026-10-31T09:25:00+08:00",
+        "receivedTime": "2026-10-31T09:28:17.725821+08:00",
+        "url": "https://www.binance.com/en/futures/AIOUSDT",
+        "note": "比较同合约数量，24h间隔允许10分钟误差，不能用价格上涨造成的名义额变化代替增仓"
+      },
+      {
+        "name": "Binplorer",
+        "status": "Valid",
+        "sourceTime": "2026-10-31T09:07:03+08:00",
+        "receivedTime": "2026-10-31T09:26:23.5566363+08:00",
+        "url": "https://binplorer.com/token/0x81a7da4074b8e0ed51bea40f9dcbdf4d9d4832b4",
+        "note": "Indexer lastUpdated / HTTP Date minimum; observation, not a verified block timestamp"
+      },
+      {
+        "name": "GoPlus安全检测",
+        "status": "Valid",
+        "sourceTime": "2026-10-31T09:26:24+08:00",
+        "receivedTime": "2026-10-31T09:26:24.7092485+08:00",
+        "url": "https://api.gopluslabs.io/api/v1/token_security/56?contract_addresses=0x81a7da4074b8e0ed51bea40f9dcbdf4d9d4832b4",
+        "note": "提供者检测声明，不自动确认地址归属或保证安全"
+      }
+    ],
+    "isolation": "独立按需快查：不修改妖币池、资产映射、自选或模拟仓；不发送真实委托；复用带原始时间的缓存与受预算限制的采集"
+  }
+]

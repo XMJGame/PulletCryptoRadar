@@ -1,0 +1,30 @@
+{
+  "asOf": "2026-10-31T08:39:43.8951344+08:00",
+  "venue": "Gate spot",
+  "symbol": "APR",
+  "observation": {
+    "currency": "APR",
+    "name": "aPriori",
+    "delisted": false,
+    "withdraw_disabled": true,
+    "withdraw_delayed": false,
+    "deposit_disabled": true,
+    "trade_disabled": true,
+    "fixed_rate": "",
+    "chain": "ETH",
+    "chains": [
+      {
+        "name": "ETH",
+        "addr": "invalid-APR-8700015-380",
+        "withdraw_disabled": true,
+        "withdraw_delayed": false,
+        "deposit_disabled": true
+      }
+    ],
+    "category": [],
+    "total_supply": "1000000000",
+    "market_cap": "9862720.0"
+  },
+  "conclusion": "此来源交易及充提不可用，地址无效；不核验身份，不推断Binance退市",
+  "source": "https://api.gateio.ws/api/v4/spot/currencies/APR"
+}
