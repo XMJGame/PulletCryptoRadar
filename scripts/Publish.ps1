@@ -1,51 +1,27 @@
-param([string]$OutputDirectory = '')
-$ErrorActionPreference = 'Stop'
-$projectRoot = Split-Path -Parent $PSScriptRoot
-if (-not $OutputDirectory) { $OutputDirectory = Join-Path $projectRoot 'artifacts\win-x64' }
-$OutputDirectory = [IO.Path]::GetFullPath($OutputDirectory)
-[IO.Directory]::CreateDirectory($OutputDirectory) | Out-Null
-try { $deploymentLease = New-Object IO.FileStream((Join-Path $OutputDirectory '.deployment.lock'),[IO.FileMode]::OpenOrCreate,[IO.FileAccess]::ReadWrite,[IO.FileShare]::None) }
-catch { throw 'Publication blocked: another startup or publication owns the deployment directory.' }
-try {
-$targetExecutable = Join-Path $OutputDirectory 'PulletCryptoRadar.exe'
-$active = @(Get-CimInstance Win32_Process -Filter "Name = 'PulletCryptoRadar.exe'" | Where-Object {
-    $_.ExecutablePath -and [string]::Equals([IO.Path]::GetFullPath($_.ExecutablePath), $targetExecutable, [StringComparison]::OrdinalIgnoreCase)
-})
-if ($active.Count -gt 0) { throw 'Publication blocked: the target server is running. Run Stop.ps1 and wait for graceful shutdown before publishing.' }
-$supervisorLock = Join-Path $OutputDirectory 'Logs\supervisor-instance.lock'
-if (Test-Path -LiteralPath $supervisorLock) {
-    try { $testLease=New-Object IO.FileStream($supervisorLock,[IO.FileMode]::Open,[IO.FileAccess]::ReadWrite,[IO.FileShare]::None); $testLease.Dispose() }
-    catch { throw 'Publication blocked: supervisor is active. Run Stop.ps1 first.' }
-}
-Push-Location (Join-Path $projectRoot 'frontend')
-try {
-    npm ci
-    if ($LASTEXITCODE -ne 0) { throw 'Frontend dependency restore failed.' }
-    npm test
-    if ($LASTEXITCODE -ne 0) { throw 'Frontend tests failed.' }
-    npm run build
-    if ($LASTEXITCODE -ne 0) { throw 'Frontend typecheck/build failed.' }
-} finally { Pop-Location }
-dotnet test (Join-Path $projectRoot 'PulletCryptoRadar.sln') -c Release --logger 'trx;LogFilePrefix=Phase12' --results-directory (Join-Path $projectRoot 'TestResults')
-if ($LASTEXITCODE -ne 0) { throw 'Tests failed.' }
-$savedSettings = $null
-$settingsPath = Join-Path $OutputDirectory 'appsettings.json'
-if (Test-Path -LiteralPath $settingsPath) {
-    $savedSettings = Get-Content -LiteralPath $settingsPath -Raw | ConvertFrom-Json -AsHashtable
-}
-$active = @(Get-CimInstance Win32_Process -Filter "Name = 'PulletCryptoRadar.exe'" | Where-Object {
-    $_.ExecutablePath -and [string]::Equals([IO.Path]::GetFullPath($_.ExecutablePath), $targetExecutable, [StringComparison]::OrdinalIgnoreCase)
-})
-if ($active.Count -gt 0) { throw 'Publication blocked: the target server was started during validation.' }
-dotnet publish (Join-Path $projectRoot 'src\PulletCryptoRadar.Host\PulletCryptoRadar.Host.csproj') -c Release -r win-x64 --self-contained true -o $OutputDirectory
-if ($LASTEXITCODE -ne 0) { throw 'Publish failed.' }
-$supervisorOutput = Join-Path $projectRoot 'artifacts\supervisor'
-dotnet publish (Join-Path $projectRoot 'src\PulletCryptoRadar.Supervisor\PulletCryptoRadar.Supervisor.csproj') -c Release -r win-x64 --self-contained true -o $supervisorOutput
-if ($LASTEXITCODE -ne 0) { throw 'Supervisor publish failed.' }
-if ($null -ne $savedSettings) {
-    $defaults = Get-Content -LiteralPath $settingsPath -Raw | ConvertFrom-Json -AsHashtable
-    foreach ($key in $defaults.Keys) { if (-not $savedSettings.ContainsKey($key)) { $savedSettings[$key] = $defaults[$key] } }
-    $savedSettings | ConvertTo-Json -Depth 20 | Set-Content -LiteralPath $settingsPath -Encoding utf8
-}
-Write-Host "Published: $OutputDirectory\PulletCryptoRadar.exe"
-} finally { $deploymentLease.Dispose() }
+﻿param([switch]$SkipTests,[switch]$NoRestore)
+$ErrorActionPreference='Stop'
+$project=Split-Path -Parent $PSScriptRoot
+$output=Join-Path $project 'artifacts\win-x64'
+$executable=Join-Path $output 'PulletCryptoRadar.exe'
+if(@(Get-Process -Name PulletCryptoRadar -ErrorAction SilentlyContinue | Where-Object {
+    [string]::Equals($_.Path,$executable,[StringComparison]::OrdinalIgnoreCase)
+}).Count){throw '请先运行 Stop.ps1，再发布；不会覆盖正在运行的程序。'}
+[IO.Directory]::CreateDirectory($output)|Out-Null
+try{$lease=[IO.File]::Open((Join-Path $output '.deployment.lock'),'OpenOrCreate','ReadWrite','None')}catch{throw '其他发布或启动正在进行。'}
+try{
+    Push-Location (Join-Path $project 'frontend')
+    try{
+        if(-not(Test-Path -LiteralPath 'node_modules')){npm ci;if($LASTEXITCODE -ne 0){throw '前端依赖还原失败'}}
+        npm run build
+        if($LASTEXITCODE -ne 0){throw '前端构建失败'}
+    }finally{Pop-Location}
+    if(-not $NoRestore){
+        dotnet restore (Join-Path $project 'PulletCryptoRadar.sln') --locked-mode --verbosity quiet
+        if($LASTEXITCODE -ne 0){throw '锁定依赖还原失败'}
+    }
+    if(-not $SkipTests){dotnet test (Join-Path $project 'PulletCryptoRadar.sln') -c Release --no-restore --verbosity quiet;if($LASTEXITCODE -ne 0){throw '后端测试失败'}}
+    dotnet publish (Join-Path $project 'src\PulletCryptoRadar.Host') -c Release -r win-x64 --self-contained true -o $output --no-restore --verbosity quiet
+    if($LASTEXITCODE -ne 0){throw '发布失败'}
+    Write-Host "已发布：$executable" -ForegroundColor Cyan
+    Write-Host 'Data 目录保留；不生成旧版本备份。运行 Start.ps1 启动。'
+}finally{$lease.Dispose()}

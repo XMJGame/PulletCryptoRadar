@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><TargetFramework>net10.0</TargetFramework><IsTestProject>true</IsTestProject><IsPackable>false</IsPackable></PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
+    <Using Include="Xunit" />
+    <ProjectReference Include="../../src/PulletCryptoRadar.DataFoundation/PulletCryptoRadar.DataFoundation.csproj" />
+    <ProjectReference Include="../../src/PulletCryptoRadar.Features/PulletCryptoRadar.Features.csproj" />
+    <ProjectReference Include="../../src/PulletCryptoRadar.Infrastructure/PulletCryptoRadar.Infrastructure.csproj" />
+  </ItemGroup>
+  <ItemGroup><ProjectReference Include="../../src/PulletCryptoRadar.Trading/PulletCryptoRadar.Trading.csproj" /></ItemGroup>
+  <ItemGroup><ProjectReference Include="../../src/PulletCryptoRadar.Host/PulletCryptoRadar.Host.csproj" /></ItemGroup>
+</Project>

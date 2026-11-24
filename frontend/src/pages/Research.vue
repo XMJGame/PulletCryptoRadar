@@ -1,5 +1,0 @@
-<script setup lang="ts">
-import PageIntro from '../components/PageIntro.vue'
-const groups=[{title:'数据核对',text:'解释数据来源、身份和覆盖。',items:[{to:'/market',name:'全市场行情',text:'交易所报价、涨跌与数据时间。'},{to:'/derivatives',name:'衍生品数据',text:'持仓量、资金费、主动买卖与覆盖。'},{to:'/onchain',name:'持币地址与标签',text:'持币分布、地址身份及关联线索。'},{to:'/flows',name:'链上资金流',text:'转账、区块与交易所归属证据。'},{to:'/mappings',name:'资产身份',text:'核对同名币、链与合约对应关系。'}]},{title:'自选与运行',text:'个人观察与系统管理。',items:[{to:'/watchtower',name:'自选观察',text:'个人成本、关键价位与钱包提醒。'},{to:'/network',name:'连接与流量',text:'采集健康、预算及连接设置。'},{to:'/alerts',name:'通知记录',text:'提醒、拦截原因与发送状态。'}]}]
-</script>
-<template><PageIntro eyebrow="SUPPORTING TOOLS" title="辅助工具" description="需要核对数据或管理运行时再来这里。日常操作使用左侧四个主入口。"/><section v-for="group in groups" :key="group.title" class="tool-group"><h2>{{group.title}}</h2><p>{{group.text}}</p><div class="tool-grid"><RouterLink v-for="item in group.items" :key="item.to" :to="item.to" class="tool-card"><h3>{{item.name}} →</h3><p>{{item.text}}</p></RouterLink></div></section><div class="context-actions"><RouterLink to="/template-library">历史行为样板库 →</RouterLink></div></template>
